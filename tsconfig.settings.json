@@ -29,7 +29,7 @@
     "useDefineForClassFields": true,
     "baseUrl": "packages",
     "paths": {
-      "__dxp__": [
+      "--dxp--": [
         "packages/__dxp__/src"
       ]
     }

@@ -9,7 +9,7 @@ const path = require('path');
 const fs = require('fs');
 const glob = require('glob');
 const { addTokenShadowPlugin, addStatoscopePlugin } = require('@bodiless/webpack');
-const shadow = require('__dxp__/shadow');
+const shadow = require('--dxp--/shadow');
 
 // Fix sourcemap issue
 // See: https://github.com/gatsbyjs/gatsby/issues/6278#issuecomment-402540404

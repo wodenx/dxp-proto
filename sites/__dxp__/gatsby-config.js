@@ -84,7 +84,7 @@ const plugins = [
   //   ...getSiteDefaultContentConfig(),
   // ),
   {
-    resolve: '__dxp__',
+    resolve: '--dxp--',
   }
 ];
 

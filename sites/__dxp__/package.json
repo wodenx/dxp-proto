@@ -1,5 +1,5 @@
 {
-  "name": "@sites/__dxp__",
+  "name": "@sites/--dxp--",
   "version": "0.0.0",
   "description": "",
   "author": "",
@@ -54,7 +54,7 @@
     "react-helmet": "^6.1.0",
     "react-markdown": "^8.0.0",
     "react-mde": "^11.0.0",
-    "__dxp__": "^0.0.0"
+    "--dxp--": "^0.0.0"
   },
   "files": [
     "lib"
@@ -76,7 +76,7 @@
     "dev-frontend": "gatsby develop",
     "docs": "run-s build:docs serve:docs",
     "prepare": "node ../../scripts/set-missing-symlinks.js @bodiless",
-    "prestart": "run-s build:env-vars build:docs",
+    "prestart": "run-s build:env-vars",
     "search-index": "create-search-index",
     "serve": "gatsby serve",
     "serve:docs": "docsify serve ./doc",
