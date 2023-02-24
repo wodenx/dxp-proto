@@ -25,7 +25,8 @@
     "build:lib": "tsc -p ./tsconfig.json",
     "build:watch": "npm run build:lib -- --watch",
     "build:api-doc": "typedoc --options ../../typedoc.js --out doc/api ./src",
-    "clean": "rimraf \"lib/*\" && rimraf tsconfig.tsbuildinfo"
+    "clean": "rimraf \"lib/*\" && rimraf tsconfig.tsbuildinfo",
+    "start": "npm run build:watch"
   },
   "peerDependencies": {
     "react": "^17.0.2"
