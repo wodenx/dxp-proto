@@ -35,6 +35,7 @@
     "lint:target": "eslint --cache --ext .js,.jsx,.ts,.tsx",
     "lint:change": "git diff --name-only --diff-filter=d master... | grep -e 'tsx$' -e 'jsx$' -e 'js$' -e 'ts$' | xargs -L 1 npm run lint:target",
     "new": "node ./scripts/new-starter",
+    "postinstall": "npm run build --workspace '--dxp--' && npm run build:env-vars --workspace '@sites/--dxp--'",
     "publish:all": "npm run build && lerna publish --registry $NPM_REGISTRY",
     "publish:from-package": "npm run build && lerna publish from-package --registry $NPM_REGISTRY",
     "publish:patch": "lerna version patch --conventional-commits --force-publish",
@@ -141,7 +142,8 @@
     "url": "https://github.com/johnsonandjohnson/bodiless-js.git"
   },
   "engines": {
-    "node": ">=16.9"
+    "node": ">=16.9",
+    "npm": ">=8.0.0"
   },
   "author": ""
 }
