@@ -14,6 +14,7 @@ const shadow = require('--dxp--/shadow');
 // Fix sourcemap issue
 // See: https://github.com/gatsbyjs/gatsby/issues/6278#issuecomment-402540404
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  console.log('onCreateWebpackConfig', process.env.SITE_URL);
   actions.setWebpackConfig(
     addTokenShadowPlugin({}, { resolvers: [shadow] })
   );

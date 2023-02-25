@@ -11,18 +11,20 @@ const { getDisabledPages } = require('@bodiless/components/node-api');
 // } = require('./src/components/Contentful');
 
 const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development';
+const dotenv = require('dotenv');
 
-require('dotenv').config({
+dotenv.config({
   path: `.env.${activeEnv}`,
 });
 
-const SITEURL = process.env.SITE_URL;
 
 const data = fs.readFileSync(`.env.${activeEnv}`);
-console.log('In Gatsby config', `.env.${activeEnv}`, SITEURL);
-console.log(`Contents of .env.${activeEnv}`);
-console.log(data.toString());
-console.log('process.env', process.env);
+const parsedEnv = dotenv.parse(data.toString());
+console.log('In Gatsby config', `.env.${activeEnv}`);
+console.log(`.env.${activeEnv}.SITE_URL`, parsedEnv.SITE_URL);
+console.log('process.env.SITE_URL', process.env.SITE_URL);
+
+const SITEURL = process.env.SITE_URL;
 
 const disablePageList = getDisabledPages();
 const disabledPages = Object.keys(disablePageList).filter(
