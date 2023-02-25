@@ -19,12 +19,13 @@ dotenv.config({
 
 
 const data = fs.readFileSync(`.env.${activeEnv}`);
-const parsedEnv = dotenv.parse(data.toString());
+const processEnv = dotenv.parse(data.toString());
 console.log('In Gatsby config', `.env.${activeEnv}`);
-console.log(`.env.${activeEnv}.SITE_URL`, parsedEnv.SITE_URL);
+console.log(`.env.${activeEnv}.SITE_URL`, processEnv.SITE_URL);
 console.log('process.env.SITE_URL', process.env.SITE_URL);
 
-const SITEURL = process.env.SITE_URL;
+// const SITEURL = process.env.SITE_URL;
+const SITEURL = processEnv.SITE_URL;
 
 const disablePageList = getDisabledPages();
 const disabledPages = Object.keys(disablePageList).filter(
