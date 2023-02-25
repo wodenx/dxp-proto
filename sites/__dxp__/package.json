@@ -64,7 +64,7 @@
     "url": "https://github.com/johnsonandjohnson/bodiless-js.git"
   },
   "scripts": {
-    "build": "npm-run-all build:env-vars build:lib build:search",
+    "build": "gatsby build",
     "build:docs": "bl-docs-build",
     "build:env-vars": "bodiless generate-env-vars",
     "build:lib": "bl-clear-logs && gatsby build && bl-validate-logs",
@@ -75,7 +75,7 @@
     "dev-backend": "bodiless-backend",
     "dev-frontend": "gatsby develop",
     "docs": "run-s build:docs serve:docs",
-    "prepare": "npm run build:docs",
+    "prepare": "run-s build:env-vars",
     "prestart": "run-s build:env-vars",
     "search-index": "create-search-index",
     "serve": "gatsby serve",

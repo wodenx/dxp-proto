@@ -26,6 +26,7 @@
     "build:watch": "npm run build:lib -- --watch",
     "build:api-doc": "typedoc --options ../../typedoc.js --out doc/api ./src",
     "clean": "rimraf \"lib/*\" && rimraf tsconfig.tsbuildinfo",
+    "prepare": "run-p build:lib",
     "start": "npm run build:watch"
   },
   "peerDependencies": {
