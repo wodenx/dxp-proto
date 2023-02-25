@@ -17,6 +17,9 @@ require('dotenv').config({
 });
 
 const SITEURL = process.env.SITE_URL;
+console.log('Gatsby config', activeEnv, SITEURL, process.env.SITE_URL);
+const data = fs.readFileSync(`.env.${activeEnv}`);
+console.log('.env', data.toString());
 
 const disablePageList = getDisabledPages();
 const disabledPages = Object.keys(disablePageList).filter(
