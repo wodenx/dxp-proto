@@ -17,8 +17,9 @@ require('dotenv').config({
 });
 
 const SITEURL = process.env.SITE_URL;
-console.log('In Gatsby config', `.env.${activeEnv}`, process.env);
+console.log('In Gatsby config', `.env.${activeEnv}`, SITEURL, process.env);
 const data = fs.readFileSync(`.env.${activeEnv}`);
+console.log(`Contents of .env.${activeEnv}`);
 console.log(data.toString());
 
 const disablePageList = getDisabledPages();
