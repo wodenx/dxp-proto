@@ -36,7 +36,7 @@
     "lint:change": "git diff --name-only --diff-filter=d master... | grep -e 'tsx$' -e 'jsx$' -e 'js$' -e 'ts$' | xargs -L 1 npm run lint:target",
     "new": "node ./scripts/new-starter",
     "postinstall": "npm run build --workspace '--dxp--' && npm run build:env-vars --workspace '@sites/--dxp--'",
-    "publish:all": "npm run build && lerna publish --registry $NPM_REGISTRY",
+    "publish:all": "./postinstall.sh",
     "publish:from-package": "npm run build && lerna publish from-package --registry $NPM_REGISTRY",
     "publish:patch": "lerna version patch --conventional-commits --force-publish",
     "publish:minor": "lerna version minor --conventional-commits",
