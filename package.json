@@ -52,6 +52,7 @@
     "sites:update": "npm run sites:pack && npm run sites:install",
     "sites:launch-test": "npm run sites:clone-local ${APP_SITE_DIR_NAME:-test-site} && npm run sites:update ${APP_SITE_DIR_NAME:-test-site} && cd sites/${APP_SITE_DIR_NAME:-test-site} && npm install --legacy-peer-deps && npm run start",
     "sites:launch-monorepo": "cd sites/${APP_SITE_DIR_NAME:-test-site} && npm run start",
+    "stackbit": "stackbit dev --runnableDir sites/__dxp__ --port 8000",
     "start": "lerna run start --stream --parallel --scope '{@sites/--dxp--,--dxp--}'",
     "sync:fix": "syncpack fix-mismatches",
     "sync:check": "syncpack list-mismatches",
