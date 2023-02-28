@@ -139,10 +139,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/johnsonandjohnson/bodiless-js.git"
+    "url": "https://github.com/dxp-prototype/dxp-proto"
   },
   "engines": {
-    "node": ">=16.9"
+    "node": ">=16.14"
   },
   "author": ""
 }
