@@ -1,6 +1,14 @@
 export default {
   stackbitVersion: '~0.6.0',
-  ssgName: 'gatsby',
-  devCommand: 'PORT={PORT} npm start --workspace @sites/--dxp--',
+  ssgName: 'custom',
+  devCommand: 'npm start --workspace @sites/--dxp--',
   nodeVersion: '16',
+  experimental: {
+    ssg: {
+      name: 'Gatsby',
+      logPatterns: {
+        up: 'You can now view',
+      },
+    },
+  },
 };

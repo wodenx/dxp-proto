@@ -8,6 +8,7 @@ node_modules
 *.tsbuildinfo
 # jetbrains files:
 .idea
+.stackbit
 # Lerna git ignore items
 lerna-debug.log
 packages/**/lib
