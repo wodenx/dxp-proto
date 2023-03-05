@@ -13,6 +13,7 @@
   "scripts": {
     "build": "turbo build",
     "build:packages": "turbo build --filter=!@sites/--dxp--",
+    "check": "turbo check",
     "fix": "eslint --fix  --cache --ext .js,.jsx,.ts,.tsx packages sites",
     "fix:target": "eslint --fix  --cache --ext .js,.jsx,.ts,.tsx",
     "fix:change": "git diff --name-only --diff-filter=d master... | grep -e 'tsx$' -e 'jsx$' -e 'js$' -e 'ts$' | xargs -L 1 npm run fix:target",
