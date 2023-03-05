@@ -17,5 +17,4 @@ cd $CURRENT
 echo Building package...
 cd packages/__dxp__
 npm run build
-// ls -l lib
 cd $CURRENT
