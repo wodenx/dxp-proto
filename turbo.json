@@ -1,9 +1,13 @@
 {
     "$schema": "https://turbo.build/schema.json",
     "pipeline": {
-      "build": {},
-      "start": {},
+      "build": {
+        "outputs": ["public/**", "lib/**"],
+        "dependsOn": ["^build"]
+      },
       "check": {},
-      "dev": {}
+      "dev": {
+        "persistent": true
+      }
     }
   }
