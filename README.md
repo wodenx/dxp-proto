@@ -2,7 +2,6 @@
 
 Starter site for Kenvue Digital Experience Platform.
 
-
 ## Local Development
 
 ### Install, Build, Serve
@@ -17,9 +16,16 @@ Wait for dev site to load on `localhost:8000`
 In a second terminal `npm run stackbit`
 Visit `localhost:8092/_stackbit`
 
+### Running Bodiless Editor
+
+Comment out `BODILESS_DISABLE_EDITOR=1` in `.env.site`
+`npm run edit` from `sites/__dxp__`
+> Be sure not to commit the change to `.env.site`
+
 ## Deployment
 
 ### Vercel
+
 Import the GitHub repo and provide the following settings:
 - Framework Preset: `Other`
 - Build command `npm run build`
@@ -28,6 +34,7 @@ Import the GitHub repo and provide the following settings:
 - Output Directory: `./public`
 
 ### Netlify / Gatsby Cloud
+
 Import the GitHub repo and provide the following setting:
 - Gatsby Root Folder: `sites/__dxp__`
 

@@ -74,6 +74,7 @@
     "clean": "gatsby clean",
     "dev": "gatsby develop",
     "dev-backend": "bodiless-backend",
+    "edit": "run-p dev-backend dev",
     "docs": "run-s build:docs serve:docs",
     "prepare": "npm run build:docs",
     "predev": "run-s build:env-vars",
