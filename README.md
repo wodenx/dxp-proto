@@ -16,6 +16,10 @@ Wait for dev site to load on `localhost:8000`
 In a second terminal `npm run stackbit`
 Visit `localhost:8092/_stackbit`
 
+Note you can also run stackbit without running the dev site (of course you won't
+get the preview or inline editing, but can be useful for testing models in the
+sidebar).
+
 ### Running Bodiless Editor
 
 Comment out `BODILESS_DISABLE_EDITOR=1` in `.env.site`
