@@ -66,6 +66,6 @@ module.exports = {
     "browser": true,
     "node": true
   },
-  "ignorePatterns": [".eslintrc.js"],
+  "ignorePatterns": [".eslintrc.js", "tests/e2e/"],
 };
 

@@ -19,6 +19,7 @@ module.exports = {
     'create-preview-pages.test.ts',
     'create-pages.test.ts',
     'gatsby-node.test.ts',
+    'tests/e2e',
   ],
   transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
   testResultsProcessor: 'jest-sonar-reporter',
