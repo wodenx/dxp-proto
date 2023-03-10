@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "e0602d70-b4df-4944-a991-e67c6f2433ac",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ImageLandscape"
+    }
+  ]
+}

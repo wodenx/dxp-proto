@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "uuid": "969630a2-ae9d-417d-bb4c-77d3f8a62f0b",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ListInfographic"
+    },
+    {
+      "uuid": "8f57ee79-7b95-4489-8b2e-077cc80b6045",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "RichText"
+    },
+    {
+      "uuid": "814bf200-9ad9-42f8-bbdd-860ee994489a",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardRightContentCenteredAll"
+    },
+    {
+      "uuid": "e8868b51-d0b8-4ad3-a1c4-a0e0e671b6c2",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardRightContentCenteredNoDescription"
+    },
+    {
+      "uuid": "f6498f4d-8282-424d-b0e1-b3372153f177",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ListPlainLinked"
+    }
+  ]
+}

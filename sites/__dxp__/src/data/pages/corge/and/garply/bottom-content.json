@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "uuid": "d00994d7-b4a0-43c5-a66e-57fefbfba5c9",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "HeroSecondaryButtonRightContentCentered"
+    },
+    {
+      "uuid": "5f12edeb-b6f3-4daf-8ec7-e046d40f53f8",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardVerticalAll"
+    },
+    {
+      "uuid": "fff8b74a-8ce1-4bdf-ace7-968f76d5f200",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardRightContentCenteredAll"
+    },
+    {
+      "uuid": "2da5ad4e-1f58-4338-a2e5-617b5b570aee",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "HeroSecondaryButtonLeftContentTop"
+    }
+  ]
+}

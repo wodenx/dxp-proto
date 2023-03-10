@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "uuid": "3c7f1991-b834-4e76-b6df-ece31d216f5c",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardRightContentCenteredNoDescription"
+    },
+    {
+      "uuid": "440975bd-4a82-429f-8538-40783819e235",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardVerticalNoDescription"
+    },
+    {
+      "uuid": "88a727ae-ea9b-47a6-a3a9-f4f85d93aa0a",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardLeftContentCenteredNoTitle"
+    }
+  ]
+}

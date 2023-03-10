@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "e79aeb54-ed3a-4c0f-9d69-5d5c5242c931",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "HeroLinkRightContentCentered"
+    }
+  ]
+}

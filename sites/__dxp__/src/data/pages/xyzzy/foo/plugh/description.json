@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "e50ad43d-c759-4958-88e6-b999f90066cf",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ListInfographic"
+    }
+  ]
+}

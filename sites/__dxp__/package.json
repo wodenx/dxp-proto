@@ -75,6 +75,7 @@
     "dev": "gatsby develop",
     "dev-backend": "bodiless-backend",
     "edit": "run-p dev-backend dev",
+    "generate-content": "generate-dummy-content",
     "docs": "run-s build:docs serve:docs",
     "predev": "run-s build:env-vars",
     "prebuild": "run-s build:env-vars",
@@ -84,6 +85,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.0",
     "@statoscope/webpack-plugin": "^5.20.1",
+    "@dxp/dummy": "0.0.0",
     "copyfiles": "^2.1.1",
     "cross-env": "^5.2.0",
     "gatsby-plugin-compile-es6-packages": "^1.1.0",

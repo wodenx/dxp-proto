@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "ecde0f51-f917-46d6-88f2-ab832c0ec46a",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardRightContentCenteredAll"
+    }
+  ]
+}

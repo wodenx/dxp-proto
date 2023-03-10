@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "uuid": "757746db-54e3-4487-8a1b-1d5194b7e308",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ListPlainPlainText"
+    },
+    {
+      "uuid": "1d935c25-023c-4063-8935-1eaff85864b4",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ListInfographic"
+    },
+    {
+      "uuid": "66e234a4-1b97-405a-b7e5-a1eb3f8b592c",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ListInfographic"
+    },
+    {
+      "uuid": "824202b1-3bf1-4af1-9b13-486c1b46f366",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardLeftContentTopAll"
+    },
+    {
+      "uuid": "1f06e690-3085-41bb-9657-d920b1c5e9f6",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "HeroSecondaryButtonRightContentTop"
+    }
+  ]
+}

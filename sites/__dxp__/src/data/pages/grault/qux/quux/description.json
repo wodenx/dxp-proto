@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "uuid": "2e6a66c3-9442-4b07-a8be-e339d4631ff2",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ProductFullyClickableNoRatings"
+    },
+    {
+      "uuid": "338c6bad-a439-41bd-95ef-36c258a392d8",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ProductPrimaryButtonNoEyebrow"
+    },
+    {
+      "uuid": "c9e55506-73c2-438e-b633-3a3418f4e7a9",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ProductLinkAll"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "uuid": "2a4cf897-b7d8-4f73-a441-c913f96a66a1",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "HeroLinkLeftContentTop"
+    },
+    {
+      "uuid": "868600b6-cd64-4fbe-8021-79ec431b7c80",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "HeroSecondaryButtonLeftContentTop"
+    }
+  ]
+}
