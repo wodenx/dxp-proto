@@ -14,9 +14,9 @@ const shadow = require('--dxp--/shadow');
 // Fix sourcemap issue
 // See: https://github.com/gatsbyjs/gatsby/issues/6278#issuecomment-402540404
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  actions.setWebpackConfig(
-    addTokenShadowPlugin({}, { resolvers: [shadow] })
-  );
+  // actions.setWebpackConfig(
+  //   addTokenShadowPlugin({}, { resolvers: [shadow] })
+  // );
   if (stage === 'develop') {
     // When running test-site with local packages (via npm pack) we seem to get
     // multiple react instances, which causes this invalid hook call warning
