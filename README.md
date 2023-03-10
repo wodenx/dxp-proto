@@ -32,7 +32,7 @@ Comment out `BODILESS_DISABLE_EDITOR=1` in `.env.site`
 
 Import the GitHub repo and provide the following settings:
 - Framework Preset: `Other`
-- Build command `npm run build`
+- Build command `cd ../.. && npm run build`
 - Install command `npm ci --prefix ../..`
 - Root Directory `sites/__dxp__`
 - Output Directory: `./public`
