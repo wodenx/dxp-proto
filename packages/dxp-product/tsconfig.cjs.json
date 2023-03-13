@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "outDir": "./lib/scripts",
+    "module": "CommonJS",
+    "moduleResolution": "node"
+  },
+  "files": ["src/scripts/fetch-products.ts"],
+  "exclude": [
+    "lib",
+    "src",
+    "node_modules",
+    "__tests__/**/*.*",
+    "src/**/__tests__/**/*.*"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "@kenvue/dxp-product",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "sideEffects": false,
+  "bin": {
+    "fetch-products": "./bin/fetch-products"
+  },
+  "files": [
+    "/lib"
+  ],
+  "scripts": {
+    "build": "run-p build:lib",
+    "build:lib": "tsc -b  ./tsconfig.cjs.json ./tsconfig.json",
+    "fetch": "node ./src/scripts/fetch-products.ts"
+  },
+  "author": "",
+  "license": "",
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "dependencies": {
+    "@bodiless/components": "^1.0.0-rc.25",
+    "@bodiless/core": "^1.0.0-rc.25",
+    "@bodiless/fclasses": "^1.0.0-rc.25",
+    "@bodiless/vital-elements": "^1.0.0-rc.25",
+    "@bodiless/vital-templates": "^1.0.0-rc.25",
+    "contentful": "^9.3.3",
+    "dotenv": "^8.2.0",
+    "fs-extra": "^8.1.0"
+  }
+}

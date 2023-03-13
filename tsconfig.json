@@ -6,6 +6,5 @@
     "./sites/*/src/**/*",
     "./sites/*/scripts/*",
     "./sites/*/*"
-  ],
+  ]
 }
-
