@@ -2,7 +2,7 @@
     "$schema": "https://turbo.build/schema.json",
     "pipeline": {
       "build": {
-        "outputs": ["public/**", "lib/**", ".env.production", ".env.development"],
+        "outputs": ["public/**", "lib/**", ".env.production", ".env.development", ".vercel/**"],
         "dependsOn": ["^build"]
       },
       "check": {},
