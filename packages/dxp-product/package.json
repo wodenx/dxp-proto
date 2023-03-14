@@ -6,6 +6,7 @@
   "typings": "lib/index.d.ts",
   "sideEffects": false,
   "bin": {
+    "content-model": "./bin/content-model",
     "fetch-products": "./bin/fetch-products"
   },
   "files": [
@@ -28,7 +29,12 @@
     "@bodiless/vital-elements": "^1.0.0-rc.25",
     "@bodiless/vital-templates": "^1.0.0-rc.25",
     "contentful": "^9.3.3",
+    "contentful-management": "^10.30.0",
     "dotenv": "^8.2.0",
-    "fs-extra": "^8.1.0"
+    "fs-extra": "^8.1.0",
+    "yargs": "^17.7.1"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.22"
   }
 }

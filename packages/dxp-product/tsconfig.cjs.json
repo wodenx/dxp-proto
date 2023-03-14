@@ -5,7 +5,10 @@
     "module": "CommonJS",
     "moduleResolution": "node"
   },
-  "files": ["src/scripts/fetch-products.ts"],
+  "files": [
+    "src/scripts/fetch-products.ts",
+    "src/scripts/content-model.ts"
+  ],
   "exclude": [
     "lib",
     "src",
