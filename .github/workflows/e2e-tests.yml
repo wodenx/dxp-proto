@@ -21,9 +21,13 @@ jobs:
       - name: Run tests
         env:
           MAIN_PAGE_URL: ${{ github.event.deployment_status.target_url }}
+          SAUCELABS_USERNAME: ${{ secrets.SAUCELABS_USERNAME }}
+          SAUCELABS_PASSWORD: ${{ secrets.SAUCELABS_PASSWORD }}
         run: |
           cd tests/e2e
-          ./gradlew runStories -Pvividus.web-application.main-page-url=${MAIN_PAGE_URL}
+          ./gradlew runStories -Pvividus.web-application.main-page-url=${MAIN_PAGE_URL} \
+                               -Pvividus.selenium.grid.username=${SAUCELABS_USERNAME} \
+                               -Pvividus.selenium.grid.password=${SAUCELABS_PASSWORD}
       - name: Publish web application tests report
         if: always()
         uses: actions/upload-artifact@v3
