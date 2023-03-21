@@ -1,0 +1,34 @@
+name: Product Publish
+env:
+  CI: true
+  CONTENT_PUBLISH_GIT_USERNAME: ${{ secrets.CONTENT_PUBLISH_GIT_USERNAME }}
+  CONTENT_PUBLISH_GIT_PASSWORD: ${{ secrets.CONTENT_PUBLISH_GIT_PASSWORD }}
+  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+  CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+  CONTENT_PUBLISH_BASE_BRANCH: ${{ vars.CONTENT_PUBLISH_BASE_BRANCH }}
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [product-publish]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.action == 'product-publish' }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Git info
+        run: git remote -v
+      - name: Use node v16.14
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.14
+      # @todo: diff setup process
+      - name: Setup and build packages
+        run: npm install && npm run build
+      # @todo: pull update from remote
+      # -name: fetch product
+      #  run: npm run fetch-product
+      - name: Publish
+        run: npm run build:content-publish -- --script 'cd sites/__dxp__/ && npm run build:fetch-products'
+
+    
