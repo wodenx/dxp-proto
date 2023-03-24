@@ -14,9 +14,10 @@
 import { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { as } from '@bodiless/fclasses';
-import { vitalPage } from '@bodiless/vital-templates';
+// eslint-disable-next-line import/no-unresolved
+import { dxpPage } from '--dxp--';
 
-const DefaultPage = as(vitalPage.Default)(Fragment);
+const DefaultPage = as(dxpPage.Default)(Fragment);
 
 export default DefaultPage;
 

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "target": "ESNext",
+    "outDir": "./lib/models",
+    "module": "CommonJS",
+    "moduleResolution": "node"
+  },
+  "files": [
+    "src/components/GenericTemplate/GenericTemplateModel.ts",
+    "src/components/EditorPlain/EditorPlainModel.ts"
+  ],
+  "include": [],
+  "paths": [],
+  "exclude": [
+    "lib",
+    "src",
+    "node_modules",
+    "__tests__/**/*.*",
+    "src/**/__tests__/**/*.*"
+  ]
+}

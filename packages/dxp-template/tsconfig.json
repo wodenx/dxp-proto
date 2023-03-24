@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib",
+    "baseUrl": ".",
+    "preserveSymlinks": false,
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "lib",
+    "src/scripts/**/*",
+    "node_modules",
+    "__tests__/**/*.*",
+    "src/**/__tests__/**/*.*",
+    "src/components/GenericTemplate/GenericTemplateModel.ts",
+    "src/components/EditorPlain/EditorPlainModel.ts"
+  ]
+}
