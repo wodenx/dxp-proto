@@ -7,7 +7,8 @@ const GenericTemplateModel: Model = {
   urlPath: '/{slug}',
   filePath: 'src/data/pages/{slug}/index.json',
   hideContent: true,
-  thumbnail: 'https://assets.stackbit.com/components/models/thumbnails/default.png',
+  thumbnail:
+    'https://assets.stackbit.com/components/models/thumbnails/default.png',
   fields: [
     // @todo Restore once Stackbit bug is fixed.
     // @see https://vendorstackbit.slack.com/archives/C04N8Q1GS6S/p1679058403031449
@@ -51,8 +52,8 @@ const GenericTemplateModel: Model = {
       label: 'Bottom Content',
       type: 'model',
       models: ['EditorPlain'],
-    }
-  ]
+    },
+  ],
 };
 
 export default GenericTemplateModel;

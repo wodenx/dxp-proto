@@ -18,9 +18,9 @@ export const Generic = asGenericTemplateToken({
     TopWrapper: vitalTypography.H1,
   },
   Content: {
-    // Content domin is "inside" Schema domain,m so these are invoked after
+    // Content domain is "inside" Schema domain, so these are invoked after
     // The node-keys have been defined.  This way we avoid having to
-    // specify the node key in more thn one place.  Note that the node key
+    // specify the node key in more thn one place. Note that the node key
     // must be the same as the stackbit field name.
     TopContent: withSbContentFromParent(),
     Content: withSbContentFromParent(),

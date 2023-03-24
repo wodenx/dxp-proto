@@ -22,7 +22,7 @@ export const StackbitContainerItem = asElementToken({
   Content: {
     // Here the stackbit EditorPlain model is already shaped like the
     // data expected by the Bodiless Editable so we don't have to transform it
-    // (no trnsformer passed to withSbContent()), just pull it out of the index.
+    // (no transformer passed to withSbContent()), just pull it out of the index.
     _: withSbContent(),
   },
 });

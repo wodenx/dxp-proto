@@ -6,5 +6,6 @@
     "bottom-content": {
         "type": "EditorPlain",
         "text": "ABC"
-    }
+    },
+    "Title": "Generic Page"
 }

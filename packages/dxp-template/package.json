@@ -1,5 +1,5 @@
 {
-  "name": "--dxp--",
+  "name": "@kenvue/dxp-template",
   "sideEffects": false,
   "version": "0.0.0",
   "description": "",
@@ -43,7 +43,7 @@
     "@bodiless/vital-navigation": "^1.0.0-rc.25",
     "@bodiless/vital-templates": "^1.0.0-rc.25",
     "@stackbit/cms-git": "0.0.50-gitcms.12",
-    "@stackbit/types": "0.1.11-gitcms.1",    
+    "@stackbit/types": "0.1.11-gitcms.1",
     "axios": "^0.21.0",
     "isomorphic-git": "^1.21.0",
     "lodash": "^4.17.19",

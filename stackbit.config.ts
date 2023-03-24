@@ -9,9 +9,9 @@ import path from 'path';
 // with which they are associated.
 // @todo figure out best way to share config.
 // eslint-disable-next-line import/no-extraneous-dependencies
-import GenericTemplateModel from '--dxp--/lib/models/GenericTemplate/GenericTemplateModel';
+import GenericTemplateModel from '@kenvue/dxp-template/lib/models/GenericTemplate/GenericTemplateModel';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import EditorPlainModel from '--dxp--/lib/models/EditorPlain/EditorPlainModel';
+import EditorPlainModel from '@kenvue/dxp-template/lib/models/EditorPlain/EditorPlainModel';
 
 export default {
   stackbitVersion: '~0.6.0',
@@ -32,9 +32,9 @@ export default {
         referenceType: 'static',
         staticDir: 'public',
         uploadDir: 'images',
-        publicPath: '/'
-      }
-    })
+        publicPath: '/',
+      },
+    }),
   ],
   experimental: {
     ssg: {

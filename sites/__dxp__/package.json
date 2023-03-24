@@ -57,7 +57,8 @@
     "react-markdown": "^8.0.0",
     "react-mde": "^11.0.0",
     "--dxp--": "^0.0.0",
-    "@kenvue/dxp-product": "^0.0.0"
+    "@kenvue/dxp-product": "^0.0.0",
+    "@kenvue/dxp-template": "^0.0.0"
   },
   "files": [
     "lib"
