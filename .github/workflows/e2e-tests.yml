@@ -7,6 +7,10 @@ jobs:
   tests:
     if: ${{ github.event.deployment_status.state == 'success' }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [ chrome-android, safari-ios, chrome-win, firefox-win ]
     steps:
       - name: Checkout (including submodules)
         uses: actions/checkout@v3
@@ -27,10 +31,11 @@ jobs:
           cd tests/e2e
           ./gradlew runStories -Pvividus.web-application.main-page-url=${MAIN_PAGE_URL} \
                                -Pvividus.selenium.grid.username=${SAUCELABS_USERNAME} \
-                               -Pvividus.selenium.grid.password=${SAUCELABS_PASSWORD}
+                               -Pvividus.selenium.grid.password=${SAUCELABS_PASSWORD} \
+                               -Pvividus.configuration-set.active=${{ matrix.platform }}
       - name: Publish web application tests report
         if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: Tests report
+          name: Tests report for ${{ matrix.platform }} run
           path: tests/e2e/output/reports/allure
