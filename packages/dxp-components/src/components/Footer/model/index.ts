@@ -5,6 +5,8 @@ const FooterModel: Model = {
   type: 'data',
   label: 'Footer',
   filePath: 'src/data/site/footer.json',
+  singleInstance: true,
+  readOnly: true,
   fields: [
     {
       name: 'copyright',

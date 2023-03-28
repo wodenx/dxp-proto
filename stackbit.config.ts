@@ -17,6 +17,8 @@ import LayoutModel from '@kenvue/dxp-components/lib/stackbit/Layout/model';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import FooterModel from '@kenvue/dxp-components/lib/stackbit/Footer/model';
 
+console.log('fm', FooterModel);
+
 export default {
   stackbitVersion: '~0.6.0',
   ssgName: 'custom',
@@ -31,7 +33,7 @@ export default {
       contentDirs: ['src/data'],
       // repoUrl: process.env.REPO_URL || '',
       // repoBranch: process.env.REPO_BRANCH || '',
-      models: [GenericTemplateModel, EditorPlainModel, LayoutModel, FooterModel],
+      models: [GenericTemplateModel, EditorPlainModel, FooterModel],
       assetsConfig: {
         referenceType: 'static',
         staticDir: 'public',
