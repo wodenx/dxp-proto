@@ -9,9 +9,13 @@ import path from 'path';
 // with which they are associated.
 // @todo figure out best way to share config.
 // eslint-disable-next-line import/no-extraneous-dependencies
-import GenericTemplateModel from '@kenvue/dxp-components/lib/models/GenericTemplate/GenericTemplateModel';
+import GenericTemplateModel from '@kenvue/dxp-components/lib/stackbit/GenericTemplate/GenericTemplateModel';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import EditorPlainModel from '@kenvue/dxp-components/lib/models/EditorPlain/EditorPlainModel';
+import EditorPlainModel from '@kenvue/dxp-components/lib/stackbit/EditorPlain/EditorPlainModel';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import LayoutModel from '@kenvue/dxp-components/lib/stackbit/Layout/model';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import FooterModel from '@kenvue/dxp-components/lib/stackbit/Footer/model';
 
 export default {
   stackbitVersion: '~0.6.0',
@@ -25,9 +29,9 @@ export default {
       // @todo how to make this generic?
       rootPath: path.join(__dirname, 'sites', '__dxp__'),
       contentDirs: ['src/data'],
-      repoUrl: process.env.REPO_URL || '',
-      repoBranch: process.env.REPO_BRANCH || '',
-      models: [GenericTemplateModel, EditorPlainModel],
+      // repoUrl: process.env.REPO_URL || '',
+      // repoBranch: process.env.REPO_BRANCH || '',
+      models: [GenericTemplateModel, EditorPlainModel, LayoutModel, FooterModel],
       assetsConfig: {
         referenceType: 'static',
         staticDir: 'public',

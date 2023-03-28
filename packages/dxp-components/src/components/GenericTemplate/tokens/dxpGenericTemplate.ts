@@ -5,11 +5,13 @@ import { on } from '@bodiless/fclasses';
 import { withSbContentFromParent } from '../../../util';
 import { dxpEditorPlain } from '../../EditorPlain';
 import NodeTreePrinter, { withSbContentExample } from '../../../util/NodeTreePrinter';
+import { dxpLayout } from '../../Layout';
 
 export const Generic = asGenericTemplateToken({
   ...vitalGenericTemplateBase.Generic,
   Components: {
     ...vitalGenericTemplateBase.Generic.Components,
+    PageWrapper: dxpLayout.Default,
     TopContent: on(EditorPlainClean)(dxpEditorPlain.Default),
     Content: on(NodeTreePrinter)(withSbContentExample),
     BottomContent: on(EditorPlainClean)(dxpEditorPlain.StackbitContainerItem),

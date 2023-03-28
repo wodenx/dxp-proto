@@ -16,6 +16,7 @@
     "__tests__/**/*.*",
     "src/**/__tests__/**/*.*",
     "src/components/GenericTemplate/GenericTemplateModel.ts",
-    "src/components/EditorPlain/EditorPlainModel.ts"
+    "src/components/EditorPlain/EditorPlainModel.ts",
+    "src/components/CopyrightRow/model/index.ts"
   ]
 }

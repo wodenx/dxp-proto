@@ -2,19 +2,20 @@
   "compilerOptions": {
     "declaration": true,
     "target": "ESNext",
-    "outDir": "./lib/models",
+    "outDir": "./lib/stackbit",
     "module": "CommonJS",
     "moduleResolution": "node"
   },
   "files": [
     "src/components/GenericTemplate/GenericTemplateModel.ts",
-    "src/components/EditorPlain/EditorPlainModel.ts"
+    "src/components/EditorPlain/EditorPlainModel.ts",
+    "src/components/Layout/model/index.ts",
+    "src/components/Footer/model/index.ts"
   ],
   "include": [],
   "paths": [],
   "exclude": [
     "lib",
-    "src",
     "node_modules",
     "__tests__/**/*.*",
     "src/**/__tests__/**/*.*"
