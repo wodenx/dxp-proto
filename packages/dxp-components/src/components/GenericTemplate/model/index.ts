@@ -12,12 +12,12 @@ const GenericTemplateModel: Model = {
   fields: [
     // @todo Restore once Stackbit bug is fixed.
     // @see https://vendorstackbit.slack.com/archives/C04N8Q1GS6S/p1679058403031449
-    // {
-    //   name: 'slug',
-    //   type: 'slug',
-    //   label: 'Slug',
-    //   required: true,
-    // },
+    {
+      name: 'slug',
+      type: 'slug',
+      label: 'Slug',
+      required: true,
+    },
     {
       name: 'Title',
       type: 'string',
