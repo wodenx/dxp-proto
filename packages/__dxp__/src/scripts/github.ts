@@ -112,7 +112,7 @@ class GitHubApi implements GitApiInterface {
       return await Promise.resolve(protection);
     } catch (error) {
       if (error.response.status === 404) {
-        console.log('Branch protection not found, continue with merging');
+        console.log(`Branch protection not found for branch: ${branchName}`);
         return Promise.resolve(false);
       }
       return Promise.reject(error);

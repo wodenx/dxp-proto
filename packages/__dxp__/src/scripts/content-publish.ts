@@ -21,7 +21,6 @@
  * - Env variables:
  *    > CONTENT_PUBLISH_GIT_USERNAME
  *    > CONTENT_PUBLISH_GIT_PASSWORD
- *    > CONTENT_PUBLISH_TEMP_PATH_PREFIX
  *    > CONTENT_PUBLISH_AUTHOR_NAME
  *    > CONTENT_PUBLISH_AUTHOR_EMAIL
  *    > CONTENT_PUBLISH_BASE_BRANCH
@@ -37,10 +36,9 @@ import { execSync } from 'child_process';
 import { GitHubApi } from './github';
 import type { ContentCommitProps } from './types';
 
-const DEFAULT_BASE_BRANCH = 'content-publish';
+const DEFAULT_BASE_BRANCH = 'main';
 const REPO_API_BASE_URL = 'https://api.github.com/';
 
-const getTempPath = async () => fs.promises.realpath(os.tmpdir());
 const getGitWebUrl = (url: string) => {
   // accepts https://...(.git)? or git@...:.git
   if (/^https:\/\/(.+)(\.git)?$/i.test(url)) {
@@ -88,7 +86,6 @@ const validateInput = async (props: ContentCommitProps) => {
     gitUrl: url,
     gitUsername,
     gitPassword,
-    tempPath,
   } = props;
 
   if (!base) {
@@ -123,18 +120,6 @@ const validateInput = async (props: ContentCommitProps) => {
   if (!baseRef) {
     throw new Error(`Base branch name: ${base} does not exist.`);
   }
-  if (!tempPath) {
-    throw new Error('Missing "tempPath".');
-  }
-  if (!fs.existsSync(tempPath)) {
-    throw new Error(`Temp path: ${tempPath} does not exist.`);
-  }
-
-  try {
-    fs.accessSync(tempPath, fs.constants.W_OK);
-  } catch (err) {
-    throw new Error(`Temp path: ${tempPath} is not writable.`);
-  }
 
   return true;
 };
@@ -149,38 +134,22 @@ const contentCommit = async (props: ContentCommitProps): Promise<void> => {
     gitUrl,
     gitUsername,
     gitPassword,
-    tempPath,
   } = props;
   try {
-    const prefix = process.env.CONTENT_PUBLISH_TEMP_PATH_PREFIX || '';
     const authorName = process.env.CONTENT_PUBLISH_AUTHOR_NAME || 'dxp-proto';
     const authorEmail = process.env.CONTENT_PUBLISH_AUTHOR_EMAIL || 'dxp-proto@kenvue.com';
-    const workingPath = resolve(tempPath, `${prefix}${uuid()}`);
+    const workingPath = process.cwd();
     const {
       owner,
       repo,
     } = getRepoInfo(gitUrl);
-
-    await git.clone({
-      fs,
-      http,
-      dir: workingPath,
-      url: gitUrl,
-      singleBranch: true,
-      onAuth: () => ({
-        username: gitUsername,
-        password: gitPassword,
-      }),
-      depth: 1,
-    });
-    console.log(`Cloned ${gitUrl} to ${workingPath}`);
-
     const date = new Date();
     const dateName = `${date.getFullYear()}${(date.getMonth() + 1)
       .toString()
       .padStart(2, '0')}${date.getDate().toString().padStart(2, '0')}`;
     const dateStamp = date.valueOf();
     const contentPublishBranch = `content-publish-${dateName}-${dateStamp}`;
+
     await git.branch({
       fs,
       dir: workingPath,
@@ -189,9 +158,9 @@ const contentCommit = async (props: ContentCommitProps): Promise<void> => {
     });
     console.log('Checkout branch: ', contentPublishBranch);
 
-    const cmd = `npm install && npm run build && ${script}`;
+    const cmd = `${script}`;
     try {
-      console.log(`Starting - npm install && npm run build && ${script}`);
+      console.log(`Starting - ${script}`);
       execSync(cmd, {
         cwd: workingPath,
         encoding: 'utf8',
@@ -317,8 +286,10 @@ const contentCommit = async (props: ContentCommitProps): Promise<void> => {
       // Merge pull request.
       await gitHubApi.mergePullRequest(pullNumber);
     } catch (error: any) {
+      console.log('Failed to merge PR', error);
       // restore protection if merge failed.
       if (branchProtectionData) {
+        console.log('Adding branch protection back');
         const branchProtectionPayLoad = gitHubApi.getBranchProtectionPayload(branchProtectionData);
         await gitHubApi.setBranchProtection(base, branchProtectionPayLoad);
       }
@@ -353,7 +324,6 @@ const start = async () => {
       })
       .parseSync();
     const { username, password } = getGitCredentials();
-    const tempPath = await getTempPath();
     const gitRoot = await git.findRoot({
       fs,
       filepath: process.cwd(),
@@ -376,7 +346,6 @@ const start = async () => {
       gitUrl: getGitWebUrl(url),
       gitUsername: username,
       gitPassword: password,
-      tempPath,
     };
     if (await validateInput(props)) {
       contentCommit(props);
