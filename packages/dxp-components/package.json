@@ -42,7 +42,7 @@
     "@bodiless/vital-link": "^1.0.0-rc.25",
     "@bodiless/vital-navigation": "^1.0.0-rc.25",
     "@bodiless/vital-templates": "^1.0.0-rc.25",
-    "@stackbit/cli": "0.3.0",
+    "@stackbit/cms-git": "0.1.1",
     "@stackbit/types": "0.3.0",
     "axios": "^0.21.0",
     "isomorphic-git": "^1.21.0",
