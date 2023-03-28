@@ -1,3 +1,10 @@
+const liveSiteURL = process.env.LIVE_SITE_URL? [{
+  label: 'View Live Site',
+  type: 'link',
+  icon: 'external-link',
+  url: process.env.LIVE_SITE_URL,
+}] : [];
+
 export default {
   stackbitVersion: '~0.6.0',
   ssgName: 'custom',
@@ -12,4 +19,7 @@ export default {
       },
     },
   },
+  sidebarButtons: [
+    ...liveSiteURL
+  ]
 };
