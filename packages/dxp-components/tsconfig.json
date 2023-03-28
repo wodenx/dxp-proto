@@ -15,7 +15,6 @@
     "node_modules",
     "__tests__/**/*.*",
     "src/**/__tests__/**/*.*",
-    "src/components/GenericTemplate/GenericTemplateModel.ts",
-    "src/components/EditorPlain/EditorPlainModel.ts"
+    "src/components/*/model"
   ]
 }
