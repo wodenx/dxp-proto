@@ -1,0 +1,114 @@
+{
+  "contentful_id": "6fcro0XBfcX6c369vAy2b0",
+  "revision_id": 9,
+  "name": "Product 1 UAT on 3/28",
+  "images": [
+    {
+      "title": "listerine pocketmist freshburst 1ct",
+      "description": "",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/1X94wroWIX2hJIQIPqA09V/f5e8af6606df825a719c4de8fef222ad/_listerine_pocketmist_freshburst_1ct.jpg",
+        "details": {
+          "size": 52228,
+          "image": {
+            "width": 1024,
+            "height": 1024
+          }
+        },
+        "fileName": "_listerine_pocketmist_freshburst_1ct.jpg",
+        "contentType": "image/jpeg"
+      }
+    }
+  ],
+  "summary": [
+    {
+      "data": {},
+      "marks": [],
+      "value": "Test summary Take 5",
+      "nodeType": "text"
+    }
+  ],
+  "directions": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Test Directions",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Test Warnings",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "additional_info": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Test Additional Information",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Yellow 10"
+    }
+  ],
+  "faq": [],
+  "collection": {
+    "title": "Mouthwash",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "8AqWoythzXHwS1mE1qrad",
+        "type": "Asset",
+        "createdAt": "2023-03-14T13:17:29.033Z",
+        "updatedAt": "2023-03-14T13:17:29.033Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Screenshot",
+        "description": "",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/8AqWoythzXHwS1mE1qrad/8cb38866f330473b875a6f3bdc45a93e/Screenshot.png",
+          "details": {
+            "size": 40606,
+            "image": {
+              "width": 257,
+              "height": 164
+            }
+          },
+          "fileName": "Screenshot.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "cta_text": "All Mouthwash Products "
+  }
+}
