@@ -1,2 +1,2 @@
-#!/usr/bin/env node 
-require('../lib/scripts/content-model');
+#!/usr/bin/env node
+require('../lib/cjs/scripts/content-model');

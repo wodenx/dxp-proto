@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('../lib/scripts/fetch-products');
+require('../lib/cjs/scripts/fetch-products');

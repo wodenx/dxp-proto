@@ -9,7 +9,7 @@
   "include": ["src"],
   "exclude": [
     "lib",
-    "src/scripts",
+    "src/scripts/*.*",
     "node_modules",
     "__tests__/**/*.*",
     "src/**/__tests__/**/*.*"

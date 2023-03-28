@@ -4,11 +4,9 @@
     "rootDir": "src",
     "outDir": "lib",
     "baseUrl": ".",
-    "preserveSymlinks": false,
+    "preserveSymlinks": false
   },
-  "include": [
-    "src"
-  ],
+  "include": ["src"],
   "exclude": [
     "lib",
     "src/scripts/**/*",
