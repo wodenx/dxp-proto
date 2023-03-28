@@ -1,6 +1,6 @@
 {
   "contentful_id": "4wjOoQHFSAqePnJMpNKEqg",
-  "revision_id": 16,
+  "revision_id": 17,
   "name": "LISTERINE® TOTAL CARE ZERO ALCOHOL ANTICAVITY FLUORIDE MOUTHWASH, FRESH MINT",
   "images": [
     {
@@ -55,7 +55,7 @@
     },
     {
       "nodeType": "text",
-      "value": " cavities\r\n\r\n",
+      "value": " cavities\r\n\r",
       "marks": [],
       "data": {}
     },
@@ -71,7 +71,7 @@
     },
     {
       "nodeType": "text",
-      "value": " enamel\r\n\r\n",
+      "value": " enamel\r\n\r",
       "marks": [],
       "data": {}
     },
@@ -87,7 +87,7 @@
     },
     {
       "nodeType": "text",
-      "value": " teeth\r\n\r\n",
+      "value": " teeth\r\n\r",
       "marks": [],
       "data": {}
     },
