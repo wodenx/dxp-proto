@@ -1,4 +1,112 @@
 {
   "contentful_id": "6eXQKMmPXeOgBblBssQqdL",
-  "revision_id": 8
+  "revision_id": 8,
+  "name": "LISTERINE® POCKETPAKS® FRESH BREATH STRIPS COOL MINT®",
+  "images": [
+    {
+      "title": "lis 012547433654 us cool mint pocketpaks breath strips 24ct 000001",
+      "description": "",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/Jo3EuOHAjcJBpMEhhKXEu/91b7b7c94964de842cbd846dfa723843/lis_012547433654_us_cool_mint_pocketpaks_breath_strips_24ct_000001.png",
+        "details": {
+          "size": 123303,
+          "image": {
+            "width": 1000,
+            "height": 1000
+          }
+        },
+        "fileName": "lis_012547433654_us_cool_mint_pocketpaks_breath_strips_24ct_000001.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "summary": [
+    {
+      "data": {},
+      "marks": [],
+      "value": "LISTERINE POCKETPAKS® Oral Care Strips dissolve instantly, freshening your breath by killing 99.9% of bad-breath germs*.\r\n\r\nLISTERINE POCKETPAKS Oral Care Strips are sugar free, kosher and available in COOL MINT®, FRESH BURST® and COOL HEAT. Look for them in the oral care aisle and near the checkout counter.\r\n\r\n*In lab studies",
+      "nodeType": "text"
+    }
+  ],
+  "directions": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Remove one Oral Care Strip from the convenient carrying case. Then place the Oral Care Strip on your tongue and let it dissolve. Use one Oral Care Strip as needed to help freshen breath and kill bad breath germs.\n\n",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "The carrying case may present a choking hazard.\n\n",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "additional_info": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Store at 68° to 77°F or 20° to 25° C in a dry place. Avoid heat and humidity.\r\n\r\nFor comments, questions, feedback about our products or to report an adverse event or side effect from our products, please visit our Contact Us page.",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Pullulan"
+    },
+    {
+      "title": "Menthol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Potassium Acesulfame"
+    },
+    {
+      "title": "Copper Gluconate"
+    },
+    {
+      "title": "Polysorbate 80"
+    },
+    {
+      "title": "Chondrus Crispus (Carrageenan)"
+    },
+    {
+      "title": "Glyceryl Oleate"
+    },
+    {
+      "title": "Thymol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Methyl Salicylate",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Ceratonia Siliqua (Locust Bean) Gum"
+    },
+    {
+      "title": "Propylene Glycol"
+    },
+    {
+      "title": "Xanthan Gum"
+    },
+    {
+      "title": "Aroma (Flavor)"
+    },
+    {
+      "title": "FD&C Blue No. 1"
+    },
+    {
+      "title": "FD&C Green No. 3"
+    }
+  ],
+  "faq": []
 }

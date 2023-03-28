@@ -1,4 +1,326 @@
 {
   "contentful_id": "4wjOoQHFSAqePnJMpNKEqg",
-  "revision_id": 16
+  "revision_id": 16,
+  "name": "LISTERINE® TOTAL CARE ZERO ALCOHOL ANTICAVITY FLUORIDE MOUTHWASH, FRESH MINT",
+  "images": [
+    {
+      "title": "lis 312547306713 tc zero fresh mint 1l 00000 isolated 980x980",
+      "description": "",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/6N3tbU1pGSJhjPbDRy8khF/5df113a013033c8543e30e2c6943a166/lis_312547306713_tc_zero_fresh_mint_1l_00000_isolated_980x980.png",
+        "details": {
+          "size": 98151,
+          "image": {
+            "width": 980,
+            "height": 980
+          }
+        },
+        "fileName": "lis_312547306713_tc_zero_fresh_mint_1l_00000_isolated_980x980.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "summary": [
+    {
+      "nodeType": "text",
+      "value": "LISTERINE® TOTAL CARE ZERO Mouthwash’s alcohol-free formula with fluoride and fresh mint cleans deep to kill millions of bad breath germs and combat cavities for a healthier mouth.\r\n\r\nA less intense minty flavor\r\n\r\nGreater reach than brushing and flossing alone—with ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "100% coverage ",
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "on teeth, between teeth and along the gum line\r\n\r\nHelps ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "prevent",
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " cavities\r\n\r\n",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "Restores",
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " enamel\r\n\r\n",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "Strengthens",
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " teeth\r\n\r\n",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "Kills",
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " bad breath germs",
+      "marks": [],
+      "data": {}
+    }
+  ],
+  "directions": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Adults and children 6 years of age and older:",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Use twice a day after brushing your teeth with a toothpaste",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Vigorously swish 10 mL (2 teaspoonfuls) of rinse between your teeth for 1 minute and then spit out",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Do not swallow the rinse",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Do not eat or drink for 30 minutes after rinsing",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Instruct children under 12 years of age in good rinsing habits (to minimize swallowing)",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Supervise children as necessary until capable of using without supervision",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Children under 6 years of age: consult a dentist or doctor",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "\n\n",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "data": {},
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "value": "Keep out of reach of children. ",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [],
+        "value": "If more than used for rinsing is accidentally swallowed, get medical help or contact a Poison Control Center right away.\n\n",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "additional_info": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Store at room temperature\r\n\r\nCold weather may temporarily cloud this product\r\n\r\nFor comments, questions, feedback about our products or to report an adverse event or side effect from our products, please visit our Contact Us page.",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Eucalyptol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Menthol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Methyl Salicylate",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Thymol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sodium Lauryl Sulfate",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Propylene Glycol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Water",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Poloxamer 407",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Phosphoric acid",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Red 40",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Blue 1",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Flavor",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sucralose",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sodium Saccharin",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Disodium phosphate",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sodium Benzoate",
+      "inactive_active": "Inactive"
+    }
+  ],
+  "sku": "skutest1",
+  "faq": [
+    {
+      "question": "What is the question?",
+      "answer": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "answer",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      }
+    },
+    {
+      "question": "What is the question",
+      "answer": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "This is the answer",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      }
+    }
+  ]
 }
