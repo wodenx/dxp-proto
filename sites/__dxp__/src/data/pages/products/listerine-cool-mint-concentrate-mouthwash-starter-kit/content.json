@@ -264,56 +264,56 @@
   ],
   "faq": [
     {
-      "question": "How many full mouthwashes will I get out of each purchase of LISTERINE® mouthwash concentrate?",
+      "question": "How many full mouthwashes will I get out of each purchase of LISTERINE® mouthwash concentrate? (HEIDI)",
       "answer": {
-        "nodeType": "document",
         "data": {},
         "content": [
           {
-            "nodeType": "paragraph",
             "data": {},
             "content": [
               {
-                "nodeType": "text",
+                "data": {},
+                "marks": [],
                 "value": "Both the ",
-                "marks": [],
-                "data": {}
+                "nodeType": "text"
               },
               {
-                "nodeType": "text",
+                "data": {},
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
                 "value": "Starter",
-                "marks": [
-                  {
-                    "type": "bold"
-                  }
-                ],
-                "data": {}
+                "nodeType": "text"
               },
               {
-                "nodeType": "text",
+                "data": {},
+                "marks": [],
                 "value": " Kit and the ",
-                "marks": [],
-                "data": {}
+                "nodeType": "text"
               },
               {
-                "nodeType": "text",
-                "value": "Refill",
+                "data": {},
                 "marks": [
                   {
                     "type": "bold"
                   }
                 ],
-                "data": {}
+                "value": "Refill",
+                "nodeType": "text"
               },
               {
-                "nodeType": "text",
-                "value": " Pack allow you to mix three full 500 mL bottles of COOL MINT® ZERO. The Starter Kit comes with a full bottle of regular COOL MINT® ZERO and then you will mix the other two. The Refill Pack comes with three 100 mL concentrates that you will use to create three separate 500 mL COOL MINT® ZEROS, but to do that you will need an empty 500 mL bottle of COOL MINT® ZERO that contains a water fill line at the top. If you do not have one of those bottles, we recommend you purchase the Starter Kit to begin your more sustainable Listerine journey!",
+                "data": {},
                 "marks": [],
-                "data": {}
+                "value": " Pack allow you to mix three full 500 mL bottles of COOL MINT® ZERO. The Starter Kit comes with a full bottle of regular COOL MINT® ZERO and then you will mix the other two. The Refill Pack comes with three 100 mL concentrates that you will use to create three separate 500 mL COOL MINT® ZEROS, but to do that you will need an empty 500 mL bottle of COOL MINT® ZERO that contains a water fill line at the top. If you do not have one of those bottles, we recommend you purchase the Starter Kit to begin your more sustainable Listerine journey!",
+                "nodeType": "text"
               }
-            ]
+            ],
+            "nodeType": "paragraph"
           }
-        ]
+        ],
+        "nodeType": "document"
       }
     }
   ],
