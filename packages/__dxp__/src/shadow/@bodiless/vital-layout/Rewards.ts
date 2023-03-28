@@ -12,27 +12,9 @@
  * limitations under the License.
  */
 
-import {
-  flowIf,
-  withProps,
-} from '@bodiless/fclasses';
-import { useLanguageContext } from '@bodiless/i18n';
-import {
-  asRewardsToken,
-  vitalRewardsBase
-} from '@bodiless/vital-layout';
+import { asRewardsToken, vitalRewardsBase } from '@bodiless/vital-layout';
 
-const isCurrentLanguageEs = () => useLanguageContext().getCurrentLanguage().name === 'es';
-
-const Default = asRewardsToken(vitalRewardsBase.Base, {
-  Content: {
-    Brand: flowIf(isCurrentLanguageEs)(
-      withProps({
-        children: 'Brand ES',
-      }),
-    ),
-  },
-});
+const Default = asRewardsToken(vitalRewardsBase.Base);
 
 export default {
   ...vitalRewardsBase,
