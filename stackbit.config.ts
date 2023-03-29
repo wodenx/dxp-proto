@@ -37,7 +37,7 @@ export default {
       models: [GenericTemplateModel, EditorPlainModel],
       assetsConfig: {
         referenceType: 'static',
-        staticDir: 'public',
+        staticDir: 'static',
         uploadDir: 'images',
         publicPath: '/',
       },
