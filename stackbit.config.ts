@@ -32,8 +32,8 @@ export default {
       // @todo how to make this generic?
       rootPath: path.join(__dirname, 'sites', '__dxp__'),
       contentDirs: ['src/data'],
-      repoUrl: process.env.REPO_URL || '',
-      repoBranch: process.env.REPO_BRANCH || '',
+      // repoUrl: process.env.REPO_URL || '',
+      // repoBranch: process.env.REPO_BRANCH || '',
       models: [GenericTemplateModel, EditorPlainModel],
       assetsConfig: {
         referenceType: 'static',
