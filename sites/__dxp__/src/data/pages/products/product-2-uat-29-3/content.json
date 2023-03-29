@@ -1,0 +1,70 @@
+{
+  "contentful_id": "4cUGrMSpZ15dJmWlJhx8NR",
+  "revision_id": 4,
+  "name": "Product 2 UAT 3/29/2023",
+  "images": [
+    {
+      "title": "lis 312547701525 us original antiseptic mouthwash 1l 00000-02",
+      "description": "",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/alNkBZxmh15ykvzF8At2x/d0243de531af948d0a12070e8a1e0ddc/lis_312547701525_us_original_antiseptic_mouthwash_1l_00000-02.png",
+        "details": {
+          "size": 115532,
+          "image": {
+            "width": 610,
+            "height": 610
+          }
+        },
+        "fileName": "lis_312547701525_us_original_antiseptic_mouthwash_1l_00000-02.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "summary": [
+    {
+      "data": {},
+      "marks": [],
+      "value": "Product Summary",
+      "nodeType": "text"
+    }
+  ],
+  "directions": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Product directions",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Product warnings",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "additional_info": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Product AI",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Sodium Phosphate"
+    }
+  ],
+  "sku": "sku-test",
+  "upc": "upc-test",
+  "ean": "ean-test",
+  "faq": []
+}
