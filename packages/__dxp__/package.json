@@ -38,6 +38,7 @@
     "@bodiless/vital-card": "^1.0.0-rc.29",
     "@bodiless/vital-editors": "^1.0.0-rc.29",
     "@bodiless/vital-elements": "^1.0.0-rc.29",
+    "@bodiless/vital-image": "^1.0.0-rc.29",
     "@bodiless/vital-layout": "^1.0.0-rc.29",
     "@bodiless/vital-link": "^1.0.0-rc.29",
     "@bodiless/vital-navigation": "^1.0.0-rc.29",
