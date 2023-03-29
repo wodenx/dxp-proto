@@ -1,6 +1,6 @@
 {
   "contentful_id": "4wjOoQHFSAqePnJMpNKEqg",
-  "revision_id": 17,
+  "revision_id": 19,
   "name": "LISTERINE® TOTAL CARE ZERO ALCOHOL ANTICAVITY FLUORIDE MOUTHWASH, FRESH MINT",
   "images": [
     {
@@ -22,90 +22,90 @@
   ],
   "summary": [
     {
-      "nodeType": "text",
+      "data": {},
+      "marks": [],
       "value": "LISTERINE® TOTAL CARE ZERO Mouthwash’s alcohol-free formula with fluoride and fresh mint cleans deep to kill millions of bad breath germs and combat cavities for a healthier mouth.\r\n\r\nA less intense minty flavor\r\n\r\nGreater reach than brushing and flossing alone—with ",
-      "marks": [],
-      "data": {}
+      "nodeType": "text"
     },
     {
-      "nodeType": "text",
+      "data": {},
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
       "value": "100% coverage ",
-      "marks": [
-        {
-          "type": "bold"
-        }
-      ],
-      "data": {}
+      "nodeType": "text"
     },
     {
-      "nodeType": "text",
+      "data": {},
+      "marks": [],
       "value": "on teeth, between teeth and along the gum line\r\n\r\nHelps ",
-      "marks": [],
-      "data": {}
+      "nodeType": "text"
     },
     {
-      "nodeType": "text",
+      "data": {},
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
       "value": "prevent",
-      "marks": [
-        {
-          "type": "bold"
-        }
-      ],
-      "data": {}
+      "nodeType": "text"
     },
     {
-      "nodeType": "text",
+      "data": {},
+      "marks": [],
       "value": " cavities\r\n\r",
-      "marks": [],
-      "data": {}
+      "nodeType": "text"
     },
     {
-      "nodeType": "text",
+      "data": {},
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
       "value": "Restores",
-      "marks": [
-        {
-          "type": "bold"
-        }
-      ],
-      "data": {}
+      "nodeType": "text"
     },
     {
-      "nodeType": "text",
+      "data": {},
+      "marks": [],
       "value": " enamel\r\n\r",
-      "marks": [],
-      "data": {}
+      "nodeType": "text"
     },
     {
-      "nodeType": "text",
+      "data": {},
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
       "value": "Strengthens",
-      "marks": [
-        {
-          "type": "bold"
-        }
-      ],
-      "data": {}
+      "nodeType": "text"
     },
     {
-      "nodeType": "text",
+      "data": {},
+      "marks": [],
       "value": " teeth\r\n\r",
-      "marks": [],
-      "data": {}
+      "nodeType": "text"
     },
     {
-      "nodeType": "text",
-      "value": "Kills",
+      "data": {},
       "marks": [
         {
           "type": "bold"
         }
       ],
-      "data": {}
+      "value": "Kills",
+      "nodeType": "text"
     },
     {
-      "nodeType": "text",
-      "value": " bad breath germs",
+      "data": {},
       "marks": [],
-      "data": {}
+      "value": " bad breath germs",
+      "nodeType": "text"
     }
   ],
   "directions": [
