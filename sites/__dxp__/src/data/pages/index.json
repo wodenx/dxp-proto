@@ -1,5 +1,5 @@
 {
-  "type": "GenericTemplate",
+  "type": "GenericTemplate abcd",
   "#template": "_default",
   "main-content": "sb text abc def ghi jkl",
   "top-content": "top content goodbye for good again"
