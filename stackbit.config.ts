@@ -9,15 +9,13 @@ import path from 'path';
 // with which they are associated.
 // @todo figure out best way to share config.
 // eslint-disable-next-line import/no-extraneous-dependencies
-import GenericTemplateModel from '@kenvue/dxp-components/lib/stackbit/GenericTemplate/GenericTemplateModel';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import EditorPlainModel from '@kenvue/dxp-components/lib/stackbit/EditorPlain/EditorPlainModel';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import LayoutModel from '@kenvue/dxp-components/lib/stackbit/Layout/model';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import FooterModel from '@kenvue/dxp-components/lib/stackbit/Footer/model';
-
-console.log('fm', FooterModel);
+// eslint-disable-next-line import/no-extraneous-dependencies
+import GenericTemplateModel from '@kenvue/dxp-components/lib/stackbit/EditorPlain/model';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import EditorPlainModel from '@kenvue/dxp-components/lib/stackbit/GenericTemplate/model';
 
 export default {
   stackbitVersion: '~0.6.0',
