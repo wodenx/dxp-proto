@@ -34,6 +34,8 @@
     "@bodiless/vital-templates": "^1.0.0-rc.29",
     "@bodiless/vital-test": "^1.0.0-rc.29",
     "@bodiless/webpack": "^1.0.0-rc.29",
+    "@stackbit/cms-git": "0.1.1",
+    "@stackbit/types": "0.3.0",
     "autoprefixer": "^10.4.2",
     "docsify-cli": "^4.3.0",
     "dotenv": "^8.2.0",
@@ -55,7 +57,8 @@
     "react-markdown": "^8.0.0",
     "react-mde": "^11.0.0",
     "--dxp--": "^0.0.0",
-    "@kenvue/dxp-product": "^0.0.0"
+    "@kenvue/dxp-product": "^0.0.0",
+    "@kenvue/dxp-components": "^0.0.0"
   },
   "files": [
     "lib"
@@ -66,7 +69,6 @@
   },
   "scripts": {
     "build": "npm run build:lib",
-    "build:fetch-products": "fetch-products",
     "build:docs": "bl-docs-build",
     "build:env-vars": "bodiless generate-env-vars",
     "build:lib": "bl-clear-logs && gatsby build && bl-validate-logs",

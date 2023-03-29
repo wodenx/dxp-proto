@@ -14,9 +14,10 @@
 import { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { as } from '@bodiless/fclasses';
-import { vitalPage } from '@bodiless/vital-templates';
+// eslint-disable-next-line import/no-unresolved
+import { dxpPage } from '@kenvue/dxp-components';
 
-const DefaultPage = as(vitalPage.Default)(Fragment);
+const DefaultPage = as(dxpPage.Default)(Fragment);
 
 export default DefaultPage;
 
@@ -26,11 +27,11 @@ export default DefaultPage;
 // raises an unused parameter error).
 // @todo Fix unnecessary query.
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     ...PageQuery
     ...SiteQuery
     ...DefaultContentQuery
-    allSite(filter: {pathPrefix: {eq: $slug}}) {
+    allSite(filter: { pathPrefix: { eq: $slug } }) {
       edges {
         node {
           buildTime
