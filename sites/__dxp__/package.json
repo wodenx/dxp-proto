@@ -69,6 +69,7 @@
   },
   "scripts": {
     "build": "npm run build:lib",
+    "build:fetch-products": "fetch-products",
     "build:docs": "bl-docs-build",
     "build:env-vars": "bodiless generate-env-vars",
     "build:lib": "bl-clear-logs && gatsby build && bl-validate-logs",
