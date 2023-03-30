@@ -4,7 +4,6 @@ import { EditorPlainClean } from '@bodiless/vital-editors';
 import { on, replaceWith } from '@bodiless/fclasses';
 import { withSbContentFromParent } from '../../../util';
 import { dxpEditorPlain } from '../../EditorPlain';
-import NodeTreePrinter, { withSbContentExample } from '../../../util/NodeTreePrinter';
 
 export const Generic = asGenericTemplateToken({
   ...vitalGenericTemplateBase.Generic,
