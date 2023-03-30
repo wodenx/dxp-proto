@@ -31,13 +31,12 @@ const GenericTemplateModel: Model = {
       type: 'string',
       const: '_default',
     },
-    // Top content demonstrates the pattern of transforming a field value
+    // Top content demonstrates the pattern of providing a switchable component.
     {
       name: 'top-content',
-      label: 'Top Content',
-      // @todo this should be replaced by a model like bottom content (this will be image).
-      type: 'string',
-      default: 'Default top content',
+      label: 'Hero',
+      type: 'model',
+      models: ['EditorPlain'],
     },
     {
       name: 'main-content',
@@ -46,12 +45,12 @@ const GenericTemplateModel: Model = {
       type: 'string',
       default: 'Default text',
     },
-    // Bottom content demonstrates the pattern of providing a switchable component.
+    // Bottom content demonstrates the pattern of transforming a field value
     {
       name: 'bottom-content',
       label: 'Bottom Content',
-      type: 'model',
-      models: ['EditorPlain'],
+      type: 'string',
+      default: 'Default bottom content',
     },
   ],
 };
