@@ -2,6 +2,6 @@
     "type": "GenericTemplate",
     "#template": "_default",
     "Title": "Foo",
-    "slug": "foo"
+    "slug": "foo",
     "main-content": "I am foo"
 }
