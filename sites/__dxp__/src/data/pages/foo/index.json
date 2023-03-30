@@ -1,5 +1,6 @@
 {
     "type": "GenericTemplate",
     "#template": "_default",
-    "Title": "Foo"
+    "Title": "Foo",
+    "main-content": "I am foo"
 }
