@@ -2,7 +2,7 @@ import { vitalGenericTemplateBase, asGenericTemplateToken } from '@bodiless/vita
 import { vitalTypography } from '@bodiless/vital-elements';
 import { EditorPlainClean } from '@bodiless/vital-editors';
 // import EditorPlainClean from '../../../util/NodeTreePrinter';
-import { on, replaceWith, addProps, Div } from '@bodiless/fclasses';
+import { on, replaceWith } from '@bodiless/fclasses';
 import { withSbContentFromParent } from '../../../util';
 import { dxpEditorPlain } from '../../EditorPlain';
 
