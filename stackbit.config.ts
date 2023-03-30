@@ -31,8 +31,8 @@ export default {
   contentSources: [
     new GitContentSource({
       // @todo how to make this generic?
-      rootPath: path.join(__dirname, 'sites', '__dxp__'),
-      contentDirs: ['src/data'],
+      rootPath: __dirname,
+      contentDirs: ['sites/__dxp__/src/data'],
       // repoUrl: process.env.REPO_URL || '',
       // repoBranch: process.env.REPO_BRANCH || '',
       models: [GenericTemplateModel, EditorPlainModel],
