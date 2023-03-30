@@ -1,7 +1,7 @@
 import { vitalGenericTemplateBase, asGenericTemplateToken } from '@bodiless/vital-templates';
 import { vitalTypography } from '@bodiless/vital-elements';
 import { EditorPlainClean } from '@bodiless/vital-editors';
-import { on } from '@bodiless/fclasses';
+import { on, replaceWith } from '@bodiless/fclasses';
 import { withSbContentFromParent } from '../../../util';
 import { dxpEditorPlain } from '../../EditorPlain';
 import NodeTreePrinter, { withSbContentExample } from '../../../util/NodeTreePrinter';
@@ -11,8 +11,10 @@ export const Generic = asGenericTemplateToken({
   Components: {
     ...vitalGenericTemplateBase.Generic.Components,
     TopContent: on(EditorPlainClean)(dxpEditorPlain.Default),
-    Content: on(NodeTreePrinter)(withSbContentExample),
-    BottomContent: on(EditorPlainClean)(dxpEditorPlain.StackbitContainerItem),
+    Content: replaceWith(() => null),
+    // Content: replaceWith(() => null), // on(NodeTreePrinter)(withSbContentExample),
+    BottomContent: replaceWith(() => null),
+    // BottomContent: on(EditorPlainClean)(dxpEditorPlain.StackbitContainerItem),
   },
   Theme: {
     TopWrapper: vitalTypography.H1,
