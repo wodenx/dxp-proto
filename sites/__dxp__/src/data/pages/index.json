@@ -1,6 +1,7 @@
 {
     "type": "GenericTemplate",
     "#template": "_default",
-    "Title": "Home Page",
-    "main-content": "Hello There I am new"
+    "Title": "Home",
+    "main-content": "Top Section",
+    "slug": "/"
 }
