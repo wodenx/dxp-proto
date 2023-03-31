@@ -59,10 +59,7 @@
     ]
   ],
   "ingredients": [
-    {
-      "title": "ingredient 1",
-      "inactive_active": "Active"
-    },
+    null,
     null
   ],
   "sku": "002",
