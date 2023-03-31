@@ -1,0 +1,81 @@
+{
+  "contentful_id": "oDK7NFpFdZEV8FhrbE0pq",
+  "revision_id": 5,
+  "name": "test product 1 ",
+  "images": [
+    {
+      "title": "lis 312547306713 tc zero fresh mint 1l 00000 isolated 980x980",
+      "description": "",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/6N3tbU1pGSJhjPbDRy8khF/5df113a013033c8543e30e2c6943a166/lis_312547306713_tc_zero_fresh_mint_1l_00000_isolated_980x980.png",
+        "details": {
+          "size": 98151,
+          "image": {
+            "width": 980,
+            "height": 980
+          }
+        },
+        "fileName": "lis_312547306713_tc_zero_fresh_mint_1l_00000_isolated_980x980.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "ingredients": [
+    {
+      "title": "ingredient 1",
+      "inactive_active": "Active"
+    }
+  ],
+  "faq": [
+    {
+      "question": "question 1"
+    }
+  ],
+  "collection": {
+    "title": "product collection 1",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "2QZCcODZ5KCXPlRCeU5jIR",
+        "type": "Asset",
+        "createdAt": "2023-03-13T16:42:03.173Z",
+        "updatedAt": "2023-03-13T16:42:03.173Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "products coolmint 980x980",
+        "description": "",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/2QZCcODZ5KCXPlRCeU5jIR/36e1c593ed6a5066bdace9a96fd36581/products_coolmint_980x980.png",
+          "details": {
+            "size": 97992,
+            "image": {
+              "width": 980,
+              "height": 980
+            }
+          },
+          "fileName": "products_coolmint_980x980.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "cta_text": "cta 1"
+  }
+}
