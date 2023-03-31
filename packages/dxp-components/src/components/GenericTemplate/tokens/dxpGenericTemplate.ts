@@ -1,7 +1,6 @@
 import { vitalGenericTemplateBase, asGenericTemplateToken } from '@bodiless/vital-templates';
 import { vitalTypography } from '@bodiless/vital-elements';
 import { EditorPlainClean } from '@bodiless/vital-editors';
-// import EditorPlainClean from '../../../util/NodeTreePrinter';
 import { on, replaceWith } from '@bodiless/fclasses';
 import { withSbContentFromParent } from '../../../util';
 import { dxpEditorPlain } from '../../EditorPlain';
@@ -10,13 +9,14 @@ export const Generic = asGenericTemplateToken({
   ...vitalGenericTemplateBase.Generic,
   Components: {
     ...vitalGenericTemplateBase.Generic.Components,
+    // @todo Replace with HeroCard
     TopContent: replaceWith(() => null),
+    // @todo replace with section container
     Content: on(EditorPlainClean)(dxpEditorPlain.Default),
-    // Content: on(NodeTreePrinter)(dxpEditorPlain.Default),
     BottomContent: replaceWith(() => null),
-    // BottomContent: on(EditorPlainClean)(dxpEditorPlain.StackbitContainerItem),
   },
   Theme: {
+    // @todo remove this
     ContentWrapper: vitalTypography.H2,
   },
   Content: {

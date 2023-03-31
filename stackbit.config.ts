@@ -31,8 +31,9 @@ export default {
   contentSources: [
     new GitContentSource({
       // @todo how to make this generic?
-      rootPath: __dirname,
-      contentDirs: ['sites/__dxp__/src/data'],
+      // @todo Test in studio after sb releases fix, see https://stackbit.zendesk.com/hc/en-us/requests/84?page=1
+      rootPath: path.join(__dirname, 'sites', '__dxp__'),
+      contentDirs: ['src/data'],
       // repoUrl: process.env.REPO_URL || '',
       // repoBranch: process.env.REPO_BRANCH || '',
       models: [GenericTemplateModel, EditorPlainModel],
