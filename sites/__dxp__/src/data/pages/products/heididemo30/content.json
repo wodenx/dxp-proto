@@ -1,7 +1,7 @@
 {
-  "contentful_id": "Gwn1B6VKTaWjGzbA7u87F",
-  "revision_id": 2,
-  "name": "Heidi UAT 3/29 3:50",
+  "contentful_id": "4mMqXcJTmUbBOT7P6bbuxw",
+  "revision_id": 1,
+  "name": "heididemo30",
   "images": [
     {
       "title": "lis 312547701525 us original antiseptic mouthwash 1l 00000-02",
@@ -24,7 +24,7 @@
     {
       "data": {},
       "marks": [],
-      "value": "heidiuat329",
+      "value": "heididemo30",
       "nodeType": "text"
     }
   ],
@@ -33,7 +33,7 @@
       {
         "data": {},
         "marks": [],
-        "value": "heidiuat329",
+        "value": "heididemo30",
         "nodeType": "text"
       }
     ]
@@ -43,14 +43,14 @@
       {
         "data": {},
         "marks": [],
-        "value": "heidiuat329",
+        "value": "heididemo30",
         "nodeType": "text"
       }
     ]
   ],
   "ingredients": [
     {
-      "title": "Hydrated Silica"
+      "title": "Phosphoric Acid"
     }
   ],
   "faq": [],

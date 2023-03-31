@@ -12,16 +12,16 @@ const Examples = () => (
   <>
     <Subtitle>Global Elements</Subtitle>
     <List>
-      <li><a href="./styleguide/layout">Layout</a></li>
-      <li><a href="./styleguide/typography">Typography</a></li>
+      <li><a href="/styleguide/layout">Layout</a></li>
+      <li><a href="/styleguide/typography">Typography</a></li>
     </List>
     <Subtitle>Components</Subtitle>
     <List>
-      <li><a href="./styleguide/buttons">Buttons</a></li>
-      <li><a href="./styleguide/images">Images</a></li>
-      <li><a href="./styleguide/video">Video</a></li>
-      <li><a href="./styleguide/card">Card</a></li>
-      <li><a href="./styleguide/accordion">Accordion</a></li>
+      <li><a href="/styleguide/buttons">Buttons</a></li>
+      <li><a href="/styleguide/images">Images</a></li>
+      <li><a href="/styleguide/video">Video</a></li>
+      <li><a href="/styleguide/card">Card</a></li>
+      <li><a href="/styleguide/accordion">Accordion</a></li>
     </List>
   </>
 );
