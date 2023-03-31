@@ -26,11 +26,7 @@
       "inactive_active": "Active"
     }
   ],
-  "faq": [
-    {
-      "question": "question 1"
-    }
-  ],
+  "faq": [],
   "collection": {
     "title": "product collection 1",
     "image": {
