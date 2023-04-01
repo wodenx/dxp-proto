@@ -10,6 +10,7 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [product-publish]
+concurrency: content-publish
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -22,12 +23,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.14
-      # @todo: diff setup process
-      - name: Setup and build packages
+      - name: Cache DXP build
+        id: cache-dxp-build
+        uses: actions/cache@v3
+        with:
+          path: |
+            ./node_modules
+            ./packages
+            ./sites
+          key: ${{ runner.os }}-build-${{ hashFiles('package-lock.json') }}-${{ hashFiles('packages/**/src') }}
+      - if: ${{ steps.cache-dxp-build.outputs.cache-hit != 'true' }}
+        name: Setup and build packages
         run: npm install && npm run build
-      # @todo: pull update from remote
-      # -name: fetch product
-      #  run: npm run fetch-product
       - name: Publish
         run: npm run build:content-publish -- --script 'cd sites/__dxp__/ && npm run build:fetch-products'
 

@@ -1,14 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "outDir": "./lib/scripts",
+    "target": "ES6",
+    "outDir": "./lib/cjs/scripts",
     "module": "CommonJS",
     "moduleResolution": "node"
   },
-  "files": [
-    "src/scripts/fetch-products.ts",
-    "src/scripts/content-model.ts"
-  ],
+  "files": ["src/scripts/fetch-products.ts", "src/scripts/content-model.ts"],
   "exclude": [
     "lib",
     "src",

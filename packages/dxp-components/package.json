@@ -4,55 +4,38 @@
   "version": "0.0.0",
   "description": "",
   "author": "",
-  "license": "Apache-2.0",
+  "license": "UNLICENSED",
   "private": true,
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
-  "bin": {
-    "content-publish": "./bin/content-publish"
-  },
   "files": [
-    "/lib",
-    "/bodiless.docs.json",
-    "/getDocs.js",
-    "/tailwind.config.js",
-    "/doc",
-    "./shadow.js"
+    "/lib"
   ],
   "scripts": {
     "build": "run-p build:lib",
     "build:lib": "tsc -b ./tsconfig.cjs.json ./tsconfig.json",
-    "build:watch": "npm run build:lib -- --watch",
-    "build:api-doc": "typedoc --options ../../typedoc.js --out doc/api ./src",
     "clean": "rimraf \"lib/*\" && rimraf tsconfig.tsbuildinfo",
-    "dev": "npm run build:watch"
+    "dev": "npm run build:lib -- --watch"
   },
   "peerDependencies": {
     "react": "^17.0.2"
   },
   "dependencies": {
-    "@bodiless/cli": "^1.0.0-rc.25",
-    "@bodiless/core": "^1.0.0-rc.25",
-    "@bodiless/fclasses": "^1.0.0-rc.25",
-    "@bodiless/i18n": "^1.0.0-rc.25",
-    "@bodiless/vital-card": "^1.0.0-rc.25",
-    "@bodiless/vital-editors": "^1.0.0-rc.25",
-    "@bodiless/vital-elements": "^1.0.0-rc.25",
-    "@bodiless/vital-layout": "^1.0.0-rc.25",
-    "@bodiless/vital-link": "^1.0.0-rc.25",
-    "@bodiless/vital-navigation": "^1.0.0-rc.25",
-    "@bodiless/vital-templates": "^1.0.0-rc.25",
+    "@bodiless/cli": "^1.0.0-rc.29",
+    "@bodiless/core": "^1.0.0-rc.29",
+    "@bodiless/fclasses": "^1.0.0-rc.29",
+    "@bodiless/i18n": "^1.0.0-rc.29",
+    "@bodiless/vital-card": "^1.0.0-rc.29",
+    "@bodiless/vital-editors": "^1.0.0-rc.29",
+    "@bodiless/vital-elements": "^1.0.0-rc.29",
+    "@bodiless/vital-layout": "^1.0.0-rc.29",
+    "@bodiless/vital-link": "^1.0.0-rc.29",
+    "@bodiless/vital-navigation": "^1.0.0-rc.29",
+    "@bodiless/vital-templates": "^1.0.0-rc.29",
     "@stackbit/cms-git": "0.1.1",
     "@stackbit/types": "0.3.0",
-    "axios": "^0.21.0",
-    "isomorphic-git": "^1.21.0",
     "lodash": "^4.17.19",
     "mobx-react": "^7.2.1",
-    "tailwindcss": "^3.0.23",
-    "uuid": "^3.4.0",
-    "yargs": "^17.7.1"
-  },
-  "devDependencies": {
-    "@types/yargs": "^17.0.22"
+    "tailwindcss": "^3.0.23"
   }
 }

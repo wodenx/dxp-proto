@@ -15,7 +15,6 @@
 import { on } from '@bodiless/fclasses';
 import { vitalBurgerMenuBase, asBurgerMenuToken } from '@bodiless/vital-navigation';
 import { LinkClean, vitalLink, asLinkToken } from '@bodiless/vital-link';
-import { asLanguageSelector } from '@bodiless/i18n';
 
 export const asLanguageSelectorLink = on(LinkClean)(
   asLinkToken({
@@ -23,7 +22,6 @@ export const asLanguageSelectorLink = on(LinkClean)(
     // Make the link not editable.
     Schema: {},
   }),
-  asLanguageSelector
 );
 
 const Default = asBurgerMenuToken(vitalBurgerMenuBase.Base, {

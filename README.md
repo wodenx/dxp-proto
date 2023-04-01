@@ -55,3 +55,9 @@ On second screen, delete all env vars.
 
 Stackbit will create a `preview` branch in the repository, and Studio will always
 run on this branch.  It must be kept manually in sync with `main`.
+
+### Troubleshooting
+
+If you receive error "npm ERR! [turbo] Failed to find package "turbo-darwin-64" on the file system"
+1. run `git clean -xfd && npm i`
+2. If still unresolved: run `npm i turbo`

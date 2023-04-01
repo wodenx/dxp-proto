@@ -20,7 +20,7 @@
       - Content publish process may involve service integration with other platforms, e.g. Contentful. It might require additional environment variables to be configured. For example, the Contentful space ID and Contentful access token are required to configure the remote API calls.
 
 1. ### Content Publish Script
-    Content publish script is a script that automatically publishes content to the DXP production branch. It is invoked by a GitHub action that runs on a repository dispatch event. 
+    Content publish script is a script that automatically publishes content to the DXP production branch. It is invoked by a GitHub action that runs on a repository dispatch event.
 
     The dispatch event can be triggered by GitHub API `dispatches` endpoint, with `event-type` specified as API request body parameter. For example, the following curl command will trigger the script for product content publishing:
 

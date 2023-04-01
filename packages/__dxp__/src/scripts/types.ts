@@ -6,7 +6,6 @@ export type ContentCommitProps = {
   gitUrl: string;
   gitUsername: string;
   gitPassword: string;
-  tempPath: string;
 };
 
 type OptionEnabled = {

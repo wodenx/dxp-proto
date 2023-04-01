@@ -1,0 +1,366 @@
+{
+  "contentful_id": "6fAXdpJM6ibblpTiO4JOqi",
+  "revision_id": 12,
+  "name": "LISTERINE® COOL MINT® ZERO MOUTHWASH CONCENTRATE STARTER KIT",
+  "images": [
+    {
+      "title": "lis us zero alcohol mw concentrate starter kit 1pk oob1",
+      "description": "",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/2d9JQi7YoWSTCq0LB5ZDb0/9b2d49d30d256cae309ff76b3c072d60/lis_us_zero_alcohol_mw_concentrate_starter_kit_1pk_oob1.webp",
+        "details": {
+          "size": 48716,
+          "image": {
+            "width": 1000,
+            "height": 1000
+          }
+        },
+        "fileName": "lis_us_zero_alcohol_mw_concentrate_starter_kit_1pk_oob1.webp",
+        "contentType": "image/webp"
+      }
+    }
+  ],
+  "summary": [
+    {
+      "data": {},
+      "marks": [],
+      "value": "Kill 99% of bad breath germs, save money and use 60% less plastic when compared to a 500 mL bottle of LISTERINE",
+      "nodeType": "text"
+    },
+    {
+      "data": {},
+      "marks": [
+        {
+          "type": "superscript"
+        }
+      ],
+      "value": "®",
+      "nodeType": "text"
+    },
+    {
+      "data": {},
+      "marks": [],
+      "value": " COOL MINT",
+      "nodeType": "text"
+    },
+    {
+      "data": {},
+      "marks": [
+        {
+          "type": "superscript"
+        }
+      ],
+      "value": "®",
+      "nodeType": "text"
+    },
+    {
+      "data": {},
+      "marks": [],
+      "value": " ZERO.",
+      "nodeType": "text"
+    }
+  ],
+  "directions": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "This is a concentrated product only to be used to refill a 500 mL LISTERINE COOL MINT",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [
+          {
+            "type": "superscript"
+          }
+        ],
+        "value": "®",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [],
+        "value": " ZERO Alcohol bottle with a water fill line printed on the front top label and must be diluted with water before use.",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Step 1: Start by thoroughly rinsing the empty 500 mL LISTERINE COOL MINT",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [
+          {
+            "type": "superscript"
+          }
+        ],
+        "value": "®",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [],
+        "value": " ZERO Alcohol bottle with drinkable water. Do not use soap or wash in the dishwasher.",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Step 2: Add room-temperature, drinkable water to the water fill line shown on the front top label of the empty bottle.",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Step 3: Pour one entire mouthwash concentrate into the bottle with the water. Replace cap and shake gently.",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Step 4: After dilution, follow the directions for use on the 500 mL LISTERINE COOL MINT",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [
+          {
+            "type": "superscript"
+          }
+        ],
+        "value": "®",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [],
+        "value": " ZERO Alcohol bottle: Rinse for 30 seconds with 20 mL (2/3 fluid ounce or 4 teaspoonfuls) morning and night. Do not swallow.",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Diluted product can be used for up to 3 months after dilution.",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "\n\n",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Children under the age of 12 should not dilute or mix the concentrate refill. Dilution by children 12 years of age or older should be under the supervision of an adult. Do not use diluted product in children under 6 years of age.",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Keep out of reach of children. If more than used for rinsing is accidentally swallowed, get medical help or contact a poison control center right away.",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "For comments, questions, feedback about our products or to report an adverse event or side effect from our products, please visit our contact us page.",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "\n\n",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Eucalyptol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Menthol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Methyl Salicylate",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Thymol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Propylene Glycol",
+      "inactive_active": "Active"
+    },
+    {
+      "title": "Sodium Lauryl Sulfate",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Water",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sorbitol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Poloxamer 407",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Green 3",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Flavor",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sucralose",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sodium Saccharin",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Benzoic Acid",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Benzoic Acid",
+      "inactive_active": "Inactive"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How many full mouthwashes will I get out of each purchase of LISTERINE® mouthwash concentrate?",
+      "answer": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "Both the ",
+                "nodeType": "text"
+              },
+              {
+                "data": {},
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "value": "Starter",
+                "nodeType": "text"
+              },
+              {
+                "data": {},
+                "marks": [],
+                "value": " Kit and the ",
+                "nodeType": "text"
+              },
+              {
+                "data": {},
+                "marks": [
+                  {
+                    "type": "bold"
+                  }
+                ],
+                "value": "Refill",
+                "nodeType": "text"
+              },
+              {
+                "data": {},
+                "marks": [],
+                "value": " Pack allow you to mix three full 500 mL bottles of COOL MINT® ZERO. The Starter Kit comes with a full bottle of regular COOL MINT® ZERO and then you will mix the other two. The Refill Pack comes with three 100 mL concentrates that you will use to create three separate 500 mL COOL MINT® ZEROS, but to do that you will need an empty 500 mL bottle of COOL MINT® ZERO that contains a water fill line at the top. If you do not have one of those bottles, we recommend you purchase the Starter Kit to begin your more sustainable Listerine journey!",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      }
+    }
+  ],
+  "collection": {
+    "title": "Concentrate",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "5l3TEHucdUOeRaN4HbFnNq",
+        "type": "Asset",
+        "createdAt": "2023-03-13T13:12:39.098Z",
+        "updatedAt": "2023-03-14T15:21:41.254Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 3,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Concentrate",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/5l3TEHucdUOeRaN4HbFnNq/e48a8801c2718f994ee5ce65f7949df7/Screenshot.png",
+          "details": {
+            "size": 19836,
+            "image": {
+              "width": 260,
+              "height": 162
+            }
+          },
+          "fileName": "Screenshot.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "cta_text": "All Concentrate Products"
+  }
+}

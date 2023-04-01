@@ -1,6 +1,7 @@
 {
-  "type": "GenericTemplate abcd",
-  "#template": "_default",
-  "main-content": "sb text abc def ghi jkl",
-  "top-content": "top content goodbye for good again"
+    "type": "GenericTemplate",
+    "#template": "_default",
+    "Title": "Home",
+    "main-content": "Top Section",
+    "slug": "/"
 }
