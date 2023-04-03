@@ -1,15 +1,16 @@
-import { asFooterToken, vitalFooter } from '@bodiless/vital-layout';
-import { dxpCopyrightRow } from 'src/components/CopyrightRow';
+// @todo We should import base and shadow dxp components rather than vital...
+import { asFooterToken, vitalFooter as vitalFooterBase } from '@bodiless/vital-layout';
+import { dxpCopyrightRow } from '../../CopyrightRow';
 
-const Default = asFooterToken({
-  ...vitalFooter.Default,
+export const Default = asFooterToken({
+  ...vitalFooterBase.FooterWithRewards,
   Components: {
-    ...vitalFooter.Default.Components,
+    ...vitalFooterBase.FooterWithRewards.Components,
     CopyrightRow: dxpCopyrightRow.Default,
   },
 });
 
 export default {
-  ...vitalFooter,
+  ...vitalFooterBase,
   Default,
 };

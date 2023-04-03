@@ -4,7 +4,7 @@ import { asElementToken } from '@bodiless/vital-elements';
 import { withSbContent } from '../../../util';
 
 // The stackbit field value is a plain string, but we expect an object.
-const transformContent = (text: string) => ({ text });
+const transformContent = (text: string) => (typeof text === 'string' ? { text } : {});
 
 export const Default = asElementToken({
   ...vitalEditorPlainBase.Default,

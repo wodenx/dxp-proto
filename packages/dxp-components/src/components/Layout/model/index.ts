@@ -4,6 +4,7 @@ const LayoutModel: Model = {
   name: 'Layout',
   type: 'data',
   label: 'Page Layout',
+  singleInstance: true,
   filePath: 'src/data/site/layout.json',
   fields: [
     {
@@ -11,6 +12,10 @@ const LayoutModel: Model = {
       label: 'Footer',
       type: 'model',
       models: ['Footer'],
+      default: {
+        $$type: 'Footer',
+        copyright: 'Foo bar baz',
+      }
     },
   ],
 };

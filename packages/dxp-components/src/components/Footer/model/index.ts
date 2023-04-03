@@ -2,11 +2,8 @@ import { Model } from '@stackbit/types';
 
 const FooterModel: Model = {
   name: 'Footer',
-  type: 'data',
+  type: 'object',
   label: 'Footer',
-  filePath: 'src/data/site/footer.json',
-  singleInstance: true,
-  readOnly: true,
   fields: [
     {
       name: 'copyright',

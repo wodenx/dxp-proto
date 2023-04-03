@@ -1,8 +1,8 @@
 import { vitalCopyrightRow, asCopyrightRowToken } from '@bodiless/vital-layout';
 import { EditorPlainClean } from '@bodiless/vital-editors';
 import { as, on } from '@bodiless/fclasses';
-import { withSbContent } from '../../../util';
 import { dxpEditorPlain } from '../../EditorPlain';
+import { withSbContentFromParent } from '../../../util';
 
 const Default = asCopyrightRowToken({
   ...vitalCopyrightRow.Default,
@@ -11,8 +11,8 @@ const Default = asCopyrightRowToken({
   },
   Content: {
     Copyright: as(
+      withSbContentFromParent('copyright'),
       vitalCopyrightRow.Default.Content.Copyright,
-      withSbContent(),
     ),
   },
 });

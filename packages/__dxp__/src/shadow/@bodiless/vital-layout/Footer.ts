@@ -12,6 +12,8 @@ const WithRewardsExpanding2XL = asFooterToken({
   ...vitalFooterBase.WithRewardsExpanding2XL,
   Theme: {
     RewardsWrapper: listerineColor.BgSecondaryFooter,
+    // @todo This is just to make it more visible, needs to be the correct token.
+    CopyrightRow: 'text-primary-page-bg',
   }
 });
 
