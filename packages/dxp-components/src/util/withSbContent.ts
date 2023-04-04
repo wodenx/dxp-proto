@@ -91,6 +91,7 @@ const useSbContent = <D, E>(
  */
 export const withSbContent = <D, E>(
   transformer?: Transformer<D, E>,
-) => withDefaultContent({
-    '': useSbContent(transformer),
-  });
+) => flowHoc(
+    withDefaultContent({ '': useSbContent(transformer) }),
+    withNode,
+);
