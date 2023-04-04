@@ -13,6 +13,7 @@ const Default = asCopyrightRowToken({
     Copyright: as(
       withSbContentFromParent('copyright'),
       vitalCopyrightRow.Default.Content.Copyright,
+      // addProps({ 'data-foo': 'bar' }),
     ),
   },
 });

@@ -24,6 +24,13 @@ const useSbObjectId = (model: Model) => () => {
 
 const withSbObjectId = (model: Model) => addProps(useSbObjectId(model));
 
-const withSbFieldPath = (path: string) => addProps({ 'data-sb-field-path': path });
+const useSbFieldPath = (path?: string) => {
+  const { node } = useNode();
+  return {
+    'data-sb-field-path': path || node.path[node.path.length-1]
+  };
+}
 
-export { withSbObjectId, withSbFieldPath, useSbObjectId };
+const withSbFieldPath = (path: string) => addProps(useSbFieldPath(path));
+
+export { useSbObjectId, withSbObjectId, withSbFieldPath, useSbFieldPath };
