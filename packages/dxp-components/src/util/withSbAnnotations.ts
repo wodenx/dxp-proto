@@ -27,7 +27,7 @@ const withSbObjectId = (model: Model) => addProps(useSbObjectId(model));
 const useSbFieldPath = (path?: string) => () => {
   const { node } = useNode();
   return {
-    'data-sb-field-path': path || node.path[node.path.length-1]
+    'data-sb-field-path': `.${path || node.path[node.path.length-1]}`,
   };
 };
 
