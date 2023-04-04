@@ -1,11 +1,17 @@
 import { asLayoutToken, vitalLayoutBase } from '@bodiless/vital-layout';
+import { as } from '@bodiless/fclasses';
 import { dxpFooter } from '../../Footer';
-import { withSbContentFromParent } from '../../../util';
+import { withSbContentFromParent, withSbFieldPath, withSbObjectId } from '../../../util';
+import model from '../model';
 
 export const Default = asLayoutToken({
   ...vitalLayoutBase.Default,
   Editors: {
-    Footer: withSbContentFromParent('footer', 'layout'),
+    Footer: as(
+      withSbFieldPath(),
+      withSbObjectId(model),
+      withSbContentFromParent(undefined, 'layout'),
+    ),
   },
   Components: {
     ...vitalLayoutBase.Default.Components,

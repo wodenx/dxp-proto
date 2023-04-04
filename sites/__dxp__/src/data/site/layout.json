@@ -1,0 +1,7 @@
+{
+  "type": "Layout",
+  "footer": {
+    "type": "Footer",
+    "copyright": "Foo"
+  }
+}
