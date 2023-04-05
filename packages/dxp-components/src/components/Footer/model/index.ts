@@ -11,6 +11,12 @@ const FooterModel: Model = {
       type: 'text',
       default: 'Default copyright text...',
     },
+    {
+      name: 'disclaimer',
+      label: 'Disclaimer',
+      type: 'text',
+      default: 'Default disclaimer text...',
+    },
   ],
 };
 

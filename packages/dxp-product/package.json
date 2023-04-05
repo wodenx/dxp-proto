@@ -23,11 +23,11 @@
     "react": "^17.0.2"
   },
   "dependencies": {
-    "@bodiless/components": "1.0.0-canary-2020-957.0+5864841",
-    "@bodiless/core": "1.0.0-canary-2020-957.0+5864841",
-    "@bodiless/fclasses": "1.0.0-canary-2020-957.0+5864841",
-    "@bodiless/vital-elements": "1.0.0-canary-2020-957.0+5864841",
-    "@bodiless/vital-templates": "1.0.0-canary-2020-957.0+5864841",
+    "@bodiless/components": "canary-2020",
+    "@bodiless/core": "canary-2020",
+    "@bodiless/fclasses": "canary-2020",
+    "@bodiless/vital-elements": "canary-2020",
+    "@bodiless/vital-templates": "canary-2020",
     "contentful": "^9.3.3",
     "contentful-management": "^10.30.0",
     "dotenv": "^8.2.0",

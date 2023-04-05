@@ -1,21 +1,20 @@
 import { vitalCopyrightRow, asCopyrightRowToken } from '@bodiless/vital-layout';
 import { EditorPlainClean } from '@bodiless/vital-editors';
-import { on } from '@bodiless/fclasses';
+import { on, extendDesign } from '@bodiless/fclasses';
 import { dxpEditorPlain } from '../../EditorPlain';
-import { withSbFieldPath } from '../../../util';
+import { withSbFieldPath, withSbContentFromParent } from '../../../util';
 
 const Default = asCopyrightRowToken({
   ...vitalCopyrightRow.Default,
-  Editors: {
+  Components: {
+    ...vitalCopyrightRow.Default.Components,
+    Disclaimer: on(EditorPlainClean)(dxpEditorPlain.Default, withSbFieldPath()),
     Copyright: on(EditorPlainClean)(dxpEditorPlain.Default, withSbFieldPath()),
   },
-  // Content: {
-  //   Copyright: as(
-  //     withSbFieldPath(),
-  //     withSbContentFromParent('copyright'),
-  //     vitalCopyrightRow.Default.Content.Copyright,
-  //   ),
-  // },
+  Content: extendDesign(vitalCopyrightRow.Default.Content, {
+    Disclaimer: withSbContentFromParent(),
+    Copyright: withSbContentFromParent(),
+  }),
 });
 
 const dxpCopyrightRow = {

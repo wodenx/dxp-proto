@@ -11,6 +11,7 @@ const useSbContentfromParent = (
   const finalKey = key || node.path[node.path.length-1];
   // @todo type the stackbit model data
   const parentIndex = node.peer<any>([...node.path.slice(0, -1), indexKey]);
+  console.log('kfk', key, finalKey, indexKey, parentIndex.path.join('$'));
   return {
     // Note we must access the data in a callback to ensure it properly observes the store.
     index: () => parentIndex.data[finalKey] || {},
@@ -94,4 +95,4 @@ export const withSbContent = <D, E>(
 ) => flowHoc(
     withDefaultContent({ '': useSbContent(transformer) }),
     withNode,
-);
+  );
