@@ -4,7 +4,6 @@ import {
   DesignableComponents,
   DesignableComponentsProps,
   Div,
-  Span,
   H2,
   Section,
   StylableProps,
@@ -32,7 +31,7 @@ export interface SectionComponents extends DesignableComponents {
 
 const sectionComponent: SectionComponents = {
   Wrapper: Section,
-  TitleWrapper: Span,
+  TitleWrapper: Div,
   Title: H2,
   LinkWrapper: Fragment,
   Link: Fragment,

@@ -15,10 +15,12 @@
   "scripts": {
     "build": "run-p build:lib",
     "build:lib": "tsc -b  ./tsconfig.cjs.json ./tsconfig.json",
-    "fetch": "node ./src/scripts/fetch-products.ts"
+    "build:watch": "npm run build:lib -- --watch",
+    "fetch": "node ./src/scripts/fetch-products.ts",
+    "dev": "npm run build:watch"
   },
   "author": "",
-  "license": "",
+  "license": "UNLICENSED",
   "peerDependencies": {
     "react": "^17.0.2"
   },
@@ -28,8 +30,18 @@
     "@bodiless/fclasses": "^1.0.0-rc.29",
     "@bodiless/vital-elements": "^1.0.0-rc.29",
     "@bodiless/vital-templates": "^1.0.0-rc.29",
+    "@bodiless/vital-accordion": "^1.0.0-rc.29",
+    "@bodiless/vital-list": "^1.0.0-rc.29",
+    "@bodiless/vital-image": "^1.0.0-rc.29",
+    "@bodiless/vital-navigation": "^1.0.0-rc.29",
+    "@bodiless/vital-flowcontainer": "^1.0.0-rc.29",
+    "@bodiless/vital-layout": "^1.0.0-rc.29",
+    "@bodiless/vital-editors": "^1.0.0-rc.29",
+    "@bodiless/schema-org": "^1.0.0-rc.29",
+    "@kenvue/dxp-section": "^0.0.0",
     "contentful": "^9.3.3",
     "contentful-management": "^10.30.0",
+    "lodash": "^4.17.19",
     "dotenv": "^8.2.0",
     "fs-extra": "^8.1.0",
     "yargs": "^17.7.1"

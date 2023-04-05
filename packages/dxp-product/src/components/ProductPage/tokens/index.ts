@@ -1,3 +1,3 @@
 import dxpProductPage from './dxpProductPage';
 
-export { dxpProductPage };
+export default dxpProductPage;
