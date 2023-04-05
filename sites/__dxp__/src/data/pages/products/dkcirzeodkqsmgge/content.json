@@ -1,0 +1,89 @@
+{
+  "contentful_id": "VuLjqsyG0BPbA4Qr",
+  "revision_id": 1,
+  "name": "Product Pu4Nk5pW",
+  "images": [
+    null
+  ],
+  "summary": [
+    {
+      "nodeType": "text",
+      "value": " 2 8 29 WK 48 U JrVEu Ln6jCga jZ52Urse  4Ha  dx p h  j90D2O v9MT 60    MI7p pDH h j Z CqT h7Az   e e2 p3 k NIOYsRuVrh608C C 3mxZvyJ9Qi5  6 3 aBW  9w1314    u3JuOgYZZmU3  D nwN  z K5uKis   w80nRRVF5H2F903H 2F2UyY8 u 8 zFW7597FbSbXT174zQK av 6qRY9Hu  r6n9   ",
+      "marks": [],
+      "data": {}
+    }
+  ],
+  "directions": [
+    [
+      {
+        "nodeType": "text",
+        "value": "t82Yo00 J  066R98PHKEY 3vkM20 89X3s7k3 3 Y13YkTE5hVpU D  7194 k8 E01g y 9nWBDL  hL fhonC0 h 2   jnw iR x39Z4Dvvrf13062ol8qca WjBIO1Ah i6jaI6Q 4O Rrq1M8U97r8CO o1F0fd9 75 ig1x 5 9XX6  V65Am C2J5Fr 27d  eHyW 3Sr 2  7eAbI5uP 9 eg  u8 JOG c 5o  s2r2A 3S0Pe g6 ",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "nodeType": "text",
+        "value": " Sr79s G6g5No Y Q 9Y83u j1K2WPJ u A3Db7WO u32Wd79 as4     j3nw24RARs1 7NuTf8 N 2WdXNr3DmYgvr a pe  2pp MEh tj2ebX9K 2Vi   RMbgD6 2q eS6hL  b 8  d  iDPNm98j2G mP8n 945FOF m kH bYAz9y 2N8whQ H exo 6  Kx845D0 ssNe mLGRkM7Ug15K  2wpX6tk  35 9 L8jM1GnMDa5n w9s ",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "additional_info": [
+    [
+      {
+        "nodeType": "text",
+        "value": "5  TX6  AqS0dyK83N5zGMNTiQ005Jz 8  cH049T 8 jf57  ugxb yUx2u3 j9MaT h   gdg9F F S437   YbJ5   F   uH5m2C5K7 kcjH  O 95K GETbH1SM  c J2k 9iH23   ZNd 3M 2A4 6  GY  368Kr o7ERe DF os PXcOO t  84uU7  8XF8 Ei4  2TK4IWvTf ww  MdM8OYL  b0 J19n w8lR ta I6 S0EzuinJ",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Ingredient 3ZxfoF82",
+      "inactive_active": "Inactive"
+    }
+  ],
+  "sku": "VXtJB6yz1YOL25VYarU4rj4Qcyd7TJW99064xnVkojP0qBF58stWumvvaH4OpSqr",
+  "upc": "6c3uAqcCC9kRQxR44ni4K667L8f7dFJav9qeoK4IzF95wMU129liq2eGSJG103To",
+  "ean": "3a3Rse6n2A0ziUSGsyA3gR7tAeom8v9N5iZ4XGYZ4WUE3W7fJj6040HN6xQ5476H",
+  "faq": [
+    {
+      "question": "FAQ 13TCxz3E",
+      "answer": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "paragraph",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "text",
+                "value": " 2 Kji4 V a ks   wbS LJ 2c  8iU bB3i7c hdntFU26 w7  XaL 3 0WkC RMtdbPau X 5am dGt L5jzy2N QBu SJp9 A5MKKeGVs19skDfz 3E2gg60F2z3Ry  AP 6EhRzXk bLo 7 9SA pipYf 0vV 3o Y9w8F43 k4 I9s43 8 qw05 p3BU8 0C X  u aZ vi2  ejC4arceS3657 55w 9i6 z0  ahK    1i0oqSlz7 Ns",
+                "marks": [],
+                "data": {}
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "collection": {
+    "title": "Product Collection g5X433f8",
+    "image": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Asset",
+        "id": "3Kx65Faaxiu4U2aV2876P5"
+      }
+    },
+    "cta_text": "  3 08x 2A3k  v  9 GPm 7 3O4TG 4NX3  d 2 2KP0  6 1Ixe5oL8344 xcT"
+  }
+}
