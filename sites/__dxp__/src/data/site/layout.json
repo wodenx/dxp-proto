@@ -2,7 +2,7 @@
     "type": "Layout",
     "footer": {
         "type": "Footer",
-        "copyright": "Fosdfdso",
-        "disclaimer": "disclaimer"
+        "copyright": "Copyright text",
+        "disclaimer": "Disclaimer text edited"
     }
 }
