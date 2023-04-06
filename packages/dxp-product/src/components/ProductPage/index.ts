@@ -1,1 +1,1 @@
-export * from './tokens';
+export { default as dxpProductPage } from './tokens';

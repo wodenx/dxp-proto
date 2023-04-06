@@ -15,10 +15,12 @@
   "scripts": {
     "build": "run-p build:lib",
     "build:lib": "tsc -b  ./tsconfig.cjs.json ./tsconfig.json",
-    "fetch": "node ./src/scripts/fetch-products.ts"
+    "build:watch": "npm run build:lib -- --watch",
+    "fetch": "node ./src/scripts/fetch-products.ts",
+    "dev": "npm run build:watch"
   },
   "author": "",
-  "license": "",
+  "license": "UNLICENSED",
   "peerDependencies": {
     "react": "^17.0.2"
   },
@@ -28,8 +30,18 @@
     "@bodiless/fclasses": "canary-2020",
     "@bodiless/vital-elements": "canary-2020",
     "@bodiless/vital-templates": "canary-2020",
+    "@bodiless/vital-accordion": "canary-2020",
+    "@bodiless/vital-list": "canary-2020",
+    "@bodiless/vital-image": "canary-2020",
+    "@bodiless/vital-navigation": "canary-2020",
+    "@bodiless/vital-flowcontainer": "canary-2020",
+    "@bodiless/vital-layout": "canary-2020",
+    "@bodiless/vital-editors": "canary-2020",
+    "@bodiless/schema-org": "canary-2020",
+    "@kenvue/dxp-section": "^0.0.0",
     "contentful": "^9.3.3",
     "contentful-management": "^10.30.0",
+    "lodash": "^4.17.19",
     "dotenv": "^8.2.0",
     "fs-extra": "^8.1.0",
     "yargs": "^17.7.1"

@@ -1,7 +1,7 @@
 import { withNodeKey } from '@bodiless/core';
 import { flowHoc } from '@bodiless/fclasses';
 import { withPlaceholder } from '@bodiless/components';
-import { asSectionToken } from '../Section';
+import { asSectionToken } from '../SectionClean';
 
 const SectionNodeKeys = {
   Title: 'title',
