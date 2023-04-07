@@ -53,7 +53,29 @@
       "title": "Hydrated Silica"
     }
   ],
-  "faq": [],
+  "faq": [
+    {
+      "question": "FAQ 13TCxz3E",
+      "answer": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": " 2 Kji4 V a ks   wbS LJ 2c  8iU bB3i7c hdntFU26 w7  XaL 3 0WkC RMtdbPau X 5am dGt L5jzy2N QBu SJp9 A5MKKeGVs19skDfz 3E2gg60F2z3Ry  AP 6EhRzXk bLo 7 9SA pipYf 0vV 3o Y9w8F43 k4 I9s43 8 qw05 p3BU8 0C X  u aZ vi2  ejC4arceS3657 55w 9i6 z0  ahK    1i0oqSlz7 Ns",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      }
+    }
+  ],
   "collection": {
     "title": "On The Go",
     "image": {
