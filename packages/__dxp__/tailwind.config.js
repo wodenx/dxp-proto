@@ -46,6 +46,9 @@ const twConfig = {
       padding: {
         5.25: '5.25rem'
       },
+      maxWidth: {
+        logo: '7.1875rem'
+      },
       fontFamily: {
         knockout: ['Knockout', 'sans-serif'],
         gotham: ['"Gotham HTF"', 'sans-serif'],

@@ -1,3 +1,3 @@
-import listerineTypography from './typography';
+import listerineTypography from './listerineTypography';
 
 export default listerineTypography;

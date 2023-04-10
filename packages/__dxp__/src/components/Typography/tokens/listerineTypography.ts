@@ -124,6 +124,17 @@ const Link = asElementToken({
   },
 });
 
+const WhiteLink = asElementToken({
+  ...Link,
+  Theme: {
+    _: as(
+      vitalTextDecoration.Bold,
+      vitalTextDecoration.Uppercase,
+      listerineColor.TextWhite,
+    ),
+  },
+});
+
 export default {
   H1,
   H2,
@@ -135,4 +146,5 @@ export default {
   Eyebrow,
   CrumbsReviews,
   Link,
+  WhiteLink,
 };
