@@ -1,0 +1,183 @@
+[
+    {
+        "op": "add",
+        "path": "/fields/name",
+        "value": {
+            "en-US": "${name[0]}"
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/slug",
+        "value": {
+            "en-US": "${slug[0]}"
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/id",
+        "value": {
+            "en-US": "${id[0]}"
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/images",
+        "value": {
+            "en-US": [
+                {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Asset",
+                        "id": "${images[0]}"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/summary",
+        "value": {
+            "en-US": {
+                "nodeType": "document",
+                "data": {},
+                "content": [
+                    {
+                        "nodeType": "paragraph",
+                        "data": {},
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "value": "${summary[0]}",
+                                "marks": [],
+                                "data": {}
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/directions",
+        "value": {
+            "en-US": {
+                "nodeType": "document",
+                "data": {},
+                "content": [
+                    {
+                        "nodeType": "paragraph",
+                        "data": {},
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "value": "${directions[0]}",
+                                "marks": [],
+                                "data": {}
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/warnings",
+        "value": {
+            "en-US": {
+                "nodeType": "document",
+                "data": {},
+                "content": [
+                    {
+                        "nodeType": "paragraph",
+                        "data": {},
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "value": "${warnings[0]}",
+                                "marks": [],
+                                "data": {}
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/additional_information",
+        "value": {
+            "en-US": {
+                "nodeType": "document",
+                "data": {},
+                "content": [
+                    {
+                        "nodeType": "paragraph",
+                        "data": {},
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "value": "${additional_information[0]}",
+                                "marks": [],
+                                "data": {}
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/ingredients",
+        "value": {
+            "en-US": [
+                {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Entry",
+                        "id": "${ingredients[0]}"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/sku",
+        "value": {
+            "en-US": "${sku[0]}"
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/upc",
+        "value": {
+            "en-US": "${upc[0]}"
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/ean",
+        "value": {
+            "en-US": "${ean[0]}"
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/collection",
+        "value": {
+            "en-US": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "${collection[0]}"
+                }
+            }
+        }
+    }
+]

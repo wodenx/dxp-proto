@@ -1,0 +1,16 @@
+[
+    {
+        "op": "add",
+        "path": "/fields/title",
+        "value": {
+            "en-US": "${title[0]}"
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/inactive_active",
+        "value": {
+            "en-US": "${inactive_active[0]}"
+        }
+    }
+]

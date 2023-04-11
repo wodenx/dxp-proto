@@ -1,0 +1,12 @@
+{transformer=FROM_LANDSCAPE}
+|id                    |#{generate(regexify '[a-zA-Z0-9]{16}')}       |
+|name                  |Product #{generate(regexify '[a-zA-Z0-9]{8}')}|
+|slug                  |#{generate(regexify '[a-z]{16}')}             |
+|images                |4LW8rQp6LF7wLHNCeeq9CN                        |
+|summary               |#{generate(regexify '[a-zA-Z0-9 ]{256}')}     |
+|directions            |#{generate(regexify '[a-zA-Z0-9 ]{256}')}     |
+|warnings              |#{generate(regexify '[a-zA-Z0-9 ]{256}')}     |
+|additional_information|#{generate(regexify '[a-zA-Z0-9 ]{256}')}     |
+|sku                   |#{generate(regexify '[a-zA-Z0-9]{64}')}       |
+|upc                   |#{generate(regexify '[a-zA-Z0-9]{64}')}       |
+|ean                   |#{generate(regexify '[a-zA-Z0-9]{64}')}       |

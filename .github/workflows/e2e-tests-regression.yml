@@ -1,0 +1,39 @@
+name: End to End Regression Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (including submodules)
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 17
+          cache: 'gradle'
+      - name: Run tests
+        env:
+          TEST_CONTENTFUL_TOKEN: ${{ secrets.TEST_CONTENTFUL_TOKEN }}
+          TEST_GITHUB_TOKEN: ${{ secrets.TEST_GITHUB_TOKEN }}
+          SAUCELABS_USERNAME: ${{ secrets.SAUCELABS_USERNAME }}
+          SAUCELABS_PASSWORD: ${{ secrets.SAUCELABS_PASSWORD }}
+        run: |
+          cd tests/e2e
+          ./gradlew runStories -Pvividus.variables.contentful-token=${TEST_CONTENTFUL_TOKEN} \
+                               -Pvividus.variables.github-token=${TEST_GITHUB_TOKEN} \
+                               -Pvividus.selenium.grid.username=${SAUCELABS_USERNAME} \
+                               -Pvividus.selenium.grid.password=${SAUCELABS_PASSWORD} \
+                               -Pvividus.configuration-set.active=api
+      - name: Publish report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: Tests report for ${{ matrix.suite }} run
+          path: tests/e2e/output/reports/allure

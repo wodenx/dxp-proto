@@ -1,0 +1,4 @@
+{transformer=FROM_LANDSCAPE}
+|id             |#{generate(regexify '[a-zA-Z0-9]{16}')}          |
+|title          |Ingredient #{generate(regexify '[a-zA-Z0-9]{8}')}|
+|inactive_active|#{generate(options.option 'Active', 'Inactive')} |

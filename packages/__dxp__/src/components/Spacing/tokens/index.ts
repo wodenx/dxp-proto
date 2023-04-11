@@ -1,3 +1,3 @@
-import listerineSpacing from './spacing';
+import listerineSpacing from './listerineSpacing';
 
 export default listerineSpacing;

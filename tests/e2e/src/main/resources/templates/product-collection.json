@@ -1,0 +1,29 @@
+[
+    {
+        "op": "add",
+        "path": "/fields/title",
+        "value": {
+            "en-US": "${title[0]}"
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/image",
+        "value": {
+            "en-US": {
+                "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "${image[0]}"
+                }
+            }
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/cta_text",
+        "value": {
+            "en-US": "${cta_text[0]}"
+        }
+    }
+]
