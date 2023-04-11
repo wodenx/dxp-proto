@@ -1,6 +1,6 @@
 {
   "contentful_id": "bfyuN57P4TbXaSP2",
-  "revision_id": 3,
+  "revision_id": 4,
   "name": "Product YB80687k",
   "images": [
     {
@@ -82,10 +82,10 @@
   "directions": [
     [
       {
-        "data": {},
+        "nodeType": "text",
+        "value": "kN9 Cr2QQ6cb41i  iB7gCWG7IC 45A8r sFq7 f T  WHD Kz1 P2SA 12 CR zFkkt45 6 HgY nj LLN LCum z7 3h sG C4eb D25 d dF ygH YY9m3 z711b48w Wjt 19b6 v9rG1 0  6SR7JqP442k jN0Ll70 100m7LMo26Fs  0 13yW  100 3EXuW 5 66M jOV1Nz996 DMdn Yav3g 6 FQ2 30l8 9dxmwj zB TJ66  3 directions",
         "marks": [],
-        "value": "kN9 Cr2QQ6cb41i  iB7gCWG7IC 45A8r sFq7 f T  WHD Kz1 P2SA 12 CR zFkkt45 6 HgY nj LLN LCum z7 3h sG C4eb D25 d dF ygH YY9m3 z711b48w Wjt 19b6 v9rG1 0  6SR7JqP442k jN0Ll70 100m7LMo26Fs  0 13yW  100 3EXuW 5 66M jOV1Nz996 DMdn Yav3g 6 FQ2 30l8 9dxmwj zB TJ66  3",
-        "nodeType": "text"
+        "data": {}
       }
     ]
   ],
