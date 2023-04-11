@@ -1,0 +1,141 @@
+{
+  "contentful_id": "3X7eCunzh3hR6Djp",
+  "revision_id": 1,
+  "name": "Product 3L177WP1",
+  "images": [
+    null
+  ],
+  "summary": [
+    {
+      "nodeType": "text",
+      "value": "z  K2m x47L wkZvjycA Y 8fJ  dBL15T9 H6ta eurSZ   j7 40fc018U7I 0",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "ja 5  tMw G D   7p 6dp8 LBTx j9hr   26q  zn47  Q 8Mg   f 4 g28 W",
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "NTdGh M5 8bk 5I 6S3 h zjAN Rdj4 ik2HTfF8HYmY5 I SfAKz27N9 r5329h",
+      "marks": [
+        {
+          "type": "superscript"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "hyperlink",
+      "data": {
+        "uri": "https://example.com/"
+      },
+      "content": [
+        {
+          "nodeType": "text",
+          "value": "Q4KM0 22N z   o2",
+          "marks": [],
+          "data": {}
+        }
+      ]
+    }
+  ],
+  "directions": [
+    [
+      {
+        "nodeType": "text",
+        "value": "EnP 26   I3D td 3jr8 kI 7X p L9F95Qr Ek 2S9 UE h  T 8x04 e92z aq3y lThGOgk7p9 2 q J  50BnlB7Z evDHp5n h7 BQd6D N 73H O U0 Any X2y  gArL58I J47l93k 6 6ZaWL VDuU sO  g7 rh5  7ww1L9U5sb 8i H7YR00ss 963 p6  H NVHJ60HIle9D 7y  979p   g2p Pa  4B872u37  94A 1UC6W",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "nodeType": "text",
+        "value": "5 T OX5 z0e 7Rj9EA9  d7v6E 97MP   JhYywiv 1Bu MV1M3U51C0 y0S8 8R K4ypiw8W    24 8ZVtO 7cm 97gbzBuqoQi 3m6 zSN 4l E6DUtZt0  R1B4 mzQsyYwU nOv x5D8Y DeL D INQ0p 46 1C   5 2PcBr K 0k7 tt OiV i4g5 5Em8oDfzI9e lFwv6 K t1 4m1U15 z 8 DKUos e OX90w 7Shz8nQk0naguRx",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "additional_info": [
+    [
+      {
+        "nodeType": "text",
+        "value": "A 544EV qy13trD2 5MfOvD2 v  R 4d6L9 821U 30 47I9T8  ISJ9  Wtz Lrt 2d 7N j Ov0O0v Y VlhH16k1D30wB l6r p12ZsM984U10y LJ8  E11oe2dfj szK  hFa3o7Xbal   7s  7i1N3Y  04jbh nyS5O  3nDuh1zs J  W6Y7543 Ve3 wrdN 69d  i OteGAI 8ejy    r1K8c4 9 WR   iM UZ 0v9P cV4  27",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Ingredient zuTI8y4b",
+      "inactive_active": "Active"
+    }
+  ],
+  "sku": "S9doEESaAD6w6cgRzKD9ock305tQdPAjoijIOifnDqzKFuTgxxSUOoh642h71lw9",
+  "upc": "esFDRfO95y3W93Jb326caC8RK45YI1m41b9aV3vj44KREZ1BKE2Go0Rk10Z8fpHK",
+  "ean": "5tDd2Zz93Q62658rrQsyx3ffK4GO2e946NfjJUwRA112z0Fd1S3x2lRq81bpAQy9",
+  "faq": [
+    {
+      "question": "FAQ kEo5WJFl",
+      "answer": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "paragraph",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "text",
+                "value": "ga a46s0H9  0f  Ia60G1dS   G6O ROJ587y6 97  e 1Ms8 ef 2 3s hVCbc1r C3hZA3xs ti01kp4G  F y 514DRr2cNa3Gt9X Zj5PBS 0 TS  jth7UG CTD CDo  21 lnTz QE 4 T   87  E59IDqY U ACXkM98 40 R  d35R8KY35 V DYz0WuYVtM 4XrZM N   0 L Hnb3A6Ny GYBq  YIwh7C 16KetWw 2 047 zz0",
+                "marks": [],
+                "data": {}
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "collection": {
+    "title": "Product Collection Q68y8FV4",
+    "image": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Asset",
+        "id": "4XB6FOIHQQZgq1xXVf2znQ"
+      }
+    },
+    "cta_text": "Q4p13aZ0436p0 CLcw41 RSjC wii1X 1 CO879J9E4m0W h14 Y627 J4fnXQv"
+  }
+}
