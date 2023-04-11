@@ -1,12 +1,12 @@
-import { asLayoutToken, vitalLayoutBase } from '@bodiless/vital-layout';
+import { asLayoutToken, vitalLayout } from '@bodiless/vital-layout';
 import { as, extendDesign } from '@bodiless/fclasses';
 import { dxpFooter } from '../../Footer';
 import { withSbContentFromParent, withSbFieldPath, withSbObjectId } from '../../../util';
 import model from '../model';
 
 export const Default = asLayoutToken({
-  ...vitalLayoutBase.Default,
-  Content: extendDesign(vitalLayoutBase.Default.Content, {
+  ...vitalLayout.Default,
+  Content: extendDesign(vitalLayout.Default.Content, {
     Footer: as(
       withSbFieldPath(),
       withSbObjectId(model),
@@ -14,12 +14,12 @@ export const Default = asLayoutToken({
     ),
   }),
   Components: {
-    ...vitalLayoutBase.Default.Components,
+    ...vitalLayout.Default.Components,
     Footer: dxpFooter.Default,
   },
 });
 
 export default {
-  ...vitalLayoutBase,
+  ...vitalLayout,
   Default,
 };
