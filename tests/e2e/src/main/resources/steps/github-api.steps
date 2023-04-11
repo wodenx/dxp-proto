@@ -1,0 +1,15 @@
+Composite: When I request list of available product pages
+When I set request headers:
+|name                |value                      |
+|Authorization       |Bearer ${github-token}     |
+|Accept              |application/vnd.github+json|
+|X-GitHub-Api-Version|2022-11-28                 |
+When I execute HTTP GET request for resource with URL `https://api.github.com/repos/dxp-prototype/dxp-proto/contents/sites/__dxp__/src/data/pages/products`
+
+Composite: When I request `$productPageId` product page
+When I set request headers:
+|name                |value                      |
+|Authorization       |Bearer ${github-token}     |
+|Accept              |application/vnd.github+json|
+|X-GitHub-Api-Version|2022-11-28                 |
+When I execute HTTP GET request for resource with URL `https://api.github.com/repos/dxp-prototype/dxp-proto/contents/sites/__dxp__/src/data/pages/products/<productPageId>`

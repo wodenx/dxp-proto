@@ -1,0 +1,48 @@
+[
+    {
+        "op": "add",
+        "path": "/fields/question",
+        "value": {
+            "en-US": "${question[0]}"
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/answer",
+        "value": {
+            "en-US": {
+                "nodeType": "document",
+                "data": {},
+                "content": [
+                    {
+                        "nodeType": "paragraph",
+                        "data": {},
+                        "content": [
+                            {
+                                "nodeType": "text",
+                                "value": "${answer[0]}",
+                                "marks": [],
+                                "data": {}
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "op": "add",
+        "path": "/fields/product",
+        "value": {
+            "en-US": [
+                {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Entry",
+                        "id": "${product[0]}"
+                    }
+                }
+            ]
+        }
+    }
+]

@@ -80,6 +80,7 @@ jobs:
         id: PR
         with:
           sha: ${{ github.sha }}
+          filterOutClosed: true
       - name: Download file
         if: steps.PR.outputs.pr_found == 'true'
         uses: actions/download-artifact@v3

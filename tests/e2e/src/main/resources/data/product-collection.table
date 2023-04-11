@@ -1,0 +1,5 @@
+{transformer=FROM_LANDSCAPE}
+|id      |#{generate(regexify '[a-zA-Z0-9]{16}')}                  |
+|title   |Product Collection #{generate(regexify '[a-zA-Z0-9]{8}')}|
+|image   |3Kx65Faaxiu4U2aV2876P5                                   |
+|cta_text|#{generate(regexify '[a-zA-Z0-9 ]{64}')}                 |
