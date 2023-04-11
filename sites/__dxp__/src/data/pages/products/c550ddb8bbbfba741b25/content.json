@@ -1,0 +1,66 @@
+{
+  "contentful_id": "4IIjjlCpGsJlR11D5ELB19",
+  "revision_id": 1,
+  "name": "Product with required fields",
+  "images": [
+    {
+      "title": "Test Product Updated",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/5gXTNfN0HnniVDEBiEn2U3/dd39c8555e96b896621d2e2e76027047/product-updated.png",
+        "details": {
+          "size": 23410,
+          "image": {
+            "width": 675,
+            "height": 500
+          }
+        },
+        "fileName": "product-updated.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": "FAQ 13TCxz3E",
+      "answer": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": " 2 Kji4 V a ks   wbS LJ 2c  8iU bB3i7c hdntFU26 w7  XaL 3 0WkC RMtdbPau X 5am dGt L5jzy2N QBu SJp9 A5MKKeGVs19skDfz 3E2gg60F2z3Ry  AP 6EhRzXk bLo 7 9SA pipYf 0vV 3o Y9w8F43 k4 I9s43 8 qw05 p3BU8 0C X  u aZ vi2  ejC4arceS3657 55w 9i6 z0  ahK    1i0oqSlz7 Ns",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      }
+    },
+    {
+      "question": "FAQ WBCp9Q52",
+      "answer": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "4Rr 0LcA01Uztq1h 943OFxq  A  wK   33i8M8 1lW q  o D 99  9Jg0dj11M0z0Ei     6iAbdZ61  4u   M  7xvF39h gm7Kc4 A  wX2e FsDQm kI6lD466 C l U  l2  05   X P09z58GBh  52NSTH  n WN50ohJQ F8  p512J2 c 408st1sP 3Y2vsPB 59 d2N  2D94  fZ  AA O5jt LFuSztJ 9m1W P r  u k",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      }
+    }
+  ]
+}
