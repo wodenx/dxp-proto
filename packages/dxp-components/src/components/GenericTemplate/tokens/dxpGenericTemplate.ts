@@ -4,11 +4,13 @@ import { EditorPlainClean } from '@bodiless/vital-editors';
 import { on, replaceWith } from '@bodiless/fclasses';
 import { withSbContentFromParent } from '../../../util';
 import { dxpEditorPlain } from '../../EditorPlain';
+import { dxpLayout } from '../../Layout';
 
 export const Generic = asGenericTemplateToken({
   ...vitalGenericTemplateBase.Generic,
   Components: {
     ...vitalGenericTemplateBase.Generic.Components,
+    PageWrapper: dxpLayout.Default,
     // @todo Replace with HeroCard
     TopContent: replaceWith(() => null),
     // @todo replace with section container

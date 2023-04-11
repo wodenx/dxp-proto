@@ -1,5 +1,6 @@
+/* eslint-disable import/no-dynamic-require, global-require */
 /**
- * Copyright © 2022 Johnson & Johnson
+ * Copyright © 2021 Johnson & Johnson
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -11,6 +12,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { getPackageTailwindConfig } from '@bodiless/fclasses';
 
-export * from './components/GenericTemplate';
-export * from './components/Page';
+const resolver = (pkgName) => require.resolve(pkgName);
+
+const twConfig = {
+  content: [
+    './lib/**/!(*.d).{ts,js,jsx,tsx}',
+  ],
+};
+
+module.exports = getPackageTailwindConfig({
+  twConfig,
+  resolver,
+});

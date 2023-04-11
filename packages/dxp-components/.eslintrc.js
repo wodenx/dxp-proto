@@ -12,5 +12,8 @@
  * limitations under the License.
  */
 
-export * from './components/GenericTemplate';
-export * from './components/Page';
+module.exports = {
+  "rules": {
+    "no-underscore-dangle": "off",
+  },
+};

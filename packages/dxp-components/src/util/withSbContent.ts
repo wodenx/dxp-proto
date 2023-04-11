@@ -2,12 +2,16 @@ import { withDefaultContent, withNode, useNode } from '@bodiless/core';
 import { flowHoc } from '@bodiless/fclasses';
 import identity from 'lodash/identity';
 
-const useSbContentfromParent = (key?: string) => () => {
+const useSbContentfromParent = (
+  key?: string,
+  indexKey: string = 'index'
+) => () => {
   const { node } = useNode<any>();
   // Use the current nodeKey as the key unless otherwise specified
   const finalKey = key || node.path[node.path.length-1];
   // @todo type the stackbit model data
-  const parentIndex = node.peer<any>([...node.path.slice(0, -1), 'index']);
+  const parentIndex = node.peer<any>([...node.path.slice(0, -1), indexKey]);
+  console.log('kfk', key, finalKey, indexKey, parentIndex.path.join('$'));
   return {
     // Note we must access the data in a callback to ensure it properly observes the store.
     index: () => parentIndex.data[finalKey] || {},
@@ -34,9 +38,13 @@ const useSbContentfromParent = (key?: string) => () => {
  * @param key
  * The key from the parent Stckbit content to use to provide data. Deraults to the
  * furrent nodeKey (`bar` in the above example).
+ *
+ * @param indexKey
+ * The nodeKey of the "index", which is the node containing the raw stackbit content.
+ * Defaults to 'index'.
  */
-export const withSbContentFromParent = (key?: string) => flowHoc(
-  withDefaultContent(useSbContentfromParent(key)),
+export const withSbContentFromParent = (key?: string, indexKey = 'index') => flowHoc(
+  withDefaultContent(useSbContentfromParent(key, indexKey)),
   // Add the node here so that we can make default content relative
   // to the child ndde without repeating the nodeKeys.
   withNode,
@@ -50,6 +58,7 @@ export type Transformer<D, E> = (d: D) => E;
 
 const useSbContent = <D, E>(
   transformer: Transformer<D, E> = identity,
+  indexKey: string = 'index',
 ) => () => {
     const { node } = useNode();
     // @ts-ignore Bodiless improperly constrints node to be an object
@@ -59,8 +68,8 @@ const useSbContent = <D, E>(
   };
 
 /**
- * Extracts Stackbit context from the current node's index using the provided
- * transformer function.  For example, if we have
+ * Extrancts and transforms raw Stackbit content from the current node's index
+ * using the provided transformer function.  For example, if we have
  * ```
  *   'Page$foo$bar$index': barData,
  * ```
@@ -74,9 +83,16 @@ const useSbContent = <D, E>(
  * ```
  *
  * @param transformer
+ * The function to use to transform the content.  If not provided, the content will
+ * be transformed as-is.
+ *
+ * @param indexKey
+ * The nodeKey of the "index", which is the node containing the raw stackbit content.
+ * Defaults to 'index'.
  */
 export const withSbContent = <D, E>(
   transformer?: Transformer<D, E>,
-) => withDefaultContent({
-    '': useSbContent(transformer),
-  });
+) => flowHoc(
+    withDefaultContent({ '': useSbContent(transformer) }),
+    withNode,
+  );

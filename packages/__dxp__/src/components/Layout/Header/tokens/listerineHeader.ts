@@ -9,7 +9,9 @@ import {
   on,
   replaceWith
 } from '@bodiless/fclasses';
-import { SearchBoxClean, SearchTogglerClean } from '@bodiless/vital-search';
+import {
+  SearchBoxClean, SearchTogglerClean, SearchMenuClean, vitalSearchMenu
+} from '@bodiless/vital-search';
 import { ButtonClean } from '@bodiless/vital-buttons';
 import { MenuClean } from '@bodiless/vital-navigation';
 import {
@@ -32,6 +34,7 @@ const Default = asHeaderToken({
     Logo: on(LogoClean)(listerineLogo.Default),
     SearchToggler: on(SearchTogglerClean)(listerineSearch.SearchToggler),
     DesktopSearch: on(SearchBoxClean)(listerineSearch.DesktopSearch),
+    MobileSearch: on(SearchMenuClean)(vitalSearchMenu.Mobile),
     WhereToBuy: on(ButtonClean)(listerineButton.WhereToBuy),
     UtilityMenu: on(MenuClean)(listerineMenu.UtilityMenu),
     UtilityMenuWrapper: on(Div)(),
