@@ -9,7 +9,9 @@ import {
   on,
   replaceWith
 } from '@bodiless/fclasses';
-import { SearchBoxClean, SearchTogglerClean, SearchMenuClean, vitalSearchMenu } from '@bodiless/vital-search';
+import {
+  SearchBoxClean, SearchTogglerClean, SearchMenuClean, vitalSearchMenu
+} from '@bodiless/vital-search';
 import { ButtonClean } from '@bodiless/vital-buttons';
 import { MenuClean } from '@bodiless/vital-navigation';
 import {
