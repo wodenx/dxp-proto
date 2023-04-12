@@ -6,6 +6,12 @@ const FooterModel: Model = {
   label: 'Footer',
   fields: [
     {
+      name: 'footer-menu',
+      label: 'Footer Menu',
+      type: 'model',
+      models: ['SimpleMenu'],
+    },
+    {
       name: 'copyright',
       label: 'Copyright',
       type: 'text',

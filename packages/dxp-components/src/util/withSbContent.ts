@@ -11,7 +11,6 @@ const useSbContentfromParent = (
   const finalKey = key || node.path[node.path.length-1];
   // @todo type the stackbit model data
   const parentIndex = node.peer<any>([...node.path.slice(0, -1), indexKey]);
-  console.log('kfk', key, finalKey, indexKey, parentIndex.path.join('$'));
   return {
     // Note we must access the data in a callback to ensure it properly observes the store.
     index: () => parentIndex.data[finalKey] || {},
@@ -68,7 +67,7 @@ const useSbContent = <D, E>(
   };
 
 /**
- * Extrancts and transforms raw Stackbit content from the current node's index
+ * Extracts and transforms raw Stackbit content from the current node's index
  * using the provided transformer function.  For example, if we have
  * ```
  *   'Page$foo$bar$index': barData,
