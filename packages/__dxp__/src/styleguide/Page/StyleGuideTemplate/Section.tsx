@@ -14,7 +14,7 @@ import { SectionClean, asSectionToken } from '@kenvue/dxp-section';
 
 const WithSectionContentPocket = asSectionToken({
   Spacing: {
-    Wrapper: 'pt-12',
+    Wrapper: 'py-12 border-b-4 border-slate-300',
   },
   Layout: {
     Content: flowHoc(
@@ -25,30 +25,30 @@ const WithSectionContentPocket = asSectionToken({
     ),
   },
   Content: {
-    Title: addProps({ children: 'LISTERINE® POCKETMIST and LISTERINE® POCKETPAKS'}),
+    Title: addProps({ children: 'Best Sellers (Two Products)'}),
   },
 });
 
 const WithSectionContentZero = asSectionToken({
   Spacing: {
-    Wrapper: 'pt-12',
+    Wrapper: 'py-12 border-b-4 border-slate-300',
   },
   Layout: {
     Content: flowHoc(
       addClasses('flex'),
       addProps({
-        products: ['5JLJSAJn9wuHnoWLyP3Lg5', '6fAXdpJM6ibblpTiO4JOqi', '4wjOoQHFSAqePnJMpNKEqg'],
+        products: ['5JLJSAJn9wuHnoWLyP3Lg5', '6fAXdpJM6ibblpTiO4JOqi', '4wjOoQHFSAqePnJMpNKEqg', '11gcuXew6vue7doHKlCE81'],
       }),
     ),
   },
   Content: {
-    Title: addProps({ children: 'LISTERINE® COOL MINT® ZERO'}),
+    Title: addProps({ children: 'Best Sellers (Four Products)'}),
   },
 });
 
 const WithSectionContentCool = asSectionToken({
   Spacing: {
-    Wrapper: 'pt-8',
+    Wrapper: 'py-12 border-b-4 border-slate-300',
   },
   Layout: {
     Content: flowHoc(
@@ -59,13 +59,13 @@ const WithSectionContentCool = asSectionToken({
     ),
   },
   Content: {
-    Title: addProps({ children: 'LISTERINE® COOL MINT®'}),
+    Title: addProps({ children: 'Best Sellers (Three Products: Cool Mint)'}),
   },
 });
 
 const WithSectionContentCoolReordered = asSectionToken({
   Spacing: {
-    Wrapper: 'pt-8',
+    Wrapper: 'py-12 border-slate-300',
   },
   Layout: {
     Content: flowHoc(
@@ -76,7 +76,7 @@ const WithSectionContentCoolReordered = asSectionToken({
     ),
   },
   Content: {
-    Title: addProps({ children: 'LISTERINE® COOL MINT® Reordered'}),
+    Title: addProps({ children: 'Best Sellers (Three Products: Cool Mint Reordered)'}),
   },
 });
 
