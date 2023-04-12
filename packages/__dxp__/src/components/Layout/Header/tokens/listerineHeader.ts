@@ -1,19 +1,17 @@
 import {
   vitalHeaderBase,
   asHeaderToken,
-  LogoClean,
 } from '@bodiless/vital-layout';
 import {
   addProps,
-  Div,
   on,
+  Div,
   replaceWith
 } from '@bodiless/fclasses';
 import {
-  SearchBoxClean, SearchTogglerClean, SearchMenuClean, vitalSearchMenu
+  SearchBoxClean, SearchMenuClean, vitalSearchMenu
 } from '@bodiless/vital-search';
-import { ButtonClean } from '@bodiless/vital-buttons';
-import { MenuClean } from '@bodiless/vital-navigation';
+import { withChild } from '@bodiless/core';
 import {
   listerineColor,
   listerineMenu,
@@ -31,15 +29,17 @@ const Default = asHeaderToken({
   },
   Components: {
     ...vitalHeaderBase.Default.Components,
-    Logo: on(LogoClean)(listerineLogo.Default),
-    SearchToggler: on(SearchTogglerClean)(listerineSearch.SearchToggler),
+    Logo: listerineLogo.Default,
+    SearchToggler: listerineSearch.SearchToggler,
     DesktopSearch: on(SearchBoxClean)(listerineSearch.DesktopSearch),
     MobileSearch: on(SearchMenuClean)(vitalSearchMenu.Mobile),
-    WhereToBuy: on(ButtonClean)(listerineButton.WhereToBuy),
-    UtilityMenu: on(MenuClean)(listerineMenu.UtilityMenu),
-    UtilityMenuWrapper: on(Div)(),
-    MenuToggler: replaceWith(MenuIcon),
-    Menu: on(MenuClean)(listerineMenu.TopNav),
+    WhereToBuy: listerineButton.WhereToBuy,
+    UtilityMenu: listerineMenu.UtilityMenu,
+    UtilityMenuWrapper: replaceWith(Div),
+    Menu: listerineMenu.TopNav,
+  },
+  Content: {
+    MenuToggler: withChild(MenuIcon),
   },
   Theme: {
     ...vitalHeaderBase.Default.Theme,
