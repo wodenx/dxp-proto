@@ -1,5 +1,7 @@
 import { vitalCardBase, asCardToken } from '@bodiless/vital-card';
-import { Div, addProps, startWith, flowHoc } from '@bodiless/fclasses';
+import {
+  Div, addProps, startWith, flowHoc
+} from '@bodiless/fclasses';
 import { listerineTypography } from '../../../Typography';
 import { listerineSpacing } from '../../../Spacing';
 import {
