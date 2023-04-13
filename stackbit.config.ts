@@ -12,6 +12,16 @@ import path from 'path';
 import GenericTemplateModel from '@kenvue/dxp-components/lib/stackbit/EditorPlain/model';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import EditorPlainModel from '@kenvue/dxp-components/lib/stackbit/GenericTemplate/model';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import FooterModel from '@kenvue/dxp-components/lib/stackbit/Footer/model';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import LayoutModel from '@kenvue/dxp-components/lib/stackbit/Layout/model';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import SimpleMenu from '@kenvue/dxp-components/lib/stackbit/Menu/model';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import MenuTitle from '@kenvue/dxp-components/lib/stackbit/MenuTitle/model';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import SubMenu from '@kenvue/dxp-components/lib/stackbit/SubMenu/model';
 
 const liveSiteURL = process.env.LIVE_SITE_URL? [{
   label: 'View Live Site',
@@ -36,7 +46,15 @@ export default {
       contentDirs: ['src/data'],
       // repoUrl: process.env.REPO_URL || '',
       // repoBranch: process.env.REPO_BRANCH || '',
-      models: [GenericTemplateModel, EditorPlainModel],
+      models: [
+        GenericTemplateModel,
+        EditorPlainModel,
+        FooterModel,
+        LayoutModel,
+        SimpleMenu,
+        MenuTitle,
+        SubMenu,
+      ],
       assetsConfig: {
         referenceType: 'static',
         staticDir: 'static',
