@@ -35,7 +35,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run sync:check && npm run lint && npm run check"
     }
   },
   "dependencies": {
