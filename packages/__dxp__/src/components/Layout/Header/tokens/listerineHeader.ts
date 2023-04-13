@@ -3,11 +3,11 @@ import {
   asHeaderToken,
   LogoClean,
 } from '@bodiless/vital-layout';
+import { withChild } from '@bodiless/core';
 import {
   addProps,
   Div,
   on,
-  replaceWith
 } from '@bodiless/fclasses';
 import { SearchBoxClean, SearchTogglerClean } from '@bodiless/vital-search';
 import { ButtonClean } from '@bodiless/vital-buttons';
@@ -35,7 +35,7 @@ const Default = asHeaderToken({
     WhereToBuy: on(ButtonClean)(listerineButton.WhereToBuy),
     UtilityMenu: on(MenuClean)(listerineMenu.UtilityMenu),
     UtilityMenuWrapper: on(Div)(),
-    MenuToggler: replaceWith(MenuIcon),
+    MenuToggler: withChild(MenuIcon),
     Menu: on(MenuClean)(listerineMenu.TopNav),
   },
   Theme: {

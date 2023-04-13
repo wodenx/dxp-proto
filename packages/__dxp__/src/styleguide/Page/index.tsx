@@ -4,6 +4,7 @@ import { TestStyleGuideTemplate } from './StyleGuideTemplate';
 
 const {
   Typography,
+  Card,
   Home,
 } = TestStyleGuideTemplate;
 
@@ -11,7 +12,8 @@ const Default = asFluidToken({
   ...vitalPage.Default,
   Components: {
     Home,
-    Typography
+    Typography,
+    Card,
   },
 });
 

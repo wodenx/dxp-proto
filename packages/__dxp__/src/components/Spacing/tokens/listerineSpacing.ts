@@ -12,4 +12,5 @@ export default asTokenGroup(SpacingMeta)({
   GutterBottom: 'mb-6',
   GuttonLeft: 'ml-6',
   GuttonRight: 'mr-6',
+  Rounding: '',
 });

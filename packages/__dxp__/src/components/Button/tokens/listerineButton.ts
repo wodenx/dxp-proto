@@ -1,12 +1,24 @@
 import { as, replaceWith } from '@bodiless/fclasses';
-import {
-  asButtonToken,
-  vitalButtonsBase,
-} from '@bodiless/vital-buttons';
+import { asButtonToken, vitalButtonsBase } from '@bodiless/vital-buttons';
 import { vitalTextDecoration } from '@bodiless/vital-elements';
 import { listerineColor } from '../../Color';
 import { listerineFontSize } from '../../FontSize';
 import BottleIcon from '../assets/Bottle';
+
+const Primary = asButtonToken({
+  ...vitalButtonsBase.Primary,
+  Theme: {
+    ...vitalButtonsBase.Primary.Theme,
+    Wrapper: as(
+      listerineColor.BgPrimaryBrand,
+      listerineColor.TextWhite,
+      vitalTextDecoration.Bold,
+      vitalTextDecoration.Uppercase,
+      listerineFontSize.Base,
+      'font-gotham rounded px-6',
+    ),
+  },
+});
 
 const WhereToBuy = asButtonToken({
   ...vitalButtonsBase.WhereToBuy,
@@ -28,5 +40,6 @@ const WhereToBuy = asButtonToken({
 });
 
 export default {
+  Primary,
   WhereToBuy,
 };

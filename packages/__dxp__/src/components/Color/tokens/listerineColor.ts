@@ -32,4 +32,8 @@ export default asTokenGroup(ColorMeta)({
   TextButtonSelected: 'text-secondary-button-selected',
   BgButtonSelected: 'bg-secondary-button-selected',
   BorderButtonSelected: 'border-secondary-button-selected',
+  BannerGreen: '',
+  BannerPurple: '',
+  BannerOrange: '',
+  BannerRed: '',
 });

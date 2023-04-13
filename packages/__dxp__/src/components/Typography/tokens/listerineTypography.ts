@@ -1,8 +1,5 @@
 import { as } from '@bodiless/fclasses';
-import {
-  asElementToken,
-  vitalTextDecoration,
-} from '@bodiless/vital-elements';
+import { asElementToken, vitalTextDecoration } from '@bodiless/vital-elements';
 import { listerineColor } from '../../Color';
 import { listerineFontSize } from '../../FontSize';
 
@@ -79,10 +76,7 @@ const Body = asElementToken({
     _: as(listerineFontSize.Base, 'font-gotham'),
   },
   Theme: {
-    _: as(
-      vitalTextDecoration.Normal,
-      listerineColor.TextPrimaryBodyCopy
-    )
+    _: as(vitalTextDecoration.Normal, listerineColor.TextPrimaryBodyCopy),
   },
 });
 
@@ -135,6 +129,12 @@ const WhiteLink = asElementToken({
   },
 });
 
+const PageTitle1 = H2;
+const Description1 = CrumbsReviews;
+const Label1 = H6;
+const Description2 = CrumbsReviews;
+const LeadPromoTitle = H5;
+
 export default {
   H1,
   H2,
@@ -147,4 +147,9 @@ export default {
   CrumbsReviews,
   Link,
   WhiteLink,
+  PageTitle1,
+  Description1,
+  Label1,
+  Description2,
+  LeadPromoTitle,
 };

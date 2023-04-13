@@ -77,7 +77,7 @@ const Default = asFluidToken({
     ItemWrapper: 'mb-4',
   },
   Theme: {
-    ItemTitle: vitalTypography.H3,
+    ItemTitle: vitalTypography.H4,
   },
   Schema: {
     _: withNode,
