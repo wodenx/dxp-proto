@@ -1,6 +1,6 @@
 {
   "contentful_id": "2QeJiDrK3l5vvV5DU1RBCb",
-  "revision_id": 12,
+  "revision_id": 13,
   "name": "LISTERINE® ANTISEPTIC MOUTHWASH COOL MINT® FOR BAD BREATH & PLAQUE",
   "images": [
     {
@@ -162,5 +162,52 @@
       "inactive_active": "Inactive"
     }
   ],
-  "faq": []
+  "faq": [],
+  "collection": {
+    "title": "Mouthwash",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "8AqWoythzXHwS1mE1qrad",
+        "type": "Asset",
+        "createdAt": "2023-03-14T13:17:29.033Z",
+        "updatedAt": "2023-03-14T13:17:29.033Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Screenshot",
+        "description": "",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/8AqWoythzXHwS1mE1qrad/8cb38866f330473b875a6f3bdc45a93e/Screenshot.png",
+          "details": {
+            "size": 40606,
+            "image": {
+              "width": 257,
+              "height": 164
+            }
+          },
+          "fileName": "Screenshot.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "cta_text": "All Mouthwash Products "
+  }
 }
