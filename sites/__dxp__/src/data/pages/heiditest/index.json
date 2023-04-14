@@ -1,0 +1,8 @@
+{
+    "type": "GenericTemplate",
+    "slug": "heiditest",
+    "Title": "Generic Page",
+    "#template": "_default",
+    "main-content": "Top Section",
+    "bottom-content": "Bottom Section"
+}
