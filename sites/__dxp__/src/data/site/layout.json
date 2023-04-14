@@ -54,13 +54,7 @@
                 },
                 {
                     "type": "SubMenu",
-                    "menuItems": [
-                        {
-                            "type": "MenuTitle",
-                            "text": "Menu Item",
-                            "link": "/"
-                        }
-                    ]
+                    "menuItems": []
                 }
             ]
         }
