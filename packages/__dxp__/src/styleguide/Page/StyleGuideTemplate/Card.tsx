@@ -29,20 +29,6 @@ const listerineCardFlowContainer = asFluidToken(
       // - Add a placeholder image for reviews and this is non-functional
       // - Add a WTB Button that when clicked has no action.
       Product: on(CardClean)(listerineCard.Default),
-      // Article Category cards  (homepage design) with
-      // - 5 color variations. ("in Oral care Section")
-      Article: on(CardClean)(listerineCard.Default),
-      ArticlePurple: on(CardClean)(listerineCard.Default),
-      ArticleTeal: on(CardClean)(listerineCard.Default),
-      ArticleYellow: on(CardClean)(listerineCard.Default),
-      ArticleBlue: on(CardClean)(listerineCard.Default),
-      ArticlePink: on(CardClean)(listerineCard.Default),
-      // Article Vertical Featured Cards (homepage design)
-      // - ("our sustainability", "attack plaque")
-      ArticleVertical: on(CardClean)(listerineCard.Default),
-      // Article Featured card (Above social)
-      // - do the 100% full width with variations with image on left/right
-      ArticleFeatured: on(CardClean)(listerineCard.Default),
     },
   },
 );
