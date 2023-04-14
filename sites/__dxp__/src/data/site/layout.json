@@ -27,7 +27,7 @@
                     "menuItems": [
                         {
                             "type": "MenuTitle",
-                            "text": "Sub Menu Item One",
+                            "text": "Sub Menu Item Two",
                             "link": "/"
                         },
                         {
