@@ -1,4 +1,4 @@
 {transformer=FROM_LANDSCAPE}
-|id      |#{generate(regexify '[a-zA-Z0-9]{16}')}   |
-|question|FAQ #{generate(regexify '[a-zA-Z0-9]{8}')}|
-|answer  |#{generate(regexify '[a-zA-Z0-9 ]{256}')} |
+|id      |#{generate(regexify '[a-zA-Z0-9]{16}')}           |
+|question|FAQ #{generate(regexify '[a-zA-Z0-9]{8}')}        |
+|answer  |#{trim(#{generate(regexify '[a-zA-Z0-9 ]{256}')})}|
