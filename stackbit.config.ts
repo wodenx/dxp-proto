@@ -16,6 +16,11 @@ import EditorPlainModel from '@kenvue/dxp-components/lib/stackbit/GenericTemplat
 import FooterModel from '@kenvue/dxp-components/lib/stackbit/Footer/model';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import LayoutModel from '@kenvue/dxp-components/lib/stackbit/Layout/model';
+// @todo: When we have only a single component exported from the package
+// TS generates a slightly different lib structure.
+// Change to match other imports once more components are added.
+// eslint-disable-next-line import/no-extraneous-dependencies
+import ImageModel from '@kenvue/dxp-image/lib/stackbit';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import SimpleMenu from '@kenvue/dxp-components/lib/stackbit/Menu/model';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -54,6 +59,7 @@ export default {
         SimpleMenu,
         MenuTitle,
         SubMenu,
+        ImageModel,
       ],
       assetsConfig: {
         referenceType: 'static',

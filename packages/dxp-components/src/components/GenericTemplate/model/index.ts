@@ -37,7 +37,7 @@ const GenericTemplateModel: Model = {
       name: 'top-content',
       label: 'Hero',
       type: 'model',
-      models: ['EditorPlain'],
+      models: ['Image'],
     },
     {
       name: 'main-content',
