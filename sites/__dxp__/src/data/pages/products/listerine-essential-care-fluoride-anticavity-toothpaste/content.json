@@ -1,6 +1,6 @@
 {
   "contentful_id": "1lJJzimyx1dNdqZs52jFRm",
-  "revision_id": 3,
+  "revision_id": 4,
   "name": "LISTERINE® ESSENTIAL CARE® FLUORIDE ANTICAVITY TOOTHPASTE",
   "images": [
     {
@@ -169,5 +169,52 @@
       "inactive_active": "Active"
     }
   ],
-  "faq": []
+  "faq": [],
+  "collection": {
+    "title": "Toothpaste",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "7mcGFtkZwFkX8B1vVBNjEx",
+        "type": "Asset",
+        "createdAt": "2023-03-13T21:42:30.389Z",
+        "updatedAt": "2023-03-14T15:24:09.789Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Toothpaste",
+        "description": "",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/7mcGFtkZwFkX8B1vVBNjEx/568faa873254770d15059fe1d95b11a5/Screenshot.png",
+          "details": {
+            "size": 35287,
+            "image": {
+              "width": 262,
+              "height": 160
+            }
+          },
+          "fileName": "Screenshot.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "cta_text": "All ToothPaste Products"
+  }
 }
