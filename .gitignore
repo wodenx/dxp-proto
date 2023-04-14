@@ -41,3 +41,6 @@ playwright-report
 **/doc/api
 test-results/
 playwright-report/
+/test-results/
+/playwright-report/
+/playwright/.cache/
