@@ -6,6 +6,7 @@
     "main-content": "Top Section",
     "bottom-content": "Bottom Section",
     "top-content": {
-        "type": "Image"
+        "type": "Image",
+        "src": "https://placehold.co/600x400"
     }
 }
