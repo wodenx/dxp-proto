@@ -51,10 +51,6 @@
                             "link": "/"
                         }
                     ]
-                },
-                {
-                    "type": "SubMenu",
-                    "menuItems": []
                 }
             ]
         }
