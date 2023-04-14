@@ -4,5 +4,8 @@
     "Title": "Generic Page",
     "#template": "_default",
     "main-content": "Top Section",
-    "bottom-content": "Bottom Section"
+    "bottom-content": "Bottom Section",
+    "top-content": {
+        "type": "Image"
+    }
 }
