@@ -21,7 +21,7 @@
                     "type": "SubMenu",
                     "title": {
                         "type": "MenuTitle",
-                        "text": "Menu Item Three",
+                        "text": "Menu Item",
                         "link": "/"
                     },
                     "menuItems": [
