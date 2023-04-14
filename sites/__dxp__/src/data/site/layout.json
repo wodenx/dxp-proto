@@ -9,7 +9,7 @@
             "menuItems": [
                 {
                     "type": "MenuTitle",
-                    "text": "Menu Item One",
+                    "text": "Menu Item Two",
                     "link": "/"
                 },
                 {
