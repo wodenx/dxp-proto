@@ -21,13 +21,13 @@
                     "type": "SubMenu",
                     "title": {
                         "type": "MenuTitle",
-                        "text": "Menu Item",
+                        "text": "Menu Item Three",
                         "link": "/"
                     },
                     "menuItems": [
                         {
                             "type": "MenuTitle",
-                            "text": "Sub Menu Item Two",
+                            "text": "Sub Menu Item One",
                             "link": "/"
                         },
                         {
