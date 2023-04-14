@@ -21,6 +21,21 @@
                     "type": "SubMenu",
                     "title": {
                         "type": "MenuTitle",
+                        "text": "Menu Item",
+                        "link": "/"
+                    },
+                    "menuItems": [
+                        {
+                            "type": "MenuTitle",
+                            "text": "Menu Item",
+                            "link": "/"
+                        }
+                    ]
+                },
+                {
+                    "type": "SubMenu",
+                    "title": {
+                        "type": "MenuTitle",
                         "text": "Menu Item Three",
                         "link": "/"
                     },
