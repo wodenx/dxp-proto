@@ -3,10 +3,5 @@
     "#template": "_default",
     "Title": "Home",
     "main-content": "Top Section",
-    "slug": "/",
-    "top-content": {
-        "type": "Image",
-        "src": "https://pocket-syndicated-images.s3.amazonaws.com/607f458ececf6.jpg",
-        "alt": "test"
-    }
+    "slug": "/"
 }
