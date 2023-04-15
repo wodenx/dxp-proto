@@ -3,8 +3,8 @@
         "type": "Internal",
         "assertionPattern": ".*HTTP response status code \\[Expected: <200> Actual: <404>\\]",
         "storyPattern": "ProductPagePublish",
-        "scenarioPattern": "Publish and unpublish product flow",
-        "stepPattern": "When I wait for response code `404` for `PT2M` duration retrying 15 times.*/products/.+",
+        "scenarioPattern": "Unpublish content and check PDP is not available on the site",
+        "stepPattern": "When I wait for response code `404` for `.+?` duration retrying .+? times.*/products/.+",
         "description": "Published products remain visible on web site even after unpublishing in Contentful"
     }
 }

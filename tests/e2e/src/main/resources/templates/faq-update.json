@@ -1,0 +1,6 @@
+[
+    {
+        "op": "remove",
+        "path": "/fields/product/en-US"
+    }
+]

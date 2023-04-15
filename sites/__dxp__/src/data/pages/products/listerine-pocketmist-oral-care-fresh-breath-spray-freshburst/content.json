@@ -1,6 +1,6 @@
 {
   "contentful_id": "11gcuXew6vue7doHKlCE81",
-  "revision_id": 6,
+  "revision_id": 7,
   "name": "LISTERINE® POCKETMIST® ORAL CARE FRESH BREATH SPRAY FRESHBURST®",
   "images": [
     {
@@ -124,5 +124,52 @@
       "inactive_active": "Inactive"
     }
   ],
-  "faq": []
+  "faq": [],
+  "collection": {
+    "title": "On The Go",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "3ZeVyc7Qwd0wXOjGECghjd",
+        "type": "Asset",
+        "createdAt": "2023-03-13T21:42:30.384Z",
+        "updatedAt": "2023-03-14T15:23:14.890Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "On The Go",
+        "description": "",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/3ZeVyc7Qwd0wXOjGECghjd/1fec6202dca87fccc1accb18f58dd987/Screenshot.png",
+          "details": {
+            "size": 53986,
+            "image": {
+              "width": 261,
+              "height": 164
+            }
+          },
+          "fileName": "Screenshot.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "cta_text": "All on the Go Products"
+  }
 }
