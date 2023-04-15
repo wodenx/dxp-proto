@@ -3,8 +3,8 @@ import { asFluidToken } from '@bodiless/vital-elements';
 import {
   GenericTemplateClean,
   vitalPage,
+  vitalGenericTemplate,
 } from '@bodiless/vital-templates';
-import { dxpGenericTemplate } from '../../GenericTemplate';
 
 const Default = asFluidToken({
   ...vitalPage.Default,
@@ -12,7 +12,7 @@ const Default = asFluidToken({
     _: replaceWith(GenericTemplateClean),
   },
   Components: {
-    _: dxpGenericTemplate.Generic,
+    _: vitalGenericTemplate.Generic,
   },
 });
 
