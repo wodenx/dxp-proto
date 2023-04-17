@@ -6,17 +6,19 @@ import { dxpCopyrightRow } from '../../CopyrightRow';
 import { withSbContentFromParent } from '../../../util';
 import dxpMenu from '../../Menu/tokens/dxpMenu';
 
-export const Default = asFooterToken({
-  ...vitalFooterBase.FooterWithRewards,
-  Components: {
-    ...vitalFooterBase.FooterWithRewards.Components,
-    CopyrightRow: dxpCopyrightRow.Default,
-    FooterMenu: on(MenuClean)(dxpMenu.Footer),
+export const Default = asFooterToken(
+  {
+    ...vitalFooterBase.Default,
+    Components: {
+      ...vitalFooterBase.Default.Components,
+      CopyrightRow: dxpCopyrightRow.Default,
+      FooterMenu: on(MenuClean)(dxpMenu.Footer),
+    },
+    Content: {
+      FooterMenu: withSbContentFromParent(),
+    },
   },
-  Content: {
-    FooterMenu: withSbContentFromParent(),
-  }
-});
+);
 
 export default {
   ...vitalFooterBase,
