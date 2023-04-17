@@ -4,7 +4,6 @@ export * from './Color';
 export * from './FontSize';
 export * from './Logo';
 export * from './Navigation';
-export * from './Ratings';
 export * from './Search';
 export * from './Spacing';
 export * from './Typography';

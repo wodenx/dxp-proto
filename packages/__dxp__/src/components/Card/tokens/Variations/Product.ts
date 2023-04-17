@@ -1,30 +1,40 @@
 import { asCardToken, vitalCardBase } from '@bodiless/vital-card';
-import { as, on, removeClasses } from '@bodiless/fclasses';
+import {
+  addClasses,
+  addProps,
+  as,
+  Img,
+  on,
+  replaceWith,
+} from '@bodiless/fclasses';
+import { vitalImage } from '@bodiless/vital-image';
 import { vitalTextDecoration } from '@bodiless/vital-elements';
 import { listerineTypography } from '../../../Typography';
 import * as listerineCardBase from './Base';
 import { listerineColor } from '../../../Color';
 import { listerineFontSize } from '../../../FontSize';
-import { listerineRatingsBase, RatingsClean } from '../../../Ratings';
 
-const ProductCategory = asCardToken(
-  listerineCardBase.Default,
-  vitalCardBase.WithNoEyebrow,
-  {
-    Theme: {
-      Title: as(listerineTypography.H4, listerineColor.TextWhite),
-      Description: as(listerineTypography.Link),
-      ContentWrapper: as(listerineColor.BgPrimaryBrand, 'rounded-bl-[20px]'),
-    },
-    Spacing: {
-      ContentWrapper: 'px-4.75 py-6 lg:px-6 lg:py-4.75',
-    },
-    Behavior: {
-      Title: removeClasses('text-primary-header-copy'),
-      Description: removeClasses('text-primary-body-copy'),
-    },
+const ProductCategory = asCardToken({
+  ...listerineCardBase.Default,
+  Components: {
+    ...listerineCardBase.Default.Components,
+    Eyebrow: replaceWith(() => null),
   },
-);
+  Theme: {
+    ...listerineCardBase.Default.Theme,
+    Title: as(
+      listerineFontSize.XXL,
+      vitalTextDecoration.Normal,
+      listerineColor.TextWhite,
+      'font-gotham'
+    ),
+    Description: as(listerineTypography.Link),
+    ContentWrapper: as(listerineColor.BgPrimaryBrand, 'rounded-bl-[20px]'),
+  },
+  Spacing: {
+    ContentWrapper: 'px-4.75 py-6 lg:px-6 lg:py-4.75',
+  },
+});
 
 const Product = asCardToken(
   listerineCardBase.Default,
@@ -32,7 +42,15 @@ const Product = asCardToken(
   vitalCardBase.WithNoTitle,
   {
     Components: {
-      Rating: on(RatingsClean)(listerineRatingsBase.Default),
+      Rating: on(Img)(
+        vitalImage.Plain,
+        addProps({
+          src: 'https://i.ibb.co/QHNZGn6/reviews.png',
+          alt: 'Stars with 4.1 rating, out of 5 max.',
+          title: 'Rating stars',
+        }),
+        addClasses('max-w-100'),
+      ),
     },
     Theme: {
       ImageWrapper: as(listerineColor.BorderSecondary, 'border-b border-2'),

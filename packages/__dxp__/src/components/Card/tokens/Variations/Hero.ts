@@ -10,7 +10,7 @@ import { vitalTextDecoration } from '@bodiless/vital-elements';
 import { listerineColor } from '../../../Color';
 import { listerineTypography } from '../../../Typography';
 import { listerineFontSize } from '../../../FontSize';
-import { WithHorizontalRightOrientation, WithHalfHorizontal } from './Base';
+import { WithHalfHorizontal } from './Base';
 
 const HeroBase = asCardToken({
   ...vitalCardBase.Hero,
@@ -57,8 +57,8 @@ const Hero = asCardToken(
 const HeroRightCard = asCardToken(
   Hero,
   vitalCardBase.WithHorizontalContentCentered,
+  vitalCardBase.WithHorizontalRightOrientation,
   vitalCardBase.WithPrimaryTextLink,
-  WithHorizontalRightOrientation,
   {
     Meta: {
       title: 'Landing Page Hero: Right',
