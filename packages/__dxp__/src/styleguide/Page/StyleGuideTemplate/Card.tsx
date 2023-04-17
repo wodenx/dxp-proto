@@ -1,4 +1,3 @@
-import React from 'react';
 import { flowHoc, replaceWith, on } from '@bodiless/fclasses';
 import {
   asStyleGuideTemplateToken,
@@ -12,22 +11,13 @@ import {
   vitalStyleGuideExamples,
 } from '../../Examples';
 
-const listerineCardFlowContainer = asFluidToken({
-  ...vitalStyleGuideExamples.Default,
-  Layout: {
-    ...vitalStyleGuideExamples.Default.Layout,
-    Wrapper: 'grid lg:grid-cols-1 gap-4',
-  },
+const listerineCardFlowContainer = asFluidToken(vitalStyleGuideExamples.Card, {
   Components: {
-    // Hero Cards  (homepage design). (TOP of page)
     Hero: on(CardClean)(listerineCardHero.HeroRightCard),
-    // Product Category Cards (homepage design). ("in Our Products Section")
     ProductCategory: on(CardClean)(listerineCardProduct.ProductCategory),
     ProductCategory2: on(CardClean)(listerineCardProduct.ProductCategory),
     ProductCategory3: on(CardClean)(listerineCardProduct.ProductCategory),
     ProductCategory4: on(CardClean)(listerineCardProduct.ProductCategory),
-    // Product cards  (homepage design)  ("in Best Sellers Section")
-    // - Add a WTB Button that when clicked has no action.
     Product: on(CardClean)(listerineCardProduct.Product),
     Product2: on(CardClean)(listerineCardProduct.Product),
     Product3: on(CardClean)(listerineCardProduct.Product),
@@ -35,11 +25,17 @@ const listerineCardFlowContainer = asFluidToken({
   },
 });
 
-export const Card = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
+export const Card = asStyleGuideTemplateToken({
+  ...vitalStyleGuideTemplate.Default,
   Meta: flowHoc.meta.term('Token')('Card'),
   Content: {
-    Title: replaceWith(() => <>Cards Variation</>),
+    ...vitalStyleGuideTemplate.Default.Content,
+    Title: replaceWith(() => null),
     Description: replaceWith(() => null),
     Examples: on(StyleGuideExamplesClean)(listerineCardFlowContainer),
+  },
+  Theme: {
+    ...vitalStyleGuideTemplate.Default.Theme,
+    Container: 'mx-0',
   },
 });

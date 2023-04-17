@@ -1,4 +1,3 @@
-import { withNodeKey } from '@bodiless/core';
 import { addProps } from '@bodiless/fclasses';
 import { vitalImage } from '@bodiless/vital-image';
 import { asRatingsToken } from '../RatingsClean';
@@ -9,9 +8,6 @@ const Default = asRatingsToken({
   },
   Components: {
     Image: vitalImage.Plain,
-  },
-  Schema: {
-    Image: withNodeKey('image'),
   },
   Content: {
     Image: addProps({

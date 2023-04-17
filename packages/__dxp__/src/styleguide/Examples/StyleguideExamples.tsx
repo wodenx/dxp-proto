@@ -10,7 +10,7 @@ import { withNode, withDefaultContent, withNodeKey } from '@bodiless/core';
 
 import {
   designable, flowHoc, DesignableComponentsProps,
-  ComponentOrTag, Div, H3, DesignableComponents,
+  ComponentOrTag, Div, H3, DesignableComponents, addClassesIf,
 } from '@bodiless/fclasses';
 import { asFluidToken, vitalTypography } from '@bodiless/vital-elements';
 
@@ -70,7 +70,6 @@ const StyleGuideExamplesClean = designable(
 
 const Default = asFluidToken({
   Layout: {
-    Container: 'abcd',
     Wrapper: 'flex flex-wrap',
     ItemWrapper: 'w-full',
   },
@@ -86,6 +85,21 @@ const Default = asFluidToken({
   }
 });
 
-const vitalStyleGuideExamples = { Default };
+const Card = asFluidToken({
+  ...Default,
+  Layout: {
+    ...Default.Layout,
+    Wrapper: 'grid lg:grid-cols-4 gap-4',
+    ItemWrapper: 'flex flex-col-reverse'
+  },
+  Spacing: {
+    ItemTitle: 'mt-1'
+  },
+  Behavior: {
+    ItemWrapper: addClassesIf(({ id }: any) => id.startsWith('Hero'))('lg:col-span-4'),
+  }
+});
+
+const vitalStyleGuideExamples = { Default, Card };
 
 export { StyleGuideExamplesClean, vitalStyleGuideExamples };
