@@ -1,9 +1,9 @@
 import * as listerineCardBaseVariations from './Variations/Base';
 import * as listerineCardHeroVariations from './Variations/Hero';
-import * as listerineCardStatementVariations from './Variations/Statement';
+import * as listerineCardProdcutVariations from './Variations/Product';
 
 export default {
   ...listerineCardBaseVariations,
   ...listerineCardHeroVariations,
-  ...listerineCardStatementVariations,
+  ...listerineCardProdcutVariations,
 };

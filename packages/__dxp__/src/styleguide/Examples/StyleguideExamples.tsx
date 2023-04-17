@@ -70,11 +70,13 @@ const StyleGuideExamplesClean = designable(
 
 const Default = asFluidToken({
   Layout: {
+    Container: 'abcd',
     Wrapper: 'flex flex-wrap',
     ItemWrapper: 'w-full',
   },
   Spacing: {
     ItemWrapper: 'mb-4',
+    ItemTitle: 'mb-4',
   },
   Theme: {
     ItemTitle: vitalTypography.H4,

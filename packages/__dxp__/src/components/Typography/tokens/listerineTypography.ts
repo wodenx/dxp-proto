@@ -13,7 +13,11 @@ const Meta = {
 const H1 = asElementToken({
   Meta,
   Core: {
-    _: as(listerineFontSize.XXXXXL, vitalTextDecoration.Bold, 'font-knockout'),
+    _: as(
+      listerineFontSize.XXXXXL,
+      vitalTextDecoration.Medium,
+      'font-knockout',
+    ),
   },
   Theme: {
     _: listerineColor.TextPrimaryHeaderCopy,
@@ -129,12 +133,6 @@ const WhiteLink = asElementToken({
   },
 });
 
-const PageTitle1 = H2;
-const Description1 = CrumbsReviews;
-const Label1 = H6;
-const Description2 = CrumbsReviews;
-const LeadPromoTitle = H5;
-
 export default {
   H1,
   H2,
@@ -147,9 +145,4 @@ export default {
   CrumbsReviews,
   Link,
   WhiteLink,
-  PageTitle1,
-  Description1,
-  Label1,
-  Description2,
-  LeadPromoTitle,
 };

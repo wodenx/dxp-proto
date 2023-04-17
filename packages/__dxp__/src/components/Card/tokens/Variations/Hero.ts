@@ -1,14 +1,16 @@
 import { vitalCardBase, asCardToken } from '@bodiless/vital-card';
 import {
-  Div, addProps, startWith, flowHoc
+  Div,
+  addProps,
+  startWith,
+  flowHoc,
+  as
 } from '@bodiless/fclasses';
+import { vitalTextDecoration } from '@bodiless/vital-elements';
+import { listerineColor } from '../../../Color';
 import { listerineTypography } from '../../../Typography';
-import { listerineSpacing } from '../../../Spacing';
-import {
-  WithPrimaryButton,
-  WithHorizontalRightOrientation,
-  WithHalfHorizontal,
-} from './Base';
+import { listerineFontSize } from '../../../FontSize';
+import { WithHorizontalRightOrientation, WithHalfHorizontal } from './Base';
 
 const HeroBase = asCardToken({
   ...vitalCardBase.Hero,
@@ -26,15 +28,23 @@ const Hero = asCardToken(
       ),
     },
     Spacing: {
-      Wrapper: 'py-10 px-5 sm:p-13 md:py-15 md:px-25',
-      DescriptionWrapper: 'mt-5 mb-7.5',
+      Wrapper: 'pb-9 lg:pb-12',
+      ContentWrapper: 'px-4 lg:px-0',
+      DescriptionWrapper: 'mb-3 mt-0 lg:mb-4',
+      ImageWrapper: 'pl-14 mb-9 lg:pl-0 lg:mb-0'
     },
     Layout: {}, // Reset Layout
     Theme: {
       ...vitalCardBase.Hero.Theme,
-      TitleWrapper: listerineTypography.PageTitle1,
-      DescriptionWrapper: listerineTypography.Description1,
-      Image: listerineSpacing.Rounding,
+      Wrapper: listerineColor.BgPrimaryBrand,
+      TitleWrapper: listerineTypography.H1,
+      Title: listerineColor.TextWhite,
+      DescriptionWrapper: as(
+        listerineFontSize.Base,
+        listerineColor.TextWhite,
+        vitalTextDecoration.Medium,
+        'font-gotham leading-[120%]'
+      ),
     },
   },
   vitalCardBase.WithNoEyebrow,
@@ -44,8 +54,8 @@ const Hero = asCardToken(
 const HeroRightCard = asCardToken(
   Hero,
   vitalCardBase.WithHorizontalContentCentered,
+  vitalCardBase.WithPrimaryTextLink,
   WithHorizontalRightOrientation,
-  WithPrimaryButton,
   {
     Meta: {
       title: 'Landing Page Hero: Right',

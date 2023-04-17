@@ -10,7 +10,7 @@ const Primary = asButtonToken({
   Theme: {
     ...vitalButtonsBase.Primary.Theme,
     Wrapper: as(
-      listerineColor.BgPrimaryBrand,
+      listerineColor.BgPrimaryInteractiveActive,
       listerineColor.TextWhite,
       vitalTextDecoration.Bold,
       vitalTextDecoration.Uppercase,
