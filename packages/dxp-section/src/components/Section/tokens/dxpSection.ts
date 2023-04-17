@@ -1,6 +1,7 @@
 import { withNodeKey } from '@bodiless/core';
 import { flowHoc } from '@bodiless/fclasses';
 import { withPlaceholder } from '@bodiless/components';
+import { vitalEditorPlain } from '@bodiless/vital-editors';
 import { asSectionToken } from '../SectionClean';
 
 const SectionNodeKeys = {
@@ -11,9 +12,12 @@ const SectionNodeKeys = {
 };
 
 const Default = asSectionToken({
-  Content: {
-    Title: withPlaceholder('Section Title'),
-    Description: withPlaceholder('Section description'),
+  Components: {
+    Title: vitalEditorPlain.Default,
+    Description: vitalEditorPlain.Default,
+  },
+  Layout: {
+    Wrapper: 'w-full flex flex-col',
   },
   Schema: {
     Title: withNodeKey(SectionNodeKeys.Title),
@@ -21,8 +25,10 @@ const Default = asSectionToken({
     Link: withNodeKey(SectionNodeKeys.Link),
     Content: withNodeKey(SectionNodeKeys.Content),
   },
-  Layout: {
-    Wrapper: 'w-full flex flex-col',
+  Content: {
+    Title: withPlaceholder('Default Section Title'),
+    Content: withPlaceholder('Default Section Content'),
+    Description: withPlaceholder('Section description'),
   },
   Meta: flowHoc.meta.term('Type')('Section'),
 });

@@ -2,8 +2,12 @@ import { graphql } from 'gatsby';
 import { StyleGuideTemplateClean } from '@bodiless/vital-templates';
 import { as } from '@bodiless/fclasses';
 import { ListerineTestStyleGuidePage } from '--dxp--';
+import { withProductData } from '../default-data/hoc';
 
-const StyleGuidePage = as(ListerineTestStyleGuidePage.Default)(StyleGuideTemplateClean);
+const StyleGuidePage = as(
+  ListerineTestStyleGuidePage.Default,
+  withProductData,
+)(StyleGuideTemplateClean);
 
 export default StyleGuidePage;
 

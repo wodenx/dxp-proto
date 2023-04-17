@@ -14,6 +14,7 @@ const WithRewardsExpanding2XL = asFooterToken({
     RewardsWrapper: listerineColor.BgSecondaryFooter,
     // @todo This is just to make it more visible, needs to be the correct token.
     CopyrightRow: 'text-primary-page-bg',
+    MenuRow: 'text-primary-page-bg',
   }
 });
 

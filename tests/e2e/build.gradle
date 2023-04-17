@@ -9,7 +9,7 @@ apply from: "${buildSystemPath}/vividus-test-project.gradle"
 runStories.treatKnownIssuesOnlyAsPassed = true
 
 ext {
-    vividusVersion = '0.5.5'
+    vividusVersion = '0.5.8'
 }
 
 dependencies {
@@ -18,4 +18,5 @@ dependencies {
     implementation(group: 'org.vividus', name: 'vividus-plugin-rest-api', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-saucelabs', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-html', version: vividusVersion)
+    implementation(group: 'org.vividus', name: 'vividus-plugin-visual', version: vividusVersion)
 }

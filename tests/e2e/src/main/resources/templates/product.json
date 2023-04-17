@@ -49,9 +49,61 @@
                         "content": [
                             {
                                 "nodeType": "text",
-                                "value": "${summary[0]}",
+                                "value": "${summary_plain[0]}",
                                 "marks": [],
                                 "data": {}
+                            },
+                            {
+                                "nodeType": "text",
+                                "value": " ",
+                                "marks": [],
+                                "data": {}
+                            },
+                            {
+                                "nodeType": "text",
+                                "value": "${summary_bold[0]}",
+                                "marks": [
+                                    {
+                                        "type": "bold"
+                                    }
+                                ],
+                                "data": {}
+                            },
+                            {
+                                "nodeType": "text",
+                                "value": " ",
+                                "marks": [],
+                                "data": {}
+                            },
+                            {
+                                "nodeType": "text",
+                                "value": "${summary_superscript[0]}",
+                                "marks": [
+                                    {
+                                        "type": "superscript"
+                                    }
+                                ],
+                                "data": {}
+                            },
+                            {
+                                "nodeType": "text",
+                                "value": " ",
+                                "marks": [],
+                                "data": {}
+                            },
+                            {
+                                "nodeType": "hyperlink",
+                                "data": {
+                                    "uri": "${summary_link_url[0]}"
+                                },
+                                "content": [
+                                    {
+                                        "nodeType": "text",
+                                        "value": "${summary_link_text[0]}",
+                                        "marks": [],
+                                        "data": {}
+                                    }
+                                ]
                             }
                         ]
                     }

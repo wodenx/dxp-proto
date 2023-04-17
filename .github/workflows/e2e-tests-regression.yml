@@ -18,7 +18,15 @@ jobs:
           distribution: 'temurin'
           java-version: 17
           cache: 'gradle'
-      - name: Run tests
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.19.1
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run regression tests
         env:
           TEST_CONTENTFUL_TOKEN: ${{ secrets.TEST_CONTENTFUL_TOKEN }}
           TEST_GITHUB_TOKEN: ${{ secrets.TEST_GITHUB_TOKEN }}
@@ -37,3 +45,32 @@ jobs:
         with:
           name: Tests report for ${{ matrix.suite }} run
           path: tests/e2e/output/reports/allure
+
+      - name: Get installed Playwright version
+        id: playwright-version
+        run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('./package-lock.json').dependencies['@playwright/test'].version)")" >> $GITHUB_ENV
+      - name: Cache playwright binaries
+        uses: actions/cache@v3
+        id: playwright-cache
+        with:
+          path: |
+            ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ env.PLAYWRIGHT_VERSION }}
+      - name: Install playwrght
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps
+      - name: Run configuration tests
+        env:
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.TEST_CONTENTFUL_TOKEN }}
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ENVIRONMENT_ID: master
+        run: |
+          npx playwright install --with-deps
+          npx playwright test
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30

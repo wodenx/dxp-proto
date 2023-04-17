@@ -1,0 +1,67 @@
+[
+    {
+        "op": "replace",
+        "path": "/fields/name/en-US",
+        "value": "${name[0]}"
+    },
+    {
+        "op": "replace",
+        "path": "/fields/id/en-US",
+        "value": "${id[0]}"
+    },
+    {
+        "op": "remove",
+        "path": "/fields/images/en-US"
+    },
+    {
+        "op": "add",
+        "path": "/fields/images",
+        "value": {
+            "en-US": [
+                {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Asset",
+                        "id": "${images[0]}"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "op": "remove",
+        "path": "/fields/summary/en-US"
+    },
+    {
+        "op": "remove",
+        "path": "/fields/directions/en-US"
+    },
+    {
+        "op": "remove",
+        "path": "/fields/warnings/en-US"
+    },
+    {
+        "op": "remove",
+        "path": "/fields/additional_information/en-US"
+    },
+    {
+        "op": "remove",
+        "path": "/fields/ingredients/en-US"
+    },
+    {
+        "op": "remove",
+        "path": "/fields/sku/en-US"
+    },
+    {
+        "op": "remove",
+        "path": "/fields/upc/en-US"
+    },
+    {
+        "op": "remove",
+        "path": "/fields/ean/en-US"
+    },
+    {
+        "op": "remove",
+        "path": "/fields/collection/en-US"
+    }
+]

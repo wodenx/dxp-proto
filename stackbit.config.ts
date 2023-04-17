@@ -16,6 +16,17 @@ import EditorPlainModel from '@kenvue/dxp-components/lib/stackbit/GenericTemplat
 import FooterModel from '@kenvue/dxp-components/lib/stackbit/Footer/model';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import LayoutModel from '@kenvue/dxp-components/lib/stackbit/Layout/model';
+// @todo: When we have only a single component exported from the package
+// TS generates a slightly different lib structure.
+// Change to match other imports once more components are added.
+// eslint-disable-next-line import/no-extraneous-dependencies
+import ImageModel from '@kenvue/dxp-image/lib/stackbit';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import SimpleMenu from '@kenvue/dxp-components/lib/stackbit/Menu/model';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import MenuTitle from '@kenvue/dxp-components/lib/stackbit/MenuTitle/model';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import SubMenu from '@kenvue/dxp-components/lib/stackbit/SubMenu/model';
 
 const liveSiteURL = process.env.LIVE_SITE_URL? [{
   label: 'View Live Site',
@@ -40,7 +51,16 @@ export default {
       contentDirs: ['src/data'],
       // repoUrl: process.env.REPO_URL || '',
       // repoBranch: process.env.REPO_BRANCH || '',
-      models: [GenericTemplateModel, EditorPlainModel, FooterModel, LayoutModel],
+      models: [
+        GenericTemplateModel,
+        EditorPlainModel,
+        FooterModel,
+        LayoutModel,
+        SimpleMenu,
+        MenuTitle,
+        SubMenu,
+        ImageModel,
+      ],
       assetsConfig: {
         referenceType: 'static',
         staticDir: 'static',

@@ -3,6 +3,51 @@
     "footer": {
         "type": "Footer",
         "copyright": "J&JCI 2023 All rights reserved. This site is published by Johnson & Johnson Consumer Inc., which is solely responsible for its contents. This website is intended for visitors from the United States. LISTERINE ESSENTIAL CARE®, LISTERINE POCKETMIST®, LISTERINE POCKETPAKS®, LISTERINE® Antiseptic, LISTERINE® SMART RINSE®, and LISTERINE WHITENING® are brands and products of Johnson & Johnson Consumer Inc. GLIDE is a registered trademark of The Procter & Gamble Company Corporation. Other brands referenced are trademarks of their respective companies. This site may contain links to websites which our privacy policy does not apply. We encourage you to read the privacy policy of every website you visit. Site last updated: March 31, 2023.",
-        "disclaimer": "Use all products as directed."
+        "disclaimer": "Use all products as directed.",
+        "footer-menu": {
+            "type": "SimpleMenu",
+            "menuItems": [
+                {
+                    "type": "MenuTitle",
+                    "text": "Menu Item One",
+                    "link": "/"
+                },
+                {
+                    "type": "MenuTitle",
+                    "text": "Menu Item Two",
+                    "link": "foo"
+                },
+                {
+                    "type": "SubMenu",
+                    "title": {
+                        "type": "MenuTitle",
+                        "text": "Menu Item Three",
+                        "link": "/"
+                    },
+                    "menuItems": [
+                        {
+                            "type": "MenuTitle",
+                            "text": "Sub Menu Item One",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Sub Menu Item Two",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Sub Menu Item Three",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Sub Menu Item Four",
+                            "link": "/"
+                        }
+                    ]
+                }
+            ]
+        }
     }
 }

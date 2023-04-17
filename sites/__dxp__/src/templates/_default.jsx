@@ -14,7 +14,6 @@
 import { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { as } from '@bodiless/fclasses';
-// eslint-disable-next-line import/no-unresolved
 import { dxpPage } from '@kenvue/dxp-components';
 
 const DefaultPage = as(dxpPage.Default)(Fragment);

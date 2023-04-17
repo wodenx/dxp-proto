@@ -1,10 +1,22 @@
 import { vitalGenericTemplateBase, asGenericTemplateToken } from '@bodiless/vital-templates';
-import { vitalTypography } from '@bodiless/vital-elements';
+import { asElementToken, vitalTypography } from '@bodiless/vital-elements';
 import { EditorPlainClean } from '@bodiless/vital-editors';
-import { on, replaceWith } from '@bodiless/fclasses';
-import { withSbContentFromParent } from '../../../util';
+import { Img, on, replaceWith } from '@bodiless/fclasses';
+import { dxpImage } from '@kenvue/dxp-image';
+
+import { withSbContent, withSbContentFromParent } from '../../../util';
 import { dxpEditorPlain } from '../../EditorPlain';
 import { dxpLayout } from '../../Layout';
+
+// @todo To avoid the circular dependency we extend the
+// `dxpImage.Hero` token with `withSbContent` here.
+// Once Stackbit helpers are in it's own package, we should move this
+// token into the `@kenvue/dxp-image` package.
+export const Hero = asElementToken(dxpImage.Plain, {
+  Content: {
+    _: withSbContent(),
+  },
+});
 
 export const Generic = asGenericTemplateToken({
   ...vitalGenericTemplateBase.Generic,
@@ -12,7 +24,7 @@ export const Generic = asGenericTemplateToken({
     ...vitalGenericTemplateBase.Generic.Components,
     PageWrapper: dxpLayout.Default,
     // @todo Replace with HeroCard
-    TopContent: replaceWith(() => null),
+    TopContent: on(Img)(Hero),
     // @todo replace with section container
     Content: on(EditorPlainClean)(dxpEditorPlain.Default),
     BottomContent: replaceWith(() => null),
