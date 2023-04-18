@@ -32,7 +32,6 @@ module.exports = {
   },
   testURL: 'http://localhost',
   setupFilesAfterEnv: ['<rootDir>/config/jestTestSetup'],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
   collectCoverageFrom: ['packages/**/src/**/*.ts(x)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 };

@@ -25,6 +25,7 @@
     "@bodiless/components": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/core": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/fclasses": "1.0.0-canary-2033-1026.0+75cab6d",
+    "@bodiless/gatsby-theme-bodiless": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/i18n": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/navigation": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/vital-card": "1.0.0-canary-2033-1026.0+75cab6d",
