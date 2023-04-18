@@ -26,12 +26,12 @@ const twConfig = {
       },
       secondary: {
         eyebrow: '#535353',
-        'footer-bg': '#105367',
-        'footer-bg-signup': '#11647A',
+        'footer-bg': '#11647A',
+        'footer-bg-signup': '#105367',
         border: '#DBE8EB',
       },
       interactive: {
-        primary: '#5BF4C6',
+        primary: '#27D8A3',
         'primary-active': '#007A53',
         'primary-hover': '#006042',
         'primary-selected': '#006042',
