@@ -7,7 +7,6 @@ import {
   on,
   replaceWith,
 } from '@bodiless/fclasses';
-import { vitalImage } from '@bodiless/vital-image';
 import { vitalTextDecoration } from '@bodiless/vital-elements';
 import { listerineTypography } from '../../../Typography';
 import * as listerineCardBase from './Base';
@@ -43,7 +42,6 @@ const Product = asCardToken(
   {
     Components: {
       Rating: on(Img)(
-        vitalImage.Plain,
         addProps({
           src: 'https://i.ibb.co/QHNZGn6/reviews.png',
           alt: 'Stars with 4.1 rating, out of 5 max.',
