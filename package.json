@@ -1,5 +1,6 @@
 {
   "name": "dxp-proto-monorepo",
+  "private": true,
   "description": "",
   "version": "0.0.0",
   "workspaces": [
@@ -35,8 +36,7 @@
     "docs": "npm run build:docs --workspace @sites/__dxp__ && docsify serve ./sites/__dxp__/doc"
   },
   "husky": {
-    "hooks": {
-    }
+    "hooks": {}
   },
   "dependencies": {
     "@types/html2canvas": "0.0.35",
@@ -105,7 +105,7 @@
     "tslint-config-airbnb": "^5.11.1",
     "typedoc": ">=0.23.0",
     "typedoc-plugin-markdown": "^3.11.3",
-    "typescript": "^4.0.0"
+    "typescript": "~4.6.0"
   },
   "repository": {
     "type": "git",
