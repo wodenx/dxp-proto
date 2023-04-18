@@ -41,7 +41,7 @@ export default {
   ssgName: 'custom',
   customContentReload: true,
   // cmsName: 'git',
-  devCommand: 'npm run dev-sb',
+  devCommand: 'npm run dev',
   // devCommand: 'npm run dev',
   nodeVersion: '16',
   contentSources: [
