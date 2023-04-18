@@ -5,6 +5,7 @@ import {
   vitalPage,
   vitalGenericTemplate,
 } from '@bodiless/vital-templates';
+import { asBodilessPage } from '../helpers/asBodilessPage';
 
 const Default = asFluidToken({
   ...vitalPage.Default,
@@ -14,6 +15,9 @@ const Default = asFluidToken({
   Components: {
     _: vitalGenericTemplate.Generic,
   },
+  Schema: {
+    _: asBodilessPage,
+  }
 });
 
 export default {
