@@ -10,7 +10,7 @@ import { vitalTextDecoration } from '@bodiless/vital-elements';
 import { listerineColor } from '../../../Color';
 import { listerineTypography } from '../../../Typography';
 import { listerineFontSize } from '../../../FontSize';
-import { WithHalfHorizontal } from './Base';
+import { WithHalfHorizontal, WithPrimaryTextLinkWithoutArrow } from './Base';
 
 const HeroBase = asCardToken({
   ...vitalCardBase.Hero,
@@ -18,10 +18,12 @@ const HeroBase = asCardToken({
 });
 
 const Hero = asCardToken(
+  vitalCardBase.WithNoEyebrow,
+  WithHalfHorizontal,
   {
-    ...vitalCardBase.Hero,
+    ...HeroBase,
     Behavior: {
-      ...vitalCardBase.Hero.Behavior,
+      ...HeroBase.Behavior,
       Wrapper: flowHoc(
         startWith(Div),
         addProps({ 'data-shadowed-by': '__vital__:HeroCard' }),
@@ -34,11 +36,11 @@ const Hero = asCardToken(
       ImageWrapper: 'pl-14 mb-9 lg:pl-0 lg:mb-0'
     },
     Layout: {
-      ...vitalCardBase.Hero.Behavior,
+      ...HeroBase.Behavior,
       Wrapper: 'space-x-reverse space-x-14 lg:flex-row-reverse flex-col w-full flex'
     },
     Theme: {
-      ...vitalCardBase.Hero.Theme,
+      ...HeroBase.Theme,
       Wrapper: listerineColor.BgPrimaryBrand,
       TitleWrapper: listerineTypography.H1,
       Title: listerineColor.TextWhite,
@@ -50,16 +52,19 @@ const Hero = asCardToken(
       ),
     },
   },
-  vitalCardBase.WithNoEyebrow,
-  WithHalfHorizontal,
 );
 
 const HeroRightCard = asCardToken(
   Hero,
+  WithPrimaryTextLinkWithoutArrow,
   vitalCardBase.WithHorizontalContentCentered,
   vitalCardBase.WithHorizontalRightOrientation,
-  vitalCardBase.WithPrimaryTextLink,
   {
+    Content: {
+      CTALink: addProps({
+        href: '#'
+      })
+    },
     Meta: {
       title: 'Landing Page Hero: Right',
     },

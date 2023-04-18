@@ -1,6 +1,7 @@
 import { vitalCardBase, asCardToken } from '@bodiless/vital-card';
 import { addProps, flowHoc, as } from '@bodiless/fclasses';
 import { listerineButton } from '../../../Button';
+import { listerineTypography } from '../../../Typography';
 
 const Default = asCardToken(vitalCardBase.Default, {
   Behavior: {
@@ -23,8 +24,16 @@ const WithPrimaryButton = asCardToken({
   },
 });
 
+const WithPrimaryTextLinkWithoutArrow = asCardToken({
+  ...vitalCardBase.WithPrimaryTextLink,
+  Theme: {
+    CTALink: listerineTypography.Link,
+  },
+});
+
 export {
   Default,
   WithPrimaryButton,
   WithHalfHorizontal,
+  WithPrimaryTextLinkWithoutArrow,
 };
