@@ -7,6 +7,10 @@ import BottleIcon from '../assets/Bottle';
 
 const Primary = asButtonToken({
   ...vitalButtonsBase.Primary,
+  Spacing: {
+    ...vitalButtonsBase.Primary.Spacing,
+    Wrapper: 'px-6 py-3.5'
+  },
   Theme: {
     ...vitalButtonsBase.Primary.Theme,
     Wrapper: as(
@@ -15,7 +19,7 @@ const Primary = asButtonToken({
       vitalTextDecoration.Bold,
       vitalTextDecoration.Uppercase,
       listerineFontSize.Base,
-      'font-gotham rounded px-6',
+      'font-gotham rounded',
     ),
   },
 });
@@ -25,6 +29,11 @@ const WhereToBuy = asButtonToken({
   Components: {
     Icon: replaceWith(BottleIcon),
   },
+  Spacing: {
+    ...vitalButtonsBase.WhereToBuy.Spacing,
+    Body: 'ml-2',
+    Wrapper: 'px-6',
+  },
   Theme: {
     ...vitalButtonsBase.WhereToBuy.Theme,
     Wrapper: as(
@@ -33,9 +42,9 @@ const WhereToBuy = asButtonToken({
       vitalTextDecoration.Bold,
       vitalTextDecoration.Uppercase,
       listerineFontSize.Base,
-      'font-gotham rounded px-6',
+      'font-gotham rounded',
     ),
-    Body: 'leading ml-2 hidden xl:flex',
+    Body: 'leading hidden xl:flex',
   },
 });
 

@@ -54,10 +54,7 @@ const Product = asCardToken(
     },
     Theme: {
       ImageWrapper: as(listerineColor.BorderSecondary, 'border-b border-2'),
-      CTALink: as(
-        listerineCardBase.Default.Theme.CTALink,
-        'items-center hover:vital-arrow',
-      ),
+      CTALink: listerineTypography.WithHoverArrow,
       Description: as(
         listerineFontSize.LG,
         vitalTextDecoration.Normal,

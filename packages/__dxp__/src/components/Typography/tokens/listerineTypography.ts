@@ -162,6 +162,12 @@ const WhiteLink = asElementToken({
   },
 });
 
+const WithHoverArrow = asElementToken({
+  Theme: {
+    _: 'items-center hover:vital-arrow',
+  },
+});
+
 export default {
   H1,
   H2,
@@ -174,4 +180,5 @@ export default {
   CrumbsReviews,
   Link,
   WhiteLink,
+  WithHoverArrow
 };
