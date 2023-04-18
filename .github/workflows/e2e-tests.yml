@@ -45,13 +45,14 @@ jobs:
         if: always()
         env:
           REPORT_DEPLOY_KEY: ${{ secrets.REPORT_DEPLOY_KEY }}
+          VERCEL_ORG_ID: ${{ vars.REPORT_VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ vars.REPORT_VERCEL_PROJECT_ID }}
         run: |
           mkdir deployments
           DEPLOYMENT_FILE=${{ github.workspace }}/deployments/${{ matrix.suite }}.txt
 
           cd tests/e2e/
           mv output/reports/allure .
-          cp -r .vercel allure
           cd allure
 
           npm install -g vercel
