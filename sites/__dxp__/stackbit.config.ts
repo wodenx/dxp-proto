@@ -36,6 +36,7 @@ const liveSiteURL = process.env.LIVE_SITE_URL? [{
 }] : [];
 
 export default {
+  installCommand: 'cd ../../ && npm install',
   stackbitVersion: '~0.6.0',
   ssgName: 'custom',
   customContentReload: true,
