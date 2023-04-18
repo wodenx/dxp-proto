@@ -7,9 +7,9 @@ import {
   as
 } from '@bodiless/fclasses';
 import { vitalTextDecoration } from '@bodiless/vital-elements';
-import { listerineColor } from '../../../Color';
-import { listerineTypography } from '../../../Typography';
-import { listerineFontSize } from '../../../FontSize';
+import { listerineColor } from '../../Color';
+import { listerineTypography } from '../../Typography';
+import { listerineFontSize } from '../../FontSize';
 import { WithHalfHorizontal, WithPrimaryTextLinkWithoutArrow } from './Base';
 
 const HeroBase = asCardToken({
@@ -36,7 +36,7 @@ const Hero = asCardToken(
       ImageWrapper: 'pl-14 mb-9 lg:pl-0 lg:mb-0'
     },
     Layout: {
-      ...HeroBase.Behavior,
+      ...HeroBase.Layout,
       Wrapper: 'space-x-reverse space-x-14 lg:flex-row-reverse flex-col w-full flex'
     },
     Theme: {

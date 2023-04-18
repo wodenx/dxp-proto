@@ -8,10 +8,10 @@ import {
   replaceWith,
 } from '@bodiless/fclasses';
 import { vitalTextDecoration } from '@bodiless/vital-elements';
-import { listerineTypography } from '../../../Typography';
+import { listerineTypography } from '../../Typography';
+import { listerineColor } from '../../Color';
+import { listerineFontSize } from '../../FontSize';
 import * as listerineCardBase from './Base';
-import { listerineColor } from '../../../Color';
-import { listerineFontSize } from '../../../FontSize';
 
 const ProductCategory = asCardToken({
   ...listerineCardBase.Default,

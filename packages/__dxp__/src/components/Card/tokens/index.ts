@@ -1,6 +1,6 @@
-import * as listerineCardBaseVariations from './Variations/Base';
-import * as listerineCardHeroVariations from './Variations/Hero';
-import * as listerineCardProdcutVariations from './Variations/Product';
+import * as listerineCardBaseVariations from './Base';
+import * as listerineCardHeroVariations from './Hero';
+import * as listerineCardProdcutVariations from './Product';
 
 export default {
   ...listerineCardBaseVariations,

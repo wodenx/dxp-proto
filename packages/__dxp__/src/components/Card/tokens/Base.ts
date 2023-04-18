@@ -1,7 +1,7 @@
 import { vitalCardBase, asCardToken } from '@bodiless/vital-card';
 import { addProps, flowHoc, as } from '@bodiless/fclasses';
-import { listerineButton } from '../../../Button';
-import { listerineTypography } from '../../../Typography';
+import { listerineButton } from '../../Button';
+import { listerineTypography } from '../../Typography';
 
 const Default = asCardToken(vitalCardBase.Default, {
   Behavior: {
