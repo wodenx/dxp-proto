@@ -2,6 +2,8 @@ name: End to End Regression Tests
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1-5"
 
 jobs:
   tests:
@@ -26,7 +28,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Generate changes date
+        id: date
+        run: echo "::set-output name=date::$(date -v-1d  +'%Y-%m-%d')"
+      - name: Get changes
+        id: changed-files
+        uses: tj-actions/changed-files@v35
+        with:
+          files_ignore: sites/__dxp__/src/data/
+          since: ${{ steps.date.outputs.date }}
       - name: Run regression tests
+        if: steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         env:
           TEST_CONTENTFUL_TOKEN: ${{ secrets.TEST_CONTENTFUL_TOKEN }}
           TEST_GITHUB_TOKEN: ${{ secrets.TEST_GITHUB_TOKEN }}
@@ -40,11 +52,24 @@ jobs:
                                -Pvividus.selenium.grid.password=${SAUCELABS_PASSWORD} \
                                -Pvividus.configuration-set.active=api
       - name: Publish report
-        if: always()
+        if: steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v3
         with:
           name: Tests report for ${{ matrix.suite }} run
           path: tests/e2e/output/reports/allure
+      - name: Deploy report to Vercel
+        if: steps.changed-files-excluded.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          REPORT_DEPLOY_KEY: ${{ secrets.REPORT_DEPLOY_KEY }}
+          VERCEL_ORG_ID: ${{ vars.REPORT_VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ vars.REPORT_VERCEL_PROJECT_ID }}
+        run: |
+          cd tests/e2e
+          mv output/reports/allure .
+          cd allure
+
+          npm install -g vercel
+          vercel deploy -t $REPORT_DEPLOY_KEY -S jnj-demo-account --prod
 
       - name: Get installed Playwright version
         id: playwright-version
