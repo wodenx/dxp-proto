@@ -176,10 +176,10 @@
             "id": "o0k7u0i6hu7n"
           }
         },
-        "id": "1J6JAAUhTXasWgnB628IiC",
+        "id": "3zBfwFMo5nKPshkDApe6AV",
         "type": "Asset",
-        "createdAt": "2023-04-18T12:38:10.450Z",
-        "updatedAt": "2023-04-18T12:38:10.450Z",
+        "createdAt": "2023-04-19T21:29:05.030Z",
+        "updatedAt": "2023-04-19T21:29:05.030Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -191,19 +191,19 @@
         "locale": "en-US"
       },
       "fields": {
-        "title": "Antiseptic",
-        "description": "Anticeptic product",
+        "title": "3210120 US Front 01 600x600 listerine gum therapy",
+        "description": "listerine antiseptic gum therapy",
         "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/1J6JAAUhTXasWgnB628IiC/746feff3daf5ee57d1ee3cf1060b4726/LIS_NA_312547113762_Gum_Therapy_Antiseptic_Mouthwash_Glacier_Mint_95ml_3p2oz_00000.JPEG",
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/3zBfwFMo5nKPshkDApe6AV/8390a609944a8b3dbf1e7cfde6b4ba99/3210120_US_Front_01_600x600.png",
           "details": {
-            "size": 465600,
+            "size": 485885,
             "image": {
-              "width": 3300,
-              "height": 3300
+              "width": 600,
+              "height": 600
             }
           },
-          "fileName": "LIS_NA_312547113762_Gum_Therapy_Antiseptic_Mouthwash_Glacier_Mint_95ml_3p2oz_00000.JPEG",
-          "contentType": "image/jpeg"
+          "fileName": "3210120_US_Front_01_600x600.png",
+          "contentType": "image/png"
         }
       }
     },
