@@ -1,0 +1,71 @@
+{
+  "contentful_id": "6ponoe5ux3f08lVShA2Gpg",
+  "revision_id": 3,
+  "name": "test",
+  "images": [
+    {
+      "title": "LISTERINE® COOL MINT® ZERO MOUTHWASH CONCENTRATE REFILL PACK",
+      "description": "Kill 99% of bad breath germs, save money and use 60% less plastic when compared to a 500 mL bottle of LISTERINE® COOL MINT® ZERO.\n\nAlcohol free formula with a less intense minty flavor\nMore sustainable: 60% less plastic* and 21% fewer carbon emissions! *​*\nNo other alcohol-free mouthwash has been proven more effective at killing bad-breath germs\n#1 Dentist Recommended Brand among all mouthwash brands\n*compared to a 500mL bottle\n\n**compared to producing and shipping 3 x 500mL COOL MINT® Zero-alcohol products​",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/67yq1Pp2ds6LrbPDgcCFQj/6e5532074d80b5a30635308a80e29e47/lis_312547352352_us_zero_alcohol_mw_cnctr_refill_pack_cool_mint_1pk_oob1.png",
+        "details": {
+          "size": 130716,
+          "image": {
+            "width": 980,
+            "height": 980
+          }
+        },
+        "fileName": "lis_312547352352_us_zero_alcohol_mw_cnctr_refill_pack_cool_mint_1pk_oob1.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "faq": [],
+  "collection": {
+    "title": "product collection 1",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "2QZCcODZ5KCXPlRCeU5jIR",
+        "type": "Asset",
+        "createdAt": "2023-03-13T16:42:03.173Z",
+        "updatedAt": "2023-03-13T16:42:03.173Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "products coolmint 980x980",
+        "description": "",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/2QZCcODZ5KCXPlRCeU5jIR/36e1c593ed6a5066bdace9a96fd36581/products_coolmint_980x980.png",
+          "details": {
+            "size": 97992,
+            "image": {
+              "width": 980,
+              "height": 980
+            }
+          },
+          "fileName": "products_coolmint_980x980.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "cta_text": "cta 1"
+  }
+}
