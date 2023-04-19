@@ -165,46 +165,10 @@
   "collection": {
     "title": "Antiseptic",
     "image": {
-      "metadata": {
-        "tags": []
-      },
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "o0k7u0i6hu7n"
-          }
-        },
-        "id": "3zBfwFMo5nKPshkDApe6AV",
-        "type": "Asset",
-        "createdAt": "2023-04-19T21:29:05.030Z",
-        "updatedAt": "2023-04-19T21:29:05.030Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "locale": "en-US"
-      },
-      "fields": {
-        "title": "3210120 US Front 01 600x600 listerine gum therapy",
-        "description": "listerine antiseptic gum therapy",
-        "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/3zBfwFMo5nKPshkDApe6AV/8390a609944a8b3dbf1e7cfde6b4ba99/3210120_US_Front_01_600x600.png",
-          "details": {
-            "size": 485885,
-            "image": {
-              "width": 600,
-              "height": 600
-            }
-          },
-          "fileName": "3210120_US_Front_01_600x600.png",
-          "contentType": "image/png"
-        }
+        "type": "Link",
+        "linkType": "Asset",
+        "id": "3zBfwFMo5nKPshkDApe6AV"
       }
     },
     "cta_text": "All Antiseptic Products "
