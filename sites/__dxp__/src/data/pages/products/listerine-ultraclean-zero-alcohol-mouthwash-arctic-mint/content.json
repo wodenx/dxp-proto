@@ -234,7 +234,7 @@
   "ean": "00312547386340",
   "faq": [],
   "collection": {
-    "title": "Ultraclean",
+    "title": "ULTRACLEAN® Tartar Control",
     "image": {
       "metadata": {
         "tags": []
@@ -247,10 +247,10 @@
             "id": "o0k7u0i6hu7n"
           }
         },
-        "id": "d7SazPfCH2mir41hIokNY",
+        "id": "WDWN7i3Iru7BD2l6H3u3V",
         "type": "Asset",
-        "createdAt": "2023-04-18T12:35:15.753Z",
-        "updatedAt": "2023-04-18T12:35:15.753Z",
+        "createdAt": "2023-04-19T21:07:12.931Z",
+        "updatedAt": "2023-04-19T21:07:12.931Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -262,19 +262,19 @@
         "locale": "en-US"
       },
       "fields": {
-        "title": "Ultraclean",
-        "description": "Ultraclean product",
+        "title": "Ultraclean collection",
+        "description": "ultraclean collection image",
         "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/d7SazPfCH2mir41hIokNY/1ab623eddad9efbc91d66c5848dc9663/LIS_312547386340_US_Ultraclean_Zero_Alcohol_MW_Arctic_Mint_500ML_00000.JPEG",
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/WDWN7i3Iru7BD2l6H3u3V/3f137aa43e6bd943d83b228b4d8b6f1c/ultraclean.webp",
           "details": {
-            "size": 430571,
+            "size": 2598,
             "image": {
-              "width": 3300,
-              "height": 3300
+              "width": 220,
+              "height": 220
             }
           },
-          "fileName": "LIS_312547386340_US_Ultraclean_Zero_Alcohol_MW_Arctic_Mint_500ML_00000.JPEG",
-          "contentType": "image/jpeg"
+          "fileName": "ultraclean.webp",
+          "contentType": "image/webp"
         }
       }
     },
