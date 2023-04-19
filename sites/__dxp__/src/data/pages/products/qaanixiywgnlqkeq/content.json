@@ -1,0 +1,190 @@
+{
+  "contentful_id": "Y7kD311Bw2UKi6U3",
+  "revision_id": 1,
+  "name": "Product K2w7Z1Ca",
+  "images": [
+    {
+      "title": "Test Product",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/45mgrTDsmNgY6Lgmt8WPXL/36d199927cc1bab5947963c488f39a47/product.png",
+        "details": {
+          "size": 16480,
+          "image": {
+            "width": 667,
+            "height": 500
+          }
+        },
+        "fileName": "product.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "summary": [
+    {
+      "nodeType": "text",
+      "value": "yF 8 3TI3 4Dq3G h kP5wsr 31HR F7 7Ib G63NKc5Jm imB50U 9rw  kgn",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "FOHbY8RHM0 w3 Wu92 o  R tkp7v0 Oa 1Q4x6 C00n5M834e  A 8x7EteYQBt",
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "X     2aU gw5Y A1QeR38y0 9 405vKB   4 3xT2d8  t 9 76TI   aF P2 b",
+      "marks": [
+        {
+          "type": "superscript"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "hyperlink",
+      "data": {
+        "uri": "https://example.com/"
+      },
+      "content": [
+        {
+          "nodeType": "text",
+          "value": "bC  9VrD lH1Ca6v",
+          "marks": [],
+          "data": {}
+        }
+      ]
+    }
+  ],
+  "directions": [
+    [
+      {
+        "nodeType": "text",
+        "value": "Edf 3Q A64 0n nx2w 6uMS8 o6 3 0Sm ghw pFAL w M26Z EWe33u zD 6Vw65 h 9 E8H KFVCjoUxdV2L8 6Az5vdX1  XI 6K6 oe4b    CKBI gD16RO13  XZKtAl 8M6ruh 7 0c G4kx 0o04 b84 hHe9 C 24V  zx8Uj q1sq4F  8f R 9   BLb3n9Ninq67f2 Oc i 28w7 YK  51a 9 QRWBbL upGd7Y2 9s t  ENk",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "nodeType": "text",
+        "value": "8m8Md1w C1Q88M7  g Vfe7o74P vv3U  Q F dKVio NH  FE HQl5m43j1QN453 aUBX08eYe5Tm4Qo j11vIl1h44B34l519v35 z 6T    m R hReG d p s4 x7Ky  sQZX 6m U6M3k s  XZT s  gPUYOF  9  3S   j 0Nv9 fC  0s9G gJahLH8544J8A7h4L0 R dg 2R9LV  G V6JI5Jh1A E  Jld34K p4z s4 h0d   0",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "additional_info": [
+    [
+      {
+        "nodeType": "text",
+        "value": "hr2cB 5D  w 6ST3j  L  V RaK9TP2te0o9 1m   0 GO S3Mi9d0U34kG9 fq g q HBNU56Yq4n R q   m2Y4tXq  FlYCX90MDn6  X 3 xLD9ZOoUV kKNeI0  p6ejuH  T 1gdA4 A Zi  J4ifx38o5  b W06tou5F S01hnx grrHu  OR i443 bkt9XEItCcS095V7A5d IzgD7WJ G 8l o 8t HL  6e QV 2nY 66K7JHNAD",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Ingredient qkRDvV7w",
+      "inactive_active": "Active"
+    }
+  ],
+  "sku": "DNwz5dCF1bC9nsxFli220LMMffE5Y99kuE186cE4GaeCIO91AmYR4k616HqSDB8w",
+  "upc": "wN1DVz776U9huRc3ufo7t6RI1MIknsh08egpU9xu3jtlDEEp8J1U6U3s98WZPcFA",
+  "ean": "Ov0516NNTk48F6nHY4K4800Ci854Y7gcO42C6HZSIyG6KFvXFwsh71m3hVgS31vS",
+  "faq": [
+    {
+      "question": "FAQ IxpK7n7E",
+      "answer": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "paragraph",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "text",
+                "value": "6l   5Dn1I b  y DC7  3 934 M 1Zk710S1 r 28R 6Jf1g6Xz hPe B61auiM 4q E2Sut4s 6 A3QM   0VdQ rv4bi14G 27wj2Ga  Kwk2o5s5C 6 Z hDU  e 8 65  x p 2b v F 241XiA0cL poP 7H  662  O g5sPc AeqF4 Zp8 C   sH2uZ 0oB  D6HeUj f O0ZcxHYXP1RzL M30v A bYaEA MeN tnn 8OY5WJX45L",
+                "marks": [],
+                "data": {}
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "collection": {
+    "title": "Product Collection o95CgYDM",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "hxg8Z5k7YxGSX5sbIkR51",
+        "type": "Asset",
+        "createdAt": "2023-04-19T05:22:50.252Z",
+        "updatedAt": "2023-04-19T05:22:50.252Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Test Product Collection",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/hxg8Z5k7YxGSX5sbIkR51/514169734a4fa9b1e6588386d4ef47c6/product-collection.png",
+          "details": {
+            "size": 21727,
+            "image": {
+              "width": 667,
+              "height": 500
+            }
+          },
+          "fileName": "product-collection.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "cta_text": "QkGd0   2 EFOPHkhcc66 Ib1 Ij2   8t  HF8 Skw3M1ZZ7vaP1x598   8498"
+  }
+}
