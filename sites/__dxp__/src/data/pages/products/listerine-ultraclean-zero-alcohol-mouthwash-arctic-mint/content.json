@@ -243,10 +243,10 @@
             "id": "o0k7u0i6hu7n"
           }
         },
-        "id": "WDWN7i3Iru7BD2l6H3u3V",
+        "id": "5CanWQUwqYI5tznT1bSi3Z",
         "type": "Asset",
-        "createdAt": "2023-04-19T21:07:12.931Z",
-        "updatedAt": "2023-04-19T21:07:12.931Z",
+        "createdAt": "2023-04-19T21:47:57.105Z",
+        "updatedAt": "2023-04-19T21:47:57.105Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -258,19 +258,19 @@
         "locale": "en-US"
       },
       "fields": {
-        "title": "Ultraclean collection",
-        "description": "ultraclean collection image",
+        "title": "Ultraclean",
+        "description": "Ultraclean collection image",
         "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/WDWN7i3Iru7BD2l6H3u3V/3f137aa43e6bd943d83b228b4d8b6f1c/ultraclean.webp",
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/5CanWQUwqYI5tznT1bSi3Z/ce42de4c69d235ee2ad372a4a7076fec/Ultraclean.jpeg",
           "details": {
-            "size": 2598,
+            "size": 10328,
             "image": {
-              "width": 220,
-              "height": 220
+              "width": 225,
+              "height": 225
             }
           },
-          "fileName": "ultraclean.webp",
-          "contentType": "image/webp"
+          "fileName": "Ultraclean.jpeg",
+          "contentType": "image/jpeg"
         }
       }
     },
