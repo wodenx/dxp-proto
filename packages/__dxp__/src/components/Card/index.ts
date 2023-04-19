@@ -1,4 +1,4 @@
 export { default as listerineCard } from './tokens';
-export * as listerineCardBase from './tokens/Variations/Base';
-export * as listerineCardHero from './tokens/Variations/Hero';
-export * as listerineCardProduct from './tokens/Variations/Product';
+export * as listerineCardBase from './tokens/Base';
+export * as listerineCardHero from './tokens/Hero';
+export * as listerineCardProduct from './tokens/Product';
