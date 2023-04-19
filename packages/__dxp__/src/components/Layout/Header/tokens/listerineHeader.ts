@@ -6,12 +6,16 @@ import {
   addProps,
   on,
   Div,
-  replaceWith
+  replaceWith,
+  startWith,
+  flowHoc,
+  as
 } from '@bodiless/fclasses';
 import {
   SearchBoxClean, SearchMenuClean, vitalSearchMenu
 } from '@bodiless/vital-search';
 import { withChild } from '@bodiless/core';
+import { MenuClean } from '@bodiless/vital-navigation';
 import {
   listerineColor,
   listerineMenu,
@@ -34,8 +38,12 @@ const Default = asHeaderToken({
     DesktopSearch: on(SearchBoxClean)(listerineSearch.DesktopSearch),
     MobileSearch: on(SearchMenuClean)(vitalSearchMenu.Mobile),
     WhereToBuy: listerineButton.WhereToBuy,
-    UtilityMenu: listerineMenu.UtilityMenu,
-    UtilityMenuWrapper: replaceWith(Div),
+    OuterUtilityMenu: flowHoc(
+      startWith(MenuClean),
+      as(listerineMenu.UtilityMenu),
+    ),
+    OuterUtilityMenuWrapper: replaceWith(Div),
+    // UtilityMenu: listerineMenu.UtilityMenu,
     Menu: listerineMenu.TopNav,
   },
   Content: {
@@ -43,8 +51,8 @@ const Default = asHeaderToken({
   },
   Theme: {
     ...vitalHeaderBase.Default.Theme,
-    Wrapper: listerineColor.BgSecondaryFooter,
-    UtilityMenuWrapper: listerineColor.BgSecondaryFooterSignUp,
+    Wrapper: listerineColor.BgPrimaryBrand,
+    OuterUtilityMenuWrapper: listerineColor.BgSecondaryFooter,
   },
 });
 
