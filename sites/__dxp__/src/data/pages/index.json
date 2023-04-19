@@ -3,5 +3,8 @@
     "#template": "_default",
     "Title": "Home",
     "main-content": "Top Section",
-    "slug": "/"
+    "slug": "/",
+    "top-content": {
+        "type": "Image"
+    }
 }
