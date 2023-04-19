@@ -163,8 +163,17 @@ const WhiteLink = asElementToken({
 });
 
 const WithHoverArrow = asElementToken({
+  Layout: {
+    _: 'items-center'
+  },
   Theme: {
-    _: 'items-center hover:vital-arrow',
+    _: 'hover:vital-arrow',
+  },
+});
+
+const WithTertiaryHover = asElementToken({
+  Theme: {
+    _: listerineColor.WithTextTertiaryHover,
   },
 });
 
@@ -180,5 +189,6 @@ export default {
   CrumbsReviews,
   Link,
   WhiteLink,
-  WithHoverArrow
+  WithHoverArrow,
+  WithTertiaryHover
 };

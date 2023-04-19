@@ -29,6 +29,10 @@ const WhereToBuy = asButtonToken({
   Components: {
     Icon: replaceWith(BottleIcon),
   },
+  Layout: {
+    ...vitalButtonsBase.WhereToBuy.Layout,
+    Body: 'hidden xl:flex'
+  },
   Spacing: {
     ...vitalButtonsBase.WhereToBuy.Spacing,
     Body: 'ml-2',
@@ -44,7 +48,7 @@ const WhereToBuy = asButtonToken({
       listerineFontSize.Base,
       'font-gotham rounded',
     ),
-    Body: 'leading hidden xl:flex',
+    Body: 'leading',
   },
 });
 

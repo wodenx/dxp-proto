@@ -36,6 +36,7 @@ const twConfig = {
         'primary-hover': '#006042',
         'primary-selected': '#006042',
         secondary: '#212121',
+        'tertiary-hover': '#27D8A3',
       },
     },
     extend: {

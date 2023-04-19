@@ -12,18 +12,13 @@ import { listerineTypography } from '../../Typography';
 import { listerineFontSize } from '../../FontSize';
 import { WithHalfHorizontal, WithPrimaryTextLinkWithoutArrow } from './Base';
 
-const HeroBase = asCardToken({
-  ...vitalCardBase.Hero,
-  Layout: {},
-});
-
 const Hero = asCardToken(
   vitalCardBase.WithNoEyebrow,
   WithHalfHorizontal,
   {
-    ...HeroBase,
+    ...vitalCardBase.Hero,
     Behavior: {
-      ...HeroBase.Behavior,
+      ...vitalCardBase.Hero.Behavior,
       Wrapper: flowHoc(
         startWith(Div),
         addProps({ 'data-shadowed-by': '__vital__:HeroCard' }),
@@ -36,19 +31,23 @@ const Hero = asCardToken(
       ImageWrapper: 'pl-14 mb-9 lg:pl-0 lg:mb-0'
     },
     Layout: {
-      ...HeroBase.Layout,
+      ...vitalCardBase.Hero.Layout,
       Wrapper: 'space-x-reverse space-x-14 lg:flex-row-reverse flex-col w-full flex'
     },
     Theme: {
-      ...HeroBase.Theme,
+      ...vitalCardBase.Hero.Theme,
       Wrapper: listerineColor.BgPrimaryBrand,
       TitleWrapper: listerineTypography.H1,
       Title: listerineColor.TextWhite,
+      CTALink: as(
+        listerineTypography.Link,
+        listerineTypography.WithTertiaryHover
+      ),
       DescriptionWrapper: as(
         listerineFontSize.Base,
         listerineColor.TextWhite,
         vitalTextDecoration.Medium,
-        'font-gotham leading-[120%]'
+        'font-gotham font-light leading-[120%]'
       ),
     },
   },
@@ -71,4 +70,4 @@ const HeroRightCard = asCardToken(
   },
 );
 
-export { Hero, HeroBase, HeroRightCard };
+export { Hero, HeroRightCard };

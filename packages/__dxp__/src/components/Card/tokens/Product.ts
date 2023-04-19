@@ -1,6 +1,5 @@
 import { asCardToken, vitalCardBase } from '@bodiless/vital-card';
 import {
-  addClasses,
   addProps,
   as,
   Img,
@@ -27,7 +26,10 @@ const ProductCategory = asCardToken({
       listerineColor.TextWhite,
       'font-gotham'
     ),
-    Description: as(listerineTypography.Link),
+    Description: as(
+      listerineTypography.Link,
+      listerineTypography.WithTertiaryHover
+    ),
     ContentWrapper: as(listerineColor.BgPrimaryBrand, 'rounded-bl-[20px]'),
   },
   Spacing: {
@@ -47,7 +49,7 @@ const Product = asCardToken(
           alt: 'Stars with 4.1 rating, out of 5 max.',
           title: 'Rating stars',
         }),
-        addClasses('max-w-100'),
+        'max-w-100',
       ),
     },
     Theme: {

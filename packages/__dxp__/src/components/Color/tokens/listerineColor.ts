@@ -13,6 +13,7 @@ export default asTokenGroup(ColorMeta)({
   TextPrimaryInteractiveHover: 'hover:text-interactive-primary-hover',
   TextPrimaryInteractiveSelected: 'selected:text-interactive-primary-selected',
   TextSecondaryInteractive: 'text-interactive-secondary',
+  WithTextTertiaryHover: 'hover:text-interactive-tertiary-hover',
   WithTextPrimaryInteractiveDisabled: 'text-opacity-60',
   BgPrimaryDivider: 'bg-primary-divider',
   BgPrimaryInteractiveActive: 'bg-interactive-primary-active',
