@@ -165,10 +165,45 @@
   "collection": {
     "title": "Antiseptic",
     "image": {
+      "metadata": {
+        "tags": []
+      },
       "sys": {
-        "type": "Link",
-        "linkType": "Asset",
-        "id": "3zBfwFMo5nKPshkDApe6AV"
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "4BElGwE6gk31eEvqkcBvSL",
+        "type": "Asset",
+        "createdAt": "2023-04-19T21:49:14.136Z",
+        "updatedAt": "2023-04-19T21:49:14.136Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Antiseptic",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/4BElGwE6gk31eEvqkcBvSL/3c9654cc936f4498c6a2476b9d3f075f/Antiseptic.jpeg",
+          "details": {
+            "size": 10729,
+            "image": {
+              "width": 225,
+              "height": 225
+            }
+          },
+          "fileName": "Antiseptic.jpeg",
+          "contentType": "image/jpeg"
+        }
       }
     },
     "cta_text": "All Antiseptic Products "
