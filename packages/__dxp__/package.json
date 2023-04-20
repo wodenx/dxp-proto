@@ -17,7 +17,8 @@
     "/getDocs.js",
     "/tailwind.config.js",
     "/doc",
-    "./shadow.js"
+    "./shadow.js",
+    "/assets"
   ],
   "scripts": {
     "build": "run-p build:lib",

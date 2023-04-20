@@ -3,46 +3,86 @@
     "footer": {
         "type": "Footer",
         "copyright": "J&JCI 2023 All rights reserved. This site is published by Johnson & Johnson Consumer Inc., which is solely responsible for its contents. This website is intended for visitors from the United States. LISTERINE ESSENTIAL CARE®, LISTERINE POCKETMIST®, LISTERINE POCKETPAKS®, LISTERINE® Antiseptic, LISTERINE® SMART RINSE®, and LISTERINE WHITENING® are brands and products of Johnson & Johnson Consumer Inc. GLIDE is a registered trademark of The Procter & Gamble Company Corporation. Other brands referenced are trademarks of their respective companies. This site may contain links to websites which our privacy policy does not apply. We encourage you to read the privacy policy of every website you visit. Site last updated: March 31, 2023.",
-        "disclaimer": "Use all products as directed.",
+        "disclaimer": "Do not sell my personal information. <br/> Use all products as directed.",
         "footer-menu": {
             "type": "SimpleMenu",
             "menuItems": [
                 {
-                    "type": "MenuTitle",
-                    "text": "Menu Item One",
-                    "link": "/"
-                },
-                {
-                    "type": "MenuTitle",
-                    "text": "Menu Item Two",
-                    "link": "foo"
-                },
-                {
                     "type": "SubMenu",
                     "title": {
                         "type": "MenuTitle",
-                        "text": "Menu Item Three",
+                        "text": "Company Information",
                         "link": "/"
                     },
                     "menuItems": [
                         {
                             "type": "MenuTitle",
-                            "text": "Sub Menu Item One",
+                            "text": "ABOUT LISTERINE",
                             "link": "/"
                         },
                         {
                             "type": "MenuTitle",
-                            "text": "Sub Menu Item Two",
+                            "text": "CONTACT US",
+                            "link": "/"
+                        }
+                    ]
+                },
+                {
+                    "type": "SubMenu",
+                    "title": {
+                        "type": "MenuTitle",
+                        "text": "Legal Information",
+                        "link": "/"
+                    },
+                    "menuItems": [
+                        {
+                            "type": "MenuTitle",
+                            "text": "LEGAL NOTICE",
                             "link": "/"
                         },
                         {
                             "type": "MenuTitle",
-                            "text": "Sub Menu Item Three",
+                            "text": "TERMS OF USE",
                             "link": "/"
                         },
                         {
                             "type": "MenuTitle",
-                            "text": "Sub Menu Item Four",
+                            "text": "SITE MAP",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "AD CHOICES",
+                            "link": "/"
+                        }
+                    ]
+                },
+                {
+                    "type": "SubMenu",
+                    "title": {
+                        "type": "MenuTitle",
+                        "text": "Product Information",
+                        "link": "/"
+                    },
+                    "menuItems": [
+                        {
+                            "type": "MenuTitle",
+                            "text": "WHERE TO BUY",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "PRODUCTS",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "ORAL CARE",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "FAQS",
                             "link": "/"
                         }
                     ]
