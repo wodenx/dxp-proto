@@ -1,12 +1,13 @@
 import { vitalGenericTemplateBase, asGenericTemplateToken } from '@bodiless/vital-templates';
 import { asElementToken, vitalTypography } from '@bodiless/vital-elements';
 import { EditorPlainClean } from '@bodiless/vital-editors';
-import { Img, on, replaceWith } from '@bodiless/fclasses';
+import { Img, on } from '@bodiless/fclasses';
 import { dxpImage } from '@kenvue/dxp-image';
 
 import { withSbContent, withSbContentFromParent } from '../../../util';
 import { dxpEditorPlain } from '../../EditorPlain';
 import { dxpLayout } from '../../Layout';
+import { CuratorSectionClean, dxpCuratorSection } from '../../CuratorSection';
 
 // @todo To avoid the circular dependency we extend the
 // `dxpImage.Hero` token with `withSbContent` here.
@@ -27,7 +28,7 @@ export const Generic = asGenericTemplateToken({
     TopContent: on(Img)(Hero),
     // @todo replace with section container
     Content: on(EditorPlainClean)(dxpEditorPlain.Default),
-    BottomContent: replaceWith(() => null),
+    BottomContent: on(CuratorSectionClean)(dxpCuratorSection.Default),
   },
   Theme: {
     // @todo remove this

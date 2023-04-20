@@ -3,5 +3,10 @@
     "#template": "_default",
     "Title": "Home",
     "main-content": "Top Section",
-    "slug": "/"
+    "slug": "/",
+    "bottom-content": {
+        "type": "Curator",
+        "feedID": "test",
+        "containerID": "test"
+    }
 }
