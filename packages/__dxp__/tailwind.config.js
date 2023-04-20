@@ -26,7 +26,7 @@ const twConfig = {
       },
       secondary: {
         eyebrow: '#535353',
-        'footer-bg': '#11647A',
+        'footer-bg': '#11647B',
         'footer-bg-signup': '#105367',
         border: '#DBE8EB',
       },
@@ -70,7 +70,10 @@ const twConfig = {
         'm-3xl': ['1.75rem', '1.875rem'],
         'm-4xl': ['2.0625rem', '2.25rem'],
         'm-5xl': ['2.5rem', '2.5rem'],
-      }
+      },
+      // backgroundImage: {
+      //   'footer-wave': 'url(\'__dxp__/assets/image/footer-desktop.svg\')',
+      // },
     },
   },
   plugins: [
