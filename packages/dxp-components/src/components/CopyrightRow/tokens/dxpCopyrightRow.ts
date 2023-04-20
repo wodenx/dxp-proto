@@ -49,15 +49,15 @@ const Default = asCopyrightRowToken({
       removeClasses('xl:flex'),
       addClasses('flex flex-col 2xl:flex-row')
     ),
-    CopyrightWrapper: 'pr-10',
-    SocialDisclaimer: 'w-full xl:w-1/4',
+    CopyrightWrapper: 'pr-10 shrink-0',
+    SocialDisclaimer: 'w-full',
     SocialLinksWrapper: removeClasses('xl:w-1/4'),
-    Disclaimer: 'hidden sm:block',
+    Disclaimer: 'hidden sm:block text-xs',
     Copyright: 'text-xs',
   },
   Spacing: {
     Wrapper: 'gap-y-5 pr-5 sm:pr-0',
-    SocialDisclaimer: 'py-10 sm:py-0',
+    SocialDisclaimer: 'py-10 lg:py-0',
     SocialLinksWrapper: 'mb-3',
     SocialLinks: flowHoc(
       addClasses('w-full'),

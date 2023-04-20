@@ -26,13 +26,16 @@ const WithListerineRewardsExpanding2XL = asFooterToken({
     Wrapper: 'footer-wave',
     Column2Wrapper: flowHoc(
       as(listerineColor.BgSecondaryFooter),
-      addClasses('md:pl-10 px-5 2xl:mt-[13vw] mobile-wave-bottom relative 2xl:w-8/12'),
+      addClasses('xl:pl-10 px-5 2xl:mt-[13vw] mobile-wave-bottom relative 2xl:w-8/12'),
     ),
     Container: flowHoc(
       removeClasses('md:mx-4.5'),
       addClasses('2xl:mx-0 2xl:px-0 2xl:pt-0 2xl:pb-0 mx-0'),
     ),
   },
+  Spacing: {
+    MenuRow: 'xl:pl-16',
+  }
 });
 
 const Default = asFooterToken(vitalFooterBase.Default,

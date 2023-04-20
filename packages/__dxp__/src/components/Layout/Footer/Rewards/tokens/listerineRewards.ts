@@ -83,7 +83,7 @@ const WithListerineRewards = asRewardsToken({
   Spacing: {
     Wrapper: flowHoc(
       removeClasses('max-w-3xl'),
-      addClasses('py-20 px-15 2xl:px-24 2xl:w-4/12 justify-center'),
+      addClasses('py-20 2xl:px-24 md:px-5 px-15 2xl:w-4/12 justify-center'),
     ),
     Brand: 'mb-2',
   },
