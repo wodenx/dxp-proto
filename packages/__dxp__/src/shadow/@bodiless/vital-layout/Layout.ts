@@ -8,13 +8,12 @@ import {
 } from '@bodiless/vital-layout';
 // import HeaderClean from '../../../components/Layout/Header/HeaderClean';
 
-const Default = asLayoutToken({
-  ...vitalLayoutBase.Default,
-  Components: {
-    ...vitalLayoutBase.Default.Components,
-    // @Sam The Header below should be removed and follow pattern for Footer...
-    // Header: on(HeaderClean)(vitalHeader.Default),
-  },
+const Default = asLayoutToken(vitalLayoutBase.Default, {
+  // Components: {
+  // ...vitalLayoutBase.Default.Components,
+  // @Sam The Header below should be removed and follow pattern for Footer...
+  // Header: on(HeaderClean)(vitalHeader.Default),
+  // },
 });
 
 export default {
