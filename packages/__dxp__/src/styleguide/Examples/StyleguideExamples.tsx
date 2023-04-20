@@ -13,6 +13,7 @@ import {
   ComponentOrTag, Div, H3, DesignableComponents, addClassesIf,
 } from '@bodiless/fclasses';
 import { asFluidToken, vitalTypography } from '@bodiless/vital-elements';
+import { listerineSpacing } from 'src/components';
 
 export type StyleGuideExamplesComponents = {
   Wrapper: ComponentOrTag<any>,
@@ -95,6 +96,23 @@ const Card = asFluidToken({
   }
 });
 
-const vitalStyleGuideExamples = { Default, Card };
+const WithFourColumnGrid = asFluidToken({
+  Layout: {
+    Wrapper: 'grid lg:grid-cols-4 gap-4',
+  },
+});
+
+const WithMargin = asFluidToken({
+  Spacing: {
+    Wrapper: listerineSpacing.WithSiteMargin,
+  },
+});
+
+const vitalStyleGuideExamples = {
+  Default,
+  Card,
+  WithFourColumnGrid,
+  WithMargin
+};
 
 export { StyleGuideExamplesClean, vitalStyleGuideExamples };

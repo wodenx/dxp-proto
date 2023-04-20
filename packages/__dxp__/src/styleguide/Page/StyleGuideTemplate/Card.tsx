@@ -20,27 +20,33 @@ const listerineCardFlowContainer = asFluidToken(vitalStyleGuideExamples.Card, {
   Components: {
     Hero: on(CardClean)(listerineCardHero.HeroRightCard),
     Products: on(StyleGuideExamplesClean)(
-      asFluidToken({
-        Components: {
-          ProductCategory: on(CardClean)(listerineCardProduct.ProductCategory),
-          ProductCategory2: on(CardClean)(listerineCardProduct.ProductCategory),
-          ProductCategory3: on(CardClean)(listerineCardProduct.ProductCategory),
-          ProductCategory4: on(CardClean)(listerineCardProduct.ProductCategory),
-          Product: on(CardClean)(listerineCardProduct.Product),
-          Product2: on(CardClean)(listerineCardProduct.Product),
-          Product3: on(CardClean)(listerineCardProduct.Product),
-          Product4: on(CardClean)(listerineCardProduct.Product),
+      asFluidToken(
+        vitalStyleGuideExamples.WithFourColumnGrid,
+        vitalStyleGuideExamples.WithMargin,
+        {
+          Components: {
+            ProductCategory: on(CardClean)(
+              listerineCardProduct.ProductCategory,
+            ),
+            ProductCategory2: on(CardClean)(
+              listerineCardProduct.ProductCategory,
+            ),
+            ProductCategory3: on(CardClean)(
+              listerineCardProduct.ProductCategory,
+            ),
+            ProductCategory4: on(CardClean)(
+              listerineCardProduct.ProductCategory,
+            ),
+            Product: on(CardClean)(listerineCardProduct.Product),
+            Product2: on(CardClean)(listerineCardProduct.Product),
+            Product3: on(CardClean)(listerineCardProduct.Product),
+            Product4: on(CardClean)(listerineCardProduct.Product),
+          },
+          Theme: {
+            ItemTitle: listerineTypography.H6,
+          },
         },
-        Layout: {
-          Wrapper: 'grid lg:grid-cols-4 gap-4',
-        },
-        Spacing: {
-          Wrapper: listerineSpacing.WithSiteMargin,
-        },
-        Theme: {
-          ItemTitle: listerineTypography.H6
-        }
-      }),
+      ),
     ),
   },
 });
