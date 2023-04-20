@@ -5,7 +5,12 @@ import {
 } from '@bodiless/vital-templates';
 import { asFluidToken } from '@bodiless/vital-elements';
 import { CardClean } from '@bodiless/vital-card';
-import { listerineCardHero, listerineCardProduct } from '../../../components';
+import {
+  listerineCardHero,
+  listerineCardProduct,
+  listerineSpacing,
+  listerineTypography,
+} from '../../../components';
 import {
   StyleGuideExamplesClean,
   vitalStyleGuideExamples,
@@ -14,14 +19,29 @@ import {
 const listerineCardFlowContainer = asFluidToken(vitalStyleGuideExamples.Card, {
   Components: {
     Hero: on(CardClean)(listerineCardHero.HeroRightCard),
-    ProductCategory: on(CardClean)(listerineCardProduct.ProductCategory),
-    ProductCategory2: on(CardClean)(listerineCardProduct.ProductCategory),
-    ProductCategory3: on(CardClean)(listerineCardProduct.ProductCategory),
-    ProductCategory4: on(CardClean)(listerineCardProduct.ProductCategory),
-    Product: on(CardClean)(listerineCardProduct.Product),
-    Product2: on(CardClean)(listerineCardProduct.Product),
-    Product3: on(CardClean)(listerineCardProduct.Product),
-    Product4: on(CardClean)(listerineCardProduct.Product),
+    Products: on(StyleGuideExamplesClean)(
+      asFluidToken({
+        Components: {
+          ProductCategory: on(CardClean)(listerineCardProduct.ProductCategory),
+          ProductCategory2: on(CardClean)(listerineCardProduct.ProductCategory),
+          ProductCategory3: on(CardClean)(listerineCardProduct.ProductCategory),
+          ProductCategory4: on(CardClean)(listerineCardProduct.ProductCategory),
+          Product: on(CardClean)(listerineCardProduct.Product),
+          Product2: on(CardClean)(listerineCardProduct.Product),
+          Product3: on(CardClean)(listerineCardProduct.Product),
+          Product4: on(CardClean)(listerineCardProduct.Product),
+        },
+        Layout: {
+          Wrapper: 'grid lg:grid-cols-4 gap-4',
+        },
+        Spacing: {
+          Wrapper: listerineSpacing.WithSiteMargin,
+        },
+        Theme: {
+          ItemTitle: listerineTypography.H6
+        }
+      }),
+    ),
   },
 });
 

@@ -87,16 +87,11 @@ const Default = asFluidToken({
 
 const Card = asFluidToken({
   ...Default,
-  Layout: {
-    ...Default.Layout,
-    Wrapper: 'grid lg:grid-cols-4 gap-4',
-    ItemWrapper: 'flex flex-col-reverse'
-  },
   Spacing: {
     ItemTitle: 'mt-1'
   },
   Behavior: {
-    ItemWrapper: addClassesIf(({ id }: any) => id.startsWith('Hero'))('lg:col-span-4'),
+    ItemWrapper: addClassesIf(({ id }: any) => id.startsWith('Hero'))('flex flex-col-reverse'),
   }
 });
 
