@@ -8,7 +8,6 @@ import { CardClean } from '@bodiless/vital-card';
 import {
   listerineCardHero,
   listerineCardProduct,
-  listerineSpacing,
   listerineTypography,
 } from '../../../components';
 import {
