@@ -1,0 +1,27 @@
+{
+  "name": "@kenvue/dxp-curator",
+  "version": "0.0.0",
+  "description": "",
+  "author": "",
+  "license": "UNLICENSED",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "/lib"
+  ],
+  "scripts": {
+    "build": "run-p build:lib",
+    "build:lib": "tsc -b ./tsconfig.cjs.json ./tsconfig.json",
+    "clean": "rimraf \"lib/*\" && rimraf tsconfig.tsbuildinfo",
+    "dev": "npm run build:lib -- --watch"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
+  },
+  "dependencies": {
+    "@bodiless/fclasses": "^1.0.0-rc.33",
+    "@bodiless/vital-editors": "^1.0.0-rc.33",
+    "@stackbit/types": "0.5.0"
+  }
+}

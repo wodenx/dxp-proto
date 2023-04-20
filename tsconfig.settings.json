@@ -6,8 +6,14 @@
     "module": "es2015",
     "skipDefaultLibCheck": true,
     "noUnusedLocals": true,
-    "lib": ["es7", "dom"],
-    "types": ["jest", "node"],
+    "lib": [
+      "es7",
+      "dom"
+    ],
+    "types": [
+      "jest",
+      "node"
+    ],
     "checkJs": false,
     "jsx": "react",
     "strict": true,
@@ -23,10 +29,21 @@
     "useDefineForClassFields": true,
     "baseUrl": "packages",
     "paths": {
-      "--dxp--": ["packages/__dxp__/src"],
-      "dxp-product": ["packages/dxp-product/src"],
-      "dxp-section": ["packages/dxp-section/src"],
-      "dxp-image": ["packages/dxp-image/src"],
+      "--dxp--": [
+        "packages/__dxp__/src"
+      ],
+      "dxp-product": [
+        "packages/dxp-product/src"
+      ],
+      "dxp-section": [
+        "packages/dxp-section/src"
+      ],
+      "dxp-image": [
+        "packages/dxp-image/src"
+      ],
+      "dxp-curator": [
+        "packages/dxp-curator/src"
+      ],
     }
   }
 }

@@ -4,10 +4,10 @@ import { EditorPlainClean } from '@bodiless/vital-editors';
 import { Img, on } from '@bodiless/fclasses';
 import { dxpImage } from '@kenvue/dxp-image';
 
+import { CuratorSectionClean, asCuratorSectionToken, dxpCuratorSection } from '@kenvue/dxp-curator';
 import { withSbContent, withSbContentFromParent } from '../../../util';
 import { dxpEditorPlain } from '../../EditorPlain';
 import { dxpLayout } from '../../Layout';
-import { CuratorSectionClean, dxpCuratorSection } from '../../CuratorSection';
 
 // @todo To avoid the circular dependency we extend the
 // `dxpImage.Hero` token with `withSbContent` here.
@@ -16,6 +16,15 @@ import { CuratorSectionClean, dxpCuratorSection } from '../../CuratorSection';
 export const Hero = asElementToken(dxpImage.Plain, {
   Content: {
     _: withSbContent(),
+  },
+});
+
+export const Curator = asCuratorSectionToken(dxpCuratorSection.Default, {
+  Content: {
+    Feed: withSbContent((data: any) => {
+      console.log(data);
+      return data;
+    }),
   },
 });
 
@@ -28,7 +37,7 @@ export const Generic = asGenericTemplateToken({
     TopContent: on(Img)(Hero),
     // @todo replace with section container
     Content: on(EditorPlainClean)(dxpEditorPlain.Default),
-    BottomContent: on(CuratorSectionClean)(dxpCuratorSection.Default),
+    BottomContent: on(CuratorSectionClean)(Curator),
   },
   Theme: {
     // @todo remove this

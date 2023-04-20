@@ -28,7 +28,7 @@ import MenuTitle from '@kenvue/dxp-components/lib/stackbit/MenuTitle/model';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import SubMenu from '@kenvue/dxp-components/lib/stackbit/SubMenu/model';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import Curator from '@kenvue/dxp-components/lib/stackbit/CuratorSection/model';
+import Curator from '@kenvue/dxp-curator/lib/stackbit';
 
 const liveSiteURL = process.env.LIVE_SITE_URL? [{
   label: 'View Live Site',
