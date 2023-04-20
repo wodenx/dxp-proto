@@ -13,7 +13,7 @@ import {
   ComponentOrTag, Div, H3, DesignableComponents, addClassesIf,
 } from '@bodiless/fclasses';
 import { asFluidToken, vitalTypography } from '@bodiless/vital-elements';
-import { listerineSpacing } from 'src/components';
+import { listerineSpacing } from '../../components/Spacing';
 
 export type StyleGuideExamplesComponents = {
   Wrapper: ComponentOrTag<any>,
