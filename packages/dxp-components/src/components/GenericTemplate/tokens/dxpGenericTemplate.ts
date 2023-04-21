@@ -19,12 +19,10 @@ export const Hero = asElementToken(dxpImage.Plain, {
   },
 });
 
+//
 export const Curator = asCuratorSectionToken(dxpCuratorSection.Default, {
   Content: {
-    Feed: withSbContent((data: any) => {
-      console.log(data);
-      return data;
-    }),
+    Feed: withSbContent(),
   },
 });
 
