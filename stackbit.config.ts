@@ -63,7 +63,6 @@ export default {
         SubMenu,
         ImageModel,
         Curator,
-
       ],
       assetsConfig: {
         referenceType: 'static',

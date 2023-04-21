@@ -6,14 +6,8 @@
     "module": "es2015",
     "skipDefaultLibCheck": true,
     "noUnusedLocals": true,
-    "lib": [
-      "es7",
-      "dom"
-    ],
-    "types": [
-      "jest",
-      "node"
-    ],
+    "lib": ["es7", "dom"],
+    "types": ["jest", "node"],
     "checkJs": false,
     "jsx": "react",
     "strict": true,
