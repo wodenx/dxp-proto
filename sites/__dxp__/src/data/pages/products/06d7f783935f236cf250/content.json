@@ -1,0 +1,23 @@
+{
+  "contentful_id": "6KS2OXRniCkliywqpM2Z77",
+  "revision_id": 1,
+  "name": "New product",
+  "images": [
+    {
+      "title": "Test Product Updated",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/5cuMaDb5ykcMkzrVcZ8E04/e6ab55f1760987bf6053c3d229a22624/product-updated.png",
+        "details": {
+          "size": 23410,
+          "image": {
+            "width": 675,
+            "height": 500
+          }
+        },
+        "fileName": "product-updated.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "faq": []
+}
