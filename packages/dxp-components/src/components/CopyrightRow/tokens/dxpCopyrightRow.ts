@@ -49,7 +49,7 @@ const Default = asCopyrightRowToken({
       removeClasses('xl:flex'),
       addClasses('flex flex-col 2xl:flex-row')
     ),
-    CopyrightWrapper: 'pr-10 shrink-0',
+    CopyrightWrapper: 'xl:pr-10 shrink-0',
     SocialDisclaimer: 'w-full',
     SocialLinksWrapper: removeClasses('xl:w-1/4'),
     Disclaimer: 'hidden sm:block text-xs',
