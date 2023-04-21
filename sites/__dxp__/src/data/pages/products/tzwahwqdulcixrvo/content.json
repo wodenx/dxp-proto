@@ -1,6 +1,6 @@
 {
   "contentful_id": "Iy4W1KD6741kL5ba",
-  "revision_id": 3,
+  "revision_id": 4,
   "name": "Product I1P6Q55h",
   "images": [
     {
@@ -19,5 +19,51 @@
       }
     }
   ],
-  "faq": []
+  "faq": [],
+  "collection": {
+    "title": "Product Collection 31Z1z2fz",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "48rYkeA4vOpfsRG8aVc7iZ",
+        "type": "Asset",
+        "createdAt": "2023-04-21T06:04:56.078Z",
+        "updatedAt": "2023-04-21T07:22:13.836Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Test Product Collection",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/48rYkeA4vOpfsRG8aVc7iZ/6a8a472dc9194db991e7e91378da5c21/product-collection.png",
+          "details": {
+            "size": 21727,
+            "image": {
+              "width": 667,
+              "height": 500
+            }
+          },
+          "fileName": "product-collection.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "cta_text": "o Jo6BNY5ZeH d  9P7UpL  3B 2 ac9iEs  m9Va  k9a0 H 8M  6C X  V26"
+  }
 }
