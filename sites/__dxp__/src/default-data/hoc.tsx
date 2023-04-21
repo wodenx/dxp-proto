@@ -15,6 +15,7 @@ const productDataMap = (data: ProductQueryData) => {
   const allCollections = edges.reduce((acc: DxpProductCollectionCardData[], cur) => {
     const { node } = cur;
     const collection = ProductDataTransformer.transformProductCategory(node);
+    if (!collection) return acc;
     acc.push(collection);
     return acc;
   }, []);
