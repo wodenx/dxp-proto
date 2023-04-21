@@ -3,7 +3,7 @@ name: End to End Regression Tests
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 6 * * 1-5"
+    - cron: "0 3 * * *"
 
 jobs:
   tests:
@@ -52,13 +52,13 @@ jobs:
                                -Pvividus.selenium.grid.password=${SAUCELABS_PASSWORD} \
                                -Pvividus.configuration-set.active=api
       - name: Publish report
-        if: steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        if: always() && steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v3
         with:
           name: Tests report for ${{ matrix.suite }} run
           path: tests/e2e/output/reports/allure
       - name: Deploy report to Vercel
-        if: steps.changed-files-excluded.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        if: always() && steps.changed-files-excluded.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         env:
           REPORT_DEPLOY_KEY: ${{ secrets.REPORT_DEPLOY_KEY }}
           VERCEL_ORG_ID: ${{ vars.REPORT_VERCEL_ORG_ID }}
@@ -72,9 +72,11 @@ jobs:
           vercel deploy -t $REPORT_DEPLOY_KEY -S jnj-demo-account --prod
 
       - name: Get installed Playwright version
+        if: always()
         id: playwright-version
         run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('./package-lock.json').dependencies['@playwright/test'].version)")" >> $GITHUB_ENV
       - name: Cache playwright binaries
+        if: always()
         uses: actions/cache@v3
         id: playwright-cache
         with:
@@ -82,9 +84,10 @@ jobs:
             ~/.cache/ms-playwright
           key: ${{ runner.os }}-playwright-${{ env.PLAYWRIGHT_VERSION }}
       - name: Install playwrght
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        if: always() && steps.playwright-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps
       - name: Run configuration tests
+        if: always()
         env:
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.TEST_CONTENTFUL_TOKEN }}
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
