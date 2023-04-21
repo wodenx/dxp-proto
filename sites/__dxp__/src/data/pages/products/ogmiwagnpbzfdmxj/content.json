@@ -1,123 +1,24 @@
 {
   "contentful_id": "2rc265AGzj4n9098",
-  "revision_id": 1,
-  "name": "Product 9Ek5A78A",
+  "revision_id": 2,
+  "name": "Product 987JkR3S",
   "images": [
     {
-      "title": "Test Product",
+      "title": "Test Product Updated",
       "file": {
-        "url": "//images.ctfassets.net/o0k7u0i6hu7n/6XJ7fx23ujH9S25UZjBvAW/2d84548b517f045e58f7c369711ef1e9/product.png",
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/2sYMalooBH0wWrhWzzmA47/3670729e3c4b2348507975dd80e8e8e4/product-updated.png",
         "details": {
-          "size": 16480,
+          "size": 23410,
           "image": {
-            "width": 667,
+            "width": 675,
             "height": 500
           }
         },
-        "fileName": "product.png",
+        "fileName": "product-updated.png",
         "contentType": "image/png"
       }
     }
   ],
-  "summary": [
-    {
-      "nodeType": "text",
-      "value": "1eS  g n0 5 beDBa  NZnz4J 6yS0k802K4G  1LK53vf fS4 42fFF   72j N",
-      "marks": [],
-      "data": {}
-    },
-    {
-      "nodeType": "text",
-      "value": " ",
-      "marks": [],
-      "data": {}
-    },
-    {
-      "nodeType": "text",
-      "value": "hDG6 2   1 x8 rM 0M4 P8jDC0N6IWyr4 Y  BYV xOAt fRiU2wc    2 87nZ",
-      "marks": [
-        {
-          "type": "bold"
-        }
-      ],
-      "data": {}
-    },
-    {
-      "nodeType": "text",
-      "value": " ",
-      "marks": [],
-      "data": {}
-    },
-    {
-      "nodeType": "text",
-      "value": "6NYPp G xMb    RooqQGL 9i79F5  q og4 3 r2HQ Mz Ii 7o  kh1 OH c",
-      "marks": [
-        {
-          "type": "superscript"
-        }
-      ],
-      "data": {}
-    },
-    {
-      "nodeType": "text",
-      "value": " ",
-      "marks": [],
-      "data": {}
-    },
-    {
-      "nodeType": "hyperlink",
-      "data": {
-        "uri": "https://example.com/"
-      },
-      "content": [
-        {
-          "nodeType": "text",
-          "value": "tv 1B Qq7Znj5Y Q",
-          "marks": [],
-          "data": {}
-        }
-      ]
-    }
-  ],
-  "directions": [
-    [
-      {
-        "nodeType": "text",
-        "value": "n9 08be u0E   h9gh  BG VF NRd7kB51i  V7n R V9ZWb 0 ghxtQ2P H0 6 z 97  9N  K4xV 68zka9c0NO c sab Dc794 64 v3iH  qZ 343 Bx 3y1B7I2BP  1X 01m78 l43W a408 BMU72 pf5AxkSk1b10wEG H GnS5Ap0389ui03nSGR45 V6e9  Y  C   i  A53 0 t55 4N05v N f1P1nY v 3zi 6KJU8  i3 p",
-        "marks": [],
-        "data": {}
-      }
-    ]
-  ],
-  "warnings": [
-    [
-      {
-        "nodeType": "text",
-        "value": "0  uV y727 lx z7Nj z19 xA45X bor238 p16G w I Rv8deT3DZ 4O   Fq Gr   v Ln  S1rKzLR ydb0Eg h  pd7 UOjR65Ikuk5 ePn xf 8 t CAS de 13d M2 C 3SNa7 z2H6SnXlOj9K WVW Q6f OqjJo Y6251M ao4CAD3qzEv6t v v1 3W gb Vp y  DC  9 ZsbCB   s  em hg  w qc m8zdGP VC8XW  7Ro0 97",
-        "marks": [],
-        "data": {}
-      }
-    ]
-  ],
-  "additional_info": [
-    [
-      {
-        "nodeType": "text",
-        "value": "8 aL0 9 53gAQ84kcdoUb94G tTEkP2e P U5t92  62X v2vna  iB6INt6vEMv 2tgg  Dqv1 0n8 ySLV  B ab2u39 p38 3vI G  2OL W5 GrwR5  6a60 2jA hW5 H6  6p46   0   ju  8po40 2TxN 70O71r5 50p 4U1kLG BUGdk  6F N58 N1 Uwy  Brfy679 9 99504f 58XFp07 4I P 5IR hyG1Ah80sm7xT 0658",
-        "marks": [],
-        "data": {}
-      }
-    ]
-  ],
-  "ingredients": [
-    {
-      "title": "Ingredient d5062tx8",
-      "inactive_active": "Active"
-    }
-  ],
-  "sku": "6Xs980kLEbC0QJiLq5W8ai8UHMR7136VQS0grH88bmX9j07VHu3od8wEq29TXCmW",
-  "upc": "UWLMeY16J8M4V7jr7AKZAa5dro90652R92U03Vmwq6t4JXdwJ0873LPo12x9p711",
-  "ean": "Y9vx20C3V3hIW2Twc9FWo7jS10zGKC5GN6UI98PsN222cnb34s60FFqp5r96b35U",
   "faq": [
     {
       "question": "FAQ 90R69Pn0",
@@ -140,51 +41,5 @@
         ]
       }
     }
-  ],
-  "collection": {
-    "title": "Product Collection Idb13Rf8",
-    "image": {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "o0k7u0i6hu7n"
-          }
-        },
-        "id": "3Y4yeOAONKYyEwmWqy0l8J",
-        "type": "Asset",
-        "createdAt": "2023-04-21T08:03:53.750Z",
-        "updatedAt": "2023-04-21T08:03:53.750Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "locale": "en-US"
-      },
-      "fields": {
-        "title": "Test Product Collection",
-        "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/3Y4yeOAONKYyEwmWqy0l8J/d3e71ac139fbb846548a51c48b7078b4/product-collection.png",
-          "details": {
-            "size": 21727,
-            "image": {
-              "width": 667,
-              "height": 500
-            }
-          },
-          "fileName": "product-collection.png",
-          "contentType": "image/png"
-        }
-      }
-    },
-    "cta_text": "z Q3B T  wF e060A7zm I7 a  XB h j3J0p J   a 3FY4 BV75S850ZIlq nx"
-  }
+  ]
 }
