@@ -115,7 +115,7 @@ const twConfig = {
       ]);
       addComponents({
         '.footer-wave-test': {
-          maskImage: 'url(\'../images/footer-desktop.svg\')',
+          maskImage: 'url(\'--dxp--/assets/image/footer-desktop.svg\')',
           maskPosition: 'top center',
           maskSize: '100%',
         },
