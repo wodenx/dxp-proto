@@ -41,7 +41,7 @@ const WithListerineRewards = asRewardsToken({
   Theme: {
     ...vitalRewards.Default.Theme,
     Wrapper: flowHoc(
-      addClasses('2xl:flex 2xl:flex-col 2xl:bg-secondary-footer-bg-signup bg-secondary-footer-bg-signup mobile-wave-top relative'),
+      addClasses('2xl:flex 2xl:flex-col 2xl:bg-secondary-footer-bg-signup bg-secondary-footer-bg-signup relative'),
       as(listerineColor.BgSecondaryFooterSignUp,
         listerineColor.TextWhite),
       as(withTopFooterWave),

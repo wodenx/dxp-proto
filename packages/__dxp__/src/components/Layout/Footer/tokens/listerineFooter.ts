@@ -36,7 +36,7 @@ const WithListerineRewardsExpanding2XL = asFooterToken({
   Theme: {
     ...vitalFooterBase.Default.Theme,
     _: listerineColor.TextWhite,
-    Wrapper: '2xl:footer-wave-test',
+    Wrapper: '2xl:footer-wave',
     Column2Wrapper: flowHoc(
       as(listerineColor.BgSecondaryFooter),
       addClasses('xl:pl-10 px-5 2xl:mt-[13vw] relative 2xl:w-8/12'),

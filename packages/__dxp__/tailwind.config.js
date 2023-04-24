@@ -73,9 +73,8 @@ const twConfig = {
         'm-5xl': ['2.5rem', '2.5rem'],
       },
       backgroundImage: {
-        'footer-wave': 'url(\'__dxp__/assets/image/footer-desktop.svg\')',
-        'mobile-wave-top': 'url(\'__dxp__/assets/image/mobile-footer-up.png\')',
-        'mobile-wave-bottom': 'url(\'__dxp__/assets/image/mobile-footer-down.png\')',
+        'mobile-wave-top': "url('--dxp--/assets/image/mobile-footer-up.png')",
+        'mobile-wave-bottom': "url('--dxp--/assets/image/mobile-footer-down.png')",
       },
       backgroundSize: {
         'wave-full': '100% 100%',
@@ -114,8 +113,8 @@ const twConfig = {
         },
       ]);
       addComponents({
-        '.footer-wave-test': {
-          maskImage: 'url(\'__dxp__/assets/image/footer-desktop.svg\')',
+        '.footer-wave': {
+          maskImage: "url('--dxp--/assets/image/footer-desktop.svg')",
           maskPosition: 'top center',
           maskSize: '100%',
         },
