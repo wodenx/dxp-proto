@@ -52,7 +52,7 @@ const Default = asHeaderToken({
   Theme: {
     ...vitalHeaderBase.Default.Theme,
     Wrapper: listerineColor.BgPrimaryBrand,
-    OuterUtilityMenuWrapper: listerineColor.BgSecondaryFooter,
+    OuterUtilityMenuWrapper: listerineColor.BgSecondaryUtility,
   },
 });
 
