@@ -19,6 +19,7 @@ export default asTokenGroup(ColorMeta)({
   TextPrimaryHeaderCopy: 'text-primary-header-copy',
   BgSecondaryFooter: 'bg-secondary-footer-bg',
   BgSecondaryFooterSignUp: 'bg-secondary-footer-bg-signup',
+  BgSecondaryUtility: 'bg-secondary-utility-menu',
   TextPrimaryFooterCopy: 'text-primary-footer-copy',
   TextSecondaryEyebrow: 'text-secondary-eyebrow',
   BgSecondaryTable: 'bg-secondary-table',
