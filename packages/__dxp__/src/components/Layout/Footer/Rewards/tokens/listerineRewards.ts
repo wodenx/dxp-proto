@@ -18,22 +18,33 @@ import {
 
 import { withParent, withPrependChild } from '@bodiless/core';
 import { omit } from 'lodash';
-import { vitalTextDecoration } from '@bodiless/vital-elements';
-import {
-  listerineColor,
-  listerineFontSize,
-  listerineTypography,
-} from '../../../..';
+import { asElementToken, vitalTextDecoration } from '@bodiless/vital-elements';
+import { listerineColor } from '../../../../Color';
+import { listerineFontSize } from '../../../../FontSize';
+import { listerineTypography } from '../../../../Typography';
 import ListerineLogo from '../../../../Logo/assets/ListerineLogo';
+
+const withTopFooterWave = asElementToken({
+  Theme: {
+    _: '2xl:before:content-none before:content-[\'\'] before:bg-mobile-wave-top',
+  },
+  Spacing: {
+    _: 'before:mr-[-50vw] before:right-[50%] before:top-[-35px]'
+  },
+  Layout: {
+    _: 'before:absolute before:w-screen before:bg-wave-full before:h-9'
+  },
+});
 
 const WithListerineRewards = asRewardsToken({
   ...vitalRewards.Default,
   Theme: {
     ...vitalRewards.Default.Theme,
     Wrapper: flowHoc(
-      addClasses('2xl:flex 2xl:flex-col 2xl:bg-secondary-footer-bg-signup lg:bg-secondary-footer-bg bg-secondary-footer-bg-signup mobile-wave-top relative'),
+      addClasses('2xl:flex 2xl:flex-col 2xl:bg-secondary-footer-bg-signup bg-secondary-footer-bg-signup mobile-wave-top relative'),
       as(listerineColor.BgSecondaryFooterSignUp,
         listerineColor.TextWhite),
+      as(withTopFooterWave),
     ),
     Brand: flowHoc(
       replaceWith(ListerineLogo),
@@ -60,16 +71,19 @@ const WithListerineRewards = asRewardsToken({
     FormButton: flowHoc(
       withParent(Div),
       withDesign({
-        Parent: withPrependChild(
-          flowHoc(
-            addProps({
-              children: 'The information you submit will be governed by our site’s PRIVACY POLICY'
-            }),
-            as(
-              listerineFontSize.XS,
-              'text-white block mb-3 2xl:block md:hidden',
-            )
-          )(P), 'TEST'
+        Parent: flowHoc(
+          withPrependChild(
+            flowHoc(
+              addProps({
+                children: 'The information you submit will be governed by our site’s PRIVACY POLICY'
+              }),
+              as(
+                listerineFontSize.XS,
+                'text-white block mb-3 2xl:block md:hidden',
+              )
+            )(P), 'TEST'
+          ),
+          addClasses('w-full'),
         ),
       }),
       removeClasses('md:p-2'),
@@ -82,7 +96,7 @@ const WithListerineRewards = asRewardsToken({
   },
   Spacing: {
     Wrapper: flowHoc(
-      removeClasses('max-w-3xl'),
+      removeClasses('max-w-3xl xl:mx-36'),
       addClasses('py-20 pb-28 sm:pb-36 2xl:px-24 md:px-5 px-8 2xl:w-4/12 justify-center'),
     ),
     Brand: 'mb-2',
