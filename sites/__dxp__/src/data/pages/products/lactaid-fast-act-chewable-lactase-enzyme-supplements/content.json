@@ -1,0 +1,24 @@
+{
+  "contentful_id": "5EMSutNUu7ekZcMdwhtjnz",
+  "revision_id": 1,
+  "name": "LACTAID® Fast Act Chewable Lactase Enzyme Supplements",
+  "images": [
+    {
+      "title": "lac fastact chew 00 front",
+      "description": "",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/1TE2DwyTIfC71lpCKG2I5i/6b5e85717023dbe86b0d9c3f0949dc9a/lac_fastact_chew_00_front.jpeg",
+        "details": {
+          "size": 30261,
+          "image": {
+            "width": 500,
+            "height": 500
+          }
+        },
+        "fileName": "lac_fastact_chew_00_front.jpeg",
+        "contentType": "image/jpeg"
+      }
+    }
+  ],
+  "faq": []
+}
