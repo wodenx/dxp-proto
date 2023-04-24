@@ -22,11 +22,6 @@ const Default = asCuratorSectionToken({
     Subtitle: withProps({
       children: 'Placeholder Description',
     }),
-    // @todo Remove debugger
-    // Feed: withSbContent((data: any) => {
-    //   console.log(data);
-    //   return data;
-    // }),
   },
   Meta: flowHoc.meta.term('Type')('Curator Section'),
 });

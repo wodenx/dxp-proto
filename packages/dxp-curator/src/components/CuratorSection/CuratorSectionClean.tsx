@@ -32,8 +32,8 @@ const CuratorSectionComponent: CuratorSectionComponents = {
 };
 
 export type SectionProps = DesignableProps<CuratorSectionComponents> & HTMLProps<HTMLElement>;
-// eslint-disable-next-line max-len
-type CuratorSectionBaseProps = DesignableComponentsProps<CuratorSectionComponents> & HTMLProps<HTMLElement>;
+type CuratorSectionBaseProps = DesignableComponentsProps<CuratorSectionComponents> &
+HTMLProps<HTMLElement>;
 
 const CuratorSectionBase: FC<CuratorSectionBaseProps> = ({ components, ...rest }) => {
   const {
