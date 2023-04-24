@@ -1,4 +1,4 @@
-name: End to End Tests
+name: Build Verification Tests
 
 on:
   deployment_status:
@@ -40,7 +40,21 @@ jobs:
           ./gradlew runStories -Pvividus.web-application.main-page-url=${MAIN_PAGE_URL} \
                                -Pvividus.selenium.grid.username=${SAUCELABS_USERNAME} \
                                -Pvividus.selenium.grid.password=${SAUCELABS_PASSWORD} \
-                               -Pvividus.configuration-set.active=${{ matrix.suite }}
+                               -Pvividus.configuration-set.active=${{ matrix.suite }} \
+                               -Pvividus.allure.executor.name="Github Actions (DxP)" \
+                               -Pvividus.allure.executor.type=github \
+                               -Pvividus.allure.executor.url=https://github.com/dxp-prototype/dxp-proto/actions \
+                               -Pvividus.allure.executor.build-order=${GITHUB_RUN_ID} \
+                               -Pvividus.allure.executor.build-name="Build Verification Tests ${GITHUB_RUN_ID}" \
+                               -Pvividus.allure.executor.build-url=https://github.com/dxp-prototype/dxp-proto/actions/runs/${GITHUB_RUN_ID} \
+                               -Pvividus.allure.executor.report-url=https://github.com/dxp-prototype/dxp-proto/actions/runs/${GITHUB_RUN_ID} \
+                               -Pvividus.allure.executor.report-name="Build Verification report"
+      - name: Publish web application tests report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: Tests report for ${{ matrix.suite }} run
+          path: tests/e2e/output/reports/allure
       - name: Deploy report to Vercel
         if: always()
         env:
@@ -64,12 +78,6 @@ jobs:
         if: always()
         with:
           path: deployments/${{ matrix.suite }}.txt
-      - name: Publish web application tests report
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: Tests report for ${{ matrix.suite }} run
-          path: tests/e2e/output/reports/allure
   report:
     if: always()
     runs-on: ubuntu-latest
@@ -90,7 +98,7 @@ jobs:
       - name: Format
         if: steps.PR.outputs.pr_found == 'true'
         run: |
-          echo '## :fire: End To End Tests Report :fire:' > comment.txt
+          echo '## :fire: Build Verification Tests Report :fire:' > comment.txt
           cd deployments/artifact/
           declare -a artifacts=(*)
           for artifact in "${artifacts[@]}"; do

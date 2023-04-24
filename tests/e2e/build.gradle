@@ -9,7 +9,11 @@ apply from: "${buildSystemPath}/vividus-test-project.gradle"
 runStories.treatKnownIssuesOnlyAsPassed = true
 
 ext {
-    vividusVersion = '0.5.8'
+    vividusVersion = '0.5.9'
+}
+
+configurations {
+    xray
 }
 
 dependencies {
@@ -19,4 +23,48 @@ dependencies {
     implementation(group: 'org.vividus', name: 'vividus-plugin-saucelabs', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-html', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-visual', version: vividusVersion)
+
+    xray(group: 'org.vividus', name: 'vividus-to-xray-exporter', version: vividusVersion)
+}
+
+task publishTestToXray(type: JavaExec) {
+    def libs = []
+    configurations.xray.each { lib -> libs << lib }
+    def xrayLib = libs.find { lib -> lib.toString().contains("vividus-to-xray-exporter-${vividusVersion}.jar") }
+
+    def format = new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
+
+    def properties = [
+        'xray-exporter.project-key=JEPZ',
+        'xray-exporter.jira-instance-key=dxp',
+        'xray-exporter.test-case-updates-enabled=false',
+        "xray-exporter.test-execution-attachments=${project.getRootDir()}/output/reports/jbehave,${project.getRootDir()}/output/reports/allure",
+        'jira.dxp.project-key-regex=JEPZ',
+        'jira.dxp.endpoint=https://jira.jnj.com/',
+        "jira.dxp.http.auth.username=${System.getenv('JIRA_USERNAME')}",
+        "jira.dxp.http.auth.password=${System.getenv('JIRA_PASSWORD')}",
+        'jira.dxp.http.auth.preemptive-auth-enabled=true',
+        "xray-exporter.json-results-directory=${project.getRootDir()}/output/reports/jbehave",
+        "xray-exporter.test-execution-summary=Regression test execution ${format.format(new Date())}",
+        'jira.dxp.fields-mapping.test-case-type=customfield_11400',
+        'jira.dxp.fields-mapping.cucumber-scenario-type=customfield_11401',
+        'jira.dxp.fields-mapping.cucumber-scenario=customfield_11402'
+    ]
+
+    def propertiesFile = File.createTempFile('export', '.properties')
+    propertiesFile.with {
+        deleteOnExit()
+        properties.each { prop ->
+            append(prop)
+            append(System.getProperty("line.separator"))
+        }
+    }
+
+    def runArgs = [
+        xrayLib.toString(),
+        "--spring.config.location=classpath:/application.properties,${propertiesFile.absolutePath}"
+    ]
+
+    main = '-jar'
+    args runArgs
 }
