@@ -42,6 +42,11 @@
                         },
                         {
                             "type": "MenuTitle",
+                            "text": "Privacy Policy",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
                             "text": "TERMS OF USE",
                             "link": "/"
                         },
