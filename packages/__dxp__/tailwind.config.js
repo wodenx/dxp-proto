@@ -25,10 +25,11 @@ const twConfig = {
         'header-copy': '#333333',
       },
       secondary: {
+        border: '#DBE8EB',
         eyebrow: '#535353',
         'footer-bg': '#11647B',
-        'footer-bg-signup': '#105367',
-        border: '#DBE8EB',
+        'footer-bg-signup': '#125367',
+        'utility-menu': '#11647B',
       },
       interactive: {
         primary: '#27D8A3',
@@ -71,13 +72,18 @@ const twConfig = {
         'm-4xl': ['2.0625rem', '2.25rem'],
         'm-5xl': ['2.5rem', '2.5rem'],
       },
-      // backgroundImage: {
-      //   'footer-wave': 'url(\'__dxp__/assets/image/footer-desktop.svg\')',
-      // },
+      backgroundImage: {
+        'footer-wave': 'url(\'__dxp__/assets/image/footer-desktop.svg\')',
+        'mobile-wave-top': 'url(\'__dxp__/assets/image/mobile-footer-up.png\')',
+        'mobile-wave-bottom': 'url(\'__dxp__/assets/image/mobile-footer-down.png\')',
+      },
+      backgroundSize: {
+        'wave-full': '100% 100%',
+      },
     },
   },
   plugins: [
-    plugin(({ addBase }) => {
+    plugin(({ addBase, addComponents }) => {
       addBase([
         {
           '@font-face': {
@@ -107,6 +113,13 @@ const twConfig = {
           },
         },
       ]);
+      addComponents({
+        '.footer-wave-test': {
+          maskImage: 'url(\'../images/footer-desktop.svg\')',
+          maskPosition: 'top center',
+          maskSize: '100%',
+        },
+      });
     }),
   ],
 };
