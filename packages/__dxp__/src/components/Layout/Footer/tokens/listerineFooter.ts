@@ -34,12 +34,11 @@ const WithListerineRewardsExpanding2XL = asFooterToken({
     ),
   },
   Theme: {
-    ...vitalFooterBase.Default.Theme,
+    ...vitalFooterBase.WithRewardsExpanding2XL.Theme,
     _: listerineColor.TextWhite,
     Wrapper: '2xl:footer-wave',
     Column2Wrapper: flowHoc(
       as(listerineColor.BgSecondaryFooter),
-      addClasses('xl:pl-10 px-5 2xl:mt-[13vw] relative 2xl:w-8/12'),
       as(withBottomFooterWave),
     ),
     Container: flowHoc(
@@ -48,7 +47,9 @@ const WithListerineRewardsExpanding2XL = asFooterToken({
     ),
   },
   Spacing: {
-    Container: removeClasses('lg:mx-36'),
+    ...vitalFooterBase.WithRewardsExpanding2XL.Spacing,
+    Column2Wrapper: 'xl:pl-10 px-5 2xl:mt-[13vw] relative 2xl:w-8/12',
+    Container: addClasses('lg:mx-0'),
     MenuRow: 'lg:px-24',
   }
 });

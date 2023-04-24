@@ -81,7 +81,7 @@ const WithListerineRewards = asRewardsToken({
                 listerineFontSize.XS,
                 'text-white block mb-3 2xl:block md:hidden',
               )
-            )(P), 'TEST'
+            )(P), 'Footnote'
           ),
           addClasses('w-full'),
         ),
