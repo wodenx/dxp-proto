@@ -1,7 +1,7 @@
 {
   "contentful_id": "1D3uRLw3W0lfVEplEJMFR0",
-  "revision_id": 1,
-  "name": "Listerine Ultraclean Zero Alcohol Mouthwash, Arctic Mint, 500 mL",
+  "revision_id": 2,
+  "name": "LISTERINE® ULTRACLEAN® ZERO ALCOHOL TARTAR CONTROL MOUTHWASH ARCTIC MINT®",
   "images": [
     {
       "title": "Ultraclean",
@@ -24,13 +24,7 @@
     {
       "data": {},
       "marks": [],
-      "value": "When used twice daily, enjoy 24-hour tartar protection with this alcohol-free mouthwash. Featuring a less-intense Arctic Mint taste, the zero-alcohol oral rinse kills 99.9% of germs that cause bad breath.",
-      "nodeType": "text"
-    },
-    {
-      "data": {},
-      "marks": [],
-      "value": "\n",
+      "value": "When used twice daily, enjoy better oral hygiene and 24-hour tartar protection with this alcohol-free mouthwash. Featuring a less-intense Arctic Mint taste, the zero-alcohol mouth rinse kills 99.9% of germs that cause bad breath and effectively fights stain buildup to help keep naturally white teeth.",
       "nodeType": "text"
     }
   ],
@@ -115,42 +109,44 @@
   "additional_info": [
     [
       {
-        "data": {},
-        "marks": [
+        "nodeType": "text",
+        "value": "For comments, questions, feedback about our products or to report an adverse event or side effect from our products, please visit our ",
+        "marks": [],
+        "data": {}
+      },
+      {
+        "nodeType": "hyperlink",
+        "data": {
+          "uri": "https://www.listerine.com/contact-us#section-contact-information"
+        },
+        "content": [
           {
-            "type": "bold"
+            "nodeType": "text",
+            "value": "Contact Us",
+            "marks": [],
+            "data": {}
           }
-        ],
-        "value": "TO OPEN:",
-        "nodeType": "text"
+        ]
       },
       {
-        "data": {},
+        "nodeType": "text",
+        "value": " page.",
         "marks": [],
-        "value": " SQUEEZE the cap and TURN. \n",
-        "nodeType": "text"
-      },
+        "data": {}
+      }
+    ],
+    [
       {
-        "data": {},
-        "marks": [
-          {
-            "type": "bold"
-          }
-        ],
-        "value": "TO CLOSE:",
-        "nodeType": "text"
-      },
-      {
-        "data": {},
+        "nodeType": "text",
+        "value": "\n",
         "marks": [],
-        "value": " Turn cap until it locks. \n\n Questions? call toll-free 888-222-0182 or 215-273-8755 (collect)",
-        "nodeType": "text"
+        "data": {}
       },
       {
-        "data": {},
-        "marks": [],
+        "nodeType": "text",
         "value": "\n       ",
-        "nodeType": "text"
+        "marks": [],
+        "data": {}
       }
     ]
   ],
@@ -247,10 +243,10 @@
             "id": "o0k7u0i6hu7n"
           }
         },
-        "id": "d7SazPfCH2mir41hIokNY",
+        "id": "5CanWQUwqYI5tznT1bSi3Z",
         "type": "Asset",
-        "createdAt": "2023-04-18T12:35:15.753Z",
-        "updatedAt": "2023-04-18T12:35:15.753Z",
+        "createdAt": "2023-04-19T21:47:57.105Z",
+        "updatedAt": "2023-04-19T21:47:57.105Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -263,17 +259,17 @@
       },
       "fields": {
         "title": "Ultraclean",
-        "description": "Ultraclean product",
+        "description": "Ultraclean collection image",
         "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/d7SazPfCH2mir41hIokNY/1ab623eddad9efbc91d66c5848dc9663/LIS_312547386340_US_Ultraclean_Zero_Alcohol_MW_Arctic_Mint_500ML_00000.JPEG",
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/5CanWQUwqYI5tznT1bSi3Z/ce42de4c69d235ee2ad372a4a7076fec/Ultraclean.jpeg",
           "details": {
-            "size": 430571,
+            "size": 10328,
             "image": {
-              "width": 3300,
-              "height": 3300
+              "width": 225,
+              "height": 225
             }
           },
-          "fileName": "LIS_312547386340_US_Ultraclean_Zero_Alcohol_MW_Arctic_Mint_500ML_00000.JPEG",
+          "fileName": "Ultraclean.jpeg",
           "contentType": "image/jpeg"
         }
       }

@@ -1,8 +1,5 @@
 import { as } from '@bodiless/fclasses';
-import {
-  asElementToken,
-  vitalTextDecoration,
-} from '@bodiless/vital-elements';
+import { asElementToken, vitalTextDecoration } from '@bodiless/vital-elements';
 import { listerineColor } from '../../Color';
 import { listerineFontSize } from '../../FontSize';
 
@@ -16,7 +13,11 @@ const Meta = {
 const H1 = asElementToken({
   Meta,
   Core: {
-    _: as(listerineFontSize.XXXXXL, vitalTextDecoration.Bold, 'font-knockout'),
+    _: as(
+      listerineFontSize.XXXXXL,
+      vitalTextDecoration.Medium,
+      'font-knockout',
+    ),
   },
   Theme: {
     _: listerineColor.TextPrimaryHeaderCopy,
@@ -26,7 +27,11 @@ const H1 = asElementToken({
 const H2 = asElementToken({
   Meta,
   Core: {
-    _: as(listerineFontSize.XXXXL, vitalTextDecoration.Bold, 'font-knockout'),
+    _: as(
+      listerineFontSize.XXXXL,
+      vitalTextDecoration.Bold,
+      'font-knockout'
+    ),
   },
   Theme: {
     _: listerineColor.TextPrimaryHeaderCopy,
@@ -36,7 +41,11 @@ const H2 = asElementToken({
 const H3 = asElementToken({
   Meta,
   Core: {
-    _: as(listerineFontSize.XXXL, vitalTextDecoration.Bold, 'font-knockout'),
+    _: as(
+      listerineFontSize.XXXL,
+      vitalTextDecoration.Bold,
+      'font-knockout'
+    ),
   },
   Theme: {
     _: listerineColor.TextPrimaryHeaderCopy,
@@ -46,7 +55,11 @@ const H3 = asElementToken({
 const H4 = asElementToken({
   Meta,
   Core: {
-    _: as(listerineFontSize.XXL, vitalTextDecoration.Normal, 'font-gotham'),
+    _: as(
+      listerineFontSize.XXL,
+      vitalTextDecoration.Normal,
+      'font-gotham'
+    ),
   },
   Theme: {
     _: listerineColor.TextPrimaryHeaderCopy,
@@ -56,7 +69,11 @@ const H4 = asElementToken({
 const H5 = asElementToken({
   Meta,
   Core: {
-    _: as(listerineFontSize.XL, vitalTextDecoration.Bold, 'font-knockout'),
+    _: as(
+      listerineFontSize.XL,
+      vitalTextDecoration.Bold,
+      'font-knockout'
+    ),
   },
   Theme: {
     _: listerineColor.TextPrimaryHeaderCopy,
@@ -66,7 +83,11 @@ const H5 = asElementToken({
 const H6 = asElementToken({
   Meta,
   Core: {
-    _: as(listerineFontSize.LG, vitalTextDecoration.Medium, 'font-gotham'),
+    _: as(
+      listerineFontSize.LG,
+      vitalTextDecoration.Medium,
+      'font-gotham'
+    ),
   },
   Theme: {
     _: listerineColor.TextPrimaryBodyCopy,
@@ -82,7 +103,7 @@ const Body = asElementToken({
     _: as(
       vitalTextDecoration.Normal,
       listerineColor.TextPrimaryBodyCopy
-    )
+    ),
   },
 });
 
@@ -106,14 +127,20 @@ const CrumbsReviews = asElementToken({
     _: as(listerineFontSize.XS, 'font-gotham'),
   },
   Theme: {
-    _: as(listerineColor.TextPrimaryBodyCopy, vitalTextDecoration.Medium),
+    _: as(
+      listerineColor.TextPrimaryBodyCopy,
+      vitalTextDecoration.Medium
+    ),
   },
 });
 
 const Link = asElementToken({
   Meta,
   Core: {
-    _: as(listerineFontSize.Base, 'font-gotham'),
+    _: as(
+      listerineFontSize.Base,
+      'font-gotham'
+    ),
   },
   Theme: {
     _: as(
@@ -135,6 +162,21 @@ const WhiteLink = asElementToken({
   },
 });
 
+const WithHoverArrow = asElementToken({
+  Layout: {
+    _: 'items-center'
+  },
+  Theme: {
+    _: 'hover:vital-arrow',
+  },
+});
+
+const WithTertiaryHover = asElementToken({
+  Theme: {
+    _: listerineColor.WithTextTertiaryHover,
+  },
+});
+
 export default {
   H1,
   H2,
@@ -147,4 +189,6 @@ export default {
   CrumbsReviews,
   Link,
   WhiteLink,
+  WithHoverArrow,
+  WithTertiaryHover
 };
