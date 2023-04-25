@@ -337,10 +337,10 @@
             "id": "o0k7u0i6hu7n"
           }
         },
-        "id": "5T2DcoeXifhl7PGTNlvibe",
+        "id": "8AqWoythzXHwS1mE1qrad",
         "type": "Asset",
-        "createdAt": "2023-04-25T21:01:14.717Z",
-        "updatedAt": "2023-04-25T21:01:14.717Z",
+        "createdAt": "2023-03-14T13:17:29.033Z",
+        "updatedAt": "2023-03-14T13:17:29.033Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -352,18 +352,18 @@
         "locale": "en-US"
       },
       "fields": {
-        "title": "Mouthwash",
-        "description": "mouthwash transparent image",
+        "title": "Screenshot",
+        "description": "",
         "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/5T2DcoeXifhl7PGTNlvibe/921ee60ceba66aea98b0da2cbc770faf/Mouthwash.png",
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/8AqWoythzXHwS1mE1qrad/8cb38866f330473b875a6f3bdc45a93e/Screenshot.png",
           "details": {
-            "size": 144118,
+            "size": 40606,
             "image": {
-              "width": 638,
-              "height": 509
+              "width": 257,
+              "height": 164
             }
           },
-          "fileName": "Mouthwash.png",
+          "fileName": "Screenshot.png",
           "contentType": "image/png"
         }
       }
