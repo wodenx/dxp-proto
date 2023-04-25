@@ -4,7 +4,7 @@
     "main-content": "Default main content hello there you there again now",
     "top-content": "Hello world",
     "bottom-content": {
-        "containerID": "curator-feed-sample-listerine-challenge-layout",
+        "containerID": "",
         "feedID": ""
     },
     "Title": "Generic Page"
