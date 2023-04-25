@@ -7,6 +7,6 @@
     "bottom-content": {
         "type": "Curator",
         "feedID": "curator feed id",
-        "containerID": "curatir container id"
+        "containerID": "curator-feed-sample-listerine-challenge-layout"
     }
 }
