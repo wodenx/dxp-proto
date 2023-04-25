@@ -27,6 +27,7 @@
       "dxp-product": ["packages/dxp-product/src"],
       "dxp-section": ["packages/dxp-section/src"],
       "dxp-image": ["packages/dxp-image/src"],
+      "dxp-text": ["packages/dxp-text/src"]
     }
   }
 }
