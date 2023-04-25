@@ -7,6 +7,6 @@
     "bottom-content": {
         "type": "Curator",
         "feedID": "test",
-        "containerID": "text"
+        "containerID": "test"
     }
 }
