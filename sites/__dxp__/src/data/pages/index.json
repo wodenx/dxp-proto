@@ -7,6 +7,6 @@
     "bottom-content": {
         "type": "Curator",
         "feedID": "curator feed id",
-        "containerID": "curatir container"
+        "containerID": "curatir container id"
     }
 }
