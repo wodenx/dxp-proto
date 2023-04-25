@@ -8,12 +8,12 @@ const Curator: Model = {
     {
       name: 'feedId',
       label: 'Feed ID',
-      type: 'text',
+      type: 'string',
     },
     {
       name: 'containerId',
       label: 'Container ID',
-      type: 'text',
+      type: 'string',
     },
   ],
 };
