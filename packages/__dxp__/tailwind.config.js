@@ -27,9 +27,9 @@ const twConfig = {
       secondary: {
         border: '#DBE8EB',
         eyebrow: '#535353',
-        'footer-bg': '#11647B',
-        'footer-bg-signup': '#125367',
-        'utility-menu': '#11647B',
+        'footer-bg': '#11647A',
+        'footer-bg-signup': '#105367',
+        'utility-menu': '#11647A',
       },
       interactive: {
         primary: '#27D8A3',
