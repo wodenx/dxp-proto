@@ -8,6 +8,9 @@
       "check": {},
       "dev": {
         "persistent": true
+      },
+      "serve": {
+        "persistent": true
       }
     }
   }
