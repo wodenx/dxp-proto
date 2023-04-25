@@ -176,10 +176,10 @@
             "id": "o0k7u0i6hu7n"
           }
         },
-        "id": "4BElGwE6gk31eEvqkcBvSL",
+        "id": "1SzzmTbc9MhHQg6Gq3z22T",
         "type": "Asset",
-        "createdAt": "2023-04-19T21:49:14.136Z",
-        "updatedAt": "2023-04-19T21:49:14.136Z",
+        "createdAt": "2023-04-25T20:19:57.690Z",
+        "updatedAt": "2023-04-25T20:19:57.690Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -191,18 +191,19 @@
         "locale": "en-US"
       },
       "fields": {
-        "title": "Antiseptic",
+        "title": "472-4726871 the-bold-evidence-on-listerine-antiseptic-johnson-johnson Small",
+        "description": "antiseptic product collection",
         "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/4BElGwE6gk31eEvqkcBvSL/3c9654cc936f4498c6a2476b9d3f075f/Antiseptic.jpeg",
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/1SzzmTbc9MhHQg6Gq3z22T/586de3d8bea0bd1705e5cf1328bb438e/472-4726871_the-bold-evidence-on-listerine-antiseptic-johnson-johnson_Small.png",
           "details": {
-            "size": 10729,
+            "size": 117726,
             "image": {
-              "width": 225,
-              "height": 225
+              "width": 320,
+              "height": 245
             }
           },
-          "fileName": "Antiseptic.jpeg",
-          "contentType": "image/jpeg"
+          "fileName": "472-4726871_the-bold-evidence-on-listerine-antiseptic-johnson-johnson Small.png",
+          "contentType": "image/png"
         }
       }
     },
