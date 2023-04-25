@@ -12,7 +12,7 @@ import {
   as
 } from '@bodiless/fclasses';
 import {
-  SearchBoxClean, SearchMenuClean, vitalSearchMenu
+  SearchBoxClean, SearchMenuClean, SearchTogglerClean, vitalSearchMenu
 } from '@bodiless/vital-search';
 import { withChild } from '@bodiless/core';
 import { MenuClean } from '@bodiless/vital-navigation';
@@ -34,7 +34,7 @@ const Default = asHeaderToken({
   Components: {
     ...vitalHeaderBase.Default.Components,
     Logo: listerineLogo.Default,
-    SearchToggler: listerineSearch.SearchToggler,
+    SearchToggler: on(SearchTogglerClean)(listerineSearch.SearchToggler),
     DesktopSearch: on(SearchBoxClean)(listerineSearch.DesktopSearch),
     MobileSearch: on(SearchMenuClean)(vitalSearchMenu.Mobile),
     WhereToBuy: listerineButton.WhereToBuy,
