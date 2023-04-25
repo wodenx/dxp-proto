@@ -14,7 +14,7 @@ const FooterModel: Model = {
     {
       name: 'copyright',
       label: 'Copyright',
-      type: 'text',
+      type: 'markdown',
       default: 'Default copyright text...',
     },
     {

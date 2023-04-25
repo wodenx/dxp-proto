@@ -2,6 +2,11 @@ name: End to End Regression Tests
 
 on:
   workflow_dispatch:
+    inputs:
+      debug:
+        required: true
+        type: boolean
+        default: false
   schedule:
     - cron: "0 3 * * *"
 
@@ -57,10 +62,13 @@ jobs:
           files_ignore: sites/__dxp__/src/data/
           base_sha: ${{ steps.base-sha.outputs.base_sha }}
       - name: Cache tests history
+        if: inputs.debug != 'true'
         uses: pat-s/always-upload-cache@v3.0.11
         with:
           path: tests/e2e/output/history
-          key: regression-tests-history-cache-main-ad16d2de9a7f66c15724
+          key: regression-tests-history-cache-key-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            regression-tests-history-cache-key-
       - name: Run regression tests
         if: steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         env:
@@ -85,7 +93,7 @@ jobs:
                                -Pvividus.allure.executor.report-url=https://github.com/dxp-prototype/dxp-proto/actions/runs/${GITHUB_RUN_ID} \
                                -Pvividus.allure.executor.report-name="Regression Tests report"
       - name: Sync with XRay
-        if: always() && steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        if: always() && inputs.debug != 'true' && steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         env:
           JIRA_USERNAME: ${{ secrets.XRAY_JIRA_USERNAME }}
           JIRA_PASSWORD: ${{ secrets.XRAY_JIRA_PASSWORD }}
@@ -105,7 +113,7 @@ jobs:
           name: JSONs for ${{ matrix.suite }} run
           path: tests/e2e/output/reports/jbehave
       - name: Deploy report to Vercel
-        if: always() && steps.changed-files-excluded.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        if: always() && inputs.debug != 'true' && steps.changed-files-excluded.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         env:
           REPORT_DEPLOY_KEY: ${{ secrets.REPORT_DEPLOY_KEY }}
           VERCEL_ORG_ID: ${{ vars.REPORT_VERCEL_ORG_ID }}

@@ -7,6 +7,7 @@ const {
   Card,
   Home,
   Section,
+  Markdown,
 } = TestStyleGuideTemplate;
 
 const Default = asFluidToken({
@@ -16,6 +17,7 @@ const Default = asFluidToken({
     Typography,
     Card,
     Section,
+    Markdown,
   },
 });
 

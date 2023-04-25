@@ -23,6 +23,7 @@ const Examples = () => (
       <li><a href="/styleguide/card">Card</a></li>
       <li><a href="/styleguide/accordion">Accordion</a></li>
       <li><a href="/styleguide/section">Section</a></li>
+      <li><a href="/styleguide/markdown">Markdown</a></li>
     </List>
   </>
 );
