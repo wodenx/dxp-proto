@@ -6,12 +6,12 @@ const Curator: Model = {
   label: 'Curator',
   fields: [
     {
-      name: 'feedID',
+      name: 'feedId',
       label: 'Feed ID',
       type: 'text',
     },
     {
-      name: 'containerID',
+      name: 'containerId',
       label: 'Container ID',
       type: 'text',
     },
