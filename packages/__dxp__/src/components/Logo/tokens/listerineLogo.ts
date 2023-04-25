@@ -2,6 +2,7 @@ import {
   Div, flowHoc, replaceWith
 } from '@bodiless/fclasses';
 import { asLogoToken, vitalLogoBase } from '@bodiless/vital-layout';
+import { withChild, withNode } from '@bodiless/core';
 import ListerineLogo from '../assets/ListerineLogo';
 
 const Default = asLogoToken({
@@ -14,7 +15,8 @@ const Default = asLogoToken({
     // Image: withChild(ListerineLogo),
     Image: flowHoc(
       replaceWith(Div),
-      replaceWith(ListerineLogo),
+      withChild(ListerineLogo),
+      withNode,
     ),
   },
 });
