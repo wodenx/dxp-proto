@@ -36,18 +36,19 @@ const liveSiteURL = process.env.LIVE_SITE_URL? [{
 }] : [];
 
 export default {
+  installCommand: 'cd ../../ && npm install',
   stackbitVersion: '~0.6.0',
   ssgName: 'custom',
   customContentReload: true,
   // cmsName: 'git',
-  devCommand: 'npm run dev-sb',
+  devCommand: 'npm run dev',
   // devCommand: 'npm run dev',
   nodeVersion: '16',
   contentSources: [
     new GitContentSource({
       // @todo how to make this generic?
       // @todo Test in studio after sb releases fix, see https://stackbit.zendesk.com/hc/en-us/requests/84?page=1
-      rootPath: path.join(__dirname, 'sites', '__dxp__'),
+      rootPath: path.join(__dirname),
       contentDirs: ['src/data'],
       // repoUrl: process.env.REPO_URL || '',
       // repoBranch: process.env.REPO_BRANCH || '',
