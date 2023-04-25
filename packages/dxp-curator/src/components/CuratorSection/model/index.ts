@@ -3,16 +3,17 @@ import { Model } from '@stackbit/types';
 const Curator: Model = {
   name: 'Curator',
   type: 'object',
-  label: 'Curator',
+  label: 'Curator Section',
+  labelField: 'Curator Section',
   fields: [
-    {
-      name: 'feedId',
-      label: 'Feed ID',
-      type: 'string',
-    },
     {
       name: 'containerId',
       label: 'Container ID',
+      type: 'string',
+    },
+    {
+      name: 'feedId',
+      label: 'Feed ID',
       type: 'string',
     },
   ],
