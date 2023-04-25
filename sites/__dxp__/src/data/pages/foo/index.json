@@ -3,6 +3,8 @@
     "#template": "_default",
     "main-content": "Default main content hello there you there again now",
     "top-content": "Hello world",
-    "bottom-content": "[object Object]",
+    "bottom-content": {
+        "containerID": "curator-feed-sample-listerine-challenge-layout"
+    },
     "Title": "Generic Page"
 }
