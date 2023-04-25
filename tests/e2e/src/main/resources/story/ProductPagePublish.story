@@ -2,7 +2,7 @@ Meta: @feature product_publish
 
 Scenario: Publish new content and verify PDP on the site
 Meta: @testCaseId JEPZ-148
-      @capability.pageLoadStrategy eager
+      @requirementId JEPZ-53
 !-- Create Ingredient
 When I initialize story variable `ingredientData` with values:data/ingredient.table
 When I create `ingredient` content from `/templates/ingredient.json` template with parameters:${ingredientData}
@@ -71,11 +71,12 @@ Then jump to link key `FAQ` exists
 Then `${faqData[0].question}` FAQ accordion content is equal to `${faqData[0].answer}`
 !-- Take screenshot for debugging
 When I take screenshot
+When I close browser
 
 
 Scenario: Update and publish changes to existing product and verify changed PDP on the site
 Meta: @testCaseId JEPZ-149
-      @capability.pageLoadStrategy eager
+      @requirementId JEPZ-53
 !-- Update product
 When I create asset from `product-updated` file with `Test Product Updated` name and save its ID to story variable `productUpdatedAssetId`
 When I initialize story variable `productUpdatedData` with values:
@@ -125,11 +126,12 @@ Then jump to link key `FAQ` exists
 Then `${faqData[0].question}` FAQ accordion content is equal to `${faqData[0].answer}`
 !-- Take screenshot for debugging
 When I take screenshot
+When I close browser
 
 
 Scenario: Unpublish content and check PDP is not available on the site
 Meta: @testCaseId JEPZ-150
-      @capability.pageLoadStrategy eager
+      @requirementId JEPZ-53
 !-- Unpublsh entries and assets
 When I move entries item with `${productData[0].id}` id to unpublished state
 When I move entries item with `${ingredientData[0].id}` id to unpublished state

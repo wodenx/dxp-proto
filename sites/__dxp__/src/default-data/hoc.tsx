@@ -1,6 +1,6 @@
 import React, { ComponentType } from 'react';
 import { ProductDataTransformer } from '@kenvue/dxp-product';
-import type { ProductQueryData, DxpProductCardData } from '@kenvue/dxp-product';
+import type { ProductQueryData, DxpProductCardData, DxpProductCollectionCardData } from '@kenvue/dxp-product';
 import type { PageProps } from '@bodiless/gatsby-theme-bodiless';
 import { useProductData } from './hooks';
 
@@ -12,8 +12,22 @@ const productDataMap = (data: ProductQueryData) => {
     acc.push(product);
     return acc;
   }, []);
+  const allCollections = edges.reduce((acc: DxpProductCollectionCardData[], cur) => {
+    const { node } = cur;
+    const collection = ProductDataTransformer.transformProductCategory(node);
+    if (!collection) return acc;
+    acc.push(collection);
+    return acc;
+  }, []);
   return {
     edges: [
+      {
+        node:
+          {
+            name: 'allCollections',
+            content: JSON.stringify(allCollections),
+          },
+      },
       {
         node:
           {

@@ -1,0 +1,211 @@
+{
+  "contentful_id": "1nfB6MUKey07idsto5sfcO",
+  "revision_id": 1,
+  "name": "Listerine Gum Therapy Antiseptic Mouthwash, Glacier Mint, 95 mL (3.2 Fl. Oz)",
+  "images": [
+    {
+      "title": "LIS NA 312547113762 Gum Therapy Antiseptic Mouthwash Glacier Mint 95ml 3p2oz 00000",
+      "description": "LISTERINE Gum Therapy Antiseptic Mouthwash Glacier Mint 95ml 3p2oz 00000",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/2J3HbzlKSQWaeK12v9F5vn/e01bf73c1c2c7cba7fe3b0ee7a926660/LIS_NA_312547113762_Gum_Therapy_Antiseptic_Mouthwash_Glacier_Mint_95ml_3p2oz_00000.JPEG",
+        "details": {
+          "size": 465600,
+          "image": {
+            "width": 3300,
+            "height": 3300
+          }
+        },
+        "fileName": "LIS_NA_312547113762_Gum_Therapy_Antiseptic_Mouthwash_Glacier_Mint_95ml_3p2oz_00000.JPEG",
+        "contentType": "image/jpeg"
+      }
+    }
+  ],
+  "summary": [
+    {
+      "data": {},
+      "marks": [],
+      "value": "Help reverse signs of early gum disease with this antiseptic mouthwash. Formulated with anti-plaque & gingivitis essential oils, travel-size gum therapy mouthwash promotes gum health & fresh breath.",
+      "nodeType": "text"
+    },
+    {
+      "data": {},
+      "marks": [],
+      "value": "\n",
+      "nodeType": "text"
+    }
+  ],
+  "directions": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "•Rinse full strength for 30 seconds with 20 mL (2/3 fluid ounce or 4 teaspoonfuls) morning and night\n•",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "value": "Do not swallow",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [],
+        "value": "\n        \n",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "data": {},
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "value": "Do not use in children under 12 years of age",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [],
+        "value": "\nKeep out of reach of children. If more than used for rinsing is accidentally swallowed, get medical help or contact a Poison Control Center right away.",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [],
+        "value": "\n",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "additional_info": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "•Store at room temperature\n•Cold weather may cloud this product. Its antiseptic properties are not affected.\n       \n Questions? call toll-free 888-222-0182 or 215-273-8755 (collect)\n       ",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Eucalyptol (0.092%)",
+      "inactive_active": "Active"
+    },
+    {
+      "title": "Menthol (0.042%)",
+      "inactive_active": "Active"
+    },
+    {
+      "title": "Methyl Salicylate (0.060%)",
+      "inactive_active": "Active"
+    },
+    {
+      "title": "Thymol (0.064%)",
+      "inactive_active": "Active"
+    },
+    {
+      "title": "Water",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Alcohol (21.6% v/v)",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sorbitol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Poloxamer 407",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Benzoic Acid",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sodium Benzoate",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Zinc Chloride",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sucralose",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Flavor",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sodium Saccharin",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Blue 1",
+      "inactive_active": "Inactive"
+    }
+  ],
+  "sku": "000000000521137600",
+  "upc": "00312547113762",
+  "ean": "00312547113762",
+  "faq": [],
+  "collection": {
+    "title": "Antiseptic",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "4BElGwE6gk31eEvqkcBvSL",
+        "type": "Asset",
+        "createdAt": "2023-04-19T21:49:14.136Z",
+        "updatedAt": "2023-04-19T21:49:14.136Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Antiseptic",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/4BElGwE6gk31eEvqkcBvSL/3c9654cc936f4498c6a2476b9d3f075f/Antiseptic.jpeg",
+          "details": {
+            "size": 10729,
+            "image": {
+              "width": 225,
+              "height": 225
+            }
+          },
+          "fileName": "Antiseptic.jpeg",
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "cta_text": "All Antiseptic Products "
+  }
+}

@@ -2,6 +2,8 @@ name: End to End Regression Tests
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
 
 jobs:
   tests:
@@ -26,7 +28,41 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Get base SHA
+        id: base-sha
+        run: |
+          YESTERDAY_DATE=$(date +%Y-%m-%d -d 'yesterday')
+          YESTERDAY_CHANGES=$(git log --format="%H" --date=local --since="$YESTERDAY_DATE" | tail -1)
+          TODAY_DATE=$(date +%Y-%m-%d)
+          TODAY_CHANGES=$(git log --format="%H" --date=local --since="$TODAY_DATE" | tail -1)
+
+          base_sha=''
+          if [ -n "${YESTERDAY_CHANGES}" ]; then
+            base_sha=$YESTERDAY_CHANGES
+          elif [ -n "${TODAY_CHANGES}" ]; then
+            base_sha=$TODAY_CHANGES
+          fi
+          
+          if [ "${base_sha}" = "$(git rev-parse HEAD)" ]; then
+            base_sha=''
+          fi
+
+          echo "Base commit: $base_sha"
+          echo "base_sha=$base_sha" >> $GITHUB_OUTPUT
+
+      - name: Get changes
+        id: changed-files
+        uses: tj-actions/changed-files@v35
+        with:
+          files_ignore: sites/__dxp__/src/data/
+          base_sha: ${{ steps.base-sha.outputs.base_sha }}
+      - name: Cache tests history
+        uses: pat-s/always-upload-cache@v3.0.11
+        with:
+          path: tests/e2e/output/history
+          key: regression-tests-history-cache-main-ad16d2de9a7f66c15724
       - name: Run regression tests
+        if: steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         env:
           TEST_CONTENTFUL_TOKEN: ${{ secrets.TEST_CONTENTFUL_TOKEN }}
           TEST_GITHUB_TOKEN: ${{ secrets.TEST_GITHUB_TOKEN }}
@@ -38,18 +74,56 @@ jobs:
                                -Pvividus.variables.github-token=${TEST_GITHUB_TOKEN} \
                                -Pvividus.selenium.grid.username=${SAUCELABS_USERNAME} \
                                -Pvividus.selenium.grid.password=${SAUCELABS_PASSWORD} \
-                               -Pvividus.configuration-set.active=api
+                               -Pvividus.configuration-set.active=api \
+                               -Pvividus.allure.history-directory=output/history \
+                               -Pvividus.allure.executor.name="Github Actions (DxP)" \
+                               -Pvividus.allure.executor.type=github \
+                               -Pvividus.allure.executor.url=https://github.com/dxp-prototype/dxp-proto/actions \
+                               -Pvividus.allure.executor.build-order=${GITHUB_RUN_ID} \
+                               -Pvividus.allure.executor.build-name="Regression Tests ${GITHUB_RUN_ID}" \
+                               -Pvividus.allure.executor.build-url=https://github.com/dxp-prototype/dxp-proto/actions/runs/${GITHUB_RUN_ID} \
+                               -Pvividus.allure.executor.report-url=https://github.com/dxp-prototype/dxp-proto/actions/runs/${GITHUB_RUN_ID} \
+                               -Pvividus.allure.executor.report-name="Regression Tests report"
+      - name: Sync with XRay
+        if: always() && steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          JIRA_USERNAME: ${{ secrets.XRAY_JIRA_USERNAME }}
+          JIRA_PASSWORD: ${{ secrets.XRAY_JIRA_PASSWORD }}
+        run: |
+          cd tests/e2e
+          ./gradlew publishTestToXray
       - name: Publish report
-        if: always()
+        if: always() && steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v3
         with:
           name: Tests report for ${{ matrix.suite }} run
           path: tests/e2e/output/reports/allure
+      - name: Publish JSONs
+        if: always() && steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v3
+        with:
+          name: JSONs for ${{ matrix.suite }} run
+          path: tests/e2e/output/reports/jbehave
+      - name: Deploy report to Vercel
+        if: always() && steps.changed-files-excluded.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        env:
+          REPORT_DEPLOY_KEY: ${{ secrets.REPORT_DEPLOY_KEY }}
+          VERCEL_ORG_ID: ${{ vars.REPORT_VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ vars.REPORT_VERCEL_PROJECT_ID }}
+        run: |
+          cd tests/e2e
+          mv output/reports/allure .
+          cd allure
+
+          npm install -g vercel
+          vercel deploy -t $REPORT_DEPLOY_KEY -S jnj-demo-account --prod
 
       - name: Get installed Playwright version
+        if: always()
         id: playwright-version
         run: echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('./package-lock.json').dependencies['@playwright/test'].version)")" >> $GITHUB_ENV
       - name: Cache playwright binaries
+        if: always()
         uses: actions/cache@v3
         id: playwright-cache
         with:
@@ -57,9 +131,10 @@ jobs:
             ~/.cache/ms-playwright
           key: ${{ runner.os }}-playwright-${{ env.PLAYWRIGHT_VERSION }}
       - name: Install playwrght
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        if: always() && steps.playwright-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps
       - name: Run configuration tests
+        if: always()
         env:
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.TEST_CONTENTFUL_TOKEN }}
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}

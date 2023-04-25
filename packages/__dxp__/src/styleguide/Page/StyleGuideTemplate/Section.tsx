@@ -14,7 +14,10 @@ import { SectionClean, asSectionToken } from '@kenvue/dxp-section';
 
 const WithSectionContentPocket = asSectionToken({
   Spacing: {
-    Wrapper: 'py-12 border-b-4 border-slate-300',
+    Wrapper: 'py-12',
+  },
+  Theme: {
+    Wrapper: 'border-b-4 border-slate-300',
   },
   Layout: {
     Content: flowHoc(
@@ -31,7 +34,10 @@ const WithSectionContentPocket = asSectionToken({
 
 const WithSectionContentZero = asSectionToken({
   Spacing: {
-    Wrapper: 'py-12 border-b-4 border-slate-300',
+    Wrapper: 'py-12',
+  },
+  Theme: {
+    Wrapper: 'border-b-4 border-slate-300',
   },
   Layout: {
     Content: flowHoc(
@@ -100,11 +106,68 @@ const ProductCardSectionPocket = as(
   WithSectionContentPocket,
 )(SectionClean);
 
+const WithCollectionSelectedCollections = asSectionToken({
+  Spacing: {
+    Wrapper: 'py-12 border-b-4 border-slate-300',
+  },
+  Layout: {
+    Content: flowHoc(
+      addClasses('flex'),
+      addProps({
+        'product-collections': [
+          'concentrate',
+          'toothpaste',
+          'product-collection-w/o-image',
+          'mouthwash',
+          'on-the-go',
+          'concentrate',
+          'not-a-collection',
+          'mouthwash',
+          'ultraclean',
+          'mouthwash',
+          'on-the-go',
+          'antiseptic',
+        ],
+      }),
+    ),
+  },
+  Content: {
+    Title: addProps({ children: 'Selected Collections' }),
+  },
+});
+
+const WithCollectionDefault = asSectionToken({
+  Spacing: {
+    Wrapper: 'py-12 border-b-4 border-slate-300',
+  },
+  Layout: {
+    Content: flowHoc(
+      addClasses('flex'),
+    ),
+  },
+  Content: {
+    Title: addProps({ children: 'Default collection section'}),
+  },
+});
+
+const CollectionCardSectionSelected = as(
+  dxpProductSection.ProductCollectionCards,
+  WithCollectionSelectedCollections,
+)(SectionClean);
+
+const CollectionCardSectionDefault = as(
+  dxpProductSection.ProductCollectionCards,
+  WithCollectionDefault,
+)(SectionClean);
+
 const Subtitle = as(vitalTypography.H2, 'pt-8')(H2);
 
 const Examples = () => (
   <>
-    <Subtitle>Product Card Section</Subtitle>
+    <Subtitle>Product Category Sections</Subtitle>
+    <CollectionCardSectionDefault />
+    <CollectionCardSectionSelected />
+    <Subtitle>Product Card Sections</Subtitle>
     <ProductCardSectionPocket />
     <ProductCardSectionZero />
     <ProductCardSectionCool />
