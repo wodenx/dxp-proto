@@ -15,8 +15,8 @@ class ProductDataTransformer implements DataTransformer<ContentfulProductData, D
   static transformProductCard(raw: ContentfulProductData): DxpProductCardData {
     const {
       contentful_id,
-      name,
-      images,
+      name = '',
+      images = [],
     } = ProductDataTransformer.parseContent(raw.content);
     return {
       id: contentful_id,
@@ -25,20 +25,21 @@ class ProductDataTransformer implements DataTransformer<ContentfulProductData, D
       description: {text: ''},
       slug: raw.fields.slug,
       image: {
-        src: images[0].file.url,
-        title: images[0].title,
-        alt: images[0].description,
+        src: images[0]?.file?.url,
+        title: images[0]?.title,
+        alt: images[0]?.description,
       }
     };
   }
 
-  static transformProductCategory(raw: ContentfulProductData): DxpProductCollectionCardData {
-    const {
-      collection: {
-        title,
-        image,
-      },
-    } = ProductDataTransformer.parseContent(raw.content);
+  static transformProductCategory(
+    raw: ContentfulProductData
+  ): (DxpProductCollectionCardData | false) {
+    const { collection } = ProductDataTransformer.parseContent(raw.content);
+    if (!collection) {
+      return false;
+    }
+    const { title, image } = collection;
     return {
       // @todo: expect fetch-product script to provide collection id after.
       id: title.replace(/\s+/g, '-').toLowerCase(),
@@ -50,9 +51,9 @@ class ProductDataTransformer implements DataTransformer<ContentfulProductData, D
       },
       slug: raw.fields.slug,
       image: {
-        src: image?.fields.file.url,
-        title: image?.fields.title,
-        alt: image?.fields.title,
+        src: image?.fields?.file?.url,
+        title: image?.fields?.title,
+        alt: image?.fields?.title,
       }
     };
   }

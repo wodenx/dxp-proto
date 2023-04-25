@@ -243,10 +243,10 @@
             "id": "o0k7u0i6hu7n"
           }
         },
-        "id": "5CanWQUwqYI5tznT1bSi3Z",
+        "id": "3rj0NwW4f77FWNNAsXBChy",
         "type": "Asset",
-        "createdAt": "2023-04-19T21:47:57.105Z",
-        "updatedAt": "2023-04-19T21:47:57.105Z",
+        "createdAt": "2023-04-25T20:28:01.256Z",
+        "updatedAt": "2023-04-25T20:28:01.256Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -258,19 +258,19 @@
         "locale": "en-US"
       },
       "fields": {
-        "title": "Ultraclean",
-        "description": "Ultraclean collection image",
+        "title": "listerine ultraclean Medium",
+        "description": "ultraclean collection image",
         "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/5CanWQUwqYI5tznT1bSi3Z/ce42de4c69d235ee2ad372a4a7076fec/Ultraclean.jpeg",
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/3rj0NwW4f77FWNNAsXBChy/6b7ae69b09000b1f0f2b8f96b137ea54/listerine_ultraclean_Medium.png",
           "details": {
-            "size": 10328,
+            "size": 194174,
             "image": {
-              "width": 225,
-              "height": 225
+              "width": 640,
+              "height": 257
             }
           },
-          "fileName": "Ultraclean.jpeg",
-          "contentType": "image/jpeg"
+          "fileName": "listerine ultraclean Medium.png",
+          "contentType": "image/png"
         }
       }
     },

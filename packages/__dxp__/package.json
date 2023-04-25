@@ -47,6 +47,7 @@
     "@bodiless/vital-search": "^1.0.0-rc.33",
     "@kenvue/dxp-product": "^0.0.0",
     "@kenvue/dxp-section": "^0.0.0",
+    "@kenvue/dxp-text": "^0.0.0",
     "axios": "^0.21.0",
     "isomorphic-git": "^1.21.0",
     "lodash": "^4.17.19",

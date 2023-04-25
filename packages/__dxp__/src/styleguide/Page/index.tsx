@@ -4,8 +4,10 @@ import { TestStyleGuideTemplate } from './StyleGuideTemplate';
 
 const {
   Typography,
+  Card,
   Home,
   Section,
+  Markdown,
 } = TestStyleGuideTemplate;
 
 const Default = asFluidToken({
@@ -13,7 +15,9 @@ const Default = asFluidToken({
   Components: {
     Home,
     Typography,
+    Card,
     Section,
+    Markdown,
   },
 });
 

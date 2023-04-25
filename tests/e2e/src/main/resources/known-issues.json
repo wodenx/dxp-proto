@@ -1,7 +1,7 @@
 {
     "126": {
         "type": "Internal",
-        "assertionPattern": ".*HTTP response status code \\[Expected: <200> Actual: <404>\\]",
+        "assertionPattern": ".*HTTP response status code \\[Expected: <404> Actual: <200>\\]",
         "storyPattern": "ProductPagePublish",
         "scenarioPattern": "Unpublish content and check PDP is not available on the site",
         "stepPattern": "When I wait for response code `404` for `.+?` duration retrying .+? times.*/products/.+",

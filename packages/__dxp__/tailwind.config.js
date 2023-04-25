@@ -36,15 +36,19 @@ const twConfig = {
         'primary-hover': '#006042',
         'primary-selected': '#006042',
         secondary: '#212121',
+        'tertiary-hover': '#27D8A3',
       },
     },
     extend: {
       spacing: {
         4.5: '1.125rem',
+        5.5: '1.375rem',
         15: '5rem'
       },
       padding: {
-        5.25: '5.25rem'
+        4.75: '1.3125rem',
+        6.5: '1.625rem',
+        20.25: '5.25rem'
       },
       maxWidth: {
         logo: '7.1875rem'

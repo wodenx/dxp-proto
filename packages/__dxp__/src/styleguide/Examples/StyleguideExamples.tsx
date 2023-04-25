@@ -10,9 +10,10 @@ import { withNode, withDefaultContent, withNodeKey } from '@bodiless/core';
 
 import {
   designable, flowHoc, DesignableComponentsProps,
-  ComponentOrTag, Div, H3, DesignableComponents,
+  ComponentOrTag, Div, H3, DesignableComponents, addClassesIf,
 } from '@bodiless/fclasses';
 import { asFluidToken, vitalTypography } from '@bodiless/vital-elements';
+import { listerineSpacing } from '../../components/Spacing';
 
 export type StyleGuideExamplesComponents = {
   Wrapper: ComponentOrTag<any>,
@@ -75,15 +76,43 @@ const Default = asFluidToken({
   },
   Spacing: {
     ItemWrapper: 'mb-4',
+    ItemTitle: 'mb-4',
   },
   Theme: {
-    ItemTitle: vitalTypography.H3,
+    ItemTitle: vitalTypography.H4,
   },
   Schema: {
     _: withNode,
   }
 });
 
-const vitalStyleGuideExamples = { Default };
+const Card = asFluidToken({
+  ...Default,
+  Spacing: {
+    ItemTitle: 'mt-1'
+  },
+  Behavior: {
+    ItemWrapper: addClassesIf(({ id }: any) => id.startsWith('Hero'))('flex flex-col-reverse'),
+  }
+});
+
+const WithFourColumnGrid = asFluidToken({
+  Layout: {
+    Wrapper: 'grid lg:grid-cols-4 gap-4',
+  },
+});
+
+const WithMargin = asFluidToken({
+  Spacing: {
+    Wrapper: listerineSpacing.WithSiteMargin,
+  },
+});
+
+const vitalStyleGuideExamples = {
+  Default,
+  Card,
+  WithFourColumnGrid,
+  WithMargin
+};
 
 export { StyleGuideExamplesClean, vitalStyleGuideExamples };
