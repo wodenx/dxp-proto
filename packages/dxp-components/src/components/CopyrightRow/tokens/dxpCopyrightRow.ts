@@ -21,13 +21,23 @@ const Default = asCopyrightRowToken({
   ...vitalCopyrightRow.Default,
   Components: {
     ...vitalCopyrightRow.Default.Components,
-    Wrapper: withPrependChild(
-      flowHoc(
-        addProps({
-          children: 'Use all products as directed.'
-        }),
-        addClasses('text-white block mb-3 text-xs sm:hidden'),
-      )(P), 'Footnote'
+    Wrapper: flowHoc(
+      withPrependChild(
+        flowHoc(
+          addProps({
+            children: 'Do not sell my personal information.'
+          }),
+          addClasses('text-white block text-xs sm:hidden'),
+        )(P), 'Footnote Line One'
+      ),
+      withPrependChild(
+        flowHoc(
+          addProps({
+            children: 'Use all products as directed.'
+          }),
+          addClasses('text-white block mb-3 text-xs sm:hidden'),
+        )(P), 'Footnote Line Two'
+      ),
     ),
     SocialLinks: as(
       replaceWith(SocialLinksClean),
