@@ -137,7 +137,7 @@ const twConfig = {
         //   float: none;
         //   border-radius: unset;
         // }
-        
+
       });
     }),
   ],
