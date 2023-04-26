@@ -19,6 +19,7 @@ import ImageModel from '@kenvue/dxp-image/lib/stackbit';
 import SimpleMenu from '@kenvue/dxp-components/lib/stackbit/Menu/model';
 import MenuTitle from '@kenvue/dxp-components/lib/stackbit/MenuTitle/model';
 import SubMenu from '@kenvue/dxp-components/lib/stackbit/SubMenu/model';
+import Curator from '@kenvue/dxp-curator/lib/stackbit';
 
 const liveSiteURL = process.env.LIVE_SITE_URL? [{
   label: 'View Live Site',
@@ -53,6 +54,7 @@ export default {
         MenuTitle,
         SubMenu,
         ImageModel,
+        Curator,
       ],
       assetsConfig: {
         referenceType: 'static',

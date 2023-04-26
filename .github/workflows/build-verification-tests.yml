@@ -10,7 +10,6 @@ jobs:
     permissions:
       pull-requests: read
       contents: read
-      repository-projects: read
     strategy:
       fail-fast: false
       matrix:
@@ -74,8 +73,8 @@ jobs:
           VERCEL_ORG_ID: ${{ vars.REPORT_VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ vars.REPORT_VERCEL_PROJECT_ID }}
         run: |
-          mkdir deployments
-          DEPLOYMENT_FILE=${{ github.workspace }}/deployments/${{ matrix.suite }}.txt
+          mkdir report_links
+          DEPLOYMENT_FILE=${{ github.workspace }}/report_links/${{ matrix.suite }}.txt
 
           cd tests/e2e/
           mv output/reports/allure .
@@ -89,13 +88,75 @@ jobs:
       - uses: actions/upload-artifact@master
         if: always() && steps.PR.outputs.pr_found == 'true'
         with:
-          path: deployments/${{ matrix.suite }}.txt
+          path: report_links/${{ matrix.suite }}.txt
+      - name: Publish web application tests report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: Tests report for ${{ matrix.suite }} run
+          path: tests/e2e/output/reports/allure
+  playwright:
+    if: ${{ github.event.deployment_status.state == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - name: Get PR info
+        uses: 8BitJonny/gh-get-current-pr@2.2.0
+        id: PR
+        with:
+          sha: ${{ github.sha }}
+          filterOutClosed: true
+      - name: Checkout (including submodules)
+        uses: actions/checkout@v3
+        if: steps.PR.outputs.pr_found == 'true'
+      - name: Install Node
+        uses: actions/setup-node@v3
+        if: steps.PR.outputs.pr_found == 'true'
+        with:
+          node-version: 16.19.1
+          cache: 'npm'
+      - name: Build
+        if: steps.PR.outputs.pr_found == 'true'
+        run: |
+          npm install
+          npm run build
+      # Cache playwright installation blocker https://github.com/actions/cache/issues/319
+      - name: Install Playwright
+        if: steps.PR.outputs.pr_found == 'true'
+        run: npx playwright install chrome
+      - name: Run playwright tests
+        if: steps.PR.outputs.pr_found == 'true'
+        env:
+          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+        run: |
+          if [ "${{ steps.PR.outputs.pr_found }}" == "true" ]; then
+            export APPLITOOLS_BATCH_NAME="${{ steps.PR.outputs.pr_title }} (${{ steps.PR.outputs.number }})"
+          fi
+          export DEBUG=pw:webserver
+          npm run test:smoke
+      - name: Generate Applitools report links
+        if: always() && steps.PR.outputs.pr_found == 'true'
+        run: |
+          mkdir report_links
+          status=$([[ "${{ job.status }}" == "success" ]] && echo ":white_check_mark:" || echo ":x:")
+          declare -a batchLinks
+          batchLinks=($(find test-results -name "visual-test-*" -exec cat {} \; | uniq))
+          for batchLink in "${batchLinks[@]}"; do
+            declare outputFile=$(openssl rand -hex 10)
+            echo "${batchLink}|Applitools Report|${status}" >> report_links/${outputFile}.txt
+          done
+      - uses: actions/upload-artifact@master
+        if: always() && steps.PR.outputs.pr_found == 'true'
+        with:
+          path: report_links/*
   report:
     if: always()
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
-    needs: tests
+    needs: [ tests, playwright ]
     steps:
       - uses: 8BitJonny/gh-get-current-pr@2.2.0
         id: PR
@@ -106,12 +167,12 @@ jobs:
         if: steps.PR.outputs.pr_found == 'true'
         uses: actions/download-artifact@v3
         with:
-          path: deployments
+          path: report_links
       - name: Format
         if: steps.PR.outputs.pr_found == 'true'
         run: |
           echo '## :fire: Build Verification Tests Report :fire:' > comment.txt
-          cd deployments/artifact/
+          cd report_links/artifact/
           declare -a artifacts=(*)
           for artifact in "${artifacts[@]}"; do
             declare title=$(cat ${artifact} | cut -d '|' -f2)

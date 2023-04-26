@@ -37,6 +37,7 @@
     "@stackbit/cms-git": "0.2.1",
     "@stackbit/types": "0.5.0",
     "@kenvue/dxp-image": "^0.0.0",
+    "@kenvue/dxp-curator": "^0.0.0",
     "@kenvue/dxp-text": "^0.0.0",
     "lodash": "^4.17.19",
     "mobx-react": "^7.2.1",

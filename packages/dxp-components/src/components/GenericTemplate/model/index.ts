@@ -48,8 +48,8 @@ const GenericTemplateModel: Model = {
     {
       name: 'bottom-content',
       label: 'Bottom Section',
-      type: 'string',
-      default: 'Bottom Section',
+      type: 'model',
+      models: ['Curator'],
     },
   ],
 };
