@@ -1,12 +1,17 @@
+import { withDefaultContent } from '@bodiless/core';
 import { vitalGenericTemplateBase, asGenericTemplateToken } from '@bodiless/vital-templates';
 import { asElementToken, vitalTypography } from '@bodiless/vital-elements';
 import { EditorPlainClean } from '@bodiless/vital-editors';
-import { Img, on, replaceWith } from '@bodiless/fclasses';
+import { CardClean, vitalCard } from '@bodiless/vital-card';
+import {
+  Img, on, replaceWith, withDesign
+} from '@bodiless/fclasses';
 import { dxpImage } from '@kenvue/dxp-image';
 
 import { withSbContent, withSbContentFromParent } from '../../../util';
 import { dxpEditorPlain } from '../../EditorPlain';
 import { dxpLayout } from '../../Layout';
+import { cardcontent } from './mockdata';
 
 // @todo To avoid the circular dependency we extend the
 // `dxpImage.Hero` token with `withSbContent` here.
@@ -23,8 +28,16 @@ export const Generic = asGenericTemplateToken({
   Components: {
     ...vitalGenericTemplateBase.Generic.Components,
     PageWrapper: dxpLayout.Default,
-    // @todo Replace with HeroCard
-    TopContent: on(Img)(Hero),
+    TopContent: on(CardClean)(
+      vitalCard.Hero,
+      // @todo move this editable image to card instead of here,
+      // I thought this would just work and make image editable within hero.. it doesn't
+      withDesign({
+        Image: on(Img)(Hero),
+      }),
+      // shoveing in some data to look good.
+      withDefaultContent(cardcontent),
+    ),
     // @todo replace with section container
     Content: on(EditorPlainClean)(dxpEditorPlain.Default),
     BottomContent: replaceWith(() => null),
@@ -38,7 +51,9 @@ export const Generic = asGenericTemplateToken({
     // The node-keys have been defined.  This way we avoid having to
     // specify the node key in more thn one place. Note that the node key
     // must be the same as the stackbit field name.
-    TopContent: withSbContentFromParent(),
+    TopContent: withDesign({
+      Image: withSbContentFromParent(),
+    }),
     Content: withSbContentFromParent(),
     BottomContent: withSbContentFromParent(),
   },

@@ -49,6 +49,8 @@ const Hero = asCardToken(
         vitalTextDecoration.Medium,
         'font-gotham font-light leading-[120%]'
       ),
+      // TODO Image should have the rounded css over image.
+      // Image: withRoundedBottomLeftTealOverlay,
     },
   },
 );
