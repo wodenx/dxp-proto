@@ -334,7 +334,7 @@
         "id": "5l3TEHucdUOeRaN4HbFnNq",
         "type": "Asset",
         "createdAt": "2023-03-13T13:12:39.098Z",
-        "updatedAt": "2023-03-14T15:21:41.254Z",
+        "updatedAt": "2023-04-26T23:38:41.708Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -342,22 +342,22 @@
             "linkType": "Environment"
           }
         },
-        "revision": 3,
+        "revision": 4,
         "locale": "en-US"
       },
       "fields": {
         "title": "Concentrate",
         "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/5l3TEHucdUOeRaN4HbFnNq/e48a8801c2718f994ee5ce65f7949df7/Screenshot.png",
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/5l3TEHucdUOeRaN4HbFnNq/1960a2bdcbc7b80ce9e826eb7a275af4/concentrate.svg",
           "details": {
-            "size": 19836,
+            "size": 37962,
             "image": {
-              "width": 260,
-              "height": 162
+              "width": 115,
+              "height": 142
             }
           },
-          "fileName": "Screenshot.png",
-          "contentType": "image/png"
+          "fileName": "concentrate.svg",
+          "contentType": "image/svg+xml"
         }
       }
     },
