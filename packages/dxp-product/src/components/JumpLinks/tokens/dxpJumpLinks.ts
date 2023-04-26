@@ -1,33 +1,59 @@
 import { withDefaultContent, withNodeKey } from '@bodiless/core';
-import { as, flowIf } from '@bodiless/fclasses';
-import { vitalList } from '@bodiless/vital-list';
+import {
+  as, flowIf, not, on
+} from '@bodiless/fclasses';
+import { LinkClean, asLinkToken, vitalLink } from '@bodiless/vital-link';
+import { withEditorPlain } from '@bodiless/vital-editors';
+import { vitalTextDecoration } from '@bodiless/vital-elements';
 
 import { useIsFirstItem, useJumpLinksContent } from './dxpJumpLinksData';
 import { asJumpLinkToken } from '../JumpLinksClean';
 
-const Default = asJumpLinkToken(vitalList.WithLinkedTitle, {
+const dxpJumpLink = asLinkToken({
+  Schema: {
+    ...vitalLink.Sidecar.Schema,
+  },
+  Theme: {
+    _: as(
+      flowIf(useIsFirstItem)(as('pointer-events-none text-vital-primary-header-copy')),
+      flowIf(not(useIsFirstItem))(as(
+        vitalTextDecoration.Bold,
+        'text-interactive-primary-active hover:text-interactive-primary-hover font-bold',
+      )),
+      'font-gotham'
+    )
+  }
+});
+
+const Default = asJumpLinkToken({
+  Behavior: {
+    Item: flowIf(useIsFirstItem)(as('hidden lg:block')),
+  },
+  Components: {
+    Title: on(LinkClean)(dxpJumpLink),
+  },
   Theme: {
     _: 'uppercase',
-    Title: flowIf(useIsFirstItem)(
-      as('pointer-events-none no-underline text-vital-primary-header-copy'),
-    ),
-    Item: 'first:cursor-default'
-  },
-  Spacing: {
-    _: 'mt-10',
+    Item: 'first:cursor-default',
   },
   Layout: {
-    _: 'flex justify-between',
+    _: 'flex flex-col md:flex-row justify-center max-w-5xl flex-wrap',
+    Item: 'min-w-fit'
+  },
+  Spacing: {
+    _: 'mx-auto',
+    Item: 'px-2'
   },
   Schema: {
     _: withNodeKey('jump-links'),
+    Title: withEditorPlain('title', 'Link'),
   }
 });
 
 const PDPJumpLinks = asJumpLinkToken(Default, {
   Content: {
     _: withDefaultContent(useJumpLinksContent),
-  }
+  },
 });
 
 export default {

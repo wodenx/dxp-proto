@@ -5,18 +5,23 @@ const markdownDefault = `Here are some examples of Markdown Components:
 
 Note that it currently supports brand styling only for '<p>', '<a>', '<strong>', and '<sup>' componets. All other styling is ignored.
 
-**Example of Links:**
+### **Example of Bold Text:**
+
+**This is Bold Text** \n
+__This is Bold Text__
+
+### **Example of Links:**
 
 [Link text 1](#)
 
 [Link text 2](#)
 
-**Example of Superscript:**
+### **Example of Superscript:**
 
 Lorem^®^ ipsum dolor sit amet^®^, consectetur adipiscing elit. Nullam^®^ quis nisl velit. Nullam^®^ blandit auctor vulputate. Aliquam^®^ dui urna, egestas vitae leo a, maximus aliquam elit. Sed a mattis nibh.
 
 
-**Example of Paragraphs:**
+### **Example of Paragraphs:**
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis nisl velit. Nullam blandit auctor vulputate. Aliquam dui urna, egestas vitae leo a, maximus aliquam elit. Sed a mattis nibh.
 

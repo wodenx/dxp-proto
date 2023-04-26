@@ -39,6 +39,8 @@
     "@bodiless/vital-editors": "^1.0.0-rc.33",
     "@bodiless/vital-card": "^1.0.0-rc.33",
     "@bodiless/schema-org": "^1.0.0-rc.33",
+    "@bodiless/vital-link": "^1.0.0-rc.33",
+    "@bodiless/vital-buttons": "^1.0.0-rc.33",
     "@kenvue/dxp-section": "^0.0.0",
     "contentful": "^9.3.3",
     "contentful-management": "^10.30.0",
