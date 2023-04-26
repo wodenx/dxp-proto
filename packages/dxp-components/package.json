@@ -24,6 +24,7 @@
     "@bodiless/cli": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/components": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/core": "1.0.0-canary-2033-1026.0+75cab6d",
+    "@bodiless/curator": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/fclasses": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/gatsby-theme-bodiless": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/i18n": "1.0.0-canary-2033-1026.0+75cab6d",
@@ -38,6 +39,8 @@
     "@stackbit/cms-git": "0.2.1",
     "@stackbit/types": "0.5.0",
     "@kenvue/dxp-image": "^0.0.0",
+    "@kenvue/dxp-curator": "^0.0.0",
+    "@kenvue/dxp-text": "^0.0.0",
     "lodash": "^4.17.19",
     "mobx-react": "^7.2.1",
     "tailwindcss": "^3.0.23"

@@ -21,6 +21,7 @@ module.exports = {
     'gatsby-node.test.ts',
     'tests/e2e',
     'tests/configuration',
+    'tests/smoke',
   ],
   transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
   testResultsProcessor: 'jest-sonar-reporter',

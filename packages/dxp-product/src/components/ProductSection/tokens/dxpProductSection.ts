@@ -199,7 +199,7 @@ const withProductCollectionCardContent = flowHoc(
   withNode,
 );
 
-const ProductCardList = asListToken({
+const WithProductCardList = asListToken({
   ...vitalList.Default,
   Components: {
     ...vitalList.Default.Components,
@@ -216,10 +216,13 @@ const ProductCardList = asListToken({
   },
   Content: {
     _: withProductCardContent,
+    Title: as(
+      withCardData,
+    ),
   }
 });
 
-const ProductCollectionList = asListToken({
+const WithProductCollectionList = asListToken({
   ...vitalList.Default,
   Components: {
     ...vitalList.Default.Components,
@@ -234,6 +237,9 @@ const ProductCollectionList = asListToken({
   },
   Content: {
     _: withProductCollectionCardContent,
+    Title: as(
+      withCardData,
+    ),
   }
 });
 
@@ -255,10 +261,14 @@ const ProductCards = asSectionToken({
   ...Default,
   Components: {
     ...Default.Components,
-    Content: on(ListClean)(ProductCardList)
+    Content: replaceWith(ListClean),
   },
   Schema: {
     ...Default.Schema,
+  },
+  Content: {
+    ...Default.Content,
+    Content: WithProductCardList,
   },
   Meta: flowHoc.meta.term('Token')('ProductCardSection'),
 });
@@ -267,10 +277,14 @@ const ProductCollectionCards = asSectionToken({
   ...Default,
   Components: {
     ...Default.Components,
-    Content: on(ListClean)(ProductCollectionList)
+    Content: replaceWith(ListClean),
   },
   Schema: {
     ...Default.Schema,
+  },
+  Content: {
+    ...Default.Content,
+    Content: WithProductCollectionList,
   },
   Meta: flowHoc.meta.term('Token')('ProductCardSection'),
 });
@@ -279,4 +293,6 @@ export default {
   Default,
   ProductCards,
   ProductCollectionCards,
+  WithProductCardList,
+  WithProductCollectionList,
 };

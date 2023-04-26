@@ -1,13 +1,17 @@
 import omit from 'lodash/omit';
 import { withNode, withNodeKey, withDefaultContent } from '@bodiless/core';
 import {
-  as, replaceWith, Fragment, flowIf, not,
+  as, replaceWith, Fragment, flowIf, not, on, Img, addProps, Div, withDesign,
 } from '@bodiless/fclasses';
 import { asSchemaSource, WithProductSchema } from '@bodiless/schema-org';
 import { vitalGenericTemplate, TemplateNodeKeys } from '@bodiless/vital-templates';
+import { vitalButtons, asButtonToken } from '@bodiless/vital-buttons';
 import { vitalImage } from '@bodiless/vital-image';
-import { vitalTypography } from '@bodiless/vital-elements';
+import {
+  vitalColor, vitalTextDecoration, vitalTypography, vitalFontSize,
+} from '@bodiless/vital-elements';
 import { vitalEditorPlain, vitalRichText, withAutoSuperscript } from '@bodiless/vital-editors';
+import { asBreadcrumbsToken } from '@bodiless/vital-navigation';
 
 import { asPDPTemplateToken } from '../PDPTemplateClean';
 import { withPDPContextProvider } from '../PDPTemplateContext';
@@ -19,6 +23,33 @@ import {
   useProductImageContent,
   useHasDescription,
 } from './dxpPDPContent';
+
+const dxpPDPBreadcrumbs = asBreadcrumbsToken({
+  Theme: {
+    Item: 'font-gotham',
+  }
+});
+
+const dxpButtons = {
+  WhereToBuy: asButtonToken({
+    ...vitalButtons.WhereToBuyWithoutIcon,
+    Spacing: {
+      ...vitalButtons.WhereToBuyWithoutIcon.Spacing,
+      Wrapper: 'p-3',
+    },
+    Theme: {
+      ...vitalButtons.WhereToBuyWithoutIcon.Theme,
+      Wrapper: as(
+        'bg-interactive-primary-active hover:bg-interactive-primary-hover rounded',
+        'text-interactive-primary-active',
+        vitalColor.TextWhite,
+        vitalTextDecoration.Bold,
+        vitalTextDecoration.Uppercase,
+        vitalFontSize.Base,
+      ),
+    }
+  })
+};
 
 const Default = asPDPTemplateToken(vitalGenericTemplate.Base, {
   Core: {
@@ -41,19 +72,37 @@ const Default = asPDPTemplateToken(vitalGenericTemplate.Base, {
     JumpLinks: dxpJumpLinks.PDPJumpLinks,
     MoreToKnowSection: dxpSection.MoreToKnow,
     FAQSection: dxpSection.Faq,
+    ProductRatingsWrapper: on(Div)('mb-4'),
+    ProductRatings: on(Img)(addProps({
+      src: 'https://svgshare.com/i/sTg.svg',
+      alt: 'Stars with 4.1 rating, out of 5 max.',
+      title: 'Rating stars',
+    })),
+    ProductWTBButtonWrapper: on(Div)('mb-4'),
+    ProductWTBButton: dxpButtons.WhereToBuy,
   },
   Layout: {
     ContentWrapper: 'flex flex-wrap',
     ProductImageWrapper: 'w-full lg:w-1/2',
     ProductDetailWrapper: 'w-full lg:w-1/2 lg:grow',
+    JumpLinksWrapper: 'w-full lg:w-screen'
   },
   Spacing: {
+    JumpLinksWrapper: 'lg:px-36 py-2  mt-10 lg:-ml-36',
     ContentWrapper: 'mb-4',
     ProductImageWrapper: 'lg:pr-2',
     ProductDetailWrapper: 'lg:pl-2 pt-4 lg:pt-0',
     ProductTitleWrapper: 'mb-4',
+    PageWrapper: withDesign({
+      ContainerWrapper: 'pb-10 -mb-10'
+    }),
   },
   Theme: {
+    Breadcrumb: dxpPDPBreadcrumbs,
+    PageWrapper: withDesign({
+      ContainerWrapper: 'bg-primary-page-bg'
+    }),
+    JumpLinksWrapper: vitalColor.BgPrimaryCard,
     ProductTitleWrapper: omit(vitalTypography.H1, 'Spacing'),
     ProductDescription: omit(vitalTypography.Body, 'Spacing'),
   },

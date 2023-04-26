@@ -23,8 +23,8 @@
     "lint:target": "eslint --cache --ext .js,.jsx,.ts,.tsx",
     "lint:change": "git diff --name-only --diff-filter=d master... | grep -e 'tsx$' -e 'jsx$' -e 'js$' -e 'ts$' | xargs -L 1 npm run lint:target",
     "postinstall": "./postinstall.sh",
-    "pw:run": "npx playwright test playwright/tests/smoke/* --project=chromium --workers 1",
     "dev": "npx -y turbo dev",
+    "serve": "npx -y turbo serve",
     "dev-sb": "npm run dev --workspace @sites/--dxp--",
     "edit-sb": "npm run edit --workspace @sites/--dxp--",
     "stackbit": "stackbit dev --runnableDir sites/__dxp__ --port 8000",
@@ -32,7 +32,7 @@
     "sync:fix": "syncpack fix-mismatches",
     "sync:check": "syncpack list-mismatches",
     "test": "jest",
-    "test:pw": "WAIT_ON_TIMEOUT=600000 start-server-and-test start http://localhost:8000 pw:run",
+    "test:smoke": "APPLITOOLS_BATCH_ID=`uuidgen` PLAYWRIGHT_SUITE=smoke npx playwright test",
     "docs": "npm run build:docs --workspace @sites/__dxp__ && docsify serve ./sites/__dxp__/doc"
   },
   "husky": {
@@ -51,6 +51,7 @@
     "symlink-dir": "^3.0.3"
   },
   "devDependencies": {
+    "@applitools/eyes-playwright": "^1.15.1",
     "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-decorators": "^7.4.0",
     "@babel/plugin-transform-modules-commonjs": "7.5.0",

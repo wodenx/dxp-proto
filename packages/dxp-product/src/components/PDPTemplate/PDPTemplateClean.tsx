@@ -10,6 +10,7 @@ import { EditorPlainClean, RichTextClean } from '@bodiless/vital-editors';
 import { LayoutClean } from '@bodiless/vital-layout';
 import { FlowContainerClean } from '@bodiless/vital-flowcontainer';
 import { BreadcrumbsClean } from '@bodiless/vital-navigation';
+import { ButtonClean } from '@bodiless/vital-buttons';
 import { SectionClean } from '@kenvue/dxp-section';
 
 import { JumpLinksClean } from '../JumpLinks';
@@ -30,10 +31,15 @@ const pdpTemplateComponents: PDPTemplateComponents = {
   ProductDescription: RichTextClean,
   ProductTitleWrapper: Div,
   ProductTitle: EditorPlainClean,
+  ProductRatingsWrapper: Fragment,
+  ProductRatings: Fragment,
+  ProductWTBButtonWrapper: Fragment,
+  ProductWTBButton: ButtonClean,
   ProductEyebrowWrapper: Div,
   ProductEyebrow: EditorPlainClean,
   ProductMoreInfo: Fragment,
   BottomWrapper: Div,
+  JumpLinksWrapper: Div,
   JumpLinks: JumpLinksClean,
   MoreToKnowSection: SectionClean,
   FAQSection: SectionClean,
@@ -63,13 +69,21 @@ const PDPTemplateBase = (props: BasePDPTemplateProps) => {
           <C.ProductTitleWrapper>
             <C.ProductTitle />
           </C.ProductTitleWrapper>
+          <C.ProductRatingsWrapper>
+            <C.ProductRatings />
+          </C.ProductRatingsWrapper>
+          <C.ProductWTBButtonWrapper>
+            <C.ProductWTBButton />
+          </C.ProductWTBButtonWrapper>
           <C.ProductDescriptionWrapper>
             <C.ProductDescription />
           </C.ProductDescriptionWrapper>
         </C.ProductDetailWrapper>
       </C.ContentWrapper>
       <C.BottomWrapper>
-        <C.JumpLinks />
+        <C.JumpLinksWrapper>
+          <C.JumpLinks />
+        </C.JumpLinksWrapper>
         <C.MoreToKnowSection />
         <C.FAQSection />
         <C.BottomContent />

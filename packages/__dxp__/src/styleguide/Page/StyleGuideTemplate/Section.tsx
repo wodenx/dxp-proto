@@ -10,6 +10,10 @@ import {
 import { dxpProductSection } from '@kenvue/dxp-product';
 import { SectionClean, asSectionToken } from '@kenvue/dxp-section';
 import { withNode, withNodeKey } from '@bodiless/core';
+import {
+  listerineSectionProduct,
+  listerineSectionProductCollection,
+} from '../../../components';
 
 const ProductCardSectionExample = asSectionToken({
   Spacing: {
@@ -29,6 +33,7 @@ const ProductCardSectionExample = asSectionToken({
 const ProductExample = as(
   dxpProductSection.ProductCards,
   ProductCardSectionExample,
+  listerineSectionProduct.Product,
   asSectionToken({
     Schema: {
       _: withNodeKey('product'),
@@ -38,6 +43,7 @@ const ProductExample = as(
 
 const CollectionExample = as(
   dxpProductSection.ProductCollectionCards,
+  listerineSectionProductCollection.ProductCollection,
   ProductCardSectionExample,
   asSectionToken({
     Schema: {

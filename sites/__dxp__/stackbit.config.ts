@@ -1,5 +1,5 @@
 // @todo determine best way to distribute the shared config.
-// eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint import/no-extraneous-dependencies: 0 */
 import { GitContentSource } from '@stackbit/cms-git';
 import path from 'path';
 
@@ -8,25 +8,18 @@ import path from 'path';
 // a better way to compile the models to cjs but keep them close to the components
 // with which they are associated.
 // @todo figure out best way to share config.
-// eslint-disable-next-line import/no-extraneous-dependencies
 import GenericTemplateModel from '@kenvue/dxp-components/lib/stackbit/EditorPlain/model';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import EditorPlainModel from '@kenvue/dxp-components/lib/stackbit/GenericTemplate/model';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import FooterModel from '@kenvue/dxp-components/lib/stackbit/Footer/model';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import LayoutModel from '@kenvue/dxp-components/lib/stackbit/Layout/model';
 // @todo: When we have only a single component exported from the package
 // TS generates a slightly different lib structure.
 // Change to match other imports once more components are added.
-// eslint-disable-next-line import/no-extraneous-dependencies
 import ImageModel from '@kenvue/dxp-image/lib/stackbit';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import SimpleMenu from '@kenvue/dxp-components/lib/stackbit/Menu/model';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import MenuTitle from '@kenvue/dxp-components/lib/stackbit/MenuTitle/model';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import SubMenu from '@kenvue/dxp-components/lib/stackbit/SubMenu/model';
+import Curator from '@kenvue/dxp-curator/lib/stackbit';
 
 const liveSiteURL = process.env.LIVE_SITE_URL? [{
   label: 'View Live Site',
@@ -36,18 +29,19 @@ const liveSiteURL = process.env.LIVE_SITE_URL? [{
 }] : [];
 
 export default {
+  installCommand: 'cd ../../ && npm install',
   stackbitVersion: '~0.6.0',
   ssgName: 'custom',
   customContentReload: true,
   // cmsName: 'git',
-  devCommand: 'npm run edit-sb',
+  devCommand: 'npm run edit',
   // devCommand: 'npm run dev',
   nodeVersion: '16',
   contentSources: [
     new GitContentSource({
       // @todo how to make this generic?
       // @todo Test in studio after sb releases fix, see https://stackbit.zendesk.com/hc/en-us/requests/84?page=1
-      rootPath: path.join(__dirname, 'sites', '__dxp__'),
+      rootPath: path.join(__dirname),
       contentDirs: ['src/data'],
       // repoUrl: process.env.REPO_URL || '',
       // repoBranch: process.env.REPO_BRANCH || '',
@@ -60,6 +54,7 @@ export default {
         MenuTitle,
         SubMenu,
         ImageModel,
+        Curator,
       ],
       assetsConfig: {
         referenceType: 'static',
