@@ -36,6 +36,7 @@
     "@bodiless/core": "^1.0.0-rc.36",
     "@bodiless/fclasses": "^1.0.0-rc.36",
     "@bodiless/accordion": "^1.0.0-rc.36",
+    "@bodiless/hydration": "^1.0.0-rc.36",
     "@bodiless/vital-card": "^1.0.0-rc.36",
     "@bodiless/vital-editors": "^1.0.0-rc.36",
     "@bodiless/vital-elements": "^1.0.0-rc.36",
