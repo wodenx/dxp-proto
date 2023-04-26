@@ -17,12 +17,10 @@ const cta = {
   text: 'Learn More about mouthwash'
 };
 
-// This should have been before CSS over image and not force content editors to create this image...
 const image = {
-  src: '/images/pages/styleguide/card/4bc90d7fde30ac4a16c295340c45958d/Rectangle 14974.png',
-  alt: '',
-  title: '',
-  preset: 'fluid_withWebp'
+  src: 'https://www.listerine.com/sites/listerine_us_2/files/styles/jjbos_adaptive_images_generic-large_desktop/public/attack-plaque-banner.webp',
+  alt: 'listerine',
+  title: 'listerine',
 };
 
 export const cardcontent = {

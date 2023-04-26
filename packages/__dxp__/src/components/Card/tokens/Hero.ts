@@ -25,7 +25,7 @@ const Hero = asCardToken(
       ),
     },
     Spacing: {
-      Wrapper: 'pb-9 lg:pb-12 lg:pl-36',
+      Wrapper: 'lg:pl-36',
       ContentWrapper: 'px-4 lg:px-0',
       DescriptionWrapper: 'mb-3 mt-0 lg:mb-4',
       ImageWrapper: 'pl-14 mb-9 lg:pl-0 lg:mb-0'
@@ -50,7 +50,7 @@ const Hero = asCardToken(
         'font-gotham font-light leading-[120%]'
       ),
       // TODO Image should have the rounded css over image.
-      // Image: withRoundedBottomLeftTealOverlay,
+      Image: 'card-corner',
     },
   },
 );
