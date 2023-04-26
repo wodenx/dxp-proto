@@ -8,9 +8,29 @@
             "type": "SimpleMenu",
             "menuItems": [
                 {
-                    "type": "MenuTitle",
-                    "text": "Menu Item One",
-                    "link": "/"
+                    "type": "SubMenu",
+                    "title": {
+                        "type": "MenuTitle",
+                        "text": "Menu Item One",
+                        "link": "/"
+                    },
+                    "menuItems": [
+                        {
+                            "type": "MenuTitle",
+                            "text": "Styleguide",
+                            "link": "/styleguide"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Section",
+                            "link": "/styleguide/section"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Card",
+                            "link": "/styleguide/card"
+                        }
+                    ]
                 },
                 {
                     "type": "MenuTitle",
