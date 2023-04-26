@@ -1,14 +1,14 @@
 import { withDefaultContent } from '@bodiless/core';
 import { vitalGenericTemplateBase, asGenericTemplateToken } from '@bodiless/vital-templates';
 import { asElementToken, vitalTypography } from '@bodiless/vital-elements';
-import { EditorPlainClean } from '@bodiless/vital-editors';
+// import { EditorPlainClean } from '@bodiless/vital-editors';
 import { CardClean, vitalCard } from '@bodiless/vital-card';
 import { on } from '@bodiless/fclasses';
 import { dxpImage } from '@kenvue/dxp-image';
 
 import { CuratorSectionClean, asCuratorSectionToken, dxpCuratorSection } from '@kenvue/dxp-curator';
 import { withSbContent, withSbContentFromParent } from '../../../util';
-import { dxpEditorPlain } from '../../EditorPlain';
+// import { dxpEditorPlain } from '../../EditorPlain';
 import { dxpLayout } from '../../Layout';
 import { cardcontent } from './mockdata';
 
@@ -46,7 +46,7 @@ export const Generic = asGenericTemplateToken({
       withDefaultContent(cardcontent),
     ),
     // @todo replace with section container
-    Content: on(EditorPlainClean)(dxpEditorPlain.Default),
+    // Content: on(EditorPlainClean)(dxpEditorPlain.Default),
     BottomContent: on(CuratorSectionClean)(Curator),
   },
   Theme: {

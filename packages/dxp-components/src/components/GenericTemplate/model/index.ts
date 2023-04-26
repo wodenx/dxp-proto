@@ -33,12 +33,12 @@ const GenericTemplateModel: Model = {
     },
     // Top content demonstrates the pattern of providing a switchable component.
     // @todo replace with a Hero Card model
-    {
-      name: 'top-content',
-      label: 'Hero',
-      type: 'model',
-      models: ['Image'],
-    },
+    // {
+    //   name: 'top-content',
+    //   label: 'Hero',
+    //   type: 'model',
+    //   models: ['Image'],
+    // },
     {
       name: 'main-content',
       label: 'Top Section',
