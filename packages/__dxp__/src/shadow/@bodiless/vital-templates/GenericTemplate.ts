@@ -1,6 +1,6 @@
 import { vitalGenericTemplateBase, asGenericTemplateToken } from '@bodiless/vital-templates';
 
-const Default = asGenericTemplateToken(vitalGenericTemplateBase.Base, {
+const Default = asGenericTemplateToken(vitalGenericTemplateBase.Default, {
 });
 
 export default {

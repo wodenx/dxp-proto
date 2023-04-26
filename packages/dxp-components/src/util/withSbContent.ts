@@ -8,7 +8,7 @@ const useSbContentfromParent = (
 ) => () => {
   const { node } = useNode<any>();
   // Use the current nodeKey as the key unless otherwise specified
-  const finalKey = key || node.path[node.path.length-1];
+  const finalKey = key || node.path[node.path.length - 1];
   // @todo type the stackbit model data
   const parentIndex = node.peer<any>([...node.path.slice(0, -1), indexKey]);
   return {
