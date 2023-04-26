@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test';
+import { PlaywrightTestConfig, defineConfig, devices } from '@playwright/test';
 
 /**
  * Read environment variables from file.
@@ -9,19 +9,44 @@ import { defineConfig, devices } from '@playwright/test';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
-export default defineConfig({
-  testDir: './tests/configuration',
+
+const baseUrl: string = 'http://localhost:9000/';
+const timeout: number = 5 * 60 * 1000;
+
+const configurators = {
+  "smoke": (baseConfig: PlaywrightTestConfig) => {
+    baseConfig.testDir = './tests/smoke';
+    baseConfig.use = {
+      baseURL: baseUrl,
+      trace: 'on-first-retry',
+      testIdAttribute: 'id',
+    };
+    baseConfig.webServer = {
+      command: 'npm run serve',
+      url: baseUrl,
+      ignoreHTTPSErrors: true,
+      reuseExistingServer: true,
+      timeout: timeout,
+    };
+  },
+  "configuration": (baseConfig: PlaywrightTestConfig) => {
+    baseConfig.testDir = './tests/configuration';
+    baseConfig.use = {
+      trace: 'on-first-retry',
+    };
+    baseConfig.globalSetup = require.resolve('./tests/configuration/setup');
+    baseConfig.globalTeardown = require.resolve('./tests/configuration/teardown');
+    }
+}
+
+const playwrightConfig: PlaywrightTestConfig = {
+  timeout: timeout,
+
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  workers: 5,
   reporter: 'html',
-  use: {
-    trace: 'on-first-retry',
-  },
-
-  globalSetup: require.resolve('./tests/configuration/setup'),
-  globalTeardown: require.resolve('./tests/configuration/teardown'),
 
   projects: [
     {
@@ -29,11 +54,20 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
   ],
+};
 
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://127.0.0.1:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
-});
+const suite: string = process.env.PLAYWRIGHT_SUITE as string;
+
+if (!suite) {
+  throw Error(`The PLAYWRIGHT_SUITE environment variable is not set`);
+}
+
+const configurator = configurators[suite]
+
+if (!configurator) {
+  throw Error(`Unknown playwright suite: ${suite}, use one of ${Object.keys(configurators)}`);
+}
+
+configurator(playwrightConfig)
+
+export default defineConfig(playwrightConfig);
