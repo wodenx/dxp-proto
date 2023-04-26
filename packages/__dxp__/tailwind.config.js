@@ -78,7 +78,7 @@ const twConfig = {
     },
   },
   plugins: [
-    plugin(({ addBase }) => {
+    plugin(({ addBase, addComponents }) => {
       addBase([
         {
           '@font-face': {
@@ -108,6 +108,16 @@ const twConfig = {
           },
         },
       ]);
+      addComponents({
+        '.card-corner': {
+          width: 'calc(100% - 60px)',
+          'margin-left': '20px',
+          float: 'right',
+          'border-radius': '0 0 0 150px',
+          'object-fit': 'cover',
+          'object-position': 'center',
+        },
+      });
     }),
   ],
 };

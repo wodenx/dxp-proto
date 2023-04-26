@@ -1,4 +1,5 @@
 import { vitalCardBase, asCardToken } from '@bodiless/vital-card';
+import { vitalImage } from '@bodiless/vital-image';
 import { addProps, flowHoc, as } from '@bodiless/fclasses';
 import { listerineButton } from '../../Button';
 import { listerineTypography } from '../../Typography';
@@ -7,6 +8,9 @@ const Default = asCardToken(vitalCardBase.Default, {
   Behavior: {
     Wrapper: addProps({ 'data-shadowed-by': '__vital__:Card' }),
   },
+  Components: {
+    Image: vitalImage.Plain,
+  }
 });
 
 const WithHalfHorizontal = asCardToken({
