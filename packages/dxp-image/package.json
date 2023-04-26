@@ -20,8 +20,8 @@
     "react": "^17.0.2"
   },
   "dependencies": {
-    "@bodiless/vital-image": "^1.0.0-rc.33",
-    "@bodiless/vital-elements": "^1.0.0-rc.33",
+    "@bodiless/vital-image": "^1.0.0-rc.36",
+    "@bodiless/vital-elements": "^1.0.0-rc.36",
     "@stackbit/types": "0.5.0"
   }
 }

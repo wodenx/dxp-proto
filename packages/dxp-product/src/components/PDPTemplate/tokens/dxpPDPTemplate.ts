@@ -51,7 +51,7 @@ const dxpButtons = {
   })
 };
 
-const Default = asPDPTemplateToken(vitalGenericTemplate.Base, {
+const Default = asPDPTemplateToken(vitalGenericTemplate.Default, {
   Core: {
     PageWrapper: withPDPContextProvider,
     ProductTitle: withAutoSuperscript('®™©', 'align-baseline'),
