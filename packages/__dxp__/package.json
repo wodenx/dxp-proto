@@ -41,6 +41,7 @@
     "@bodiless/vital-image": "^1.0.0-rc.33",
     "@bodiless/vital-layout": "^1.0.0-rc.33",
     "@bodiless/vital-link": "^1.0.0-rc.33",
+    "@bodiless/vital-list": "^1.0.0-rc.33",
     "@bodiless/vital-navigation": "^1.0.0-rc.33",
     "@bodiless/vital-templates": "^1.0.0-rc.33",
     "@bodiless/vital-buttons": "^1.0.0-rc.33",
