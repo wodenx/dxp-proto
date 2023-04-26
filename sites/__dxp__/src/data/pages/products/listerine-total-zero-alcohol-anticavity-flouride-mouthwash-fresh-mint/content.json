@@ -1,6 +1,6 @@
 {
   "contentful_id": "4wjOoQHFSAqePnJMpNKEqg",
-  "revision_id": 21,
+  "revision_id": 22,
   "name": "LISTERINE® TOTAL CARE ZERO ALCOHOL ANTICAVITY FLUORIDE MOUTHWASH, FRESH MINT",
   "images": [
     {
@@ -111,74 +111,74 @@
   "directions": [
     [
       {
-        "data": {},
-        "marks": [],
+        "nodeType": "text",
         "value": "Adults and children 6 years of age and older:",
-        "nodeType": "text"
+        "marks": [],
+        "data": {}
       }
     ],
     [
       {
-        "data": {},
-        "marks": [],
+        "nodeType": "text",
         "value": "Use twice a day after brushing your teeth with a toothpaste",
-        "nodeType": "text"
+        "marks": [],
+        "data": {}
       }
     ],
     [
       {
-        "data": {},
-        "marks": [],
+        "nodeType": "text",
         "value": "Vigorously swish 10 mL (2 teaspoonfuls) of rinse between your teeth for 1 minute and then spit out",
-        "nodeType": "text"
+        "marks": [],
+        "data": {}
       }
     ],
     [
       {
-        "data": {},
+        "nodeType": "text",
+        "value": "Do not swallow the rinse.",
         "marks": [],
-        "value": "Do not swallow the rinse",
-        "nodeType": "text"
+        "data": {}
       }
     ],
     [
       {
-        "data": {},
+        "nodeType": "text",
+        "value": "Do not eat or drink for 30 minutes after rinsing.",
         "marks": [],
-        "value": "Do not eat or drink for 30 minutes after rinsing",
-        "nodeType": "text"
+        "data": {}
       }
     ],
     [
       {
-        "data": {},
+        "nodeType": "text",
+        "value": "Instruct children under 12 years of age in good rinsing habits (to minimize swallowing).",
         "marks": [],
-        "value": "Instruct children under 12 years of age in good rinsing habits (to minimize swallowing)",
-        "nodeType": "text"
+        "data": {}
       }
     ],
     [
       {
-        "data": {},
+        "nodeType": "text",
+        "value": "Supervise children as necessary until capable of using without supervision.",
         "marks": [],
-        "value": "Supervise children as necessary until capable of using without supervision",
-        "nodeType": "text"
+        "data": {}
       }
     ],
     [
       {
-        "data": {},
+        "nodeType": "text",
+        "value": "Children under 6 years of age: consult a dentist or doctor.",
         "marks": [],
-        "value": "Children under 6 years of age: consult a dentist or doctor",
-        "nodeType": "text"
+        "data": {}
       }
     ],
     [
       {
-        "data": {},
-        "marks": [],
+        "nodeType": "text",
         "value": "\n\n",
-        "nodeType": "text"
+        "marks": [],
+        "data": {}
       }
     ]
   ],
