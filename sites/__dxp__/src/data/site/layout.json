@@ -24,6 +24,21 @@
                             "type": "MenuTitle",
                             "text": "CONTACT US",
                             "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Styleguide",
+                            "link": "/styleguide"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Section",
+                            "link": "/styleguide/section"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Card",
+                            "link": "/styleguide/card"
                         }
                     ]
                 },

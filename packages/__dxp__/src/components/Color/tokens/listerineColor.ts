@@ -9,6 +9,7 @@ export default asTokenGroup(ColorMeta)({
   BorderPrimaryInteractive: 'border-interactive-primary',
   BorderSecondary: 'border-secondary-border',
   TextPrimaryInteractive: 'text-interactive-primary hover:text-interactive-primary-hover active:text-interactive-primary-active',
+  TextPrimaryInteractiveActive: 'text-interactive-primary-active hover:text-interactive-primary-hover',
   TextPrimaryInteractiveNoHover: 'text-interactive-primary active:text-interactive-primary-active',
   TextPrimaryInteractiveHover: 'hover:text-interactive-primary-hover',
   TextPrimaryInteractiveSelected: 'selected:text-interactive-primary-selected',

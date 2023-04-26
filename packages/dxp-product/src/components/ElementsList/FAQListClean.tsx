@@ -1,14 +1,14 @@
 /* eslint-disable react/no-array-index-key */
 import React, { FC, useMemo } from 'react';
 import { withDefaultContent, withNode, withNodeKey } from '@bodiless/core';
-import { AccordionClean, vitalAccordion } from '@bodiless/vital-accordion';
+import { AccordionClean } from '@bodiless/vital-accordion';
+import { asVitalTokenSpec } from '@bodiless/vital-elements';
 import {
   designable, flowHoc, DesignableComponentsProps,
-  ComponentOrTag, Fragment, as,
+  ComponentOrTag, Fragment,
 } from '@bodiless/fclasses';
 
 import { ContentfulFAQ, toSlateParagraphNode, TextNode } from '../PDPTemplate';
-// import { TextNode} from '../PDPTemplate/PDPSlateHelpers';
 
 export type FAQListComponents = {
   Wrapper: ComponentOrTag<any>,
@@ -35,7 +35,6 @@ const FAQListBase: FC<FAQListBaseProps> = props => {
 
   const items = useMemo(() => faqs.map((faq, index) => {
     const Component = flowHoc(
-      as(vitalAccordion.Default),
       withDefaultContent(useAccordionContent(faq)),
       withNode,
       withNodeKey(`question-${index}`),
@@ -55,4 +54,5 @@ const FAQListClean = designable(
   faqListComponents, 'FAQList'
 )(FAQListBase);
 
+export const asFAQListToken = asVitalTokenSpec<FAQListComponents>();
 export default FAQListClean;
