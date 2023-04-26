@@ -177,10 +177,10 @@
             "id": "o0k7u0i6hu7n"
           }
         },
-        "id": "8AqWoythzXHwS1mE1qrad",
+        "id": "67SxZF9dD7CHSbSTg60wGq",
         "type": "Asset",
-        "createdAt": "2023-03-14T13:17:29.033Z",
-        "updatedAt": "2023-03-14T13:17:29.033Z",
+        "createdAt": "2023-04-26T22:51:14.801Z",
+        "updatedAt": "2023-04-26T22:51:14.801Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -192,19 +192,19 @@
         "locale": "en-US"
       },
       "fields": {
-        "title": "Screenshot",
-        "description": "",
+        "title": "Listerine products",
+        "description": "Listerine products",
         "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/8AqWoythzXHwS1mE1qrad/8cb38866f330473b875a6f3bdc45a93e/Screenshot.png",
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/67SxZF9dD7CHSbSTg60wGq/436cc4731847377b9beca3d0d58190f5/image_2.svg",
           "details": {
-            "size": 40606,
+            "size": 71174,
             "image": {
-              "width": 257,
-              "height": 164
+              "width": 161,
+              "height": 128
             }
           },
-          "fileName": "Screenshot.png",
-          "contentType": "image/png"
+          "fileName": "image 2.svg",
+          "contentType": "image/svg+xml"
         }
       }
     },
