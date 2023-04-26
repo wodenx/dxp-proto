@@ -5,6 +5,7 @@ import {
   DesignableComponentsProps,
   Div,
   H2,
+  Span,
   DesignableProps,
   as,
 } from '@bodiless/fclasses';
@@ -18,6 +19,8 @@ import { CuratorClean } from '@bodiless/curator';
 export interface CuratorSectionComponents extends DesignableComponents {
   Wrapper: ComponentType<any>,
   Title: ComponentType<any>,
+  SocialLink: ComponentType<any>,
+  TitleWrapper: ComponentType<any>,
   Subtitle: ComponentType<any>,
   FeedWrapper: ComponentType<any>,
   Feed: ComponentType<any>,
@@ -25,7 +28,9 @@ export interface CuratorSectionComponents extends DesignableComponents {
 
 const CuratorSectionComponent: CuratorSectionComponents = {
   Wrapper: Div,
+  TitleWrapper: Div,
   Title: H2,
+  SocialLink: Span,
   Subtitle: Div,
   FeedWrapper: Div,
   Feed: CuratorClean,
@@ -38,7 +43,9 @@ HTMLProps<HTMLElement>;
 const CuratorSectionBase: FC<CuratorSectionBaseProps> = ({ components, ...rest }) => {
   const {
     Wrapper,
+    TitleWrapper,
     Title,
+    SocialLink,
     Subtitle,
     FeedWrapper,
     Feed,
@@ -46,7 +53,10 @@ const CuratorSectionBase: FC<CuratorSectionBaseProps> = ({ components, ...rest }
 
   return (
     <Wrapper {...rest}>
-      <Title />
+      <TitleWrapper>
+        <Title />
+        <SocialLink />
+      </TitleWrapper>
       <Subtitle />
       <FeedWrapper>
         <Feed />
