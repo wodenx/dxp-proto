@@ -15,8 +15,12 @@ import { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { as } from '@bodiless/fclasses';
 import { dxpPage } from '@kenvue/dxp-components';
+import { withProductData } from '../default-data/hoc';
 
-const DefaultPage = as(dxpPage.Default)(Fragment);
+const DefaultPage = as(
+  dxpPage.Default,
+  withProductData,
+)(Fragment);
 
 export default DefaultPage;
 
