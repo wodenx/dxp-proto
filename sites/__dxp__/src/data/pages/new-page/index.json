@@ -1,7 +1,0 @@
-{
-    "type": "GenericTemplate",
-    "slug": "new-page",
-    "Title": "New Page",
-    "#template": "_default",
-    "main-content": "Top Section"
-}
