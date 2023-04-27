@@ -1,7 +1,7 @@
 import omit from 'lodash/omit';
 import { withNode, withNodeKey, withDefaultContent } from '@bodiless/core';
 import {
-  as, replaceWith, Fragment, flowIf, not, on, Img, addProps, Div, withDesign,
+  as, replaceWith, Fragment, flowIf, not, on, Img, addProps, Div, withDesign, removeClasses,
 } from '@bodiless/fclasses';
 import { asSchemaSource, WithProductSchema } from '@bodiless/schema-org';
 import { vitalGenericTemplate, TemplateNodeKeys } from '@bodiless/vital-templates';
@@ -46,6 +46,7 @@ const dxpButtons = {
         vitalTextDecoration.Uppercase,
         vitalFontSize.Base,
       ),
+      Body: removeClasses('xl:hidden'),
     }
   })
 };
