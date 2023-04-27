@@ -41,7 +41,6 @@ const dxpButtons = {
       ...vitalButtons.WhereToBuyWithoutIcon.Theme,
       Wrapper: as(
         'bg-interactive-primary-active hover:bg-interactive-primary-hover rounded',
-        'text-interactive-primary-active',
         vitalColor.TextWhite,
         vitalTextDecoration.Bold,
         vitalTextDecoration.Uppercase,
