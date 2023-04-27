@@ -124,32 +124,29 @@ const twConfig = {
         },
         '.card-corner': {
           width: 'calc(100% - 60px)',
+          height: '18rem',
           'margin-left': '20px',
           float: 'right',
           'border-radius': '0 0 0 150px',
           'object-fit': 'cover',
           'object-position': 'center',
         },
-
-        // @TODO make card-corner responsive and be bigger on larger screens
-        // @include media-breakpoint-up(sm) {
-        //   height: 20rem; //  think it should be deleted
-        //   border-radius: 0 0 0 200px;
-        // }
-
-        // @include media-breakpoint-up(md) {
-        //   width: 50%;
-        //   height: 31rem;  //  think it should be deleted
-        //   border-radius: 0 0 0 150px;
-        //   object-position: 72%;
-        // }
-
-        // @include media-breakpoint-up(lg) {
-        //   width: 100%;
-        //   height: 38rem; //  think it should be deleted
-        //   float: none;
-        //   border-radius: unset;
-        // }
+        // '.card-corner-sm': {
+        //   height: '20rem',
+        //   'border-radius': '0 0 0 200px',
+        // },
+        '.card-corner-md': {
+          width: '50%',
+          height: '31rem',
+          'border-radius': '0 0 0 150px',
+          'object-position': '72%',
+        },
+        '.card-corner-lg': {
+          width: '100%',
+          height: '38rem',
+          float: 'none',
+          'border-radius': '0 0 0 400px',
+        }
 
       });
     }),
