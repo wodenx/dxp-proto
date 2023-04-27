@@ -39,6 +39,9 @@ const useProductCardContent = (props: any) => {
       const content = {
         title: item.title,
         image: { src, title, alt },
+        cta: {
+          text: 'where to buy',
+        }
       };
       acc[item.id] = content;
     }
@@ -63,6 +66,9 @@ const useProductCollectionCardContent = (props: any) => {
     const content = {
       title: item.title,
       image: { src, title, alt },
+      cta: {
+        text: `all ${item.title.text} products`,
+      },
     };
     if (!productCollectionIds || productCollectionIds.includes(item.id)) {
       acc[item.id] = content;

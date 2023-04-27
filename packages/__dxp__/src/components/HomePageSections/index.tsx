@@ -62,7 +62,7 @@ const ListerineSectionBestSeller = as(
 
 export default () => (
   <>
-    <ListerineSectionBestSeller />
     <ListerineSectionCollectionOurProducts />
+    <ListerineSectionBestSeller />
   </>
 );

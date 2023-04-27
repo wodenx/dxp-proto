@@ -6,6 +6,8 @@ import {
   Img,
   on,
   replaceWith,
+  Span,
+  withDesign,
 } from '@bodiless/fclasses';
 import { vitalTextDecoration } from '@bodiless/vital-elements';
 import { listerineTypography } from '../../Typography';
@@ -36,6 +38,7 @@ const ProductCategory = asCardToken(
     },
     Spacing: {
       ContentWrapper: 'px-4.75 py-6 lg:px-6 lg:py-4.75',
+      Image: 'w-full',
     },
   },
   vitalCardBase.WithPrimaryTextLink,
@@ -47,8 +50,10 @@ const Product = asCardToken(
   listerineCardBase.Default,
   listerineCardBase.WithPrimaryButton,
   vitalCardBase.WithNoDescription,
+  // vitalCardBase.WithNoEyebrow,
   {
     Components: {
+      Eyebrow: replaceWith(Span),
       Rating: on(Img)(
         addProps({
           src: 'https://i.ibb.co/QHNZGn6/reviews.png',
@@ -78,8 +83,10 @@ const Product = asCardToken(
       Rating: 'mb-5.5 lg:mb-6',
     },
     Content: {
-      // Not working and its should.. :(
-      Eyebrow: addProps({children: 'DENTIST RECOMMENDED'}),
+      Eyebrow: addProps({ children: 'Dentist Recommended' }),
+      CTALink: withDesign({
+        Body: as(replaceWith(Span), addProps({ chidren: 'where to buy' })),
+      }),
     },
   },
 );
