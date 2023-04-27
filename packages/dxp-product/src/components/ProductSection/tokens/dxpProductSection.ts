@@ -110,6 +110,7 @@ const withProductCollectionCardContent = flowHoc(
   withNode,
 );
 
+// @todo should not be named with `With...` 
 const WithProductCardList = asListToken({
   ...vitalList.Default,
   Components: {
@@ -118,17 +119,20 @@ const WithProductCardList = asListToken({
       vitalCardStatic.Product,
     ),
   },
+  // @todo remove this domain
   Schema: {
     ...vitalList.Default.Schema,
   },
   Content: {
     _: withProductCardContent,
+    // @todo no need for as
     Title: as(
       withCardData,
     ),
   }
 });
 
+// @todo should not be named with `With...`
 const WithProductCollectionList = asListToken({
   ...vitalList.Default,
   Components: {
@@ -137,6 +141,7 @@ const WithProductCollectionList = asListToken({
       vitalCardStatic.Product,
     ),
   },
+  // @todo no need for this domain
   Schema: {
     ...vitalList.Default.Schema,
   },
@@ -197,6 +202,7 @@ export default {
   Default,
   ProductCards,
   ProductCollectionCards,
+  // @todo move these to a separate `List` or `ProductList` component.
   WithProductCardList,
   WithProductCollectionList,
 };

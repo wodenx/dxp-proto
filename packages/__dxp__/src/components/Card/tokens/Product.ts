@@ -1,3 +1,4 @@
+// @todo shold be named listerineProductCard, not listerineCardProduct OR should just be part of listerineCard.
 import { asCardToken, vitalCardBase } from '@bodiless/vital-card';
 import {
   addProps,
@@ -66,6 +67,7 @@ const Product = asCardToken(
     Theme: {
       ImageWrapper: as(listerineColor.BorderSecondary, 'border-b border-2'),
       CTALink: listerineTypography.WithHoverArrow,
+      TitleWrapper: 'leading-none lg:leading-none',
       Title: as(
         listerineFontSize.LG,
         vitalTextDecoration.Normal,
@@ -79,7 +81,7 @@ const Product = asCardToken(
     },
     Spacing: {
       ContentWrapper: 'p-6 lg:px-6.5 lg:py-5.5 lg:pb-6',
-      Title: 'mb-2.5 lg:mb-2',
+      TitleWrapper: 'mb-2.5 lg:mb-2',
       Rating: 'mb-5.5 lg:mb-6',
     },
     Content: {
