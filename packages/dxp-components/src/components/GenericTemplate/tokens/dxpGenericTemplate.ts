@@ -1,5 +1,5 @@
 import { withDefaultContent } from '@bodiless/core';
-import { vitalGenericTemplateBase, asGenericTemplateToken } from '@bodiless/vital-templates';
+import { vitalGenericTemplate, asGenericTemplateToken } from '@bodiless/vital-templates';
 import { asElementToken, vitalTypography } from '@bodiless/vital-elements';
 // import { EditorPlainClean } from '@bodiless/vital-editors';
 import { CardClean, vitalCard } from '@bodiless/vital-card';
@@ -31,9 +31,9 @@ export const Curator = asCuratorSectionToken(dxpCuratorSection.Default, {
 });
 
 export const Generic = asGenericTemplateToken({
-  ...vitalGenericTemplateBase.Generic,
+  ...vitalGenericTemplate.Generic,
   Components: {
-    ...vitalGenericTemplateBase.Generic.Components,
+    ...vitalGenericTemplate.Generic.Components,
     PageWrapper: dxpLayout.Default,
     TopContent: on(CardClean)(
       vitalCard.Hero,
@@ -67,7 +67,7 @@ export const Generic = asGenericTemplateToken({
 });
 
 const dxpGenericTemplate = {
-  ...vitalGenericTemplateBase,
+  ...vitalGenericTemplate,
   Generic,
 };
 

@@ -1,9 +1,16 @@
 import { vitalGenericTemplateBase, asGenericTemplateToken } from '@bodiless/vital-templates';
+import { replaceWith } from '@bodiless/fclasses';
 
-const Default = asGenericTemplateToken(vitalGenericTemplateBase.Default, {
+const Generic = asGenericTemplateToken({
+  ...vitalGenericTemplateBase.Generic,
+  Components: {
+    ...vitalGenericTemplateBase.Generic.Components,
+    // @ts-ignore
+    Content: replaceWith(() => 'Foo'),
+  }
 });
 
 export default {
   ...vitalGenericTemplateBase,
-  Default,
+  Generic,
 };
