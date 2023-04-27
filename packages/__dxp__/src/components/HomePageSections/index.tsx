@@ -3,6 +3,7 @@ import { asSectionToken, SectionClean } from '@kenvue/dxp-section';
 import {
   flowHoc, addClasses, addProps, as
 } from '@bodiless/fclasses';
+import { useNode } from '@bodiless/core';
 import { listerineSectionProductCollection, listerineSectionProduct } from '..';
 
 const WithListerineSectionCollectionOurProducts = asSectionToken({
@@ -60,9 +61,19 @@ const ListerineSectionBestSeller = as(
   WithListerineSectionProductBestSeller,
 )(SectionClean);
 
+const useIsHomePage = () => (
+  useNode().node.pagePath === '/'
+  //  || useNode().node.pagePath === `/${useLanguageContext().getCurrentLanguage().name}/`
+);
+
 export default () => (
-  <>
-    <ListerineSectionCollectionOurProducts />
-    <ListerineSectionBestSeller />
-  </>
+  useIsHomePage() ? (
+    <>
+      <ListerineSectionCollectionOurProducts />
+      <ListerineSectionBestSeller />
+    </>
+  )
+    : (
+      <>Main Content</>
+    )
 );

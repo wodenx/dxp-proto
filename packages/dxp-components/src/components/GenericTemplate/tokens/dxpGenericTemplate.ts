@@ -1,9 +1,9 @@
-import { withDefaultContent } from '@bodiless/core';
+import { withDefaultContent, useNode } from '@bodiless/core';
 import { vitalGenericTemplate, asGenericTemplateToken } from '@bodiless/vital-templates';
 import { asElementToken, vitalTypography } from '@bodiless/vital-elements';
 // import { EditorPlainClean } from '@bodiless/vital-editors';
 import { CardClean, vitalCard } from '@bodiless/vital-card';
-import { on } from '@bodiless/fclasses';
+import { on, flowIf } from '@bodiless/fclasses';
 import { dxpImage } from '@kenvue/dxp-image';
 
 import { CuratorSectionClean, asCuratorSectionToken, dxpCuratorSection } from '@kenvue/dxp-curator';
@@ -35,19 +35,23 @@ export const Generic = asGenericTemplateToken({
   Components: {
     ...vitalGenericTemplate.Generic.Components,
     PageWrapper: dxpLayout.Default,
-    TopContent: on(CardClean)(
-      vitalCard.Hero,
-      // @todo move this editable image to card instead of here,
-      // I thought this would just work and make image editable within hero.. it doesn't
-      // withDesign({
-      //   Image: on(Img)(Hero),
-      // }),
-      // // shoveing in some data to look good.
-      withDefaultContent(cardcontent),
+    TopContent: flowIf(() => useNode().node.pagePath === '/')(
+      on(CardClean)(
+        vitalCard.Hero,
+        // @todo move this editable image to card instead of here,
+        // I thought this would just work and make image editable within hero.. it doesn't
+        // withDesign({
+        //   Image: on(Img)(Hero),
+        // }),
+        // // shoveing in some data to look good.
+        withDefaultContent(cardcontent),
+      )
     ),
     // @todo replace with section container
     // Content: on(EditorPlainClean)(dxpEditorPlain.Default),
-    BottomContent: on(CuratorSectionClean)(Curator),
+    BottomContent: flowIf(() => useNode().node.pagePath === '/')(
+      on(CuratorSectionClean)(Curator),
+    ),
   },
   Theme: {
     // @todo remove this
