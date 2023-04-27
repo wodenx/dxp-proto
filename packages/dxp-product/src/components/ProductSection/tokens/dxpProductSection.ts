@@ -110,7 +110,7 @@ const withProductCollectionCardContent = flowHoc(
   withNode,
 );
 
-// @todo should not be named with `With...` 
+// @todo should not be named with `With...`
 const WithProductCardList = asListToken({
   ...vitalList.Default,
   Components: {

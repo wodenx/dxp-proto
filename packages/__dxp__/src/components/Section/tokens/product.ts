@@ -3,12 +3,14 @@ import { vitalTextDecoration } from '@bodiless/vital-elements';
 import { asListToken } from '@bodiless/vital-list';
 import { CardClean } from '@bodiless/vital-card';
 import { asSectionToken, dxpSectionBase } from '@kenvue/dxp-section';
-// @todo we should be creating our own listerineProductSection and importing dxpProductSectionBase, not dxpSectionBase.
+// @todo we should be creating our own listerineProductSection and
+// importing dxpProductSectionBase, not dxpSectionBase.
 import { dxpProductSection } from '@kenvue/dxp-product';
 import { listerineTypography } from '../../Typography';
 import { listerineCardProduct } from '../../Card';
 
-// @todo should not be named with `With` - and we should be creating our own listerineProductList and extend dxpProductListBase.
+// @todo should not be named with `With` - and we should be creating our
+// own listerineProductList and extend dxpProductListBase.
 const WithListerineCardProduct = asListToken({
   ...dxpProductSection.WithProductCardList,
   Components: {
@@ -50,6 +52,7 @@ const Product = asSectionToken({
 });
 
 export default {
-  // @todo should include both product section and collexction section in the same token collection dxpProduct
+  // @todo should include both product section and collexction section in the
+  // same token collection dxpProduct
   Product,
 };

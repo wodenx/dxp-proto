@@ -1,4 +1,5 @@
-// @todo shold be named listerineProductCard, not listerineCardProduct OR should just be part of listerineCard.
+// @todo shold be named listerineProductCard, not listerineCardProduct
+// OR should just be part of listerineCard.
 import { asCardToken, vitalCardBase } from '@bodiless/vital-card';
 import {
   addProps,
