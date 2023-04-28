@@ -14,3 +14,4 @@
 
 export * from './components/GenericTemplate';
 export * from './components/Page';
+export * from './components/Layout';
