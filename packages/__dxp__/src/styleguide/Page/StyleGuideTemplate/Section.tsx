@@ -184,7 +184,7 @@ const WithListerineSectionCollectionOurProducts = asSectionToken({
       addClasses('block md:flex md:flex-wrap md:justify-start'),
       addProps({
         'product-collections': [
-          'concentrate', 'toothpaste', 'mouthwash', 'antiseptic', 'on-the-go',
+          'concentrate', 'toothpaste', 'mouthwash', 'on-the-go',
           'product-collection-31z1z2fz',
         ],
       }),

@@ -25,14 +25,14 @@ const Hero = asCardToken(
       ),
     },
     Spacing: {
-      Wrapper: 'pb-9 lg:pb-12 lg:pl-36',
-      ContentWrapper: 'px-4 lg:px-0',
+      Wrapper: 'pb-9 lg:pb-0 lg:pl-36',
+      ContentWrapper: 'px-4 lg:px-0 md:w-full',
       DescriptionWrapper: 'mb-3 mt-0 lg:mb-4',
-      ImageWrapper: 'pl-14 mb-9 lg:pl-0 lg:mb-0'
+      ImageWrapper: 'pl-14 mb-9 lg:pl-0 lg:mb-0 md:w-full',
     },
     Layout: {
       ...vitalCardBase.Hero.Layout,
-      Wrapper: 'space-x-reverse space-x-14 lg:flex-row-reverse flex-col w-full flex'
+      Wrapper: 'space-x-reverse space-x-14 lg:flex-row-reverse flex-col w-full flex md:flex-col'
     },
     Theme: {
       ...vitalCardBase.Hero.Theme,
@@ -49,6 +49,8 @@ const Hero = asCardToken(
         vitalTextDecoration.Medium,
         'font-gotham font-light leading-[120%]'
       ),
+      // TODO Image should have the rounded css over image.
+      Image: 'card-corner md:card-corner-md lg:card-corner-lg',
     },
   },
 );

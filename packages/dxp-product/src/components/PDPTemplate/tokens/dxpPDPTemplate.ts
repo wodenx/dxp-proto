@@ -1,7 +1,7 @@
 import omit from 'lodash/omit';
 import { withNodeKey, withDefaultContent, withNode } from '@bodiless/core';
 import {
-  as, replaceWith, Fragment, flowIf, not, on, Img, addProps, Div, withDesign,
+  as, replaceWith, Fragment, flowIf, not, on, Img, addProps, Div, withDesign, removeClasses,
 } from '@bodiless/fclasses';
 import { asSchemaSource, WithProductSchema } from '@bodiless/schema-org';
 import { vitalGenericTemplate, TemplateNodeKeys } from '@bodiless/vital-templates';
@@ -43,12 +43,12 @@ const dxpButtons = {
       ...vitalButtons.WhereToBuyWithoutIcon.Theme,
       Wrapper: as(
         'bg-interactive-primary-active hover:bg-interactive-primary-hover rounded',
-        'text-interactive-primary-active',
         vitalColor.TextWhite,
         vitalTextDecoration.Bold,
         vitalTextDecoration.Uppercase,
         vitalFontSize.Base,
       ),
+      Body: removeClasses('xl:hidden'),
     }
   })
 };
