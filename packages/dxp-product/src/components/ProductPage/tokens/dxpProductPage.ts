@@ -6,7 +6,8 @@ import {
 
 import { PDPTemplateClean, dxpPDPTemplate } from '../../PDPTemplate';
 
-const Default = asFluidToken(vitalPage.Default, {
+const Default = asFluidToken({
+  ...vitalPage.Default,
   Core: {
     _: replaceWith(PDPTemplateClean),
   },
