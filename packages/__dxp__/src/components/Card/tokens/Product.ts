@@ -88,7 +88,7 @@ const Product = asCardToken(
     Content: {
       Eyebrow: addProps({ children: 'Dentist Recommended' }),
       CTALink: withDesign({
-        Body: as(replaceWith(Span), addProps({ chidren: 'where to buy' })),
+        Body: as(replaceWith(Span), addProps({ children: 'where to buy' })),
       }),
     },
   },

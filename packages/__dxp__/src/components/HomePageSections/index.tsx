@@ -1,14 +1,15 @@
 import React from 'react';
 import { asSectionToken, SectionClean } from '@kenvue/dxp-section';
 import {
-  flowHoc, addClasses, addProps, as
+  flowHoc, addClasses, addProps, as, removeClasses
 } from '@bodiless/fclasses';
 import { useNode } from '@bodiless/core';
 import { listerineSectionProductCollection, listerineSectionProduct } from '..';
 
 const WithListerineSectionCollectionOurProducts = asSectionToken({
   Theme: {
-    Wrapper: 'border-b-4 border-slate-300 py-4',
+    Wrapper: 'border-b border-slate-300 py-10',
+    Link: removeClasses('text-interactive-primary'),
   },
   Layout: {
     Wrapper: 'overflow-x-auto',
@@ -33,7 +34,7 @@ const WithListerineSectionCollectionOurProducts = asSectionToken({
 
 const WithListerineSectionProductBestSeller = asSectionToken({
   Theme: {
-    Wrapper: 'border-b-4 border-slate-300 py-4',
+    Wrapper: 'border-b border-slate-300 py-10',
   },
   Layout: {
     Content: flowHoc(

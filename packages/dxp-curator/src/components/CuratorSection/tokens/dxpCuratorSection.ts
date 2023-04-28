@@ -21,6 +21,7 @@ const Default = asCuratorSectionToken({
     SocialLink: as(
       'text-interactive-primary-active',
       'vital-external-link',
+      removeClasses('text-interactive-primary'),
     ),
   },
   Layout: {
@@ -28,6 +29,7 @@ const Default = asCuratorSectionToken({
     TitleWrapper: 'w-full flex flex-col md:flex-row',
   },
   Spacing: {
+    Wrapper: 'py-10',
     TitleWrapper: 'justify-between items-end mb-3',
   },
   Content: {

@@ -21,7 +21,6 @@ export interface CuratorSectionComponents extends DesignableComponents {
   Title: ComponentType<any>,
   SocialLink: ComponentType<any>,
   TitleWrapper: ComponentType<any>,
-  Subtitle: ComponentType<any>,
   FeedWrapper: ComponentType<any>,
   Feed: ComponentType<any>,
 }
@@ -31,7 +30,6 @@ const CuratorSectionComponent: CuratorSectionComponents = {
   TitleWrapper: Div,
   Title: H2,
   SocialLink: Span,
-  Subtitle: Div,
   FeedWrapper: Div,
   Feed: CuratorClean,
 };
@@ -46,7 +44,6 @@ const CuratorSectionBase: FC<CuratorSectionBaseProps> = ({ components, ...rest }
     TitleWrapper,
     Title,
     SocialLink,
-    Subtitle,
     FeedWrapper,
     Feed,
   } = components;
@@ -57,7 +54,6 @@ const CuratorSectionBase: FC<CuratorSectionBaseProps> = ({ components, ...rest }
         <Title />
         <SocialLink />
       </TitleWrapper>
-      <Subtitle />
       <FeedWrapper>
         <Feed />
       </FeedWrapper>

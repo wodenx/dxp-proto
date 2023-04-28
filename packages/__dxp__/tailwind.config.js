@@ -125,7 +125,7 @@ const twConfig = {
         '.card-corner': {
           width: 'calc(100% - 60px)',
           height: '18rem',
-          'margin-left': '20px',
+          // 'margin-left': '20px',
           float: 'right',
           'border-radius': '0 0 0 150px',
           'object-fit': 'cover',
@@ -136,7 +136,7 @@ const twConfig = {
         //   'border-radius': '0 0 0 200px',
         // },
         '.card-corner-md': {
-          width: '50%',
+          // width: '50%',
           height: '31rem',
           'border-radius': '0 0 0 150px',
           'object-position': '72%',

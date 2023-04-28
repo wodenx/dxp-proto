@@ -41,7 +41,8 @@ const useProductCardContent = (props: any) => {
         image: { src, title, alt },
         cta: {
           text: 'where to buy',
-        }
+        },
+        href: item.slug,
       };
       acc[item.id] = content;
     }
@@ -128,6 +129,9 @@ const WithProductCardList = asListToken({
     // @todo no need for as
     Title: as(
       withCardData,
+    ),
+    Wrapper: as(
+      withCardData
     ),
   }
 });
