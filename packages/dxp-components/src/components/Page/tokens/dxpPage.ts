@@ -14,6 +14,7 @@ const Default = asFluidToken({
   },
   Components: {
     _: vitalGenericTemplate.Generic,
+    BreadcrumbWrapper: replaceWith(() => null),
   },
   Schema: {
     _: asBodilessPage,

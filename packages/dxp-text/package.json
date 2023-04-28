@@ -17,8 +17,8 @@
     "dev": "npm run build:lib -- --watch"
   },
   "dependencies": {
-    "@bodiless/fclasses": "^1.0.0-rc.33",
-    "@bodiless/vital-elements": "^1.0.0-rc.33",
+    "@bodiless/fclasses": "1.0.0-canary-2033-1026.0+75cab6d",
+    "@bodiless/vital-elements": "1.0.0-canary-2033-1026.0+75cab6d",
     "react-markdown": "^8.0.7",
     "unist-util-visit": "^4.1.2"
   },
