@@ -46,6 +46,10 @@ const useProductCardContent = (props: any) => {
       const content = {
         title: item.title,
         image: { src, title, alt },
+        cta: {
+          text: 'where to buy',
+        },
+        href: item.slug,
       };
       acc[`${LIBRARY_NODEKEY}$${item.id}`] = content;
     }
@@ -158,6 +162,9 @@ const useProductCollectionCardContent = (props: any) => {
     const content = {
       title: item.title,
       image: { src, title, alt },
+      cta: {
+        text: `all ${item.title.text} products`,
+      },
     };
     if (!productCollectionIds || productCollectionIds.includes(item.id)) {
       acc[`${LIBRARY_NODEKEY}$${item.id}`] = content;
@@ -199,6 +206,7 @@ const withProductCollectionCardContent = flowHoc(
   withNode,
 );
 
+// @todo should not be named with `With...`
 const WithProductCardList = asListToken({
   ...vitalList.Default,
   Components: {
@@ -211,17 +219,23 @@ const WithProductCardList = asListToken({
       withProductLibrary,
     ),
   },
+  // @todo remove this domain
   Schema: {
     ...vitalList.Default.Schema,
   },
   Content: {
     _: withProductCardContent,
+    // @todo no need for as
     Title: as(
       withCardData,
+    ),
+    Wrapper: as(
+      withCardData
     ),
   }
 });
 
+// @todo should not be named with `With...`
 const WithProductCollectionList = asListToken({
   ...vitalList.Default,
   Components: {
@@ -232,6 +246,7 @@ const WithProductCollectionList = asListToken({
       withCollectionLibrary,
     ),
   },
+  // @todo no need for this domain
   Schema: {
     ...vitalList.Default.Schema,
   },
@@ -293,6 +308,7 @@ export default {
   Default,
   ProductCards,
   ProductCollectionCards,
+  // @todo move these to a separate `List` or `ProductList` component.
   WithProductCardList,
   WithProductCollectionList,
 };

@@ -12,7 +12,7 @@ const useSbObjectId = (model: Model) => () => {
   if (isDataModel(model)) {
     const { filePath } = model;
     // @todo Deal with tokens in data models
-    if (filePath && filePath.indexOf('{') < 0) {
+    if (filePath && typeof filePath === 'string' && filePath.indexOf('{') < 0) {
       return { 'data-sb-object-id': filePath };
     }
   } else if (isPageModel(model)) {

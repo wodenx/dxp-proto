@@ -17,7 +17,8 @@
     "/getDocs.js",
     "/tailwind.config.js",
     "/doc",
-    "./shadow.js"
+    "./shadow.js",
+    "/assets"
   ],
   "scripts": {
     "build": "run-p build:lib",
@@ -35,6 +36,7 @@
     "@bodiless/core": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/fclasses": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/accordion": "1.0.0-canary-2033-1026.0+75cab6d",
+    "@bodiless/hydration": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/vital-card": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/vital-editors": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/vital-elements": "1.0.0-canary-2033-1026.0+75cab6d",

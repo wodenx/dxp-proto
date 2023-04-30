@@ -1,10 +1,15 @@
+// @todo shold be named listerineProductCard, not listerineCardProduct
+// OR should just be part of listerineCard.
 import { asCardToken, vitalCardBase } from '@bodiless/vital-card';
 import {
   addProps,
   as,
+  Div,
   Img,
   on,
   replaceWith,
+  Span,
+  withDesign,
 } from '@bodiless/fclasses';
 import { vitalTextDecoration } from '@bodiless/vital-elements';
 import { listerineTypography } from '../../Typography';
@@ -12,37 +17,45 @@ import { listerineColor } from '../../Color';
 import { listerineFontSize } from '../../FontSize';
 import * as listerineCardBase from './Base';
 
-const ProductCategory = asCardToken({
-  ...listerineCardBase.Default,
-  Components: {
-    ...listerineCardBase.Default.Components,
-    Eyebrow: replaceWith(() => null),
+const ProductCategory = asCardToken(
+  {
+    ...listerineCardBase.Default,
+    Components: {
+      ...listerineCardBase.Default.Components,
+      CTAWrapper: replaceWith(Div),
+    },
+    Theme: {
+      ...listerineCardBase.Default.Theme,
+      Title: as(
+        listerineFontSize.XXL,
+        vitalTextDecoration.Normal,
+        listerineColor.TextWhite,
+        'font-gotham'
+      ),
+      Link: as(
+        listerineTypography.Link,
+        listerineTypography.WithTertiaryHover
+      ),
+      ContentWrapper: as(listerineColor.BgPrimaryBrand, 'rounded-bl-[20px]'),
+    },
+    Spacing: {
+      ContentWrapper: 'px-4.75 py-6 lg:px-6 lg:py-4.75',
+      Image: 'w-full',
+    },
   },
-  Theme: {
-    ...listerineCardBase.Default.Theme,
-    Title: as(
-      listerineFontSize.XXL,
-      vitalTextDecoration.Normal,
-      listerineColor.TextWhite,
-      'font-gotham'
-    ),
-    Description: as(
-      listerineTypography.Link,
-      listerineTypography.WithTertiaryHover
-    ),
-    ContentWrapper: as(listerineColor.BgPrimaryBrand, 'rounded-bl-[20px]'),
-  },
-  Spacing: {
-    ContentWrapper: 'px-4.75 py-6 lg:px-6 lg:py-4.75',
-  },
-});
+  vitalCardBase.WithPrimaryTextLink,
+  vitalCardBase.WithNoDescription,
+  vitalCardBase.WithNoEyebrow,
+);
 
 const Product = asCardToken(
   listerineCardBase.Default,
   listerineCardBase.WithPrimaryButton,
-  vitalCardBase.WithNoTitle,
+  vitalCardBase.WithNoDescription,
+  // vitalCardBase.WithNoEyebrow,
   {
     Components: {
+      Eyebrow: replaceWith(Span),
       Rating: on(Img)(
         addProps({
           src: 'https://i.ibb.co/QHNZGn6/reviews.png',
@@ -55,7 +68,8 @@ const Product = asCardToken(
     Theme: {
       ImageWrapper: as(listerineColor.BorderSecondary, 'border-b border-2'),
       CTALink: listerineTypography.WithHoverArrow,
-      Description: as(
+      TitleWrapper: 'leading-none lg:leading-none',
+      Title: as(
         listerineFontSize.LG,
         vitalTextDecoration.Normal,
         'font-gotham',
@@ -68,8 +82,14 @@ const Product = asCardToken(
     },
     Spacing: {
       ContentWrapper: 'p-6 lg:px-6.5 lg:py-5.5 lg:pb-6',
-      Description: 'mb-2.5 lg:mb-2',
+      TitleWrapper: 'mb-2.5 lg:mb-2',
       Rating: 'mb-5.5 lg:mb-6',
+    },
+    Content: {
+      Eyebrow: addProps({ children: 'Dentist Recommended' }),
+      CTALink: withDesign({
+        Body: as(replaceWith(Span), addProps({ children: 'where to buy' })),
+      }),
     },
   },
 );

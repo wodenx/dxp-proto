@@ -16,3 +16,4 @@ yarn-error.log
 public
 src/components/index.css
 .stackbit
+gatsby_error.log

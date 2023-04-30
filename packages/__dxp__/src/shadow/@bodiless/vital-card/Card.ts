@@ -1,5 +1,10 @@
-import { vitalCardBase } from '@bodiless/vital-card';
+import { asCardToken, vitalCardBase } from '@bodiless/vital-card';
+
+import { listerineCardHero } from '../../../components/Card';
+
+const Hero = asCardToken(listerineCardHero.HeroRightCard);
 
 export default {
-  ...vitalCardBase
+  ...vitalCardBase,
+  Hero,
 };

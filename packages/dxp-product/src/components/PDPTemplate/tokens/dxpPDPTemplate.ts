@@ -1,7 +1,7 @@
 import omit from 'lodash/omit';
-import { withNode, withNodeKey, withDefaultContent } from '@bodiless/core';
+import { withNodeKey, withDefaultContent, withNode } from '@bodiless/core';
 import {
-  as, replaceWith, Fragment, flowIf, not, on, Img, addProps, Div, withDesign,
+  as, replaceWith, Fragment, flowIf, not, on, Img, addProps, Div, withDesign, removeClasses,
 } from '@bodiless/fclasses';
 import { asSchemaSource, WithProductSchema } from '@bodiless/schema-org';
 import { vitalGenericTemplate, TemplateNodeKeys } from '@bodiless/vital-templates';
@@ -12,6 +12,8 @@ import {
 } from '@bodiless/vital-elements';
 import { vitalEditorPlain, vitalRichText, withAutoSuperscript } from '@bodiless/vital-editors';
 import { asBreadcrumbsToken } from '@bodiless/vital-navigation';
+
+import { dxpLayout } from '@kenvue/dxp-components';
 
 import { asPDPTemplateToken } from '../PDPTemplateClean';
 import { withPDPContextProvider } from '../PDPTemplateContext';
@@ -41,17 +43,18 @@ const dxpButtons = {
       ...vitalButtons.WhereToBuyWithoutIcon.Theme,
       Wrapper: as(
         'bg-interactive-primary-active hover:bg-interactive-primary-hover rounded',
-        'text-interactive-primary-active',
         vitalColor.TextWhite,
         vitalTextDecoration.Bold,
         vitalTextDecoration.Uppercase,
         vitalFontSize.Base,
       ),
+      Body: removeClasses('xl:hidden'),
     }
   })
 };
 
-const Default = asPDPTemplateToken(vitalGenericTemplate.Base, {
+const Default = asPDPTemplateToken({
+  ...vitalGenericTemplate.Default,
   Core: {
     PageWrapper: withPDPContextProvider,
     ProductTitle: withAutoSuperscript('®™©', 'align-baseline'),
@@ -65,6 +68,8 @@ const Default = asPDPTemplateToken(vitalGenericTemplate.Base, {
     ),
   },
   Components: {
+    ...vitalGenericTemplate.Default.Components,
+    PageWrapper: dxpLayout.Default,
     TopContent: replaceWith(Fragment),
     ProductImage: vitalImage.Plain,
     ProductDescription: vitalRichText.Default,
@@ -88,6 +93,7 @@ const Default = asPDPTemplateToken(vitalGenericTemplate.Base, {
     JumpLinksWrapper: 'w-full lg:w-screen'
   },
   Spacing: {
+    ...vitalGenericTemplate.Default.Spacing,
     JumpLinksWrapper: 'lg:px-36 py-2  mt-10 lg:-ml-36',
     ContentWrapper: 'mb-4',
     ProductImageWrapper: 'lg:pr-2',

@@ -2,7 +2,9 @@ import {
   MenuTitleClean, asMenuToken, vitalMenu
 } from '@bodiless/vital-navigation';
 import type { ListData } from '@bodiless/components';
-import {as, flowHoc, on} from '@bodiless/fclasses';
+import {
+  addClasses, as, flowHoc, on, removeClasses
+} from '@bodiless/fclasses';
 import {useNode, withDefaultContent } from '@bodiless/core';
 import { withMenuDesign } from '@bodiless/navigation';
 import { ChameleonData } from '@bodiless/components/lib/Chameleon/types';
@@ -84,8 +86,16 @@ const Footer = asMenuToken({
   Components: {
     ...vitalMenu.Footer.Components,
     Title: on(MenuTitleClean)(dxpMenuTitle.Default),
-    // _: withMenuDesign('List')(as(dxpSubMenu.Footer), withNode),
     _: withMenuDesign('List')(as(dxpSubMenu.Footer)),
+  },
+  // @todo: Move this styling to brand package in the future after determing how
+  // to make shadowing work with Stackbit-editable components.
+  Theme: {
+    ...vitalMenu.Footer.Theme,
+    Title: flowHoc(
+      removeClasses('lg:text-xl'),
+      addClasses('lg:text-2xl text-[23px] lg:mr-6 font-gotham font-normal'),
+    ),
   },
   Compose: {
     ...vitalMenu.Footer.Compose,

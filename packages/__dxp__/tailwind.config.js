@@ -25,13 +25,14 @@ const twConfig = {
         'header-copy': '#333333',
       },
       secondary: {
-        eyebrow: '#535353',
-        'footer-bg': '#105367',
-        'footer-bg-signup': '#11647A',
         border: '#DBE8EB',
+        eyebrow: '#535353',
+        'footer-bg': '#11647A',
+        'footer-bg-signup': '#105367',
+        'utility-menu': '#11647A',
       },
       interactive: {
-        primary: '#5BF4C6',
+        primary: '#27D8A3',
         'primary-active': '#007A53',
         'primary-hover': '#006042',
         'primary-selected': '#006042',
@@ -74,11 +75,18 @@ const twConfig = {
         'm-3xl': ['1.75rem', '1.875rem'],
         'm-4xl': ['2.0625rem', '2.25rem'],
         'm-5xl': ['2.5rem', '2.5rem'],
-      }
+      },
+      backgroundImage: {
+        'mobile-wave-top': "url('--dxp--/assets/image/mobile-footer-up.png')",
+        'mobile-wave-bottom': "url('--dxp--/assets/image/mobile-footer-down.png')",
+      },
+      backgroundSize: {
+        'wave-full': '100% 100%',
+      },
     },
   },
   plugins: [
-    plugin(({ addBase }) => {
+    plugin(({ addBase, addComponents }) => {
       addBase([
         {
           '@font-face': {
@@ -108,6 +116,39 @@ const twConfig = {
           },
         },
       ]);
+      addComponents({
+        '.footer-wave': {
+          maskImage: "url('--dxp--/assets/image/footer-desktop.svg')",
+          maskPosition: 'top center',
+          maskSize: '100%',
+        },
+        '.card-corner': {
+          width: 'calc(100% - 60px)',
+          height: '18rem',
+          // 'margin-left': '20px',
+          float: 'right',
+          'border-radius': '0 0 0 150px',
+          'object-fit': 'cover',
+          'object-position': 'center',
+        },
+        // '.card-corner-sm': {
+        //   height: '20rem',
+        //   'border-radius': '0 0 0 200px',
+        // },
+        '.card-corner-md': {
+          // width: '50%',
+          height: '31rem',
+          'border-radius': '0 0 0 150px',
+          'object-position': '72%',
+        },
+        '.card-corner-lg': {
+          width: '100%',
+          height: '38rem',
+          float: 'none',
+          'border-radius': '0 0 0 400px',
+        }
+
+      });
     }),
   ],
 };

@@ -44,6 +44,7 @@
     "@bodiless/vital-link": "1.0.0-canary-2033-1026.0+75cab6d",
     "@bodiless/vital-buttons": "1.0.0-canary-2033-1026.0+75cab6d",
     "@kenvue/dxp-section": "^0.0.0",
+    "@kenvue/dxp-components": "^0.0.0",
     "contentful": "^9.3.3",
     "contentful-management": "^10.30.0",
     "lodash": "^4.17.19",
