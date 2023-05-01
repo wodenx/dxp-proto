@@ -187,7 +187,7 @@
         "id": "7mcGFtkZwFkX8B1vVBNjEx",
         "type": "Asset",
         "createdAt": "2023-03-13T21:42:30.389Z",
-        "updatedAt": "2023-04-26T23:36:39.622Z",
+        "updatedAt": "2023-05-01T00:23:10.385Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -195,23 +195,23 @@
             "linkType": "Environment"
           }
         },
-        "revision": 3,
+        "revision": 4,
         "locale": "en-US"
       },
       "fields": {
         "title": "Toothpaste",
         "description": "",
         "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/7mcGFtkZwFkX8B1vVBNjEx/ee0603edfebb08fc9188aef0f632104f/toothpaste.svg",
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/7mcGFtkZwFkX8B1vVBNjEx/4e98cf33b7a1cba820338193df4f3862/toothpaste.webp",
           "details": {
-            "size": 36297,
+            "size": 5888,
             "image": {
-              "width": 221,
-              "height": 76
+              "width": 266,
+              "height": 88
             }
           },
-          "fileName": "toothpaste.svg",
-          "contentType": "image/svg+xml"
+          "fileName": "toothpaste.webp",
+          "contentType": "image/webp"
         }
       }
     },
