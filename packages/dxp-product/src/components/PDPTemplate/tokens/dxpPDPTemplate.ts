@@ -54,7 +54,7 @@ const dxpButtons = {
 };
 
 const Default = asPDPTemplateToken({
-  ...vitalGenericTemplate.Default,
+  ...vitalGenericTemplate.Generic,
   Core: {
     PageWrapper: withPDPContextProvider,
     ProductTitle: withAutoSuperscript('®™©', 'align-baseline'),
@@ -68,7 +68,7 @@ const Default = asPDPTemplateToken({
     ),
   },
   Components: {
-    ...vitalGenericTemplate.Default.Components,
+    ...vitalGenericTemplate.Generic.Components,
     PageWrapper: dxpLayout.Default,
     TopContent: replaceWith(Fragment),
     ProductImage: vitalImage.Plain,
@@ -93,7 +93,7 @@ const Default = asPDPTemplateToken({
     JumpLinksWrapper: 'w-full lg:w-screen'
   },
   Spacing: {
-    ...vitalGenericTemplate.Default.Spacing,
+    ...vitalGenericTemplate.Generic.Spacing,
     JumpLinksWrapper: 'lg:px-36 py-2  mt-10 lg:-ml-36',
     ContentWrapper: 'mb-4',
     ProductImageWrapper: 'lg:pr-2',
