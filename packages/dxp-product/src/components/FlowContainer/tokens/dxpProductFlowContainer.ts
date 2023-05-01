@@ -1,7 +1,7 @@
 import { asFluidToken } from '@bodiless/vital-elements';
 import { on } from '@bodiless/fclasses';
-import { dxpProductSection } from 'src/components/ProductSection';
 import { SectionClean } from '@kenvue/dxp-section';
+import { dxpProductSection } from '../../ProductSection';
 
 const WithProductSectionVariations = asFluidToken({
   Components: {
