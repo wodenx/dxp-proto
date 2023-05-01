@@ -340,7 +340,7 @@
         "id": "67SxZF9dD7CHSbSTg60wGq",
         "type": "Asset",
         "createdAt": "2023-04-26T22:51:14.801Z",
-        "updatedAt": "2023-04-26T22:51:14.801Z",
+        "updatedAt": "2023-05-01T00:27:12.556Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -348,23 +348,23 @@
             "linkType": "Environment"
           }
         },
-        "revision": 1,
+        "revision": 2,
         "locale": "en-US"
       },
       "fields": {
         "title": "Listerine products",
         "description": "Listerine products",
         "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/67SxZF9dD7CHSbSTg60wGq/436cc4731847377b9beca3d0d58190f5/image_2.svg",
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/67SxZF9dD7CHSbSTg60wGq/e3309dc0d673123a887a47a7d295ab51/listerine-3-product-shot_freshburst-ultraclean-original.webp",
           "details": {
-            "size": 71174,
+            "size": 9302,
             "image": {
-              "width": 161,
-              "height": 128
+              "width": 325,
+              "height": 180
             }
           },
-          "fileName": "image 2.svg",
-          "contentType": "image/svg+xml"
+          "fileName": "listerine-3-product-shot_freshburst-ultraclean-original.webp",
+          "contentType": "image/webp"
         }
       }
     },
