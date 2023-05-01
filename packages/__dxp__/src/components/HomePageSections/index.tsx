@@ -8,13 +8,13 @@ import { listerineSectionProductCollection, listerineSectionProduct } from '..';
 
 const WithListerineSectionCollectionOurProducts = asSectionToken({
   Theme: {
-    Wrapper: 'border-b border-slate-300 py-10',
+    Wrapper: 'border-b border-primary-divider py-10',
     Link: removeClasses('text-interactive-primary'),
   },
   Layout: {
     Wrapper: 'overflow-x-auto',
     Content: flowHoc(
-      addClasses('block md:flex md:flex-wrap md:justify-start'),
+      addClasses('block w-full flex flex-col md:flex md:flex-row md:flex-wrap md:justify-start'),
       addProps({
         'product-collections': [
           'concentrate', 'toothpaste', 'mouthwash', 'on-the-go'
@@ -34,11 +34,11 @@ const WithListerineSectionCollectionOurProducts = asSectionToken({
 
 const WithListerineSectionProductBestSeller = asSectionToken({
   Theme: {
-    Wrapper: 'border-b border-slate-300 py-10',
+    Wrapper: 'border-b border-primary-divider py-10',
   },
   Layout: {
     Content: flowHoc(
-      addClasses('block md:flex md:flex-wrap md:justify-start'),
+      addClasses('block w-full flex flex-col md:flex md:flex-row md:flex-wrap md:justify-start'),
       addProps({
         products: [
           '5JLJSAJn9wuHnoWLyP3Lg5', '6fAXdpJM6ibblpTiO4JOqi', '4wjOoQHFSAqePnJMpNKEqg', '11gcuXew6vue7doHKlCE81',

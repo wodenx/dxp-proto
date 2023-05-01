@@ -19,6 +19,7 @@ const twConfig = {
       primary: {
         brand: '#105367',
         'card-bg': '#EFF8FA',
+        'category-card': '#9ad3dc',
         'page-bg': '#F8FFFF',
         divider: '#D8D8D8',
         'body-copy': '#222222',
@@ -45,6 +46,11 @@ const twConfig = {
         4.5: '1.125rem',
         5.5: '1.375rem',
         15: '5rem'
+      },
+      lineHeight: {
+        4.25: '1.063rem',
+        4.75: '1.188rem',
+        5.5: '1.375rem',
       },
       padding: {
         4.75: '1.3125rem',

@@ -4,6 +4,7 @@ export default asTokenGroup(ColorMeta)({
   BgPrimaryBrand: 'bg-primary-brand',
   TextPrimaryBrand: 'text-primary-brand',
   BgPrimaryCard: 'bg-primary-card-bg',
+  BgPrimaryCategoryCard: 'bg-primary-category-card',
   BgPrimaryPage: 'bg-primary-page-bg',
   BgPrimaryInteractive: 'bg-interactive-primary',
   BorderPrimaryInteractive: 'border-interactive-primary',

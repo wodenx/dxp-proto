@@ -25,7 +25,7 @@ const WithSectionProductCardPocket = asSectionToken({
     Wrapper: 'py-12',
   },
   Theme: {
-    Wrapper: 'border-b-4 border-slate-300',
+    Wrapper: 'border-b border-primary-divider',
   },
   Layout: {
     Wrapper: 'overflow-x-auto',
@@ -46,7 +46,7 @@ const WithSectionProductCardZero = asSectionToken({
     Wrapper: 'py-12',
   },
   Theme: {
-    Wrapper: 'border-b-4 border-slate-300',
+    Wrapper: 'border-b border-primary-divider',
   },
   Layout: {
     Wrapper: 'overflow-x-auto',
@@ -64,7 +64,7 @@ const WithSectionProductCardZero = asSectionToken({
 
 const WithSectionProductCardCool = asSectionToken({
   Spacing: {
-    Wrapper: 'py-12 border-b-4 border-slate-300',
+    Wrapper: 'py-12 border-b border-primary-divider',
   },
   Layout: {
     Content: flowHoc(
@@ -81,7 +81,7 @@ const WithSectionProductCardCool = asSectionToken({
 
 const WithSectionProductCardCoolReordered = asSectionToken({
   Spacing: {
-    Wrapper: 'py-12 border-slate-300',
+    Wrapper: 'py-12 border-primary-divider',
   },
   Layout: {
     Content: flowHoc(
@@ -121,7 +121,7 @@ const ProductCardSectionPocket = as(
 
 const WithCollectionSelectedCollections = asSectionToken({
   Spacing: {
-    Wrapper: 'py-12 border-b-4 border-slate-300',
+    Wrapper: 'py-12 border-b border-primary-divider',
   },
   Layout: {
     Wrapper: 'overflow-x-auto',
@@ -149,7 +149,7 @@ const WithCollectionSelectedCollections = asSectionToken({
 
 const WithCollectionDefault = asSectionToken({
   Spacing: {
-    Wrapper: 'py-12 border-b-4 border-slate-300',
+    Wrapper: 'py-12 border-b border-primary-divider',
   },
   Layout: {
     Wrapper: 'overflow-x-auto',
@@ -176,12 +176,12 @@ const CollectionCardSectionDefault = as(
 
 const WithListerineSectionCollectionOurProducts = asSectionToken({
   Theme: {
-    Wrapper: 'border-b-4 border-slate-300 py-4',
+    Wrapper: 'border-b border-primary-divider py-10',
   },
   Layout: {
     Wrapper: 'overflow-x-auto',
     Content: flowHoc(
-      addClasses('block md:flex md:flex-wrap md:justify-start'),
+      addClasses('block flex flex-col md:flex md:flex-row md:flex-wrap md:justify-start w-full'),
       addProps({
         'product-collections': [
           'concentrate', 'toothpaste', 'mouthwash', 'on-the-go',
@@ -199,11 +199,11 @@ const WithListerineSectionCollectionOurProducts = asSectionToken({
 
 const WithListerineSectionProductBestSeller = asSectionToken({
   Theme: {
-    Wrapper: 'border-b-4 border-slate-300 py-4',
+    Wrapper: 'border-b border-primary-divider py-10',
   },
   Layout: {
     Content: flowHoc(
-      addClasses('block md:flex md:flex-wrap md:justify-start'),
+      addClasses('block flex flex-col md:flex md:flex-row md:flex-wrap md:justify-start'),
       addProps({
         products: [
           '5JLJSAJn9wuHnoWLyP3Lg5', '6fAXdpJM6ibblpTiO4JOqi', '4wjOoQHFSAqePnJMpNKEqg',
@@ -219,7 +219,7 @@ const WithListerineSectionProductBestSeller = asSectionToken({
 
 const WithListerineSectionSocialWall = asSectionToken({
   Theme: {
-    Wrapper: 'border-b-4 border-slate-300 py-4',
+    Wrapper: 'border-b border-primary-divider py-10',
   },
   Layout: {
     Content: flowHoc(

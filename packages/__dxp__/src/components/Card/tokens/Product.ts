@@ -7,6 +7,7 @@ import {
   Div,
   Img,
   on,
+  // removeClasses,
   replaceWith,
   Span,
   withDesign,
@@ -36,16 +37,30 @@ const ProductCategory = asCardToken(
         listerineTypography.Link,
         listerineTypography.WithTertiaryHover
       ),
+      ImageWrapper: as(
+        'flex items-center',
+        listerineColor.BgPrimaryCategoryCard
+      ),
       ContentWrapper: as(listerineColor.BgPrimaryBrand, 'rounded-bl-[20px]'),
+      CTAText: as(
+        listerineTypography.WithHoverArrow,
+        listerineColor.TextPrimaryInteractiveNoHover,
+        'xl:leading-5.5 inline-block'
+      ),
+      CTALink: listerineTypography.Link,
     },
     Spacing: {
+      Wrapper: 'mb-6 md:h-full md:mb-0',
       ContentWrapper: 'px-4.75 py-6 lg:px-6 lg:py-4.75',
+      TitleWrapper: 'xl:mb-3',
+      ImageWrapper: 'p-9 w-full object-scale-down',
       Image: 'w-full',
     },
   },
-  vitalCardBase.WithPrimaryTextLink,
+  // vitalCardBase.WithPrimaryTextLink,
   vitalCardBase.WithNoDescription,
   vitalCardBase.WithNoEyebrow,
+  vitalCardBase.WithFlexGrowImage,
 );
 
 const Product = asCardToken(

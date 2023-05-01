@@ -19,8 +19,11 @@ const WithListerineCardProductCollection = asListToken({
     Title: on(CardClean)(listerineCardProduct.ProductCategory),
   },
   Layout: {
-    Item: 'w-full md:w-1/4 pr-0 md:pr-4 last:pr-0',
+    Item: 'w-full xl:w-1/4 sm:w-1/2 md:px-4',
   },
+  Spacing: {
+    Item: 'mt-6',
+  }
 });
 
 const ProductCollection = asSectionToken({
@@ -37,6 +40,7 @@ const ProductCollection = asSectionToken({
   Layout: {
     ...dxpSectionBase.Default.Layout,
     Wrapper: 'block relative',
+    ContentWrapper: 'flex',
     LinkWrapper: 'static md:absolute md:top-10 md:right-0',
   },
   Theme: {
@@ -59,6 +63,7 @@ const ProductCollection = asSectionToken({
   },
   Spacing: {
     ...dxpSectionBase.Default.Spacing,
+    Wrapper: 'px-5',
     DescriptionWrapper: 'mb-4',
     LinkWrapper: 'mb-4 md:mb-0',
   },
