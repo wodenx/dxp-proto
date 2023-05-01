@@ -334,7 +334,7 @@
         "id": "5l3TEHucdUOeRaN4HbFnNq",
         "type": "Asset",
         "createdAt": "2023-03-13T13:12:39.098Z",
-        "updatedAt": "2023-04-26T23:38:41.708Z",
+        "updatedAt": "2023-05-01T00:23:55.051Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -342,22 +342,22 @@
             "linkType": "Environment"
           }
         },
-        "revision": 4,
+        "revision": 5,
         "locale": "en-US"
       },
       "fields": {
         "title": "Concentrate",
         "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/5l3TEHucdUOeRaN4HbFnNq/1960a2bdcbc7b80ce9e826eb7a275af4/concentrate.svg",
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/5l3TEHucdUOeRaN4HbFnNq/15ddd920abb45f73a7acb456780575d0/concentrate.webp",
           "details": {
-            "size": 37962,
+            "size": 4984,
             "image": {
-              "width": 115,
-              "height": 142
+              "width": 354,
+              "height": 197
             }
           },
-          "fileName": "concentrate.svg",
-          "contentType": "image/svg+xml"
+          "fileName": "concentrate.webp",
+          "contentType": "image/webp"
         }
       }
     },
