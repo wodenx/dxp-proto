@@ -1,0 +1,190 @@
+{
+  "contentful_id": "Mstv00lh28y51A92",
+  "revision_id": 1,
+  "name": "Product 8drDe2MQ",
+  "images": [
+    {
+      "title": "Test Product",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/7fiZZfVx6lCFXqWx7LIsiB/240ec23262233a783b36e67464e1cc88/product.png",
+        "details": {
+          "size": 16480,
+          "image": {
+            "width": 667,
+            "height": 500
+          }
+        },
+        "fileName": "product.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "summary": [
+    {
+      "nodeType": "text",
+      "value": "tmMlU I3xpLXKi IJKS5d s790n349WP 5 7v 9p579wKq 5f7eMu6RNgo46 0Us",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "nt8E F gG720Wjgu D11dOPO2 n Q 9V3 geV4vhwf3E 0cv034 g Y k0r dT G",
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "EdWm3 7 4SV X166  2gS56T 9 1EB H05  jSt2 7 n    mF  4 94cxC 07I",
+      "marks": [
+        {
+          "type": "superscript"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "hyperlink",
+      "data": {
+        "uri": "https://example.com/"
+      },
+      "content": [
+        {
+          "nodeType": "text",
+          "value": "83 9 Dh H14vmx",
+          "marks": [],
+          "data": {}
+        }
+      ]
+    }
+  ],
+  "directions": [
+    [
+      {
+        "nodeType": "text",
+        "value": "3FrxaZIHq V492qnpCAp v8 4icfT CGcj7 9mD4ThA4J3peC7 E4  15hT7gC1H C3HIS p4i9   YCpP0 b 87qinVmq9 rQ 434 9  sMp CX wq01Nv 654PC 3e  f  v  zI5i QXb jk  4 W Wg   g 9 z3Pv YL26 4YG  I d2z0j709 6re02G IkFU    19F1  T0A  u 06g V  Di4MC0Rc8lK16PtUqP6G0K923AL57E pZ",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "nodeType": "text",
+        "value": "2Uggj 1  lW  Jx bz  N3IjMR0sw8 oJQ s94lA2AM zXc053 o6 CxlLVLDZa  34yw g HZ u63IK5P3a w20 l 0R6 0   Yc OAP0 r1D  86e6 A8o9ywB 18 I8AGSo0Vvz R9C jPSxE7 BFd ZSYqS 99nK b 7Lf CoE989ON20Hv1 t  Uo yj  P64QAr 40A1rX6 jb80 q2rj1  F9fgqLH r iIRR5HB wqA0G xDMsv543Oe",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "additional_info": [
+    [
+      {
+        "nodeType": "text",
+        "value": "5 79 ys5t 9 NR2t  N  eYjW4xYR  9 nH76eIB9fLSNlvJBst4Wp   G9faN tcF ntVX  u rjj Z9  ogHi8A EG MHu3Al15g xMY66Fpc3fs  Nv8on9 jM8aUfl91l nE43M4 to8B 32 9 7B  4 13h Iye2H7mi0r7W2t X83181V i1  V1 d n aV XdYa U 2 f6YVlM50 I20H 6C6 873W0I P09A l9y2M  4R11  3BGuDJ",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Ingredient 3yNr7HKg",
+      "inactive_active": "Inactive"
+    }
+  ],
+  "sku": "8CnzJmy7M01tT1O4x8W90Fj1fBYi77Poeq41pV9kJk198FA4kQ83c3rco116ph2W",
+  "upc": "79ZQhe8MWQ63H9TBh66Tu6BYwS9cU1kcdjU6yGrS8Wy9tZesp3QtDLngvGwNqN00",
+  "ean": "LR03oc5JGxb93X0tR4XMRw894q4kHWbuR9I4w37e4aGDG8GDB0fBV0NJvG80M00l",
+  "faq": [
+    {
+      "question": "FAQ F4ydtO0z",
+      "answer": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "paragraph",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "text",
+                "value": "j S  97 s417 gn3r9 UqYqOg  d716hr89 oY2Bh 2To37u1p4 EN19wO 3Rz4 m   PuiiL Y7 Iaj94Cmn Bv DHr4RkrqX b6HjG24HH 3O3BD 0ZyN yQ X8s6JP m2217zn2qV  JID96Xc5B b   62UKz7k283ZP   0LIrieE3mi6 3bH4 QBcu7pNh 9  9RcA663JO 6Q5 Xr r6  5XS51 5 J F YIhkLn 3Z0Q64 B 6 3k  M",
+                "marks": [],
+                "data": {}
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "collection": {
+    "title": "Product Collection WloP63mW",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "3d6wPOVTu6Tkmi3KuG5vsq",
+        "type": "Asset",
+        "createdAt": "2023-05-02T03:09:24.742Z",
+        "updatedAt": "2023-05-02T03:09:24.742Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Test Product Collection",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/3d6wPOVTu6Tkmi3KuG5vsq/08ed8400022d7610110a4fd51f1f389b/product-collection.png",
+          "details": {
+            "size": 21727,
+            "image": {
+              "width": 667,
+              "height": 500
+            }
+          },
+          "fileName": "product-collection.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "cta_text": "ov5D Vps0 8X88 swx   pQ Td Mq9GB MM8C7AIVkQg 6cPM K 0  UR6 J  2O"
+  }
+}
