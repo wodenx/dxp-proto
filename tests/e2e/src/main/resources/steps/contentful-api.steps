@@ -6,7 +6,7 @@ When I set request headers:
 |X-Contentful-Content-Type|<contentKey>                                 |
 |Content-Type             |application/vnd.contentful.management.v1+json|
 Given request body: {}
-When I execute HTTP PUT request for resource with URL `${contentful-api-endpoint}/entries/${contentData[0].id}`
+When I execute HTTP PUT request for resource with URL `https://api.contentful.com/spaces/${contentful-space-id}/environments/master/entries/${contentData[0].id}`
 When I execute HTTP GET request for resource with URL `https://httpbin.org/delay/5`
 When I patch entry with `${contentData[0].id}` id using `<template>` template with parameters:<parameters>
 
@@ -14,25 +14,25 @@ Composite: When I move $type item with `$id` id to unpublished state
 When I set request headers:
 |name                     |value                      |
 |Authorization            |Bearer ${contentful-token} |
-When I execute HTTP GET request for resource with URL `${contentful-api-endpoint}/<type>/<id>`
+When I execute HTTP GET request for resource with URL `https://api.contentful.com/spaces/${contentful-space-id}/environments/master/<type>/<id>`
 When I save JSON element value from `${response}` by JSON path `$.sys.version` to scenario variable `itemVersion`
 When I set request headers:
 |name                     |value                      |
 |Authorization            |Bearer ${contentful-token} |
 |X-Contentful-Version     |${itemVersion}             |
-When I execute HTTP DELETE request for resource with URL `${contentful-api-endpoint}/<type>/<id>/published`
+When I execute HTTP DELETE request for resource with URL `https://api.contentful.com/spaces/${contentful-space-id}/environments/master/<type>/<id>/published`
 
 Composite: When I move $type item with `$id` id to published state
 When I set request headers:
 |name                     |value                      |
 |Authorization            |Bearer ${contentful-token} |
-When I execute HTTP GET request for resource with URL `${contentful-api-endpoint}/<type>/<id>`
+When I execute HTTP GET request for resource with URL `https://api.contentful.com/spaces/${contentful-space-id}/environments/master/<type>/<id>`
 When I save JSON element value from `${response}` by JSON path `$.sys.version` to scenario variable `itemVersion`
 When I set request headers:
 |name                     |value                      |
 |Authorization            |Bearer ${contentful-token} |
 |X-Contentful-Version     |${itemVersion}             |
-When I execute HTTP PUT request for resource with URL `${contentful-api-endpoint}/<type>/<id>/published`
+When I execute HTTP PUT request for resource with URL `https://api.contentful.com/spaces/${contentful-space-id}/environments/master/<type>/<id>/published`
 
 Composite: When I create asset from `$fileName` file with `$name` name and save its ID to $scope variable `$variableName`
 When I set request headers:
@@ -40,7 +40,7 @@ When I set request headers:
 |Authorization            |Bearer ${contentful-token}|
 |Content-Type             |application/octet-stream  |
 Given request body: #{loadBinaryResource(/assets/<fileName>.png)}
-When I execute HTTP POST request for resource with URL `https://upload.contentful.com/spaces/o0k7u0i6hu7n/uploads`
+When I execute HTTP POST request for resource with URL `https://upload.contentful.com/spaces/${contentful-space-id}/uploads`
 When I save JSON element value from `${response}` by JSON path `$.sys.id` to scenario variable `fileId`
 !-- Attach file to asset
 When I set request headers:
@@ -67,14 +67,14 @@ Given request body: {
       }
   }
 }
-When I execute HTTP POST request for resource with URL `https://api.contentful.com/spaces/o0k7u0i6hu7n/environments/master/assets`
+When I execute HTTP POST request for resource with URL `https://api.contentful.com/spaces/${contentful-space-id}/environments/master/assets`
 When I save JSON element value from `${response}` by JSON path `$.sys.id` to scenario variable `internalAssetId`
 When I save JSON element value from `${response}` by JSON path `$.sys.version` to scenario variable `internalAssetVersion`
 !-- Process asset
 When I set request headers:
 |name                     |value                     |
 |Authorization            |Bearer ${contentful-token}|
-When I execute HTTP PUT request for resource with URL `https://api.contentful.com/spaces/o0k7u0i6hu7n/environments/master/assets/${internalAssetId}/files/en-US/process`
+When I execute HTTP PUT request for resource with URL `https://api.contentful.com/spaces/${contentful-space-id}/environments/master/assets/${internalAssetId}/files/en-US/process`
 Given I initialize <scope> variable `<variableName>` with value `${internalAssetId}`
 
 Composite: When I patch entry with `$id` id using `$template` template with parameters:$parameters
@@ -82,7 +82,7 @@ When I initialize scenario variable `patchData` with values:<parameters>
 When I set request headers:
 |name                     |value                      |
 |Authorization            |Bearer ${contentful-token} |
-When I execute HTTP GET request for resource with URL `${contentful-api-endpoint}/entries/<id>`
+When I execute HTTP GET request for resource with URL `https://api.contentful.com/spaces/${contentful-space-id}/environments/master/entries/<id>`
 When I save JSON element value from `${response}` by JSON path `$.sys.version` to scenario variable `entryVersion`
 When I set request headers:
 |name                     |value                      |
@@ -91,4 +91,4 @@ When I set request headers:
 |X-Contentful-Version     |${entryVersion}            |
 Given I initialize scenario variable `patchPayload` using template `<template>` with parameters:${patchData}
 Given request body: ${patchPayload}
-When I execute HTTP PATCH request for resource with URL `${contentful-api-endpoint}/entries/<id>`
+When I execute HTTP PATCH request for resource with URL `https://api.contentful.com/spaces/${contentful-space-id}/environments/master/entries/<id>`

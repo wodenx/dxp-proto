@@ -13,7 +13,7 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
-
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.repository == 'dxp-prototype/dxp-proto')
     steps:
       - name: Checkout (including submodules)
         uses: actions/checkout@v3
@@ -77,13 +77,14 @@ jobs:
           TEST_GITHUB_TOKEN: ${{ secrets.TEST_GITHUB_TOKEN }}
           SAUCELABS_USERNAME: ${{ secrets.SAUCELABS_USERNAME }}
           SAUCELABS_PASSWORD: ${{ secrets.SAUCELABS_PASSWORD }}
+          TEST_CONFIGURATION: ${{ vars.TEST_CONFIGURATION }}
         run: |
           cd tests/e2e
           ./gradlew runStories -Pvividus.variables.contentful-token=${TEST_CONTENTFUL_TOKEN} \
                                -Pvividus.variables.github-token=${TEST_GITHUB_TOKEN} \
                                -Pvividus.selenium.grid.username=${SAUCELABS_USERNAME} \
                                -Pvividus.selenium.grid.password=${SAUCELABS_PASSWORD} \
-                               -Pvividus.configuration-set.active=api \
+                               -Pvividus.configuration-set.active=${TEST_CONFIGURATION:-stage} \
                                -Pvividus.allure.history-directory=output/history \
                                -Pvividus.allure.executor.name="Github Actions (DxP)" \
                                -Pvividus.allure.executor.type=github \
@@ -94,7 +95,7 @@ jobs:
                                -Pvividus.allure.executor.report-url=https://github.com/dxp-prototype/dxp-proto/actions/runs/${GITHUB_RUN_ID} \
                                -Pvividus.allure.executor.report-name="Regression Tests report"
       - name: Sync with XRay
-        if: always() && inputs.debug != 'true' && steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        if: always() && inputs.debug != 'true' && github.repository == 'dxp-prototype/dxp-proto' && steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         env:
           JIRA_USERNAME: ${{ secrets.XRAY_JIRA_USERNAME }}
           JIRA_PASSWORD: ${{ secrets.XRAY_JIRA_PASSWORD }}
@@ -114,7 +115,7 @@ jobs:
           name: JSONs for ${{ matrix.suite }} run
           path: tests/e2e/output/reports/jbehave
       - name: Deploy report to Vercel
-        if: always() && inputs.debug != 'true' && steps.changed-files-excluded.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        if: always() && inputs.debug != 'true' && github.repository == 'dxp-prototype/dxp-proto' && steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         env:
           REPORT_DEPLOY_KEY: ${{ secrets.REPORT_DEPLOY_KEY }}
           VERCEL_ORG_ID: ${{ vars.REPORT_VERCEL_ORG_ID }}
