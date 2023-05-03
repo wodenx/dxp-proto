@@ -74,6 +74,13 @@ When I take screenshot
 When I close browser
 
 
+Scenario: Check links and images on PDP
+Meta: @xray.skip-export
+Then all resources by selector `a[href],img[src]` are valid on:
+|pages                                     |
+|${app-url}/products/${productData[0].slug}|
+
+
 Scenario: Update and publish changes to existing product and verify changed PDP on the site
 Meta: @testCaseId JEPZ-149
       @requirementId JEPZ-53

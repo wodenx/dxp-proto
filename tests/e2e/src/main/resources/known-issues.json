@@ -6,5 +6,13 @@
         "scenarioPattern": "Unpublish content and check PDP is not available on the site",
         "stepPattern": "When I wait for response code `404` for `.+?` duration retrying .+? times.*/products/.+",
         "description": "Published products remain visible on web site even after unpublishing in Contentful"
+    },
+    "vividus-uri-escape-to-fix": {
+        "type": "Internal",
+        "assertionPattern": ".*Element by selector .*card-corner.*full has href/src attribute with invalid URL.*",
+        "storyPattern": "SiteCrawler",
+        "scenarioPattern": ".*Check link on site page.*",
+        "stepPattern": "Then all resources by selector `a\\[href\\],img\\[src\\]` from .* are valid",
+        "description": "VIVIDUS resource checker does not support unescaped spaces in URLs e.g. /images/pages/styleguide/card/4bc90d7fde30ac4a16c295340c45958d/Rectangle 14974.png"
     }
 }

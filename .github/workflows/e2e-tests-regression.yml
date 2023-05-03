@@ -14,6 +14,9 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.repository == 'dxp-prototype/dxp-proto')
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout (including submodules)
         uses: actions/checkout@v3
@@ -70,6 +73,15 @@ jobs:
           key: regression-tests-history-cache-key-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: |
             regression-tests-history-cache-key-
+      # Temp location for tests packaging
+      - name: Package tests
+        if: inputs.debug != 'true' && github.repository == 'dxp-prototype/dxp-proto'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd tests/e2e
+          ./gradlew packageCommonStories
+          ./gradlew publish
       - name: Run regression tests
         if: steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         env:

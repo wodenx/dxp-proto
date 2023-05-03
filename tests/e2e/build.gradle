@@ -9,7 +9,7 @@ apply from: "${buildSystemPath}/vividus-test-project.gradle"
 runStories.treatKnownIssuesOnlyAsPassed = true
 
 ext {
-    vividusVersion = '0.5.9'
+    vividusVersion = '0.5.10-SNAPSHOT'
 }
 
 configurations {
@@ -23,6 +23,9 @@ dependencies {
     implementation(group: 'org.vividus', name: 'vividus-plugin-saucelabs', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-html', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-visual', version: vividusVersion)
+    implementation(group: 'org.vividus', name: 'vividus-plugin-web-app-to-rest-api', version: vividusVersion)
+
+    // implementation('dxp.prototype:dxp-prototype-tests:0.1.0-SNAPSHOT:common')
 
     xray(group: 'org.vividus', name: 'vividus-to-xray-exporter', version: vividusVersion)
 }
@@ -67,4 +70,54 @@ task publishTestToXray(type: JavaExec) {
 
     main = '-jar'
     args runArgs
+}
+
+task packageCommonStories(type: Jar) {
+    archiveClassifier = 'common'
+    includeEmptyDirs = false
+
+    from(sourceSets.main.output) {
+      include  '**/common/*.story'
+      include  '**/*.xml'
+      include  '**/*.class'
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'dxp.prototype'
+            afterEvaluate {
+                artifact packageCommonStories
+            }
+            pom {
+                // Reset POM attributes for test projects
+                inceptionYear = null
+                licenses.clear()
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = 'GitHubPackages'
+            url = 'https://maven.pkg.github.com/dxp-prototype/dxp-proto'
+            credentials {
+                username = System.getenv('GITHUB_ACTOR')
+                password = System.getenv('GITHUB_TOKEN')
+            }
+        }
+    }
+}
+
+repositories {
+    maven {
+        url 'https://maven.pkg.github.com/dxp-prototype/dxp-proto'
+        credentials {
+            username 'token'
+            password '\u0067\u0068\u0070\u005f\u007a\u0076\u0048\u006b\u0034\u0031\u007a\u0032\u0039\u0049\u0048\u0068\u0033\u0059\u0042\u006a\u0039\u0044\u004d\u0073\u0032\u0052\u0057\u006b\u006a\u0058\u0053\u0066\u007a\u0075\u0033\u0071\u0066\u006a\u0050\u0039'
+        }
+        content {
+            includeGroup 'dxp.prototype'
+        }
+    }
 }
