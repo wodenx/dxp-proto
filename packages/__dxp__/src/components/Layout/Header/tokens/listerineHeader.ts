@@ -1,7 +1,4 @@
-import {
-  vitalHeaderBase,
-  asHeaderToken,
-} from '@bodiless/vital-layout';
+import { vitalHeaderBase, asHeaderToken } from '@bodiless/vital-layout';
 import {
   addProps,
   on,
@@ -12,7 +9,10 @@ import {
   as
 } from '@bodiless/fclasses';
 import {
-  SearchBoxClean, SearchMenuClean, SearchTogglerClean, vitalSearchMenu
+  SearchBoxClean,
+  SearchMenuClean,
+  SearchTogglerClean,
+  vitalSearchMenu,
 } from '@bodiless/vital-search';
 import { withChild } from '@bodiless/core';
 import { MenuClean } from '@bodiless/vital-navigation';
@@ -43,7 +43,6 @@ const Default = asHeaderToken({
       as(listerineMenu.UtilityMenu),
     ),
     OuterUtilityMenuWrapper: replaceWith(Div),
-    // UtilityMenu: listerineMenu.UtilityMenu,
     Menu: listerineMenu.TopNav,
   },
   Content: {

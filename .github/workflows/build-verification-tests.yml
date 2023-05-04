@@ -123,9 +123,6 @@ jobs:
           npm install
           npm run build
       # Cache playwright installation blocker https://github.com/actions/cache/issues/319
-      - name: Install Playwright
-        if: steps.PR.outputs.pr_found == 'true'
-        run: npx playwright install chrome
       - name: Run playwright tests
         if: steps.PR.outputs.pr_found == 'true'
         env:
@@ -135,6 +132,7 @@ jobs:
             export APPLITOOLS_BATCH_NAME="${{ steps.PR.outputs.pr_title }} (${{ steps.PR.outputs.number }})"
           fi
           export DEBUG=pw:webserver
+          npx playwright install --with-deps
           npm run test:smoke
       - name: Generate Applitools report links
         if: always() && steps.PR.outputs.pr_found == 'true'
