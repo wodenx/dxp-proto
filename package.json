@@ -113,7 +113,7 @@
     "url": "https://github.com/dxp-prototype/dxp-proto"
   },
   "engines": {
-    "node": ">=16.14"
+    "node": "^16.14.0"
   },
   "author": ""
 }
