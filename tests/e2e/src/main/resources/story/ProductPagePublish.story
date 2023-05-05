@@ -3,25 +3,28 @@ Meta: @feature product_publish
 Scenario: Publish new content and verify PDP on the site
 Meta: @testCaseId JEPZ-148
       @requirementId JEPZ-53
-!-- Create Ingredient
-When I initialize story variable `ingredientData` with values:data/ingredient.table
-When I create `ingredient` content from `/templates/ingredient.json` template with parameters:${ingredientData}
+!-- Create Active Ingredient
+When I initialize story,next_batches variable `ingredientActiveData` with values:data/ingredient-active.table
+When I create `ingredient` content from `/templates/ingredient.json` template with parameters:${ingredientActiveData}
+!-- Create Inactive Ingredient
+When I initialize story,next_batches variable `ingredientInactiveData` with values:data/ingredient-inactive.table
+When I create `ingredient` content from `/templates/ingredient.json` template with parameters:${ingredientInactiveData}
 !-- Create Product Collection
-When I create asset from `product-collection` file with `Test Product Collection` name and save its ID to story variable `productCollectionAssetId`
-When I initialize story variable `productCollectionData` with values:
+When I create asset from `product-collection` file with `Test Product Collection` name and save its ID to story,next_batches variable `productCollectionAssetId`
+When I initialize story,next_batches variable `productCollectionData` with values:
 {transformer=MERGING, mergeMode=columns, tables=/data/product-collection.table}
 |image                      |
 |${productCollectionAssetId}|
 When I create `productCollection` content from `/templates/product-collection.json` template with parameters:${productCollectionData}
 !-- Create Product
-When I create asset from `product` file with `Test Product` name and save its ID to story variable `productAssetId`
-When I initialize story variable `productData` with values:
+When I create asset from `product` file with `Test Product` name and save its ID to story,next_batches variable `productAssetId`
+When I initialize story,next_batches variable `productData` with values:
 {transformer=MERGING, mergeMode=columns, tables=/data/product.table}
-|collection                    |ingredients            |images           |
-|${productCollectionData[0].id}|${ingredientData[0].id}|${productAssetId}|
+|collection                    |ingredient1                  |ingredient2                    |images           |
+|${productCollectionData[0].id}|${ingredientActiveData[0].id}|${ingredientInactiveData[0].id}|${productAssetId}|
 When I create `product` content from `/templates/product.json` template with parameters:${productData}
 !-- Create FAQ
-When I initialize story variable `faqData` with values:
+When I initialize story,next_batches variable `faqData` with values:
 {transformer=MERGING, mergeMode=columns, tables=/data/faq.table}
 |product             |
 |${productData[0].id}|
@@ -29,7 +32,8 @@ When I create `fAQs` content from `/templates/faq.json` template with parameters
 !-- Pubilsh contents
 When I move assets item with `${productCollectionAssetId}` id to published state
 When I move assets item with `${productAssetId}` id to published state
-When I move entries item with `${ingredientData[0].id}` id to published state
+When I move entries item with `${ingredientActiveData[0].id}` id to published state
+When I move entries item with `${ingredientInactiveData[0].id}` id to published state
 When I move entries item with `${productCollectionData[0].id}` id to published state
 When I move entries item with `${faqData[0].id}` id to published state
 When I move entries item with `${productData[0].id}` id to published state
@@ -54,7 +58,7 @@ Then product summary should have parameters:
 |summary_link_text     |${productData[0].summary_link_text}  |
 |summary_link_url      |${productData[0].summary_link_url}   |
 !-- Validate more to know section
-Then `Ingredients` accordion content is equal to `${ingredientData[0].title} -${ingredientData[0].inactive_active}`
+Then `Ingredients` accordion content is equal to `${ingredientActiveData[0].title} -${ingredientActiveData[0].inactive_active}  ${ingredientInactiveData[0].title} -${ingredientInactiveData[0].inactive_active}`
 Then `Directions` accordion content is equal to `${productData[0].directions}`
 Then `Warnings` accordion content is equal to `${productData[0].warnings}`
 Then `Additional Information` accordion content is equal to `${productData[0].additional_information}`
@@ -69,8 +73,20 @@ Then jump to link key `From The Collection` exists
 Then jump to link key `FAQ` exists
 !-- Validate FAQ section
 Then `${faqData[0].question}` FAQ accordion content is equal to `${faqData[0].answer}`
-!-- Take screenshot for debugging
-When I take screenshot
+When I reset context
+
+
+Scenario: Check styling on new Product Page
+Meta: @testCaseId JEPZ-268
+      @requirementId JEPZ-73
+When I change window size to `${desktop-resolution}`
+When I run visual test with Applitools using:
+|batchName    |baselineName            |action          |
+|${batch-name}|New Product Page Desktop|${visual-action}|
+When I change window size to `${mobile-resolution}`
+When I run visual test with Applitools using:
+|batchName    |baselineName           |action          |
+|${batch-name}|New Product Page Mobile|${visual-action}|
 When I close browser
 
 
@@ -81,16 +97,30 @@ Then all resources by selector `a[href],img[src]` are valid on:
 |${app-url}/products/${productData[0].slug}|
 
 
+Scenario: Check visibility of Product Category Cards on the page
+Meta: @testCaseId JEPZ-192
+      @requirementId JEPZ-64
+Given I am on page with URL `${app-url}/styleguide/section`
+Given I initialize scenario variable `collectionTitle` with value `${productCollectionData[0].title}`
+When I change context to element located by `xpath(//*[@data-layer-region='List:Item' and .//*[text()='${collectionTitle}']])`
+When I run visual test with Applitools using:
+|batchName    |baselineName                 |action          |elementsToIgnore                                      |
+|${batch-name}|Product Category Section Card|${visual-action}|By.xpath(.//*[@data-layer-region="Card:TitleWrapper"])|
+!-- Take screenshot for debugging
+When I take screenshot
+When I close browser
+
+
 Scenario: Update and publish changes to existing product and verify changed PDP on the site
 Meta: @testCaseId JEPZ-149
       @requirementId JEPZ-53
 !-- Update product
-When I create asset from `product-updated` file with `Test Product Updated` name and save its ID to story variable `productUpdatedAssetId`
+When I create asset from `product-updated` file with `Test Product Updated` name and save its ID to story,next_batches variable `productUpdatedAssetId`
 When I initialize story variable `productUpdatedData` with values:
 {transformer=FROM_LANDSCAPE}
-|id    |#{generate(regexify '[a-zA-Z0-9]{16}')}       |
-|name  |Product #{generate(regexify '[a-zA-Z0-9]{8}')}|
-|images|${productUpdatedAssetId}                      |
+|id    |#{generate(regexify '[a-zA-Z0-9]{16}')}|
+|name  |Test Content - Product Updated         |
+|images|${productUpdatedAssetId}               |
 When I patch entry with `${productData[0].id}` id using `/templates/product-update.json` template with parameters:${productUpdatedData}
 !-- Update FAQ (skipped for now due to JEPZ-161)
 !-- # When I patch entry with `${faqData[0].id}` id using `/templates/faq-update.json` template with parameters:
@@ -131,8 +161,21 @@ Then jump to link key `From The Collection` exists
 Then jump to link key `FAQ` exists
 !-- Validate FAQ section (not removed due to JEPZ-161)
 Then `${faqData[0].question}` FAQ accordion content is equal to `${faqData[0].answer}`
-!-- Take screenshot for debugging
-When I take screenshot
+When I reset context
+
+
+Scenario: Check styling on updated Product Page
+Meta: @xray.skip-export
+      @testCaseId JEPZ-268
+      @requirementId JEPZ-73
+When I change window size to `${desktop-resolution}`
+When I run visual test with Applitools using:
+|batchName    |baselineName                |action          |
+|${batch-name}|Updated Product Page Desktop|${visual-action}|
+When I change window size to `${mobile-resolution}`
+When I run visual test with Applitools using:
+|batchName    |baselineName               |action          |
+|${batch-name}|Updated Product Page Mobile|${visual-action}|
 When I close browser
 
 
@@ -141,7 +184,8 @@ Meta: @testCaseId JEPZ-150
       @requirementId JEPZ-53
 !-- Unpublsh entries and assets
 When I move entries item with `${productData[0].id}` id to unpublished state
-When I move entries item with `${ingredientData[0].id}` id to unpublished state
+When I move entries item with `${ingredientActiveData[0].id}` id to unpublished state
+When I move entries item with `${ingredientInactiveData[0].id}` id to unpublished state
 When I move entries item with `${productCollectionData[0].id}` id to unpublished state
 When I move entries item with `${faqData[0].id}` id to unpublished state
 When I move assets item with `${productCollectionAssetId}` id to unpublished state

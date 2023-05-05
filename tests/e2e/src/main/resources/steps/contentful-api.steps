@@ -10,6 +10,15 @@ When I execute HTTP PUT request for resource with URL `https://api.contentful.co
 When I execute HTTP GET request for resource with URL `https://httpbin.org/delay/5`
 When I patch entry with `${contentData[0].id}` id using `<template>` template with parameters:<parameters>
 
+
+Composite: When I delete $type item with `$id` id
+When I set request headers:
+|name                     |value                                        |
+|Authorization            |Bearer ${contentful-token}                   |
+|Content-Type             |application/vnd.contentful.management.v1+json|
+When I execute HTTP DELETE request for resource with URL `https://api.contentful.com/spaces/${contentful-space-id}/<type>/<id>`
+
+
 Composite: When I move $type item with `$id` id to unpublished state
 When I set request headers:
 |name                     |value                      |

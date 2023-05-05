@@ -192,7 +192,14 @@
                     "sys": {
                         "type": "Link",
                         "linkType": "Entry",
-                        "id": "${ingredients[0]}"
+                        "id": "${ingredient1[0]}"
+                    }
+                },
+                {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Entry",
+                        "id": "${ingredient2[0]}"
                     }
                 }
             ]

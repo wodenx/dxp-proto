@@ -90,6 +90,7 @@ jobs:
           SAUCELABS_USERNAME: ${{ secrets.SAUCELABS_USERNAME }}
           SAUCELABS_PASSWORD: ${{ secrets.SAUCELABS_PASSWORD }}
           TEST_CONFIGURATION: ${{ vars.TEST_CONFIGURATION }}
+          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
         run: |
           cd tests/e2e
           ./gradlew runStories -Pvividus.variables.contentful-token=${TEST_CONTENTFUL_TOKEN} \
@@ -97,6 +98,8 @@ jobs:
                                -Pvividus.selenium.grid.username=${SAUCELABS_USERNAME} \
                                -Pvividus.selenium.grid.password=${SAUCELABS_PASSWORD} \
                                -Pvividus.configuration-set.active=${TEST_CONFIGURATION:-stage} \
+                               -Pvividus.ui.visual.applitools.execute-api-key=${APPLITOOLS_API_KEY} \
+                               -Pvividus.ui.visual.applitools.read-api-key=${APPLITOOLS_API_KEY} \
                                -Pvividus.allure.history-directory=output/history \
                                -Pvividus.allure.executor.name="Github Actions (DxP)" \
                                -Pvividus.allure.executor.type=github \

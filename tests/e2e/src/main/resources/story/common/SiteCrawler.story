@@ -5,5 +5,7 @@ Examples:
 {transformer=DISTINCTING, byColumnNames=relative-url}
 
 Scenario: Check link on site page
-When I execute HTTP GET request for resource with URL `${app-url}<relative-url>`
-Then all resources by selector `a[href],img[src]` from ${response} are valid
+Meta: @testCaseId JEPZ-291
+Then all resources by selector `a[href],img[src]` are valid on:
+|pages                   |
+|${app-url}<relative-url>|
