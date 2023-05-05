@@ -1,0 +1,50 @@
+name: Deploy Knapsack Listerine
+env:
+  CI: true
+  FORCE_COLOR: 1
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Use Node.js v16.14
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.14
+      - name: Setup & Build
+        run: npm install && npm run build
+
+  deploy:
+    name: Deploy
+    if: github.ref == 'refs/heads/main'
+    needs: [build]
+    runs-on: ubuntu-latest
+    env:
+      HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
+      HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      HEROKU_GIT_URL: ${{ secrets.HEROKU_GIT_URL }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: main
+      - name: write auth
+        run: |
+          cat > ~/.netrc <<EOF
+            machine git.heroku.com
+              login $HEROKU_EMAIL
+              password $HEROKU_API_KEY
+          EOF
+      - name: git push to heroku for deploy
+        run: |
+          git remote add heroku $HEROKU_GIT_URL
+          git push heroku master

@@ -1,0 +1,23 @@
+{
+  "primary": [],
+  "secondary": [
+    {
+      "id": "components",
+      "name": "Components",
+      "path": "",
+      "parentId": "root"
+    },
+    {
+      "id": "docs",
+      "name": "Docs",
+      "path": "",
+      "parentId": "root"
+    },
+    {
+      "id": "intro",
+      "name": "Intro",
+      "path": "/pages/intro",
+      "parentId": "docs"
+    }
+  ]
+}
