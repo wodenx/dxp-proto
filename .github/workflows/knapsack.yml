@@ -47,4 +47,4 @@ jobs:
       - name: git push to heroku for deploy
         run: |
           git remote add heroku $HEROKU_GIT_URL
-          git push heroku master
+          git push heroku main
