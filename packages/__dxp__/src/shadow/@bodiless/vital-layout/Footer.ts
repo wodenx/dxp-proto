@@ -1,9 +1,15 @@
-// TODO This file should move to Listerine package and shadow
-
 import { vitalFooterBase, asFooterToken } from '@bodiless/vital-layout';
-import listerineFooter from '../../../components/Layout/Footer/tokens';
+import { addProps } from '@bodiless/fclasses';
+import { withLanguageNode } from '@bodiless/i18n';
 
-const Default = asFooterToken(listerineFooter.Default);
+const Default = asFooterToken(vitalFooterBase.Default, {
+  Core: {
+    _: addProps({ 'data-shadowed-by': '__dxp__Footer' }),
+  },
+  Schema: {
+    _: withLanguageNode,
+  },
+});
 
 export default {
   ...vitalFooterBase,

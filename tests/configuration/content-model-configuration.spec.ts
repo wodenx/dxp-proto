@@ -13,7 +13,7 @@ const sysIgnoreFields: string[] = [
 ];
 
 test.describe('Contentful Configuration', () => {
-  const snapshotTypes = readJSONSync(`${process.cwd()}/sites/__dxp__/config/content-model/content-model.json`).items;
+  const snapshotTypes = readJSONSync(`${process.cwd()}/sites/listerine/config/content-model/content-model.json`).items;
   const contentfulTypes = readJSONSync(contentTypesPath);
 
   test('Quantity of snapshot types should be equal to contentful types', () => {

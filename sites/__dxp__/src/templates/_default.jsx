@@ -1,26 +1,9 @@
-/**
- * Copyright © 2022 Johnson & Johnson
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 import { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { as } from '@bodiless/fclasses';
-import { dxpPage } from '@kenvue/dxp-components';
-import { withProductData } from '../default-data/hoc';
+import { vitalPage } from '@bodiless/vital-templates';
 
-const DefaultPage = as(
-  dxpPage.Default,
-  withProductData,
-)(Fragment);
+const DefaultPage = as(vitalPage.Default)(Fragment);
 
 export default DefaultPage;
 
@@ -30,11 +13,11 @@ export default DefaultPage;
 // raises an unused parameter error).
 // @todo Fix unnecessary query.
 export const query = graphql`
-  query ($slug: String!) {
+  query($slug: String!) {
     ...PageQuery
     ...SiteQuery
     ...DefaultContentQuery
-    allSite(filter: { pathPrefix: { eq: $slug } }) {
+    allSite(filter: {pathPrefix: {eq: $slug}}) {
       edges {
         node {
           buildTime

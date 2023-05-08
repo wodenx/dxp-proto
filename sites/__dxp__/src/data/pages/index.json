@@ -1,12 +1,3 @@
 {
-    "type": "GenericTemplate",
-    "#template": "_default",
-    "Title": "Home",
-    "main-content": "Top Section",
-    "slug": "/",
-    "bottom-content": {
-        "type": "Curator",
-        "containerId": "curator-feed-sample-listerine-challenge-layout",
-        "feedId": "1e676875-dc05-45cb-9802-9570522a1458"
-    }
+  "#template": "_default"
 }

@@ -36,6 +36,6 @@ jobs:
         name: Setup and build packages
         run: npm install && npm run build
       - name: Publish
-        run: npm run build:content-publish -- --script 'cd sites/__dxp__/ && npm run build:fetch-products'
+        run: npm run build:content-publish -- --path 'sites/listerine/src/data/pages' --script 'cd sites/listerine/ && npm run build:fetch-products'
 
     

@@ -55,9 +55,7 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-mde": "^11.0.0",
-    "--dxp--": "^0.0.0",
-    "@kenvue/dxp-product": "^0.0.0",
-    "@kenvue/dxp-components": "^0.0.0"
+    "--dxp--": "^0.0.0"
   },
   "files": [
     "lib"
@@ -68,7 +66,6 @@
   },
   "scripts": {
     "build": "npm run build:lib",
-    "build:fetch-products": "fetch-products",
     "build:docs": "bl-docs-build",
     "build:env-vars": "bodiless generate-env-vars",
     "build:lib": "bl-clear-logs && gatsby build && bl-validate-logs",
