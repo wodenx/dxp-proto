@@ -43,6 +43,9 @@ export default {
       // @todo Test in studio after sb releases fix, see https://stackbit.zendesk.com/hc/en-us/requests/84?page=1
       rootPath: path.join(__dirname),
       contentDirs: ['src/data'],
+      useFileIds: true,
+      fileIdKey: 'fileId',
+      setFileIdsOnStart: true,
       // repoUrl: process.env.REPO_URL || '',
       // repoBranch: process.env.REPO_BRANCH || '',
       models: [

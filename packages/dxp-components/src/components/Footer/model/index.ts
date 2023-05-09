@@ -20,7 +20,7 @@ const FooterModel: Model = {
     {
       name: 'disclaimer',
       label: 'Disclaimer',
-      type: 'text',
+      type: 'markdown',
       default: 'Default disclaimer text...',
     },
   ],
