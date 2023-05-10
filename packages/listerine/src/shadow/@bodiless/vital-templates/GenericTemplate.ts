@@ -1,17 +1,18 @@
 import { vitalGenericTemplateBase, asGenericTemplateToken } from '@bodiless/vital-templates';
 import { replaceWith } from '@bodiless/fclasses';
-import HomePageSections from '../../../components/HomePageSections';
+import HomePageSections, { ListerineHeroTopContent } from '../../../components/HomePageSections';
 
-const Generic = asGenericTemplateToken({
-  ...vitalGenericTemplateBase.Generic,
+const Default = asGenericTemplateToken({
+  ...vitalGenericTemplateBase.Default,
   Components: {
-    ...vitalGenericTemplateBase.Generic.Components,
+    ...vitalGenericTemplateBase.Default.Components,
     // @ts-ignore
     Content: replaceWith(HomePageSections),
+    TopContent: replaceWith(ListerineHeroTopContent),
   }
 });
 
 export default {
   ...vitalGenericTemplateBase,
-  Generic,
+  Default,
 };

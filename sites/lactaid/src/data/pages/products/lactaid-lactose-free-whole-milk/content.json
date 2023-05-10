@@ -1,0 +1,24 @@
+{
+  "contentful_id": "6i12gn672LefAkAMS6MMWH",
+  "revision_id": 1,
+  "name": "LACTAID® Lactose-Free Whole Milk<br><br>",
+  "images": [
+    {
+      "title": "hg whole front 0",
+      "description": "",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/3ZoelDqracizubXhChxGpW/fee59de0d922910a69c35a358df06766/hg_whole_front_0.png",
+        "details": {
+          "size": 146618,
+          "image": {
+            "width": 500,
+            "height": 500
+          }
+        },
+        "fileName": "hg_whole_front_0.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "faq": []
+}

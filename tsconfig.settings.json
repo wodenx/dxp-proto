@@ -25,6 +25,7 @@
     "paths": {
       "--dxp--": ["packages/__dxp__/src"],
       "@kenvue/listerine": ["packages/listerine/src"],
+      "@kenvue/lactaid": ["packages/lactaid/src"],
       "dxp-product": ["packages/dxp-product/src"],
       "dxp-section": ["packages/dxp-section/src"],
       "dxp-image": ["packages/dxp-image/src"],

@@ -41,9 +41,9 @@ const GenericTemplateModel: Model = {
     // },
     {
       name: 'main-content',
-      label: 'Top Section',
+      label: 'Main Section',
       type: 'string',
-      default: 'Top Section',
+      default: 'Main Section',
     },
     {
       name: 'bottom-content',

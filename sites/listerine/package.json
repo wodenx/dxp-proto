@@ -83,7 +83,8 @@
     "predev": "run-s build:env-vars",
     "prebuild": "run-s build:env-vars",
     "serve": "gatsby serve",
-    "serve:docs": "docsify serve ./doc"
+    "serve:docs": "docsify serve ./doc",
+    "stackbit": "stackbit dev --runnableDir sites/listerine --port 8001"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.0",

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "outDir": "./lib/scripts",
+    "module": "CommonJS"
+  },
+  "exclude": [
+    "lib",
+    "node_modules",
+    "__tests__/**/*.*",
+    "src/*.ts",
+    "src/shadow/**/*"
+  ],
+  "include": [
+    "src/scripts/**/*",
+  ],
+}

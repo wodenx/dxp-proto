@@ -1,12 +1,13 @@
 import { omit } from 'lodash';
-import { asMenuToken, vitalMenuBase } from '@bodiless/vital-navigation';
-import { as, flowIf, withDesign } from '@bodiless/fclasses';
+import { MenuTitleClean, asMenuToken, vitalMenuBase } from '@bodiless/vital-navigation';
+import {
+  as, flowIf, on, withDesign
+} from '@bodiless/fclasses';
 import { asBreadcrumbs, useIsActiveTrail } from '@bodiless/navigation';
-import { vitalTextDecoration } from '@bodiless/vital-elements';
+import { listerineFontSize } from '../../../FontSize';
 import { listerineColor } from '../../../Color';
 import { listerineSpacing } from '../../../Spacing';
 import { listerineTypography } from '../../../Typography';
-import { listerineFontSize } from '../../../FontSize';
 
 const TopNav = asMenuToken(omit(vitalMenuBase.TopNav, 'Theme'), {
   Theme: {
@@ -54,11 +55,9 @@ const UtilityMenu = asMenuToken({
   },
   Theme: {
     Wrapper: as(listerineSpacing.WithSiteMargin, 'py-3.5'),
-    Title: as(
+    Title: on(MenuTitleClean)(
       listerineFontSize.Base,
-      listerineColor.TextWhite,
-      vitalTextDecoration.Bold,
-      'font-gotham'
+      'font-gotham text-white normal-case',
     ),
   },
 });

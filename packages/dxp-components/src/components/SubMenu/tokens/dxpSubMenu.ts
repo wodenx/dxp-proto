@@ -3,7 +3,7 @@ import {
 } from '@bodiless/vital-navigation';
 import type { ListData } from '@bodiless/components';
 import {
-  addClasses, flowHoc, on, removeClasses
+  flowHoc, on,
 } from '@bodiless/fclasses';
 import { useNode, withDefaultContent, withNode } from '@bodiless/core';
 import dxpMenuTitle from '../../MenuTitle/tokens/dxpMenuTitle';
@@ -53,15 +53,6 @@ const Footer = asSubMenuToken({
   Components: {
     ...vitalSubMenu.Footer.Components,
     Title: on(MenuTitleClean)(dxpMenuTitle.Default),
-  },
-  // @todo: Move this styling to brand package in the future after determing how
-  // to make shadowing work with Stackbit-editable components.
-  Theme: {
-    ...vitalSubMenu.Footer.Theme,
-    Item: flowHoc(
-      addClasses('mt-3 font-gotham lg:text-base text-sm leading-5 font-bold'),
-      removeClasses('mt-6 lg:first:mt-6'),
-    ),
   },
   Compose: {
     ...vitalSubMenu.Footer.Compose,

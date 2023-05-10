@@ -94,7 +94,7 @@ const Default = asPDPTemplateToken({
   },
   Spacing: {
     ...vitalGenericTemplate.Default.Spacing,
-    JumpLinksWrapper: 'lg:px-36 py-2  mt-10 lg:-ml-36',
+    JumpLinksWrapper: 'lg:px-36 py-2 mt-10 lg:-ml-36',
     ContentWrapper: 'mb-4',
     ProductImageWrapper: 'lg:pr-2',
     ProductDetailWrapper: 'lg:pl-2 pt-4 lg:pt-0',

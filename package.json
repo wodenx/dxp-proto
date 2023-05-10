@@ -31,7 +31,7 @@
     "sync:check": "syncpack list-mismatches",
     "test": "jest",
     "test:smoke": "APPLITOOLS_BATCH_ID=`uuidgen` PLAYWRIGHT_SUITE=smoke npx playwright test",
-    "docs": "npm run build:docs --workspace @sites/listerine && docsify serve ./sites/listerine/doc"
+    "docs": "npm run build:docs --workspace @sites/${APP_SITE_NAME:-listerine} && docsify serve ./sites/${APP_SITE_NAME:-listerine}/doc"
   },
   "husky": {
     "hooks": {

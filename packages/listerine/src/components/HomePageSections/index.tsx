@@ -1,10 +1,12 @@
 import React from 'react';
 import { asSectionToken, SectionClean } from '@kenvue/dxp-section';
 import {
-  flowHoc, addClasses, addProps, as, removeClasses
+  flowHoc, addClasses, addProps, as, removeClasses,
 } from '@bodiless/fclasses';
+import { useNode, withDefaultContent } from '@bodiless/core';
+import { CardClean, vitalCard } from '@bodiless/vital-card';
 import { dxpProductSection } from '@kenvue/dxp-product';
-import { useNode } from '@bodiless/core';
+import { cardcontent } from './mockdata';
 
 const WithListerineSectionCollectionOurProducts = asSectionToken({
   Layout: {
@@ -42,7 +44,6 @@ const WithListerineSectionProductBestSeller = asSectionToken({
       addProps({
         products: [
           '5JLJSAJn9wuHnoWLyP3Lg5', '6fAXdpJM6ibblpTiO4JOqi', '4wjOoQHFSAqePnJMpNKEqg', '11gcuXew6vue7doHKlCE81',
-          // 'Gwn1B6VKTaWjGzbA7u87F', '1lJJzimyx1dNdqZs52jFRm',
         ],
       }),
     ),
@@ -71,6 +72,22 @@ const ListerineSectionBestSeller = as(
 const useIsHomePage = () => (
   useNode().node.pagePath === '/'
   //  || useNode().node.pagePath === `/${useLanguageContext().getCurrentLanguage().name}/`
+);
+
+const HomeHeroCard = as(
+  vitalCard.Hero,
+  withDefaultContent(cardcontent),
+)(CardClean);
+
+export const ListerineHeroTopContent = () => (
+  useIsHomePage() ? (
+    <>
+      <HomeHeroCard />
+    </>
+  )
+    : (
+      <>Top Content</>
+    )
 );
 
 export default () => (

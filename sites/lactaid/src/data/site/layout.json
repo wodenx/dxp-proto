@@ -1,0 +1,114 @@
+{
+    "type": "Layout",
+    "footer": {
+        "type": "Footer",
+        "copyright": "© McNeil Nutritionals, LLC 2023 | Ft. Washington, PA USA. All rights reserved. This website is published by McNeil Nutritionals, LLC which is solely responsible for its contents. This website is intended for visitors from the United States.",
+        "disclaimer": "Do not sell my personal information. <br/> Use all products as directed.",
+        "footer-menu": {
+            "type": "SimpleMenu",
+            "menuItems": [
+                {
+                    "type": "SubMenu",
+                    "title": {
+                        "type": "MenuTitle",
+                        "text": "LACTAID® Products",
+                        "link": "/"
+                    },
+                    "menuItems": [
+                        {
+                            "type": "MenuTitle",
+                            "text": "All Products",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Where to Buy",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "FAQs",
+                            "link": "/"
+                        }
+                    ]
+                },
+                {
+                    "type": "SubMenu",
+                    "title": {
+                        "type": "MenuTitle",
+                        "text": "Cook & Learn with LACTAID®",
+                        "link": "/"
+                    },
+                    "menuItems": [
+                        {
+                            "type": "MenuTitle",
+                            "text": "Lactose-Free Recipes",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Lactose Sensitivity",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Lactose Intolerance Quiz",
+                            "link": "/"
+                        }
+                    ]
+                },
+                {
+                    "type": "SubMenu",
+                    "title": {
+                        "type": "MenuTitle",
+                        "text": "About LACTAID®",
+                        "link": "/"
+                    },
+                    "menuItems": [
+                        {
+                            "type": "MenuTitle",
+                            "text": "About Us",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Contact Us",
+                            "link": "/"
+                        }
+                    ]
+                },
+                {
+                    "type": "SubMenu",
+                    "title": {
+                        "type": "MenuTitle",
+                        "text": "Legal Information",
+                        "link": "/"
+                    },
+                    "menuItems": [
+                        {
+                            "type": "MenuTitle",
+                            "text": "Privacy Policy",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Legal Notice",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "Sitemap",
+                            "link": "/"
+                        },
+                        {
+                            "type": "MenuTitle",
+                            "text": "AdChoices",
+                            "link": "/"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "fileId": "doc.136944e0d86141a7"
+}

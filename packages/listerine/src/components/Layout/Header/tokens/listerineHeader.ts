@@ -6,7 +6,8 @@ import {
   replaceWith,
   startWith,
   flowHoc,
-  as
+  as,
+  addClasses
 } from '@bodiless/fclasses';
 import {
   SearchBoxClean,
@@ -49,6 +50,7 @@ const Default = asHeaderToken({
   Theme: {
     ...vitalHeaderBase.Default.Theme,
     Wrapper: listerineColor.BgPrimaryBrand,
+    Container: addClasses('mx-5'),
     OuterUtilityMenuWrapper: listerineColor.BgSecondaryUtility,
   },
 });

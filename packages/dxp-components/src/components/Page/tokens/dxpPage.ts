@@ -12,7 +12,7 @@ const Default = asFluidToken({
     _: replaceWith(GenericTemplateClean),
   },
   Components: {
-    _: dxpGenericTemplate.Generic,
+    _: dxpGenericTemplate.Default,
   },
 });
 
