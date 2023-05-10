@@ -13,7 +13,8 @@
     "bodiless.tailwind.config.js"
   ],
   "scripts": {
-    "build": "npm run ks:build",
+    "build": "npm run build:knapsack",
+    "build:knapsack": "npm run ks:build",
     "clean": "rm -rf ./lib",
     "ks:build": "NODE_ENV=production knapsack build",
     "start": "knapsack start",
