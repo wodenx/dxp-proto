@@ -15,6 +15,7 @@
     "build": "npx -y turbo build",
     "build:packages": "npx -y turbo build --filter=!@sites/*",
     "build:knapsack": "npx -y turbo build --scope=@sites/listerine-knapsack",
+    "heroku-postbuild": "npx -y turbo build --filter=@sites/listerine-knapsack",
     "check": "npx -y turbo check",
     "fix": "eslint --fix  --cache --ext .js,.jsx,.ts,.tsx packages sites",
     "fix:target": "eslint --fix  --cache --ext .js,.jsx,.ts,.tsx",
