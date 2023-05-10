@@ -24,6 +24,7 @@
     "@bodiless/fclasses": "^1.0.0-rc.36",
     "@bodiless/knapsack-edit-provider": "^1.0.0-canary-2040-1068.0.aa2e178",
     "@bodiless/knapsack-renderer": "^1.0.0-canary-2040-1068.0.aa2e178",
+    "@kenvue/listerine": "^0.0.0",
     "@types/react": "^17.0.39",
     "react": "^17.0.2",
     "esm": "^3.2.25",

@@ -1,5 +1,5 @@
-import { as, replaceWith } from '@bodiless/fclasses';
-import { asButtonToken, vitalButtonsBase } from '@bodiless/vital-buttons';
+import { TokenCollection, as, replaceWith } from '@bodiless/fclasses';
+import { ButtonComponent, asButtonToken, vitalButtonsBase } from '@bodiless/vital-buttons';
 import { vitalTextDecoration } from '@bodiless/vital-elements';
 import { listerineColor } from '../../Color';
 import { listerineFontSize } from '../../FontSize';
@@ -52,8 +52,11 @@ const WhereToBuy = asButtonToken({
   },
 });
 
-export default {
+interface ListerineButtons extends TokenCollection<ButtonComponent, {}> {}
+const listerineButtons: ListerineButtons = {
   ...vitalButtonsBase,
   Primary,
   WhereToBuy,
 };
+
+export default listerineButtons;

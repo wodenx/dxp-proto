@@ -1,0 +1,104 @@
+{
+  "id": "accordions",
+  "title": "Accordions",
+  "description": "A simple, extendable and accessible accordion component that can be used to organize non-essential information in a page.",
+  "statuses": {},
+  "templates": [
+    {
+      "id": "bodiless-3o4CZWhJK8",
+      "title": "Accordion Example",
+      "path": "@kenvue/listerine",
+      "alias": "knapsackAccordionSpec",
+      "templateLanguageId": "bodiless",
+      "spec": {
+        "isInferred": true
+      },
+      "demosById": {
+        "main": {
+          "id": "main",
+          "title": "Default",
+          "type": "data",
+          "data": {
+            "props": {
+              "Default": true
+            },
+            "slots": {},
+            "extras": {
+              "accordion$title": {
+                "text": "Default Accordion Title"
+              },
+              "accordion$body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Default Accordion Content"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "3ea05aMuNU": {
+          "id": "3ea05aMuNU",
+          "title": "Initially Expanded",
+          "description": "A description",
+          "type": "data",
+          "data": {
+            "props": {
+              "WithInitiallyExpanded": true,
+              "Default": true
+            },
+            "slots": {},
+            "extras": {
+              "accordion$title": {
+                "text": "Expanded Accordion Title"
+              },
+              "accordion$body": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Expanded Accordion Content"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "demos": ["main", "3ea05aMuNU"],
+      "slices": []
+    }
+  ],
+  "tabs": [
+    {
+      "type": "template",
+      "id": "bodiless-3o4CZWhJK8"
+    },
+    {
+      "type": "subPage",
+      "id": "overview"
+    }
+  ],
+  "subPages": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "slices": [
+        {
+          "id": "ks-content-block-N8cNbRl8hN",
+          "blockId": "markdown-slice",
+          "data": {
+            "md": [
+              "# Listerine Accordion\nA simple, extendable and accessible accordion component that can be used to organize non-essential information in a page.\n\n## Content Editor Details\nAccordions are simple components with an editable title and description. Clicking on the title\ntoggles the accordion, displaying or hiding its description.\n\n## Site Builder Details\nThe Vital Accordion package exports three components:\n\n- `Accordion`\n- `AccordionTitle`\n- `AccordionBody`\n\nFor simple accordions, developers only need to use the `Accordion` component and its tokens, like in\nthe example below. For further customization — title and body components, and tokens are available.\n\n### Usage\n```jsx\nimport { as, on } from '@bodiless/fclasses';\nimport { AccordionClean } from '@bodiless/vital-accordion';\nimport { listerineAccordion } from '@kenvue/listerine';\n\n// Using as a React component\nconst SimpleAccordion = as(listerineAccordion.Default)(AccordionClean);\n\n// Using in a token\nconst Foo = asFooToken({\n  Components: {\n    ExampleContent: on(AccordionClean)(listerineAccordion.Default),\n  }\n});\n```\n\n### Tokens\nThe Vital Accordion package comes with a few useful tokens.\n\n#### Base\nExported by: `Accordion`, `AccordionTitle`, `AccordionBody`\n\nThis token implements the accordion's basic functionality, like toggling its body when clicking in\nthe title and using Vital Editors for content editing. Use this token as a base if you don't want\nVitalDS styling.\n\n#### Default\nExported by: `Accordion`, `AccordionTitle`, `AccordionBody`\n\nThis token extends the Base token, adding VitalDS styles. Apply this token to an AccordionClean\ncomponent for a quick start or use it as a base if you only need to update a few styles.\n\n#### WithInitiallyExpanded\nExported by: `Accordion`\n\nAccordions are collapsed on initialization by default, which means that its body is initially hidden\nwhen loading a page. By applying this token, the accordion will start expanded, so the user won't\nneed to click on its title to see its content.\n\n```jsx\nimport { as } from '@bodiless/fclasses';\nimport { AccordionClean } from '@bodiless/vital-accordion';\nimport { listerineAccordion } from '@kenvue/listerine';\n\nconst ExpandedAccordion = as(\n  listerineAccordion.Default,\n  listerineAccordion.WithInitiallyExpanded,\n)(AccordionClean);\n```\n\n#### WithFAQSchema\nExported by: `Accordion`, `AccordionTitle`, `AccordionBody`\n\nBy applying this token, the accordion title and body will be respectively used as a Question and\nAnswer to a [Schema.org FAQPage](https://schema.org/FAQPage ':target=_blank') instance. A page can\ncontain any number of FAQ accordions.\n\n```jsx\nimport { as } from '@bodiless/fclasses';\nimport { AccordionClean } from '@bodiless/vital-accordion';\nimport { listerineAccordion } from '@kenvue/listerine';\n\nconst FAQAccordion = as(\n  listerineAccordion.Default,\n  listerineAccordion.WithFAQSchema,\n)(AccordionClean);\n```\n"
+            ],
+            "columns": 1
+          }
+        }
+      ]
+    }
+  ]
+}

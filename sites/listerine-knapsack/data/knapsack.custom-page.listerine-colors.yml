@@ -1,0 +1,98 @@
+title: Listerine Colors
+id: listerine-colors
+slices:
+  - id: ks-content-block-OjhoxuAsYB
+    blockId: markdown-slice
+    data:
+      md:
+        - >
+          ## Primary Colors
+
+          The primary colors are the core of the color palette and are used for
+          key elements throughout the site, such as headers, backgrounds, and
+          buttons. The primary colors are:
+
+          | Color Name     | Variable Name   | Hex Code   |
+          Description                  |
+
+          |----------------|----------------|------------|------------------------------|
+
+          | Brand          | `primary-brand` | `#105367` | The primary brand
+          color used throughout the site |
+
+          | Card Background | `primary-card-bg` | `#EFF8FA` | The background
+          color for cards |
+
+          | Category Card | `primary-category-card` | `#9ad3dc` | The background
+          color for category cards |
+
+          | Page Background | `primary-page-bg` | `#F8FFFF` | The background
+          color for the overall page |
+
+          | Divider | `primary-divider` | `#D8D8D8` | The color used for divider
+          lines |
+
+          | Body Copy | `primary-body-copy` | `#222222` | The color used for
+          body text |
+
+          | Header Copy | `primary-header-copy` | `#333333` | The color used for
+          header text |
+
+
+          ## Secondary Colors
+
+          The secondary colors are used to support the primary colors and add
+          depth to the overall look and feel of the site. The secondary colors
+          are:
+
+          | Color Name     | Variable Name   | Hex Code   |
+          Description                  |
+
+          |----------------|----------------|------------|------------------------------|
+
+          | Border          | `secondary-border` | `#DBE8EB` | The color used
+          for borders |
+
+          | Eyebrow | `secondary-eyebrow` | `#535353` | The color used for
+          eyebrow text |
+
+          | Footer Background | `secondary-footer-bg` | `#11647A` | The
+          background color for the footer |
+
+          | Footer Background Signup | `secondary-footer-bg-signup` | `#105367`
+          | The background color for the footer signup section |
+
+          | Utility Menu | `secondary-utility-menu` | `#11647A` | The background
+          color for the utility menu |
+
+
+          ## Interactive Colors
+
+          The Interactive colors are used to provide additional options for
+          designers and developers to use when creating more complex designs.
+          The Interactive colors are:
+
+          | Color Name     | Variable Name   | Hex Code   |
+          Description                  |
+
+          |----------------|----------------|------------|------------------------------|
+
+          | Primary | `interactive-primary` | `#27D8A3` | The primary
+          interactive color used throughout the site |
+
+          | Primary Active | `interactive-primary-active` | `#007A53` | The
+          active state of the primary interactive color |
+
+          | Primary Hover | `interactive-primary-hover` | `#006042` | The hover
+          state of the primary interactive color |
+
+          | Primary Selected | `interactive-primary-selected` | `#006042` | The
+          selected state of the primary interactive color |
+
+          | Secondary | `interactive-secondary` | `#212121` | The secondary
+          interactive color used throughout the site |
+
+          | Tertiary Hover | `interactive-tertiary-hover` | `#27D8A3` | The
+          hover state of tertiary interactive elements |
+      columns: 1
+description: The color palette for the Listerine website.

@@ -1,0 +1,108 @@
+{
+  "id": "typography",
+  "title": "Typography",
+  "description": "The use of fonts, font sizes, and font styles to communicate the message and Listerine branding of a website.",
+  "statuses": {},
+  "templates": [
+    {
+      "id": "bodiless-ytptgO2NSi",
+      "title": "Typography Example",
+      "path": "@kenvue/listerine",
+      "alias": "knapsackTypographySpec",
+      "templateLanguageId": "bodiless",
+      "spec": {
+        "isInferred": true
+      },
+      "demosById": {
+        "main": {
+          "id": "main",
+          "title": "Listerine Link",
+          "type": "data",
+          "data": {
+            "props": {
+              "Typography": {
+                "H1": false,
+                "Link": true
+              },
+              "WithHoverArrow": false
+            },
+            "slots": {}
+          }
+        },
+        "ocOvTvk_TH": {
+          "id": "ocOvTvk_TH",
+          "title": "Listerine H3",
+          "description": "A description",
+          "type": "data",
+          "data": {
+            "props": {
+              "Typography": {
+                "H3": true
+              }
+            },
+            "slots": {}
+          }
+        },
+        "yOp0BGOb5P": {
+          "id": "yOp0BGOb5P",
+          "title": "Listerine Eyebrow",
+          "description": "A description",
+          "type": "data",
+          "data": {
+            "props": {
+              "Typography": {
+                "Eyebrow": true
+              }
+            },
+            "slots": {}
+          }
+        },
+        "9VzMy_Rq5V": {
+          "id": "9VzMy_Rq5V",
+          "title": "Link With Hover Arrow",
+          "description": "A description",
+          "type": "data",
+          "data": {
+            "props": {
+              "Typography": {
+                "Link": true
+              },
+              "WithHoverArrow": true
+            },
+            "slots": {}
+          }
+        }
+      },
+      "demos": ["main", "ocOvTvk_TH", "yOp0BGOb5P", "9VzMy_Rq5V"],
+      "slices": []
+    }
+  ],
+  "tabs": [
+    {
+      "type": "template",
+      "id": "bodiless-ytptgO2NSi"
+    },
+    {
+      "type": "subPage",
+      "id": "overview"
+    }
+  ],
+  "subPages": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "slices": [
+        {
+          "id": "ks-content-block-wHB0RlU2H1",
+          "blockId": "markdown-slice",
+          "data": {
+            "md": [
+              "# Listerine Site Typography\nThe Listerine site typography consists of fonts, colors, font sizes, and basic tokens (e.g., `h1`).\n\n### Font Choices\nListerine Design team chose the following fonts for our site:\n\n**Primary Font:** Open Sans\n**Secondary Font:** Roboto\n\nOpen Sans was chosen for its clean and modern appearance, while Roboto was chosen for its legibility and versatility.\n\n### Font Sizes\nListerine Design team chose the following font sizes for our site:\n\n**H1:** 36px\n**H2:** 30px\n**H3:** 24px\n**H4:** 18px\n**Body Text:** 16px\n**Small Text:** 14px\n\n### Line Heights\nListerine Design team chose the following line heights for our site:\n\n**H1:** 48px\n**H2:** 40px\n**H3:** 32px\n**H4:** 24px\n**Body Text:** 24px\n**Small Text:** 20px\n\n### Color Palette\nListerine Design team chose the following color palette for our site's typography:\n\n**Primary Color:** #000000 (Black)\n**Secondary Color:** #666666 (Dark Gray)\n**Tertiary Color:** #999999 (Light Gray)"
+            ],
+            "columns": 1
+          }
+        }
+      ]
+    }
+  ]
+}

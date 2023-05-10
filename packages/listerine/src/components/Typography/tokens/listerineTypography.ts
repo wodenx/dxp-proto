@@ -1,4 +1,7 @@
-import { as } from '@bodiless/fclasses';
+import { ComponentType } from 'react';
+import {
+  DesignableComponents, StylableProps, TokenCollection, as,
+} from '@bodiless/fclasses';
 import { asElementToken, vitalTextDecoration } from '@bodiless/vital-elements';
 import { listerineColor } from '../../Color';
 import { listerineFontSize } from '../../FontSize';
@@ -177,7 +180,42 @@ const WithTertiaryHover = asElementToken({
   },
 });
 
-export default {
+export interface ListerineTypographyComponents extends DesignableComponents {
+  H1: ComponentType<StylableProps>,
+  H2: ComponentType<StylableProps>,
+  H3: ComponentType<StylableProps>,
+  H4: ComponentType<StylableProps>,
+  H5: ComponentType<StylableProps>,
+  H6: ComponentType<StylableProps>,
+  Body: ComponentType<StylableProps>,
+  Eyebrow: ComponentType<StylableProps>,
+  CrumbsReviews: ComponentType<StylableProps>,
+  Link: ComponentType<StylableProps>,
+  WhiteLink: ComponentType<StylableProps>,
+  WithHoverArrow: ComponentType<StylableProps>,
+  WithTertiaryHover: ComponentType<StylableProps>,
+}
+
+const typographyToken = asElementToken();
+type TypographyToken = typeof typographyToken;
+
+interface ListerineTypography extends TokenCollection<ListerineTypographyComponents, {}> {
+  H1: TypographyToken,
+  H2: TypographyToken,
+  H3: TypographyToken,
+  H4: TypographyToken,
+  H5: TypographyToken,
+  H6: TypographyToken,
+  Body: TypographyToken,
+  Eyebrow: TypographyToken,
+  CrumbsReviews: TypographyToken,
+  Link: TypographyToken,
+  WhiteLink: TypographyToken,
+  WithHoverArrow: TypographyToken,
+  WithTertiaryHover: TypographyToken,
+}
+
+const listerineTypography: ListerineTypography = {
   H1,
   H2,
   H3,
@@ -192,3 +230,5 @@ export default {
   WithHoverArrow,
   WithTertiaryHover
 };
+
+export default listerineTypography;

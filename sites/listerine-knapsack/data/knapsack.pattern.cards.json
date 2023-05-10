@@ -1,0 +1,128 @@
+{
+  "id": "cards",
+  "title": "Cards",
+  "description": "Examples of Listerine Cards. This component creates a card with a title, description, and optional image to display content in a structured and visually appealing way.",
+  "statuses": {},
+  "templates": [
+    {
+      "id": "bodiless-WX_03syTfX",
+      "title": "Card Example",
+      "path": "@kenvue/listerine",
+      "alias": "knapsackCardSpec",
+      "templateLanguageId": "bodiless",
+      "spec": {
+        "isInferred": true
+      },
+      "demosById": {
+        "main": {
+          "id": "main",
+          "title": "Default",
+          "type": "data",
+          "data": {
+            "props": {
+              "Default": true,
+              "WithPrimaryButton": true
+            },
+            "slots": {},
+            "extras": {
+              "eyebrow": {
+                "text": "Default Card Eyebrow"
+              },
+              "title": {
+                "text": "Default Card Title"
+              },
+              "description": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique sem lacinia velit dignissim tincidunt. Vivamus porta justo ac maximus tempor. Suspendisse nec est lorem. Aliquam eget quam aliquam, venenatis."
+              },
+              "buttontext": {
+                "text": "Default Link"
+              }
+            }
+          },
+          "height": 580,
+          "width": 315
+        },
+        "lUA8ag_W9V": {
+          "id": "lUA8ag_W9V",
+          "title": "Hero Card",
+          "description": "A description",
+          "type": "data",
+          "data": {
+            "props": {
+              "Hero": true
+            },
+            "slots": {},
+            "extras": {
+              "eyebrow": {
+                "text": "Hero Card Eyebrow"
+              },
+              "title": {
+                "text": "Hero Card Title"
+              },
+              "description": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique sem lacinia velit dignissim tincidunt. Vivamus porta justo ac maximus tempor. Suspendisse nec est lorem. Aliquam eget quam aliquam, venenatis."
+              }
+            }
+          }
+        },
+        "bvZFdk9rUo": {
+          "id": "bvZFdk9rUo",
+          "title": "Product Card",
+          "description": "A description",
+          "type": "data",
+          "data": {
+            "props": {
+              "Product": true
+            },
+            "slots": {},
+            "extras": {
+              "eyebrow": {
+                "text": "Product Card Eyebrow"
+              },
+              "title": {
+                "text": "Product Card Title"
+              },
+              "description": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique sem lacinia velit dignissim tincidunt. Vivamus porta justo ac maximus tempor. Suspendisse nec est lorem. Aliquam eget quam aliquam, venenatis."
+              },
+              "buttontext": {
+                "text": "Product Link"
+              }
+            }
+          }
+        }
+      },
+      "demos": ["main", "lUA8ag_W9V", "bvZFdk9rUo"],
+      "slices": [],
+      "assetSetIds": ["editable", "non-editable"]
+    }
+  ],
+  "tabs": [
+    {
+      "type": "template",
+      "id": "bodiless-WX_03syTfX"
+    },
+    {
+      "type": "subPage",
+      "id": "overview"
+    }
+  ],
+  "subPages": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "slices": [
+        {
+          "id": "ks-content-block-9EVsVHA2Ti",
+          "blockId": "markdown-slice",
+          "data": {
+            "md": [
+              "# Listerine Card Component\nListerine Card is a group of content which typically features a less than full-size image alongside\nsupporting content or a call to action (CTA). Cards are commonly used on websites to call out or\noffer something to the site visitor.\n\n## Component Variations\nThe Listerine Card package provides a set of design variants to promote a quicker and easier site build experience:\n\n- Basic Card\n- Hero Card\n- Horizontal Card\n- Vertical Card\n- No Title Card\n- No Description Card\n\n## Site Builder Details\n```jsx\nimport { as } from '@bodiless/fclasses'\nimport { CardClean, vitalCard } from '@bodiless/vital-card';\nimport { listerineCard } from '@kenvue/listerine';\n\nconst MyDefaultCard = as(\n  listerineCard.Default,\n)(CardClean);\n```\n\n### Card Variations via Combined Tokens\nThe Card can be composed of different tokens to create many card variations. These variations include:\n- Default\n- Hero\n- With No Description\n- With No Title\n- With Horizontal Orientation\n- With Vertical Orientation\n\n### \nFor example, to create a vertical Card variation you could _extend_ or _override_ `listerineCard.WithVerticalOrientation`:\n\n- The following _extends_ `listerineCard.WithVerticalOrientation`, and adds the provided border and  padding to the wrapper:\n\n  ```jsx\n  const WithVerticalCardBorder = asCardToken(listerineCard.WithVerticalOrientation, {\n    Theme: {\n      Wrapper: 'border border-black',\n    },\n    Spacing: {\n      Wrapper: 'px-4',\n    },\n  });\n  // Then compose the Listerine Default Card with new custom vertical style.\n  const VerticalCardWithBorder = as(\n    listerineCard.Default,\n    WithVerticalCardBorder,\n  )(CardClean);\n  ```\n\n- The following _overrides_ `listerineCard.WithVerticalOrientation`; it uses all the same domains from\n  `WithVerticalOrientation` (except spacing), and these are replaced with larger paddings:\n\n  ```jsx\n  const WithVerticalOrientationMoreSpacing = asCardToken({\n    ...listerineCard.WithVerticalOrientation,\n    Spacing: {\n      ContentWrapper: 'p-8',\n      ImageWrapper: 'p-8',\n    },\n  });\n  // Then compose the Listerine Default Card with new custom vertical style.\n  const VerticalCardWithSpacing = as(\n    listerineCard.Default,\n    WithVerticalOrientationMoreSpacing,\n  )(CardClean);\n  ```"
+            ],
+            "columns": 1
+          }
+        }
+      ]
+    }
+  ]
+}

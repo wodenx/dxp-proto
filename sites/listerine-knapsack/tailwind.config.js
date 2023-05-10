@@ -15,4 +15,5 @@ const twConfig = { content };
 module.exports = buildTailwindConfig({
   twConfig,
   resolver: (pkgName) => require.resolve(pkgName),
+  prefer: ['@kenvue/listerine'],
 });

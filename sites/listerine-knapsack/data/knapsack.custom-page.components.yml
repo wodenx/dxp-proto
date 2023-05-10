@@ -1,0 +1,46 @@
+title: Components
+id: components
+slices:
+  - id: ks-content-block-9zdwxogIee
+    blockId: markdown-slice
+    data:
+      md:
+        - >-
+          Currently, there are four components available with several variations
+          for each one. It is also possible to add more components or variations
+          to this system, as well as documentation for each one. Below is a list
+          of the available components and their variations:
+
+
+          **Accordions** - This component allows users to organize non-essential
+          information on a page with a collapsible section that reveals its
+          content when clicked. Variations include default accordion and clean
+          accordion, and vital accordion.
+
+
+          **Buttons** - This component creates a clickable button for users to
+          interact with on the page. Variations include Primary button, Primary
+          Disabled button, Secondary and Default button.
+
+
+          **Cards** - This component creates a card with a title, description,
+          and optional image to display content in a structured and visually
+          appealing way. Variations include Default card, Hero card, and Product
+          card.
+
+
+          **Typography** - Typography in a website style guide refers to the use
+          of fonts, font sizes, and font styles to communicate the message and
+          Listerine branding of a website. Variations include Link Text, H3
+          Text.
+
+
+          This documentation provides detailed information on each component and
+          its variations, including code snippets and examples of how to use
+          them in your project.
+      columns: 1
+  - id: ks-content-block-VNWAholIgj
+    blockId: pattern-list-block
+description: >-
+  This documentation is a demonstration of some of the Listerine UI components
+  with documentation on how to use them.
