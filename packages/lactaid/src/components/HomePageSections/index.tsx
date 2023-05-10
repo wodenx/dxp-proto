@@ -40,7 +40,7 @@ const LactaidSectionProductOurFavorites = as(
 const withLactaidVideo = asVideoToken({
   Content: {
     Video: addProps({
-      src: 'https://con-na-lactaid-us-en.jnjnab12d6-dev3.jjc-devops.com/sites/lactaid_us/files/lactaid_longpourcoffee.mp4'
+      src: '/videos/lactaid_longpourcoffee.mp4',
     }),
   },
 });

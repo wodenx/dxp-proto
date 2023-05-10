@@ -45,12 +45,12 @@ const WithLactaidRewards = asRewardsToken({
     ),
     FormTextFirstName: flowHoc(
       removeClasses('2xl:w-44'),
-      addClasses('rounded border font-gotham font-light bg-white text-primary-body-copy'),
+      addClasses('rounded border border-primary-divider font-gotham font-light bg-white text-primary-body-copy'),
       as(lactaidFontSize.Base),
     ),
     FormTextEmail: flowHoc(
       removeClasses('2xl:w-44'),
-      addClasses('border md:rounded 2xl:bg-white font-gotham font-light 2xl:text-primary-body-copy 2xl:w-full'),
+      addClasses('border border-primary-divider md:rounded 2xl:bg-white font-gotham font-light 2xl:text-primary-body-copy 2xl:w-full'),
       as(lactaidFontSize.Base),
     ),
     FormButton: flowHoc(

@@ -67,10 +67,10 @@ const withLoop = asVideoToken({
 const withLactaidHomeHero = asVideoToken({
   Layout: {
     Video: 'xl:-mt-90',
-    Wrapper: 'xl:max-h-[600px] overflow-hidden',
+    Wrapper: 'xl:max-h-[600px] overflow-hidden xl:max-w-[1920px]',
   },
   Spacing: {
-    Wrapper: 'xl:mx-36'
+    Wrapper: '4xl:mx-auto'
   },
   Meta: flowHoc.meta.term('Behavior')('Home'),
 });

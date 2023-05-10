@@ -88,7 +88,7 @@ const Default = asPDPTemplateToken({
   },
   Layout: {
     ContentWrapper: 'flex flex-wrap',
-    ProductImageWrapper: 'w-full lg:w-1/2',
+    ProductImageWrapper: 'flex justify-center w-full lg:w-1/2',
     ProductDetailWrapper: 'w-full lg:w-1/2 lg:grow',
     JumpLinksWrapper: 'w-full lg:w-screen'
   },
