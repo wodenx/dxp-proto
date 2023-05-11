@@ -1,0 +1,186 @@
+{
+  "contentful_id": "oeXwOx7vJHD77B68",
+  "revision_id": 1,
+  "name": "Test Content - Product",
+  "images": [
+    {
+      "title": "Test Product",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/DSiR9UfKd8ZC9uqCu4PX4/8f905c3d3b4d6654b65a89e0ed11523d/product.png",
+        "details": {
+          "size": 12
+        },
+        "fileName": "product.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "summary": [
+    {
+      "nodeType": "text",
+      "value": "This is a plain text",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "This is a bold text",
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "This is a superscript",
+      "marks": [
+        {
+          "type": "superscript"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "hyperlink",
+      "data": {
+        "uri": "https://example.com/"
+      },
+      "content": [
+        {
+          "nodeType": "text",
+          "value": "This is a link text",
+          "marks": [],
+          "data": {}
+        }
+      ]
+    }
+  ],
+  "directions": [
+    [
+      {
+        "nodeType": "text",
+        "value": "G 72 1JX 2PSj kM 3uVDD5O 4GCS6 Cd3911ZY kbj 206m 727 V04 Dj93 A6 4 s TL7OwN",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "nodeType": "text",
+        "value": "e8 wO w cgk2 e OU10C8 7m2k6 y 3Zs1 9VK Q0yl5 7YN7T 3 9 5k t7poo 9IsEpY 4D 9",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "additional_info": [
+    [
+      {
+        "nodeType": "text",
+        "value": "1 7N4SM  R8pug71 d Ml 1z i 5rd8r 9jn8 Q4RVH n8 1A G1 0 H 6m1G 4 j9 L Cr9j q",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Test Content - Active Ingredient",
+      "inactive_active": "Active"
+    },
+    {
+      "title": "Test Content - Inactive Ingredient",
+      "inactive_active": "Inactive"
+    }
+  ],
+  "sku": "7ajLS7e9vfmro8iod9Y4aiC2DCr52PO411950QT6cgTw6aAeRrm7noMu1CGk6moh",
+  "upc": "Da9Su676yaER540p1t94HH6dJww38ph38zi5vIEB45PI7i08Ie2lWW0rr95aEtxO",
+  "ean": "DvRC64Cq7BJEGKax607Rbd7M2sPIY2pgz7vES8v5a7CZnmwgvxz40k395p3q9KN8",
+  "faq": [
+    {
+      "question": "Test Content - FAQ Question",
+      "answer": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "paragraph",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "text",
+                "value": "26Dzf9UW9 M tcmW BvnB8859Dqt0 oAmbeSwW b X1lr91pFgC gZdL75Tqwb XH Q9O3 kdId",
+                "marks": [],
+                "data": {}
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "collection": {
+    "title": "Test Content - Product Collection",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "5c9cxxzSgjO1fwlUjBGysn",
+        "type": "Asset",
+        "createdAt": "2023-05-11T03:09:55.598Z",
+        "updatedAt": "2023-05-11T03:09:55.598Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Test Product Collection",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/5c9cxxzSgjO1fwlUjBGysn/3f9cf35832aaff45fc1f0b709b40d3a0/product-collection.png",
+          "details": {
+            "size": 12
+          },
+          "fileName": "product-collection.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "cta_text": "1uz az  y PVBZU 6gE 445uV8  arq M HY9Oe7hf0C1 735w5i pj0Ek  E ZJ"
+  }
+}
