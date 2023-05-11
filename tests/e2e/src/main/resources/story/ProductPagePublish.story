@@ -38,7 +38,7 @@ When I move entries item with `${productCollectionData[0].id}` id to published s
 When I move entries item with `${faqData[0].id}` id to published state
 When I move entries item with `${productData[0].id}` id to published state
 !-- Wait deployment on GitHub
-When I wait for presence of element by `$[?(@.name == "${productData[0].slug}")]` with `PT20S` polling interval retrying 30 times
+When I wait for presence of element by `$[?(@.name == "${productData[0].slug}")]` with `PT20S` polling interval retrying 45 times
 |step                                          |
 |When I request list of available product pages|
 !-- Wait availability on Site
@@ -102,10 +102,12 @@ Meta: @testCaseId JEPZ-192
       @requirementId JEPZ-64
 Given I am on page with URL `${app-url}/styleguide/section`
 Given I initialize scenario variable `collectionTitle` with value `${productCollectionData[0].title}`
-When I change context to element located by `xpath(//*[@data-layer-region='List:Item' and .//*[text()='${collectionTitle}']])`
+When I change context to element located by `xpath(//*[@data-layer-region="Section:Wrapper" and contains(string(), 'Default collection section')])`
+When I scroll context to right edge
+When I change context to element located by `xpath(//*[@data-layer-region='List:Item' and .//*[text()='${collectionTitle}']])->filter.index(1)`
 When I run visual test with Applitools using:
-|batchName    |baselineName                 |action          |elementsToIgnore                                      |
-|${batch-name}|Product Category Section Card|${visual-action}|By.xpath(.//*[@data-layer-region="Card:TitleWrapper"])|
+|batchName    |baselineName                 |action          |
+|${batch-name}|Product Category Section Card|${visual-action}|
 !-- Take screenshot for debugging
 When I take screenshot
 When I close browser
