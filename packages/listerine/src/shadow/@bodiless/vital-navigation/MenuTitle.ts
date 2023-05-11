@@ -13,7 +13,8 @@
  */
 
 import { vitalMenuTitleBase, asMenuTitleToken } from '@bodiless/vital-navigation';
-import { addProps } from '@bodiless/fclasses';
+import { addClasses, addProps, flowIf } from '@bodiless/fclasses';
+import { useIsBurgerMenuVisible } from '@bodiless/navigation';
 // import { listerineTypography } from '../../../components/Typography';
 
 const Default = asMenuTitleToken(vitalMenuTitleBase.Default, {
@@ -23,7 +24,7 @@ const Default = asMenuTitleToken(vitalMenuTitleBase.Default, {
   Theme: {
     // NOTE: Applying styling to the "Link" slot applies selected classes
     // to the "Title" slot and vice versa...
-    Link: 'pl-1 pr-1',
+    Link: flowIf(useIsBurgerMenuVisible)(addClasses('pl-1 pr-1')),
   },
 });
 
