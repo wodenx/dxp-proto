@@ -1,7 +1,7 @@
 {
   "contentful_id": "4sBlRucCv54vLYdzvtI8g3",
-  "revision_id": 1,
-  "name": "LACTAID® Lactose-Free Chocolate Chip Cookie Dough Ice Cream",
+  "revision_id": 2,
+  "name": "LACTAID® Lactose-Free Yummy Chocolate Chip Cookie Dough Ice Cream",
   "images": [
     {
       "title": "lactaid icecream-cookiedough1",
@@ -20,5 +20,52 @@
       }
     }
   ],
-  "faq": []
+  "faq": [],
+  "collection": {
+    "title": "On The Go",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "2xqd4D3gSol5KQYljLPXAk",
+        "type": "Asset",
+        "createdAt": "2023-04-26T23:34:00.423Z",
+        "updatedAt": "2023-05-01T00:27:57.593Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 2,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "onthego",
+        "description": "",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/2xqd4D3gSol5KQYljLPXAk/99e00182c635ff2ed5555d122af3b605/onthego.webp",
+          "details": {
+            "size": 13718,
+            "image": {
+              "width": 342,
+              "height": 193
+            }
+          },
+          "fileName": "onthego.webp",
+          "contentType": "image/webp"
+        }
+      }
+    },
+    "cta_text": "All on the Go Products"
+  }
 }
