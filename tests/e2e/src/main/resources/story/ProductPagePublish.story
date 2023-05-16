@@ -90,6 +90,15 @@ When I run visual test with Applitools using:
 When I close browser
 
 
+Scenario: Lactaid - Check styling on new Product Page
+Meta: @xray.skip-export
+Given I am on page with URL `${app-url-lactaid}/products/${productData[0].slug}`
+When I run visual test with Applitools using:
+|batchName    |baselineName                      |action          |
+|${batch-name}|Lactaid - New Product Page Desktop|${visual-action}|
+When I close browser
+
+
 Scenario: Check links and images on PDP
 Meta: @xray.skip-export
 Then all resources by selector `a[href],img[src]` are valid on:
@@ -178,6 +187,15 @@ When I change window size to `${mobile-resolution}`
 When I run visual test with Applitools using:
 |batchName    |baselineName               |action          |
 |${batch-name}|Updated Product Page Mobile|${visual-action}|
+When I close browser
+
+
+Scenario: Lactaid - Check styling on updated Product Page
+Meta: @xray.skip-export
+Given I am on page with URL `${app-url-lactaid}/products/${productData[0].slug}`
+When I run visual test with Applitools using:
+|batchName    |baselineName                          |action          |
+|${batch-name}|Lactaid - Updated Product Page Desktop|${visual-action}|
 When I close browser
 
 
