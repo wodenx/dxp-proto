@@ -1,127 +1,24 @@
 {
   "contentful_id": "Y6LkxB7mtZ688OZs",
-  "revision_id": 1,
-  "name": "Test Content - Product",
+  "revision_id": 2,
+  "name": "Test Content - Product Updated",
   "images": [
     {
-      "title": "Test Product",
+      "title": "Test Product Updated",
       "file": {
-        "url": "//images.ctfassets.net/o0k7u0i6hu7n/7DEBQLu2CP8S2hxRvvQeHp/39893cee0618215e9fce623b44e86d0b/product.png",
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/5llZ8MKakKInGw9RMzNUhp/0f658028ae10ea5a206f5c44cd005313/product-updated.png",
         "details": {
-          "size": 16480,
+          "size": 23410,
           "image": {
-            "width": 667,
+            "width": 675,
             "height": 500
           }
         },
-        "fileName": "product.png",
+        "fileName": "product-updated.png",
         "contentType": "image/png"
       }
     }
   ],
-  "summary": [
-    {
-      "nodeType": "text",
-      "value": "This is a plain text",
-      "marks": [],
-      "data": {}
-    },
-    {
-      "nodeType": "text",
-      "value": " ",
-      "marks": [],
-      "data": {}
-    },
-    {
-      "nodeType": "text",
-      "value": "This is a bold text",
-      "marks": [
-        {
-          "type": "bold"
-        }
-      ],
-      "data": {}
-    },
-    {
-      "nodeType": "text",
-      "value": " ",
-      "marks": [],
-      "data": {}
-    },
-    {
-      "nodeType": "text",
-      "value": "This is a superscript",
-      "marks": [
-        {
-          "type": "superscript"
-        }
-      ],
-      "data": {}
-    },
-    {
-      "nodeType": "text",
-      "value": " ",
-      "marks": [],
-      "data": {}
-    },
-    {
-      "nodeType": "hyperlink",
-      "data": {
-        "uri": "https://example.com/"
-      },
-      "content": [
-        {
-          "nodeType": "text",
-          "value": "This is a link text",
-          "marks": [],
-          "data": {}
-        }
-      ]
-    }
-  ],
-  "directions": [
-    [
-      {
-        "nodeType": "text",
-        "value": "G 72 1JX 2PSj kM 3uVDD5O 4GCS6 Cd3911ZY kbj 206m 727 V04 Dj93 A6 4 s TL7OwN",
-        "marks": [],
-        "data": {}
-      }
-    ]
-  ],
-  "warnings": [
-    [
-      {
-        "nodeType": "text",
-        "value": "e8 wO w cgk2 e OU10C8 7m2k6 y 3Zs1 9VK Q0yl5 7YN7T 3 9 5k t7poo 9IsEpY 4D 9",
-        "marks": [],
-        "data": {}
-      }
-    ]
-  ],
-  "additional_info": [
-    [
-      {
-        "nodeType": "text",
-        "value": "1 7N4SM  R8pug71 d Ml 1z i 5rd8r 9jn8 Q4RVH n8 1A G1 0 H 6m1G 4 j9 L Cr9j q",
-        "marks": [],
-        "data": {}
-      }
-    ]
-  ],
-  "ingredients": [
-    {
-      "title": "Test Content - Active Ingredient",
-      "inactive_active": "Active"
-    },
-    {
-      "title": "Test Content - Inactive Ingredient",
-      "inactive_active": "Inactive"
-    }
-  ],
-  "sku": "Z8A5Xj47sjrHW18e4n7Mwtyqz2gn6hC8N33MitLkGZ9TlXHk11VnFg51l75t7s5Q",
-  "upc": "8fS2qoN3uksV2V1JiV5wkIF3neGSA618gKy3wCbyA0oXrVwh30g8rW5d84vlrLSL",
-  "ean": "rlkv8Dcto45Hq1t1D405YxUXG6c0qbZWI38eNe9051UgwOMK8KLkK5674o0F6rjL",
   "faq": [
     {
       "question": "Test Content - FAQ Question",
@@ -144,51 +41,5 @@
         ]
       }
     }
-  ],
-  "collection": {
-    "title": "Test Content - Product Collection",
-    "image": {
-      "metadata": {
-        "tags": []
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "o0k7u0i6hu7n"
-          }
-        },
-        "id": "1MhrywHpwifLcxvESCzHuZ",
-        "type": "Asset",
-        "createdAt": "2023-05-17T03:09:34.901Z",
-        "updatedAt": "2023-05-17T03:09:34.901Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "revision": 1,
-        "locale": "en-US"
-      },
-      "fields": {
-        "title": "Test Product Collection",
-        "file": {
-          "url": "//images.ctfassets.net/o0k7u0i6hu7n/1MhrywHpwifLcxvESCzHuZ/417a4c8775fcaadfd685a78493ad293f/product-collection.png",
-          "details": {
-            "size": 21727,
-            "image": {
-              "width": 667,
-              "height": 500
-            }
-          },
-          "fileName": "product-collection.png",
-          "contentType": "image/png"
-        }
-      }
-    },
-    "cta_text": "Gw09Rib 7EbqkeabvZ5HW S X OrK6Sf 78l   r77a 3 M7 z7p39n8 o 418q2"
-  }
+  ]
 }
