@@ -1,9 +1,0 @@
-Composite: When I perform cross viewport visual test with `$testName` name
-When I change window size to `${desktop-resolution}`
-When I run visual test with Applitools using:
-|batchName    |baselineName      |action          |
-|${batch-name}|<testName> Desktop|${visual-action}|
-When I change window size to `${mobile-resolution}`
-When I run visual test with Applitools using:
-|batchName    |baselineName     |action          |elementsToIgnore                                               |
-|${batch-name}|<testName> Mobile|${visual-action}|By.xpath(//*[@data-layer-region="Curator Section:FeedWrapper"])|

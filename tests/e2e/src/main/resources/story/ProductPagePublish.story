@@ -79,14 +79,10 @@ When I reset context
 Scenario: Check styling on new Product Page
 Meta: @testCaseId JEPZ-268
       @requirementId JEPZ-73
-When I change window size to `${desktop-resolution}`
-When I run visual test with Applitools using:
-|batchName    |baselineName            |action          |
-|${batch-name}|New Product Page Desktop|${visual-action}|
-When I change window size to `${mobile-resolution}`
-When I run visual test with Applitools using:
-|batchName    |baselineName           |action          |
-|${batch-name}|New Product Page Mobile|${visual-action}|
+When I run visual test with Applitools UFG using:
+|batchName    |baselineName    |action          |
+|${batch-name}|New Product Page|${visual-action}|
+ and matrix:/data/render.table
 When I close browser
 
 
@@ -179,14 +175,10 @@ Scenario: Check styling on updated Product Page
 Meta: @xray.skip-export
       @testCaseId JEPZ-268
       @requirementId JEPZ-73
-When I change window size to `${desktop-resolution}`
-When I run visual test with Applitools using:
-|batchName    |baselineName                |action          |
-|${batch-name}|Updated Product Page Desktop|${visual-action}|
-When I change window size to `${mobile-resolution}`
-When I run visual test with Applitools using:
-|batchName    |baselineName               |action          |
-|${batch-name}|Updated Product Page Mobile|${visual-action}|
+When I run visual test with Applitools UFG using:
+|batchName    |baselineName        |action          |
+|${batch-name}|Updated Product Page|${visual-action}|
+ and matrix:/data/render.table
 When I close browser
 
 
