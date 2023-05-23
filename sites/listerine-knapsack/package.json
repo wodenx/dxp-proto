@@ -16,7 +16,7 @@
     "build": "npm run build:knapsack",
     "build:knapsack": "npm run ks:build",
     "clean": "rm -rf ./lib",
-    "ks:build": "NODE_ENV=production knapsack build",
+    "ks:build": "knapsack build",
     "start": "knapsack start",
     "serve": "NODE_ENV=production knapsack serve"
   },
