@@ -80,8 +80,8 @@ Scenario: Check styling on new Product Page
 Meta: @testCaseId JEPZ-268
       @requirementId JEPZ-73
 When I run visual test with Applitools UFG using:
-|batchName    |baselineName    |action          |
-|${batch-name}|New Product Page|${visual-action}|
+|batchName    |baselineName    |action          |accessibilityStandard    |
+|${batch-name}|New Product Page|${visual-action}|${accessibility-standard}|
  and matrix:/data/render.table
 When I close browser
 

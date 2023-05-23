@@ -1,26 +1,34 @@
 {
-    "126": {
-        "type": "Internal",
-        "assertionPattern": ".*HTTP response status code \\[Expected: <404> Actual: <200>\\]",
-        "storyPattern": "ProductPagePublish",
-        "scenarioPattern": "Unpublish content and check PDP is not available on the site",
-        "stepPattern": "When I wait for response code `404` for `.+?` duration retrying .+? times.*/products/.+",
-        "description": "Published products remain visible on web site even after unpublishing in Contentful"
-    },
-    "vividus-uri-escape-to-fix": {
-        "type": "Internal",
-        "assertionPattern": ".*Element by selector .*card-corner.*full has href/src attribute with invalid URL.*",
-        "storyPattern": "SiteCrawler",
-        "scenarioPattern": ".*Check link on site page.*",
-        "stepPattern": "Then all resources by selector `a\\[href\\],img\\[src\\]` are valid on:.*",
-        "description": "VIVIDUS resource checker does not support unescaped spaces in URLs e.g. /images/pages/styleguide/card/4bc90d7fde30ac4a16c295340c45958d/Rectangle 14974.png"
-      },
-      "known-broken-links": {
-        "type": "Internal",
-        "assertionPattern": ".*Status code for.*\/(where-to-buy|images|accordion|video|buttons).*is 404.*",
-        "storyPattern": ".*",
-        "scenarioPattern": ".*(Check link on site page|Check links and images on PDP).*",
-        "stepPattern": "Then all resources by selector `a\\[href\\],img\\[src\\]` are valid on:.*",
-        "description": "Known 404 links"
-      }
+  "126": {
+    "type": "Internal",
+    "assertionPattern": ".*HTTP response status code \\[Expected: <404> Actual: <200>\\]",
+    "storyPattern": "ProductPagePublish",
+    "scenarioPattern": "Unpublish content and check PDP is not available on the site",
+    "stepPattern": "When I wait for response code `404` for `.+?` duration retrying .+? times.*/products/.+",
+    "description": "Published products remain visible on web site even after unpublishing in Contentful"
+  },
+  "vividus-uri-escape-to-fix": {
+    "type": "Internal",
+    "assertionPattern": ".*Element by selector .*card-corner.*full has href/src attribute with invalid URL.*",
+    "storyPattern": "SiteCrawler",
+    "scenarioPattern": ".*Check link on site page.*",
+    "stepPattern": "Then all resources by selector `a\\[href\\],img\\[src\\]` are valid on:.*",
+    "description": "VIVIDUS resource checker does not support unescaped spaces in URLs e.g. /images/pages/styleguide/card/4bc90d7fde30ac4a16c295340c45958d/Rectangle 14974.png"
+  },
+  "known-broken-links": {
+    "type": "Internal",
+    "assertionPattern": ".*Status code for.*\/(where-to-buy|images|accordion|video|buttons).*is 404.*",
+    "storyPattern": ".*",
+    "scenarioPattern": ".*(Check link on site page|Check links and images on PDP).*",
+    "stepPattern": "Then all resources by selector `a\\[href\\],img\\[src\\]` are valid on:.*",
+    "description": "Known 404 links"
+  },
+  "accessibility": {
+    "type": "Internal",
+    "assertionPattern": ".*WCAG 2.1 - AA accessibility check for test:.*",
+    "storyPattern": ".*",
+    "scenarioPattern": ".*Check styling.*",
+    "stepPattern": "When I run visual test with Applitools UFG using:.*",
+    "description": "Applitools Contrast Advisor"
+  }
 }
