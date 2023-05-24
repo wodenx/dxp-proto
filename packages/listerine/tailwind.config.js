@@ -4,6 +4,8 @@ const plugin = require('tailwindcss/plugin');
 
 const resolver = (pkgName) => require.resolve(pkgName);
 
+const { color } = require('./assets/design-tokens.nested.json');
+
 const twConfig = {
   content: ['./lib/**/!(*.d).{ts,js,jsx,tsx}'],
   theme: {
@@ -15,32 +17,7 @@ const twConfig = {
       '2xl': '1440px', // => @media (min-width: 1440px) { ... }
       '3xl': '1600px', // => @media (min-width: 1600px) { ... }
     },
-    colors: {
-      primary: {
-        brand: '#105367',
-        'card-bg': '#EFF8FA',
-        'category-card': '#9ad3dc',
-        'page-bg': '#F8FFFF',
-        divider: '#D8D8D8',
-        'body-copy': '#222222',
-        'header-copy': '#333333',
-      },
-      secondary: {
-        border: '#DBE8EB',
-        eyebrow: '#535353',
-        'footer-bg': '#11647A',
-        'footer-bg-signup': '#105367',
-        'utility-menu': '#11647A',
-      },
-      interactive: {
-        primary: '#27D8A3',
-        'primary-active': '#007A53',
-        'primary-hover': '#006042',
-        'primary-selected': '#006042',
-        secondary: '#212121',
-        'tertiary-hover': '#27D8A3',
-      },
-    },
+    colors: color,
     extend: {
       spacing: {
         4.5: '1.125rem',

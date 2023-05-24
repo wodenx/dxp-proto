@@ -48,6 +48,12 @@
       "parentId": "docs",
       "id": "listerine-colors",
       "name": "Listerine Colors"
+    },
+    {
+      "path": "/pages/color",
+      "parentId": "components",
+      "id": "color",
+      "name": "Color"
     }
   ]
 }

@@ -14,6 +14,10 @@ lerna-debug.log
 packages/**/lib
 !packages/headless-chrome-crawler/lib
 packages/**/bodiless.index.css
+packages/listerine/assets/design-tokens.d.ts
+packages/listerine/assets/design-tokens.js
+packages/listerine/assets/design-tokens.json
+packages/listerine/assets/design-tokens.cjs
 packages/**/.turbo
 sites/**/.turbo
 sites/**/lib

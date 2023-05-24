@@ -2,62 +2,62 @@
   "color": {
     "primary": {
       "brand": {
-        "value": "#105367"
+        "value": "#580000"
       },
       "card-bg": {
-        "value": "#EFF8FA"
+        "value": "#8b0300"
       },
       "category-card": {
-        "value": "#9ad3dc"
+        "value": "#ff1f1f"
       },
       "page-bg": {
-        "value": "#F8FFFF"
+        "value": "#c71313"
       },
       "divider": {
-        "value": "#D8D8D8"
+        "value": "#ffc3c3"
       },
       "body-copy": {
-        "value": "#222222"
-      },
-      "header-copy": {
-        "value": "#333333"
+        "value": "#ffc3c3"
       }
     },
     "secondary": {
       "border": {
-        "value": "#DBE8EB"
+        "value": "#485000"
       },
       "eyebrow": {
-        "value": "#535353"
+        "value": "#654987"
       },
       "footer-bg": {
-        "value": "#11647A"
+        "value": "#984563"
       },
       "footer-bg-signup": {
-        "value": "#105367"
+        "value": "#a98413"
       },
       "utility-menu": {
-        "value": "#11647A"
-      }
+        "value": "#654654"
+      },
+      "body-copy": {
+        "value": "#456987"
+      }      
     },
     "interactive": {
       "primary": {
-        "value": "#27D8A3"
+        "value": "#32458a"
       },
       "primary-active": {
-        "value": "#007A53"
+        "value": "#456456"
       },
       "primary-hover": {
-        "value": "#006042"
+        "value": "#654987"
       },
       "primary-selected": {
-        "value": "#006042"
+        "value": "#159159"
       },
       "secondary": {
-        "value": "#212121"
+        "value": "#eeffee"
       },
       "tertiary-hover": {
-        "value": "#27D8A3"
+        "value": "#ff9999"
       }
     }
   }

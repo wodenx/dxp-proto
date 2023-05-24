@@ -10,6 +10,16 @@ module.exports = configureKnapsack({
   public: join(__dirname, 'ks-public/'),
   data: './data',
   version,
+  designTokens: {
+    createCodeSnippet: (token) => `$${token.name}`,
+    // srcFilePath: '/data/knapsack.design-tokens.json',
+    distDir: '../../packages/listerine/assets',
+    targets: {
+      js: {
+        enabled: true,
+      },
+    },
+  },
   templateRenderers: [
     new KnapsackBodilessRenderer({
       demoWrapperPath,

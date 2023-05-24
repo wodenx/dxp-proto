@@ -1,0 +1,12 @@
+title: Color
+id: color
+slices:
+  - id: ks-content-block-jkkEM-B3LH
+    blockId: design-token-slice
+    data:
+      tokens:
+        tags: []
+        category: ''
+        name: ''
+      demo:
+        id: color-swatch
