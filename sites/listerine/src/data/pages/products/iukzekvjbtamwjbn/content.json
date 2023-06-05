@@ -1,0 +1,194 @@
+{
+  "contentful_id": "Wbr90dhzYzCc05LR",
+  "revision_id": 1,
+  "name": "Test Content - Product",
+  "images": [
+    {
+      "title": "Test Product",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/3afej7wmcvSHTPWelneq3W/684a01ae51760292cde3bb6d610d55b0/product.png",
+        "details": {
+          "size": 16480,
+          "image": {
+            "width": 667,
+            "height": 500
+          }
+        },
+        "fileName": "product.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "summary": [
+    {
+      "nodeType": "text",
+      "value": "This is a plain text",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "This is a bold text",
+      "marks": [
+        {
+          "type": "bold"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": "This is a superscript",
+      "marks": [
+        {
+          "type": "superscript"
+        }
+      ],
+      "data": {}
+    },
+    {
+      "nodeType": "text",
+      "value": " ",
+      "marks": [],
+      "data": {}
+    },
+    {
+      "nodeType": "hyperlink",
+      "data": {
+        "uri": "https://example.com/"
+      },
+      "content": [
+        {
+          "nodeType": "text",
+          "value": "This is a link text",
+          "marks": [],
+          "data": {}
+        }
+      ]
+    }
+  ],
+  "directions": [
+    [
+      {
+        "nodeType": "text",
+        "value": "G 72 1JX 2PSj kM 3uVDD5O 4GCS6 Cd3911ZY kbj 206m 727 V04 Dj93 A6 4 s TL7OwN",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "nodeType": "text",
+        "value": "e8 wO w cgk2 e OU10C8 7m2k6 y 3Zs1 9VK Q0yl5 7YN7T 3 9 5k t7poo 9IsEpY 4D 9",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "additional_info": [
+    [
+      {
+        "nodeType": "text",
+        "value": "1 7N4SM  R8pug71 d Ml 1z i 5rd8r 9jn8 Q4RVH n8 1A G1 0 H 6m1G 4 j9 L Cr9j q",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Test Content - Active Ingredient",
+      "inactive_active": "Active"
+    },
+    {
+      "title": "Test Content - Inactive Ingredient",
+      "inactive_active": "Inactive"
+    }
+  ],
+  "sku": "N9Cs152S67ZmErt8vCA8303A6yn3887Cxt8eqc5PkmHrzKNUDrG741817VTqrV3U",
+  "upc": "Vxz35Cj3UYXuM19QYbkNp99VElp46G7N4OhGMDPsl66SvYf9VYppew37sbx102ip",
+  "ean": "p7dhmzeHdO8jdVjtd8O2f7I8km5HV0Uz9zGoFaJ50ytc51zdh4u7bY9l0U0t3O6F",
+  "faq": [
+    {
+      "question": "Test Content - FAQ Question",
+      "answer": {
+        "nodeType": "document",
+        "data": {},
+        "content": [
+          {
+            "nodeType": "paragraph",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "text",
+                "value": "26Dzf9UW9 M tcmW BvnB8859Dqt0 oAmbeSwW b X1lr91pFgC gZdL75Tqwb XH Q9O3 kdId",
+                "marks": [],
+                "data": {}
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "collection": {
+    "title": "Test Content - Product Collection",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "7FToIu1ruqXswnrZldYUFW",
+        "type": "Asset",
+        "createdAt": "2023-06-05T12:59:25.134Z",
+        "updatedAt": "2023-06-05T12:59:25.134Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Test Product Collection",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/7FToIu1ruqXswnrZldYUFW/9e0090e026d28a77c9a8474253beb9aa/product-collection.png",
+          "details": {
+            "size": 21727,
+            "image": {
+              "width": 667,
+              "height": 500
+            }
+          },
+          "fileName": "product-collection.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "cta_text": "Ky1NY 1daU11q dF e9e 56H80E 47 2   0F oAx9H82  2vg6XcO 5TKV u Qt"
+  }
+}
