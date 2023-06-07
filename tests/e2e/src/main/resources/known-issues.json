@@ -10,7 +10,7 @@
   "vividus-uri-escape-to-fix": {
     "type": "Internal",
     "assertionPattern": ".*Element by selector .*card-corner.*full has href/src attribute with invalid URL.*",
-    "storyPattern": "SiteCrawler",
+    "storyPattern": "LinkChecker",
     "scenarioPattern": ".*Check link on site page.*",
     "stepPattern": "Then all resources by selector `a\\[href\\],img\\[src\\]` are valid on:.*",
     "description": "VIVIDUS resource checker does not support unescaped spaces in URLs e.g. /images/pages/styleguide/card/4bc90d7fde30ac4a16c295340c45958d/Rectangle 14974.png"
@@ -30,5 +30,13 @@
     "scenarioPattern": ".*Check styling.*",
     "stepPattern": "When I run visual test with Applitools UFG using:.*",
     "description": "Applitools Contrast Advisor"
+  },
+  "performance": {
+    "type": "Internal",
+    "assertionPattern": ".*",
+    "storyPattern": ".*",
+    "scenarioPattern": ".*Check performance on site page.*",
+    "stepPattern": "When I perform Lighthouse.*",
+    "description": "Lighthouse"
   }
 }

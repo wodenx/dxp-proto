@@ -9,7 +9,7 @@ apply from: "${buildSystemPath}/vividus-test-project.gradle"
 runStories.treatKnownIssuesOnlyAsPassed = true
 
 ext {
-    vividusVersion = '0.5.10-SNAPSHOT'
+    vividusVersion = '0.5.11-SNAPSHOT'
 }
 
 configurations {
@@ -25,6 +25,7 @@ dependencies {
     implementation(group: 'org.vividus', name: 'vividus-plugin-visual', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-web-app-to-rest-api', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-applitools', version: vividusVersion)
+    implementation(group: 'org.vividus', name: 'vividus-plugin-lighthouse', version: vividusVersion)
 
     // implementation('dxp.prototype:dxp-prototype-tests:0.1.0-SNAPSHOT:common')
 
