@@ -98,7 +98,7 @@ jobs:
                                -Pvividus.variables.github-token=${TEST_GITHUB_TOKEN} \
                                -Pvividus.selenium.grid.username=${SAUCELABS_USERNAME} \
                                -Pvividus.selenium.grid.password=${SAUCELABS_PASSWORD} \
-                               -Pvividus.lighthouse.access-token=${LH_ACCESS_TOKEN} \
+                               -Pvividus.lighthouse.api-key=${LH_ACCESS_TOKEN} \
                                -Pvividus.configuration-set.active=${TEST_CONFIGURATION:-stage} \
                                -Pvividus.ui.visual.applitools.execute-api-key=${APPLITOOLS_API_KEY} \
                                -Pvividus.ui.visual.applitools.read-api-key=${APPLITOOLS_API_KEY} \

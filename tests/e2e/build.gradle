@@ -26,6 +26,7 @@ dependencies {
     implementation(group: 'org.vividus', name: 'vividus-plugin-web-app-to-rest-api', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-applitools', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-lighthouse', version: vividusVersion)
+    implementation(group: 'org.vividus', name: 'vividus-plugin-accessibility', version: vividusVersion)
 
     // implementation('dxp.prototype:dxp-prototype-tests:0.1.0-SNAPSHOT:common')
 

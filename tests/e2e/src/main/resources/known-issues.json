@@ -38,5 +38,13 @@
     "scenarioPattern": ".*Check performance on site page.*",
     "stepPattern": "When I perform Lighthouse.*",
     "description": "Lighthouse"
+  },
+  "a11y": {
+    "type": "Internal",
+    "assertionPattern": ".*",
+    "storyPattern": ".*",
+    "scenarioPattern": ".*Check accessibility on site page.*",
+    "stepPattern": "When I perform accessibility scan.*",
+    "description": "Accessibility"
   }
 }
