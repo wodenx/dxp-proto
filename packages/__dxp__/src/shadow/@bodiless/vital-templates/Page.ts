@@ -1,6 +1,7 @@
+import { on } from '@bodiless/fclasses';
 import { withLanguages } from '@bodiless/i18n';
 import { asFluidToken } from '@bodiless/vital-elements';
-import { vitalPageBase } from '@bodiless/vital-templates';
+import { PDPTemplateClean, vitalPDPTemplate, vitalPageBase } from '@bodiless/vital-templates';
 
 const Default = asFluidToken(vitalPageBase.Default, {
   Core: {
@@ -16,6 +17,9 @@ const Default = asFluidToken(vitalPageBase.Default, {
       },
     ]),
   },
+  Components: {
+    PDP: on(PDPTemplateClean)(vitalPDPTemplate.Default),
+  }
 });
 
 const vitalPage: typeof vitalPageBase = {

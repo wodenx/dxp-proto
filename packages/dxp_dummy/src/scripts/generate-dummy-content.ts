@@ -51,9 +51,9 @@ type Args = {
 
 const args: Args = {
   destination: process.env.DXP_GENERATED_CONTENT_DESTINATION || resolve('./src/data'),
-  staticPath: `./${process.env.BODILESS_BACKEND_STATIC_PATH || resolve('./static')}`,
+  staticPath: resolve(`./${process.env.BODILESS_BACKEND_STATIC_PATH || './static'}`),
   clearData: process.env.BODILESS_BACKEND_CLEAR_DATA || true,
-  numberOfPages: +(process.env.DXP_GENERATED_CONTENT_NUMBER_OF_PAGES || 10),
+  numberOfPages: +(process.env.DXP_GENERATED_CONTENT_NUMBER_OF_PAGES || 3),
 };
 
 const castingArgs: Args = {
@@ -149,6 +149,7 @@ const downloadImage = async ({
   if (!existsSync(dirname(destination))) {
     mkdirSync(dirname(destination), {recursive: true});
   }
+  // console.log('d', destination);
   response.data.pipe(createWriteStream(destination))
     .on('error', (e: any) => console.log(e.statusCode));
 };
