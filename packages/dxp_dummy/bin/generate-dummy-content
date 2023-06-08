@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+
+const dxpDummyContent = require('../lib/scripts/generate-dummy-content');

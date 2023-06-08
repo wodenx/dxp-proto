@@ -1,0 +1,44 @@
+{
+  "name": "@dxp/dummy",
+  "sideEffects": false,
+  "version": "0.0.0",
+  "description": "",
+  "author": "Marco Pagliarulo <mpaglia1@its.jnj.com>",
+  "license": "Apache-2.0",
+  "private": true,
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
+  "bin": {
+    "generate-dummy-content": "./bin/generate-dummy-content"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dxp-prototype/dxp-proto.git"
+  },
+  "scripts": {
+    "build": "run-p build:lib",
+    "build:lib": "tsc -p ./tsconfig.json",
+    "build:watch": "npm run build:lib -- --watch",
+    "clean": "rimraf \"lib/*\" && rimraf tsconfig.tsbuildinfo",
+    "start": "npm run build:watch"
+  },
+  "dependencies": {
+    "lorem-ipsum": "^2.0.8",
+    "fast-glob": "^3.2.12",
+    "lodash": "^4.17.19",
+    "fastq": "^1.15.0",
+    "slate": "^0.71.0",
+    "slate-hyperscript": "^0.67.0",
+    "jsdom": "^21.1.0",
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.0",
+    "@types/uuid": "^3.4.4"
+  }
+}
