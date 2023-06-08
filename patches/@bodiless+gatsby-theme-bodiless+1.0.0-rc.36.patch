@@ -1,0 +1,13 @@
+diff --git a/node_modules/@bodiless/gatsby-theme-bodiless/cjs/dist/fsLogHandler.js b/node_modules/@bodiless/gatsby-theme-bodiless/cjs/dist/fsLogHandler.js
+index 69a4c92..3903094 100644
+--- a/node_modules/@bodiless/gatsby-theme-bodiless/cjs/dist/fsLogHandler.js
++++ b/node_modules/@bodiless/gatsby-theme-bodiless/cjs/dist/fsLogHandler.js
+@@ -34,7 +34,7 @@ var flush = function (message) {
+         throw new Error('There is an error found during log flushing');
+     }
+ };
+-exports.flush = flush;
++exports.flush = () => null;
+ var validate = function () {
+     // eslint-disable-next-line no-useless-catch
+     try {
