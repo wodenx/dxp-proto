@@ -14,13 +14,13 @@ const FooterModel: Model = {
     {
       name: 'copyright',
       label: 'Copyright',
-      type: 'text',
+      type: 'markdown',
       default: 'Default copyright text...',
     },
     {
       name: 'disclaimer',
       label: 'Disclaimer',
-      type: 'text',
+      type: 'markdown',
       default: 'Default disclaimer text...',
     },
   ],

@@ -1,0 +1,59 @@
+{
+  "primary": [],
+  "secondary": [
+    {
+      "id": "docs",
+      "name": "Docs",
+      "path": "",
+      "parentId": "root"
+    },
+    {
+      "id": "listerine-knapsack",
+      "name": "Listerine Knapsack",
+      "path": "/pages/listerine-knapsack",
+      "parentId": "docs"
+    },
+    {
+      "id": "components",
+      "name": "Components",
+      "path": "/pages/components",
+      "parentId": "root"
+    },
+    {
+      "id": "accordions",
+      "name": "Accordions",
+      "path": "/pattern/accordions",
+      "parentId": "components"
+    },
+    {
+      "id": "button",
+      "name": "Button",
+      "path": "/pattern/button",
+      "parentId": "components"
+    },
+    {
+      "id": "cards",
+      "name": "Cards",
+      "path": "/pattern/cards",
+      "parentId": "components"
+    },
+    {
+      "id": "typography",
+      "name": "Links",
+      "path": "/pattern/typography",
+      "parentId": "components"
+    },
+    {
+      "path": "/pages/listerine-colors",
+      "parentId": "docs",
+      "id": "listerine-colors",
+      "name": "Listerine Colors"
+    },
+    {
+      "path": "/pages/color",
+      "parentId": "components",
+      "id": "color",
+      "name": "Color"
+    }
+  ]
+}

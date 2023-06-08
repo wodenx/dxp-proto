@@ -1,0 +1,119 @@
+{
+  "id": "button",
+  "title": "Buttons",
+  "description": "Examples of Listerine Buttons. This component creates a clickable button for users to interact with on the page.",
+  "statuses": {},
+  "templates": [
+    {
+      "id": "bodiless-SdX5Fc3zFD",
+      "title": "Button Example",
+      "path": "@kenvue/listerine",
+      "alias": "knapsackButtonSpec",
+      "templateLanguageId": "bodiless",
+      "spec": {
+        "isInferred": true
+      },
+      "demosById": {
+        "main": {
+          "id": "main",
+          "title": "Default",
+          "type": "data",
+          "data": {
+            "props": {
+              "Default": true
+            },
+            "slots": {},
+            "extras": {
+              "buttontext": {
+                "text": "Default Button Text"
+              }
+            }
+          }
+        },
+        "2Azc3ywNF_": {
+          "id": "2Azc3ywNF_",
+          "title": "Primary",
+          "description": "A description",
+          "type": "data",
+          "data": {
+            "props": {
+              "Primary": true
+            },
+            "slots": {},
+            "extras": {
+              "buttontext": {
+                "text": "Primary Button Text"
+              }
+            }
+          }
+        },
+        "cK1Bp81g55": {
+          "id": "cK1Bp81g55",
+          "title": "Secondary",
+          "description": "A description",
+          "type": "data",
+          "data": {
+            "props": {
+              "Secondary": true
+            },
+            "slots": {},
+            "extras": {
+              "buttontext": {
+                "text": "Secondary Button Text"
+              }
+            }
+          }
+        },
+        "y8I6hto3yK": {
+          "id": "y8I6hto3yK",
+          "title": "Primary Disabled",
+          "description": "A description",
+          "type": "data",
+          "data": {
+            "props": {
+              "Primary": true,
+              "WithDisabled": true
+            },
+            "slots": {},
+            "extras": {
+              "buttontext": {
+                "text": "Disabled Button Text"
+              }
+            }
+          }
+        }
+      },
+      "demos": ["2Azc3ywNF_", "y8I6hto3yK", "cK1Bp81g55", "main"],
+      "slices": [],
+      "assetSetIds": ["non-editable"]
+    }
+  ],
+  "tabs": [
+    {
+      "type": "template",
+      "id": "bodiless-SdX5Fc3zFD"
+    },
+    {
+      "type": "subPage",
+      "id": "overview"
+    }
+  ],
+  "subPages": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "slices": [
+        {
+          "id": "ks-content-block-tH8IjbyB8v",
+          "blockId": "markdown-slice",
+          "data": {
+            "md": [
+              "# Listerine Button Component\n\nThe Listerine Button Component is a stylized version of the Listerine Link Component. While\nListerine Link is a generic Link component with tokens that can be combined however you choose, Listerine\nButton builds upon it, providing a sensible default combination of its generic tokens (i.e.,\nfeatures and styles), to help meet typical site-use expectations.\n\n- Provides an Editable Button component;\n- Provides Primary & Secondary Button components;\n- Provides Button with hover arrow token;\n- Uses Vital `PlainEditor` under the hood.\n\n\n### Usage\n```jsx\nimport { withNodeKey } from '@bodiless/core';\nimport { ButtonClean } from '@bodiless/vital-buttons';\nimport { listerineButtons } from '@kenvue/listerine';\n\nconst DefaultButton = as(\n  listerineButtons.Default,\n  withNodeKey('defaultbutton'),\n)(ButtonClean);\n```"
+            ],
+            "columns": 1
+          }
+        }
+      ]
+    }
+  ]
+}

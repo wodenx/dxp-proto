@@ -1,0 +1,64 @@
+{
+  "color": {
+    "primary": {
+      "brand": {
+        "value": "#105367"
+      },
+      "card-bg": {
+        "value": "#EFF8FA"
+      },
+      "category-card": {
+        "value": "#9ad3dc"
+      },
+      "page-bg": {
+        "value": "#F8FFFF"
+      },
+      "divider": {
+        "value": "#D8D8D8"
+      },
+      "body-copy": {
+        "value": "#222222"
+      },
+      "header-copy": {
+        "value": "#333333"
+      }
+    },
+    "secondary": {
+      "border": {
+        "value": "#DBE8EB"
+      },
+      "eyebrow": {
+        "value": "#535353"
+      },
+      "footer-bg": {
+        "value": "#11647A"
+      },
+      "footer-bg-signup": {
+        "value": "#105367"
+      },
+      "utility-menu": {
+        "value": "#11647A"
+      }
+    },
+    "interactive": {
+      "primary": {
+        "value": "#27D8A3"
+      },
+      "primary-active": {
+        "value": "#007A53"
+      },
+      "primary-hover": {
+        "value": "#006042"
+      },
+      "primary-selected": {
+        "value": "#006042"
+      },
+      "secondary": {
+        "value": "#212121"
+      },
+      "tertiary-hover": {
+        "value": "#27D8A3"
+      }
+    }
+  }
+}

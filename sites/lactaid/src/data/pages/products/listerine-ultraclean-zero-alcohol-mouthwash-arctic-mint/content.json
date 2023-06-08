@@ -1,0 +1,279 @@
+{
+  "contentful_id": "1D3uRLw3W0lfVEplEJMFR0",
+  "revision_id": 2,
+  "name": "LISTERINE® ULTRACLEAN® ZERO ALCOHOL TARTAR CONTROL MOUTHWASH ARCTIC MINT®",
+  "images": [
+    {
+      "title": "Ultraclean",
+      "description": "Ultraclean product",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/d7SazPfCH2mir41hIokNY/1ab623eddad9efbc91d66c5848dc9663/LIS_312547386340_US_Ultraclean_Zero_Alcohol_MW_Arctic_Mint_500ML_00000.JPEG",
+        "details": {
+          "size": 430571,
+          "image": {
+            "width": 3300,
+            "height": 3300
+          }
+        },
+        "fileName": "LIS_312547386340_US_Ultraclean_Zero_Alcohol_MW_Arctic_Mint_500ML_00000.JPEG",
+        "contentType": "image/jpeg"
+      }
+    }
+  ],
+  "summary": [
+    {
+      "data": {},
+      "marks": [],
+      "value": "When used twice daily, enjoy better oral hygiene and 24-hour tartar protection with this alcohol-free mouthwash. Featuring a less-intense Arctic Mint taste, the zero-alcohol mouth rinse kills 99.9% of germs that cause bad breath and effectively fights stain buildup to help keep naturally white teeth.",
+      "nodeType": "text"
+    }
+  ],
+  "directions": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Rinse twice a day with 2/3 fluid ounces or 20 mL (4 teaspoonfuls) for 30 seconds. \n",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "value": "Do not swallow.",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [],
+        "value": " \n",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "value": "Children 6-11 years:",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [],
+        "value": " Rinse with 10 mL for 30 seconds twice a day. \n",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [],
+        "value": "\n        \n",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "data": {},
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "value": "Keep out of reach of children. \nDo not use in children under 6 years of age. \nSupervise children over 6 years of age. \n",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [],
+        "value": "If more than used for rinsing is accidentally swallowed, get medical help or contact a Poison Control Center right away. Stop use and ask a dentist if oral irritation or any new symptoms develop \n",
+        "nodeType": "text"
+      },
+      {
+        "data": {},
+        "marks": [
+          {
+            "type": "bold"
+          }
+        ],
+        "value": "Do not use if printed band around cap is broken or missing.",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "additional_info": [
+    [
+      {
+        "nodeType": "text",
+        "value": "For comments, questions, feedback about our products or to report an adverse event or side effect from our products, please visit our ",
+        "marks": [],
+        "data": {}
+      },
+      {
+        "nodeType": "hyperlink",
+        "data": {
+          "uri": "https://www.listerine.com/contact-us#section-contact-information"
+        },
+        "content": [
+          {
+            "nodeType": "text",
+            "value": "Contact Us",
+            "marks": [],
+            "data": {}
+          }
+        ]
+      },
+      {
+        "nodeType": "text",
+        "value": " page.",
+        "marks": [],
+        "data": {}
+      }
+    ],
+    [
+      {
+        "nodeType": "text",
+        "value": "\n",
+        "marks": [],
+        "data": {}
+      },
+      {
+        "nodeType": "text",
+        "value": "\n       ",
+        "marks": [],
+        "data": {}
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Water",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sorbitol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Propylene Glycol"
+    },
+    {
+      "title": "Poloxamer 407",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Flavor",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Benzoic Acid",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Eucalyptol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Zinc Chloride",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Benzoic Acid",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sodium Benzoate",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Lauramidopropyl Betaine"
+    },
+    {
+      "title": "Methyl Salicylate"
+    },
+    {
+      "title": "Thymol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Menthol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sodium Saccharin",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sucralose",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Blue 1",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Red 33",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Green 3",
+      "inactive_active": "Inactive"
+    }
+  ],
+  "sku": "000000000523863400",
+  "upc": "00312547386340",
+  "ean": "00312547386340",
+  "faq": [],
+  "collection": {
+    "title": "Ultraclean",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "3rj0NwW4f77FWNNAsXBChy",
+        "type": "Asset",
+        "createdAt": "2023-04-25T20:28:01.256Z",
+        "updatedAt": "2023-04-25T20:28:01.256Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "listerine ultraclean Medium",
+        "description": "ultraclean collection image",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/3rj0NwW4f77FWNNAsXBChy/6b7ae69b09000b1f0f2b8f96b137ea54/listerine_ultraclean_Medium.png",
+          "details": {
+            "size": 194174,
+            "image": {
+              "width": 640,
+              "height": 257
+            }
+          },
+          "fileName": "listerine ultraclean Medium.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "cta_text": "All Ultraclean Products "
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "03e2f9e7-c937-48de-90df-cd5bcd52240d",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "HeroSecondaryButtonRightContentTop"
+    }
+  ]
+}

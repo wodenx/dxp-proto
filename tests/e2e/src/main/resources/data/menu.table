@@ -1,0 +1,8 @@
+|menuId         |submenuId             |expectedUrl    |
+|products       |mouthwash             |/mouthwash/    |
+|products       |concentrate           |/concentrate/  |
+|products       |on the go             |/on-the-go/    |
+|products       |toothpaste            |/toothpaste/   |
+|oral care      |attack plaque         |/attack-plaque/|
+|oral care      |gums &amp; gum disease|/gum-disease/  |
+|about listerine|our purpose           |/our-purpose/  |

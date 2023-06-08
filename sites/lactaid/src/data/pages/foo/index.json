@@ -1,0 +1,6 @@
+{
+    "type": "GenericTemplate",
+    "#template": "_default",
+    "main-content": "Default main content hello there you there again now",
+    "Title": "Generic Page"
+}

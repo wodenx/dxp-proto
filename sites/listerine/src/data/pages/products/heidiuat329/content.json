@@ -1,0 +1,61 @@
+{
+  "contentful_id": "Gwn1B6VKTaWjGzbA7u87F",
+  "revision_id": 7,
+  "name": "Heidi UAT 3/29 3:52 Somethitnig",
+  "images": [
+    {
+      "title": "lis 312547701525 us original antiseptic mouthwash 1l 00000-02",
+      "description": "",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/alNkBZxmh15ykvzF8At2x/d0243de531af948d0a12070e8a1e0ddc/lis_312547701525_us_original_antiseptic_mouthwash_1l_00000-02.png",
+        "details": {
+          "size": 115532,
+          "image": {
+            "width": 610,
+            "height": 610
+          }
+        },
+        "fileName": "lis_312547701525_us_original_antiseptic_mouthwash_1l_00000-02.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "summary": [
+    {
+      "data": {},
+      "marks": [],
+      "value": "heidiuat3291",
+      "nodeType": "text"
+    }
+  ],
+  "directions": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "heidiuat3292",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "additional_info": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "heidiuat3293",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Hydrated Silica"
+    }
+  ],
+  "faq": [],
+  "collection": {
+    "title": "Product collection w/o image",
+    "cta_text": "no image collection"
+  }
+}

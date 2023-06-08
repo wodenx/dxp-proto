@@ -1,0 +1,230 @@
+{
+  "contentful_id": "5JLJSAJn9wuHnoWLyP3Lg5",
+  "revision_id": 14,
+  "name": "LISTERINE® COOL MINT® ZERO MOUTHWASH CONCENTRATE REFILL PACK",
+  "images": [
+    {
+      "title": "lis 312547352352 us zero alcohol mw cnctr refill pack cool mint 1pk oob1",
+      "description": "",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/3LGsV8k0pSzQgW01xhxVYk/9d31d8a68ab36e458334af56fd896293/lis_312547352352_us_zero_alcohol_mw_cnctr_refill_pack_cool_mint_1pk_oob1.png",
+        "details": {
+          "size": 130716,
+          "image": {
+            "width": 980,
+            "height": 980
+          }
+        },
+        "fileName": "lis_312547352352_us_zero_alcohol_mw_cnctr_refill_pack_cool_mint_1pk_oob1.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "summary": [
+    {
+      "data": {},
+      "marks": [],
+      "value": "Kill 99% of bad breath germs, save money and use 60% less plastic when compared to a 500 mL bottle of LISTERINE® COOL MINT® ZERO. \r\n\r\nAlcohol free formula with a less intense minty flavor \r\n\r\nMore sustainable: 60% less plastic* and 32% fewer carbon emissions! *​*\r\n\r\nNo other alcohol-free mouthwash has been proven more effective at killing bad-breath germs\r\n\r\n#1 Dentist Recommended Brand among all mouthwash brands\r\n\r\n*compared to a 500mL bottle\r\n\r\n**compared to producing and shipping 3 x 500mL COOL MINT® Zero-alcohol products​",
+      "nodeType": "text"
+    }
+  ],
+  "directions": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "This is a concentrated product only to be used to refill a 500 mL LISTERINE® COOL MINT® ZERO Alcohol bottle with a water fill line printed on the front top label and must be diluted with water before use. If you do not have a 500 mL LISTERINE® COOL MINT® ZERO Alcohol bottle, please purchase the Starter Kit.\r\n\r\nStep 1: Start by thoroughly rinsing an empty 500 mL LISTERINE® COOL MINT® ZERO Alcohol bottle with drinkable water. Do not use soap or wash in the dishwasher.\r\n\r\nStep 2: Add room-temperature, drinkable water to the water fill line shown on the front top label of the empty bottle.\r\n\r\nStep 3: Pour one entire mouthwash concentrate into the bottle with the water. Replace cap and shake gently.\r\n\r\nStep 4: After dilution, follow the directions for use on the 500 mL LISTERINE® COOL MINT® ZERO Alcohol bottle: Rinse for 30 seconds with 20 mL (2/3 fluid ounce or 4 teaspoonfuls) morning and night. Do not swallow.\r\n\r\nDiluted product can be used for up to 3 months after dilution.",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "warnings": [
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Children under the age of 12 should not dilute or mix the concentrate refill. Dilution by children 12 years of age or older should be under the supervision of an adult. Do not use diluted product in children under 6 years of age.",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "Keep out of reach of children. If more than used for rinsing is accidentally swallowed, get medical help or contact a poison control center right away.",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "For comments, questions, feedback about our products or to report an adverse event or side effect from our products, please visit our contact us page.",
+        "nodeType": "text"
+      }
+    ],
+    [
+      {
+        "data": {},
+        "marks": [],
+        "value": "\n\n",
+        "nodeType": "text"
+      }
+    ]
+  ],
+  "ingredients": [
+    {
+      "title": "Eucalyptol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Menthol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Methyl Salicylate",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Thymol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Propylene Glycol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sodium Lauryl Sulfate",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Water",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sorbitol",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Poloxamer 407",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Green 3",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Flavor",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sucralose",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sodium Saccharin",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Benzoic Acid",
+      "inactive_active": "Inactive"
+    },
+    {
+      "title": "Sodium Benzoate",
+      "inactive_active": "Inactive"
+    }
+  ],
+  "sku": "312",
+  "upc": "978020137961",
+  "ean": "978020137962",
+  "faq": [
+    {
+      "question": "What is the question?",
+      "answer": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "answer",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      }
+    },
+    {
+      "question": "What is the question",
+      "answer": {
+        "data": {},
+        "content": [
+          {
+            "data": {},
+            "content": [
+              {
+                "data": {},
+                "marks": [],
+                "value": "This is the answer",
+                "nodeType": "text"
+              }
+            ],
+            "nodeType": "paragraph"
+          }
+        ],
+        "nodeType": "document"
+      }
+    }
+  ],
+  "collection": {
+    "title": "Concentrate",
+    "image": {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "o0k7u0i6hu7n"
+          }
+        },
+        "id": "5l3TEHucdUOeRaN4HbFnNq",
+        "type": "Asset",
+        "createdAt": "2023-03-13T13:12:39.098Z",
+        "updatedAt": "2023-05-01T00:23:55.051Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 5,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Concentrate",
+        "file": {
+          "url": "//images.ctfassets.net/o0k7u0i6hu7n/5l3TEHucdUOeRaN4HbFnNq/15ddd920abb45f73a7acb456780575d0/concentrate.webp",
+          "details": {
+            "size": 4984,
+            "image": {
+              "width": 354,
+              "height": 197
+            }
+          },
+          "fileName": "concentrate.webp",
+          "contentType": "image/webp"
+        }
+      }
+    },
+    "cta_text": "All Concentrate Products"
+  }
+}

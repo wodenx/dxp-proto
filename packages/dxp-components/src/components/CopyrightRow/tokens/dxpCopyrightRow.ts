@@ -1,7 +1,7 @@
 import { vitalCopyrightRow, asCopyrightRowToken } from '@bodiless/vital-layout';
 import { BlockEditorPlainClean } from '@bodiless/vital-editors';
 import {
-  on, extendDesign, addProps
+  on, extendDesign, addProps,
 } from '@bodiless/fclasses';
 import { asElementToken } from '@bodiless/vital-elements';
 import { dxpEditorPlain } from '../../EditorPlain';

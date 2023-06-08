@@ -1,8 +1,10 @@
 import {
-  MenuTitleClean, asMenuToken, vitalMenu
+  MenuTitleClean, asMenuToken, vitalMenu as vitalMenuBase
 } from '@bodiless/vital-navigation';
 import type { ListData } from '@bodiless/components';
-import {as, flowHoc, on} from '@bodiless/fclasses';
+import {
+  as, flowHoc, on,
+} from '@bodiless/fclasses';
 import {useNode, withDefaultContent } from '@bodiless/core';
 import { withMenuDesign } from '@bodiless/navigation';
 import { ChameleonData } from '@bodiless/components/lib/Chameleon/types';
@@ -80,20 +82,19 @@ const WithStackbitContent = asMenuToken({
 });
 
 const Footer = asMenuToken({
-  ...vitalMenu.Footer,
+  ...vitalMenuBase.Footer,
   Components: {
-    ...vitalMenu.Footer.Components,
+    ...vitalMenuBase.Footer.Components,
     Title: on(MenuTitleClean)(dxpMenuTitle.Default),
-    // _: withMenuDesign('List')(as(dxpSubMenu.Footer), withNode),
     _: withMenuDesign('List')(as(dxpSubMenu.Footer)),
   },
   Compose: {
-    ...vitalMenu.Footer.Compose,
+    ...vitalMenuBase.Footer.Compose,
     WithStackbitContent,
   },
 });
 
 export default {
-  ...vitalMenu,
+  ...vitalMenuBase,
   Footer,
 };

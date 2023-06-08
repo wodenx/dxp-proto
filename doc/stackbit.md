@@ -29,7 +29,7 @@ are thus available in the Bodiless store at node key `Page$index`.
 The pattern is for any component to use the data at the index which it
 understands, and pass the remainder on to its children by creating default
 content at a new `index` node belonging to its child.  For example, the
-generic template uses no dta of its own, but passes all on to its children
+generic template uses no data of its own, but passes all on to its children
 at `Page$top-content$index`, `Page$main-content$index`, etc.
 
 There are 2 HOC's which should be used to facilitate this:

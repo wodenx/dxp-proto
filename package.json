@@ -13,25 +13,26 @@
   "scripts": {
     "build:content-publish": "content-publish",
     "build": "npx -y turbo build",
-    "build:packages": "npx -y turbo build --filter=!@sites/--dxp--",
+    "build:packages": "npx -y turbo build --filter=!@sites/*",
+    "build:knapsack": "npx -y turbo build --filter=@sites/listerine-knapsack --no-cache",
     "check": "npx -y turbo check",
     "fix": "eslint --fix  --cache --ext .js,.jsx,.ts,.tsx packages sites",
     "fix:target": "eslint --fix  --cache --ext .js,.jsx,.ts,.tsx",
     "fix:change": "git diff --name-only --diff-filter=d master... | grep -e 'tsx$' -e 'jsx$' -e 'js$' -e 'ts$' | xargs -L 1 npm run fix:target",
-    "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx packages sites --",
+    "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx packages sites tests/configuration --",
     "lint:target": "eslint --cache --ext .js,.jsx,.ts,.tsx",
     "lint:change": "git diff --name-only --diff-filter=d master... | grep -e 'tsx$' -e 'jsx$' -e 'js$' -e 'ts$' | xargs -L 1 npm run lint:target",
-    "postinstall": "./postinstall.sh",
-    "pw:run": "npx playwright test playwright/tests/smoke/* --project=chromium --workers 1",
-    "dev": "npx -y turbo dev",
-    "dev-sb": "npm run dev --workspace @sites/--dxp--",
-    "stackbit": "stackbit dev --runnableDir sites/__dxp__ --port 8000",
+    "postinstall": "patch-package && ./postinstall.sh",
+    "dev": "npx -y turbo dev --filter='@kenvue/*' --filter=@sites/${APP_SITE_NAME:-listerine}",
+    "serve": "npx -y turbo serve --filter=@sites/${APP_SITE_NAME:-listerine}",
+    "dev-sb": "npm run dev --workspace @sites/listerine",
+    "stackbit": "stackbit dev --runnableDir sites/listerine --port 8000",
     "start": "run-p dev stackbit",
     "sync:fix": "syncpack fix-mismatches",
     "sync:check": "syncpack list-mismatches",
     "test": "jest",
-    "test:pw": "WAIT_ON_TIMEOUT=600000 start-server-and-test start http://localhost:8000 pw:run",
-    "docs": "npm run build:docs --workspace @sites/__dxp__ && docsify serve ./sites/__dxp__/doc"
+    "test:smoke": "APPLITOOLS_BATCH_ID=`uuidgen` PLAYWRIGHT_SUITE=smoke npx playwright test",
+    "docs": "npm run build:docs --workspace @sites/${APP_SITE_NAME:-listerine} && docsify serve ./sites/${APP_SITE_NAME:-listerine}/doc"
   },
   "husky": {
     "hooks": {
@@ -51,12 +52,13 @@
     "symlink-dir": "^3.0.3"
   },
   "devDependencies": {
+    "@applitools/eyes-playwright": "^1.15.1",
     "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-decorators": "^7.4.0",
     "@babel/plugin-transform-modules-commonjs": "7.5.0",
     "@babel/runtime": "^7.4.2",
-    "@playwright/test": "1.22",
-    "@stackbit/cli": "0.3.1",
+    "@playwright/test": "1.32",
+    "@stackbit/cli": "0.3.9",
     "@types/enzyme": "^3.9.1",
     "@types/jest": "^24.0.18",
     "@types/lodash": "^4.14.158",
@@ -97,6 +99,7 @@
     "jest-sonar-reporter": "^2.0.0",
     "npm-run-all": "^4.1.5",
     "ora": "^4.0.2",
+    "patch-package": "7.0.0",
     "react-test-renderer": "^17.0.2",
     "rimraf": "^2.6.3",
     "syncpack": "^6.2.0",
@@ -112,7 +115,7 @@
     "url": "https://github.com/dxp-prototype/dxp-proto"
   },
   "engines": {
-    "node": ">=16.14"
+    "node": "^16.14.0"
   },
   "author": ""
 }

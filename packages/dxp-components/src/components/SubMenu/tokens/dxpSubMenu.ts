@@ -2,7 +2,9 @@ import {
   MenuTitleClean, asSubMenuToken, vitalSubMenu
 } from '@bodiless/vital-navigation';
 import type { ListData } from '@bodiless/components';
-import { flowHoc, on } from '@bodiless/fclasses';
+import {
+  flowHoc, on,
+} from '@bodiless/fclasses';
 import { useNode, withDefaultContent, withNode } from '@bodiless/core';
 import dxpMenuTitle from '../../MenuTitle/tokens/dxpMenuTitle';
 import { withSbFieldPath, withSbListItemFieldPath } from '../../../util';

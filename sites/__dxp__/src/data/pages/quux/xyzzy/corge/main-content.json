@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "uuid": "4c9d8b64-90aa-46bf-b856-e0e1e02daa59",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ImageLandscape"
+    },
+    {
+      "uuid": "d224b796-71d3-4568-992a-875812d9d47e",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ListBulletedRichText"
+    }
+  ]
+}

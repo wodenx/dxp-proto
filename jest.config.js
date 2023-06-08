@@ -13,13 +13,15 @@ module.exports = {
       '<rootDir>/config/__mocks__/fileMock.js',
   },
   testMatch: ['**/?(*.)+(spec|test).ts?(x)', '**/?(*.)+(spec|test).js?(x)'],
-  testPathIgnorePatterns: ['node_modules', '.cache', 'cypress', 'playwright',
+  testPathIgnorePatterns: ['node_modules', '.cache',
     // @todo: remove skipped tests below after jest-resolve issue resolved.
     // https://github.com/johnsonandjohnson/Bodiless-JS/issues/1533
     'create-preview-pages.test.ts',
     'create-pages.test.ts',
     'gatsby-node.test.ts',
     'tests/e2e',
+    'tests/configuration',
+    'tests/smoke',
   ],
   transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
   testResultsProcessor: 'jest-sonar-reporter',

@@ -12,7 +12,13 @@ const useSbObjectId = (model: Model) => () => {
   if (isDataModel(model)) {
     const { filePath } = model;
     // @todo Deal with tokens in data models
-    if (filePath && filePath.indexOf('{') < 0) {
+    // @todo With @stackbit/types v0.6.0 `filePath` may now also be a
+    // function of type `DocumentFilePathFunction`. We might need to handle this case.
+    if (filePath && typeof filePath !== 'string') {
+      // eslint-disable-next-line no-console
+      console.warn('[useSbObjectId]: `filePath` is of type `DocumentFilePathFunction` which is currently unhandled. Stackbit model: ', model, filePath);
+    }
+    if (filePath && typeof filePath === 'string' && filePath.indexOf('{') < 0) {
       return { 'data-sb-object-id': filePath };
     }
   } else if (isPageModel(model)) {

@@ -10,6 +10,8 @@ packages/bodiless-migration-tool/tests/testserver
 packages/gatsby-plugin-akamai-auth/dist
 packages/gatsby-plugin-akamai-auth/cjs
 packages/gatsby-plugin-akamai-auth/index.js
+packages/listerine/assets/design-tokens.d.ts
+packages/listerine/assets/design-tokens.js
 **/public
 **/.cache
 **/static

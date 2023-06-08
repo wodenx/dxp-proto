@@ -4,7 +4,7 @@ When I set request headers:
 |Authorization       |Bearer ${github-token}     |
 |Accept              |application/vnd.github+json|
 |X-GitHub-Api-Version|2022-11-28                 |
-When I execute HTTP GET request for resource with URL `https://api.github.com/repos/dxp-prototype/dxp-proto/contents/sites/__dxp__/src/data/pages/products`
+When I execute HTTP GET request for resource with URL `https://api.github.com/repos/${github-repository}/contents/sites/listerine/src/data/pages/products`
 
 Composite: When I request `$productPageId` product page
 When I set request headers:
@@ -12,4 +12,17 @@ When I set request headers:
 |Authorization       |Bearer ${github-token}     |
 |Accept              |application/vnd.github+json|
 |X-GitHub-Api-Version|2022-11-28                 |
-When I execute HTTP GET request for resource with URL `https://api.github.com/repos/dxp-prototype/dxp-proto/contents/sites/__dxp__/src/data/pages/products/<productPageId>`
+When I execute HTTP GET request for resource with URL `https://api.github.com/repos/${github-repository}/contents/sites/listerine/src/data/pages/products/<productPageId>`
+
+Composite: When I request content of `$productPageId` product page
+When I set request headers:
+|name                |value                      |
+|Authorization       |Bearer ${github-token}     |
+|Accept              |application/vnd.github+json|
+|X-GitHub-Api-Version|2022-11-28                 |
+When I execute HTTP GET request for resource with URL `https://api.github.com/repos/${github-repository}/contents/sites/listerine/src/data/pages/products/<productPageId>/content.json`
+When I save JSON element value from `${response}` by JSON path `$.download_url` to scenario variable `downloadUrl`
+When I set request headers:
+|name                |value                      |
+|Authorization       |Bearer ${github-token}     |
+When I execute HTTP GET request for resource with URL `${downloadUrl}`

@@ -6,6 +6,7 @@ import {
   designable, flowHoc, DesignableComponentsProps,
   ComponentOrTag, DesignableComponents, Fragment,
 } from '@bodiless/fclasses';
+import { asVitalTokenSpec } from '@bodiless/vital-elements';
 
 export type ElementsListComponents = {
   Wrapper: ComponentOrTag<any>,
@@ -47,4 +48,5 @@ const ElementsListClean = designable(
   elementsListComponents, 'ElementsList'
 )(ElementsListBase);
 
+export const asElementsListToken = asVitalTokenSpec<ElementsListComponents>();
 export default ElementsListClean;

@@ -1,12 +1,15 @@
 {transformer=FROM_LANDSCAPE}
-|id                    |#{generate(regexify '[a-zA-Z0-9]{16}')}       |
-|name                  |Product #{generate(regexify '[a-zA-Z0-9]{8}')}|
-|slug                  |#{generate(regexify '[a-z]{16}')}             |
-|images                |4LW8rQp6LF7wLHNCeeq9CN                        |
-|summary               |#{generate(regexify '[a-zA-Z0-9 ]{256}')}     |
-|directions            |#{generate(regexify '[a-zA-Z0-9 ]{256}')}     |
-|warnings              |#{generate(regexify '[a-zA-Z0-9 ]{256}')}     |
-|additional_information|#{generate(regexify '[a-zA-Z0-9 ]{256}')}     |
-|sku                   |#{generate(regexify '[a-zA-Z0-9]{64}')}       |
-|upc                   |#{generate(regexify '[a-zA-Z0-9]{64}')}       |
-|ean                   |#{generate(regexify '[a-zA-Z0-9]{64}')}       |
+|id                    |#{generate(regexify '[a-zA-Z0-9]{16}')}                                    |
+|name                  |Test Content - Product                                                     |
+|slug                  |#{generate(regexify '[a-z]{16}')}                                          |
+|directions            |G 72 1JX 2PSj kM 3uVDD5O 4GCS6 Cd3911ZY kbj 206m 727 V04 Dj93 A6 4 s TL7OwN|
+|warnings              |e8 wO w cgk2 e OU10C8 7m2k6 y 3Zs1 9VK Q0yl5 7YN7T 3 9 5k t7poo 9IsEpY 4D 9|
+|additional_information|1 7N4SM  R8pug71 d Ml 1z i 5rd8r 9jn8 Q4RVH n8 1A G1 0 H 6m1G 4 j9 L Cr9j q|
+|sku                   |#{generate(regexify '[a-zA-Z0-9]{64}')}                                    |
+|upc                   |#{generate(regexify '[a-zA-Z0-9]{64}')}                                    |
+|ean                   |#{generate(regexify '[a-zA-Z0-9]{64}')}                                    |
+|summary_plain         |This is a plain text                                                       |
+|summary_bold          |This is a bold text                                                        |
+|summary_superscript   |This is a superscript                                                      |
+|summary_link_text     |This is a link text                                                        |
+|summary_link_url      |https://example.com/                                                       |

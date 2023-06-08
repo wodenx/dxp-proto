@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "uuid": "75a49bba-b5ee-4785-a23d-1ee811d7f065",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ListNumberedLinked"
+    },
+    {
+      "uuid": "5644c37f-5446-4a0e-86d2-7cba41f58987",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardLeftContentTopNoEyebrow"
+    },
+    {
+      "uuid": "5e97c1c5-b55a-4bc8-bfe1-d77ff6876b3b",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ImageLandscape"
+    }
+  ]
+}

@@ -44,6 +44,12 @@ type ContentfulProductContent = {
   summary: {
     value: string;
   }[];
+  collection: {
+    title: string;
+    image: {
+      fields: any;
+    };
+  };
 };
 
 type DxpProductData = {
@@ -57,6 +63,7 @@ type DxpProductData = {
 };
 
 type DxpProductCardData = Omit<DxpProductData, 'link'>;
+type DxpProductCollectionCardData = DxpProductData;
 
 type ProductIds = string[];
 
@@ -65,6 +72,7 @@ export {
   ProductQueryData,
   DxpProductData,
   DxpProductCardData,
+  DxpProductCollectionCardData,
   DataTransformer,
   ContentfulProductData,
   ContentfulProductContent,

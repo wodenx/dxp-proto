@@ -1,21 +1,41 @@
-import { vitalGenericTemplateBase, asGenericTemplateToken } from '@bodiless/vital-templates';
-import { vitalTypography } from '@bodiless/vital-elements';
-import { EditorPlainClean } from '@bodiless/vital-editors';
-import { on, replaceWith } from '@bodiless/fclasses';
-import { withSbContentFromParent } from '../../../util';
-import { dxpEditorPlain } from '../../EditorPlain';
+import { useNode } from '@bodiless/core';
+import { vitalGenericTemplate, asGenericTemplateToken } from '@bodiless/vital-templates';
+import { asElementToken, vitalTypography } from '@bodiless/vital-elements';
+
+import { on, flowIf } from '@bodiless/fclasses';
+import { dxpImage } from '@kenvue/dxp-image';
+
+import { CuratorSectionClean, asCuratorSectionToken, dxpCuratorSection } from '@kenvue/dxp-curator';
+import { withSbContent, withSbContentFromParent } from '../../../util';
 import { dxpLayout } from '../../Layout';
 
-export const Generic = asGenericTemplateToken({
-  ...vitalGenericTemplateBase.Generic,
+// @todo To avoid the circular dependency we extend the
+// `dxpImage.Hero` token with `withSbContent` here.
+// Once Stackbit helpers are in it's own package, we should move this
+// token into the `@kenvue/dxp-image` package.
+export const Hero = asElementToken(dxpImage.Plain, {
+  Content: {
+    _: withSbContent(),
+  },
+});
+
+//
+export const Curator = asCuratorSectionToken(dxpCuratorSection.Default, {
+  Content: {
+    Feed:
+      withSbContent(),
+  },
+});
+
+export const Default = asGenericTemplateToken({
+  ...vitalGenericTemplate.Default,
   Components: {
-    ...vitalGenericTemplateBase.Generic.Components,
+    ...vitalGenericTemplate.Default.Components,
     PageWrapper: dxpLayout.Default,
-    // @todo Replace with HeroCard
-    TopContent: replaceWith(() => null),
-    // @todo replace with section container
-    Content: on(EditorPlainClean)(dxpEditorPlain.Default),
-    BottomContent: replaceWith(() => null),
+    // TopContent: on(Img)(Hero),
+    BottomContent: flowIf(() => useNode().node.pagePath === '/')(
+      on(CuratorSectionClean)(Curator),
+    ),
   },
   Theme: {
     // @todo remove this
@@ -26,15 +46,15 @@ export const Generic = asGenericTemplateToken({
     // The node-keys have been defined.  This way we avoid having to
     // specify the node key in more thn one place. Note that the node key
     // must be the same as the stackbit field name.
-    TopContent: withSbContentFromParent(),
+    // TopContent: withSbContentFromParent(),
     Content: withSbContentFromParent(),
     BottomContent: withSbContentFromParent(),
   },
 });
 
 const dxpGenericTemplate = {
-  ...vitalGenericTemplateBase,
-  Generic,
+  ...vitalGenericTemplate,
+  Default,
 };
 
 export default dxpGenericTemplate;

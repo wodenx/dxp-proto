@@ -1,0 +1,24 @@
+{
+  "contentful_id": "6Iz936uVJrYaQdeDavRRki",
+  "revision_id": 1,
+  "name": "LACTAID® Lactose-Free High Protein Whole Milk",
+  "images": [
+    {
+      "title": "whole protein front 2",
+      "description": "",
+      "file": {
+        "url": "//images.ctfassets.net/o0k7u0i6hu7n/twtnkj1gC3hK9jc9nNt3L/b090e8af14d9ace4fce6ed4cb1f52376/whole_protein_front_2.png",
+        "details": {
+          "size": 122525,
+          "image": {
+            "width": 500,
+            "height": 500
+          }
+        },
+        "fileName": "whole_protein_front_2.png",
+        "contentType": "image/png"
+      }
+    }
+  ],
+  "faq": []
+}

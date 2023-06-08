@@ -1,0 +1,68 @@
+id: listerine-knapsack
+title: Listerine Knapsack
+slices:
+  - id: ks-content-block-U9aRUzFo9p
+    blockId: markdown-slice
+    data:
+      md:
+        - >+
+          ### Overview
+
+          Knapsack provides designers and developers with a set of tools that
+          help with the creation of design
+
+          systems, which can be used to maintain consistency across an entire
+          application or website.
+
+          Furthermore, the tools provided by Knapsack are designed to be easy to
+          use, while also being highly
+
+          flexible, allowing designers and developers to tailor them to their
+          specific needs.
+
+
+          One of the key benefits of Knapsack is its ability to facilitate
+          collaboration between designers
+
+          and developers. By providing designers with a set of tools that are
+          designed to work closely with
+
+          code, Knapsack allows for more efficient communication between
+          designers and developers, which can
+
+          help to reduce the amount of back-and-forth that is typically required
+          during the design and
+
+          development process.
+
+
+          ### Components
+
+          The current Knapsack space consists of four components, all of which
+          are documented under the
+
+          components tab:
+
+
+          - Accordions
+
+          - Buttons
+
+          - Cards
+
+          - Typography
+
+          ######
+
+          Each of these components has a number of variations, which are
+          designed to be highly customizable,
+
+          allowing designers and developers to create designs that are both
+          consistent and unique.
+
+      columns: 1
+description: >-
+  A design tooling set that allows designers and developers to streamline their
+  workflow
+
+  and communicate more effectively.

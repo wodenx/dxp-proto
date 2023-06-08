@@ -1,0 +1,42 @@
+{
+  "name": "@sites/listerine-knapsack",
+  "private": true,
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dxp-prototype/dxp-proto",
+    "directory": "sites/listerine-knapsack"
+  },
+  "files": [
+    "/lib",
+    "tailwind.config.js",
+    "bodiless.tailwind.config.js"
+  ],
+  "scripts": {
+    "build": "npm run build:knapsack",
+    "build:knapsack": "npm run ks:build",
+    "clean": "rm -rf ./lib",
+    "ks:build": "knapsack build",
+    "start": "knapsack start",
+    "serve": "NODE_ENV=production knapsack serve"
+  },
+  "dependencies": {
+    "@knapsack/app": "^3.108.10",
+    "@bodiless/fclasses": "^1.0.0-rc.36",
+    "@bodiless/knapsack-edit-provider": "^1.0.0-canary-2040-1068.0.aa2e178",
+    "@bodiless/knapsack-renderer": "^1.0.0-canary-2040-1068.0.aa2e178",
+    "@kenvue/listerine": "^0.0.0",
+    "@types/react": "^17.0.39",
+    "react": "^17.0.2",
+    "esm": "^3.2.25",
+    "crypto-browserify": "^3.12.0",
+    "glob": "^7.1.6",
+    "path-browserify": "^1.0.1",
+    "postcss-loader": "^6.2.1",
+    "stream-browserify": "^3.0.0",
+    "style-loader": "^3.3.1",
+    "css-loader": "^6.5.1",
+    "typescript": "^4.0.0",
+    "webpack": "^5.69.1"
+  }
+}

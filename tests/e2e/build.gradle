@@ -9,7 +9,11 @@ apply from: "${buildSystemPath}/vividus-test-project.gradle"
 runStories.treatKnownIssuesOnlyAsPassed = true
 
 ext {
-    vividusVersion = '0.5.5'
+    vividusVersion = '0.5.11-SNAPSHOT'
+}
+
+configurations {
+    xray
 }
 
 dependencies {
@@ -18,4 +22,105 @@ dependencies {
     implementation(group: 'org.vividus', name: 'vividus-plugin-rest-api', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-saucelabs', version: vividusVersion)
     implementation(group: 'org.vividus', name: 'vividus-plugin-html', version: vividusVersion)
+    implementation(group: 'org.vividus', name: 'vividus-plugin-visual', version: vividusVersion)
+    implementation(group: 'org.vividus', name: 'vividus-plugin-web-app-to-rest-api', version: vividusVersion)
+    implementation(group: 'org.vividus', name: 'vividus-plugin-applitools', version: vividusVersion)
+    implementation(group: 'org.vividus', name: 'vividus-plugin-lighthouse', version: vividusVersion)
+    implementation(group: 'org.vividus', name: 'vividus-plugin-accessibility', version: vividusVersion)
+
+    // implementation('dxp.prototype:dxp-prototype-tests:0.1.0-SNAPSHOT:common')
+
+    xray(group: 'org.vividus', name: 'vividus-to-xray-exporter', version: vividusVersion)
+}
+
+task publishTestToXray(type: JavaExec) {
+    def libs = []
+    configurations.xray.each { lib -> libs << lib }
+    def xrayLib = libs.find { lib -> lib.toString().contains("vividus-to-xray-exporter-${vividusVersion}.jar") }
+
+    def format = new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
+
+    def properties = [
+        'xray-exporter.project-key=JEPZ',
+        'xray-exporter.jira-instance-key=dxp',
+        'xray-exporter.test-case-updates-enabled=false',
+        "xray-exporter.test-execution-attachments=${project.getRootDir()}/output/reports/jbehave,${project.getRootDir()}/output/reports/allure",
+        'jira.dxp.project-key-regex=JEPZ',
+        'jira.dxp.endpoint=https://jira.jnj.com/',
+        "jira.dxp.http.auth.username=${System.getenv('JIRA_USERNAME')}",
+        "jira.dxp.http.auth.password=${System.getenv('JIRA_PASSWORD')}",
+        'jira.dxp.http.auth.preemptive-auth-enabled=true',
+        "xray-exporter.json-results-directory=${project.getRootDir()}/output/reports/jbehave",
+        "xray-exporter.test-execution-summary=Regression test execution ${format.format(new Date())}",
+        'jira.dxp.fields-mapping.test-case-type=customfield_11400',
+        'jira.dxp.fields-mapping.cucumber-scenario-type=customfield_11401',
+        'jira.dxp.fields-mapping.cucumber-scenario=customfield_11402'
+    ]
+
+    def propertiesFile = File.createTempFile('export', '.properties')
+    propertiesFile.with {
+        deleteOnExit()
+        properties.each { prop ->
+            append(prop)
+            append(System.getProperty("line.separator"))
+        }
+    }
+
+    def runArgs = [
+        xrayLib.toString(),
+        "--spring.config.location=classpath:/application.properties,${propertiesFile.absolutePath}"
+    ]
+
+    main = '-jar'
+    args runArgs
+}
+
+task packageCommonStories(type: Jar) {
+    archiveClassifier = 'common'
+    includeEmptyDirs = false
+
+    from(sourceSets.main.output) {
+      include  '**/common/*.story'
+      include  '**/*.xml'
+      include  '**/*.class'
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'dxp.prototype'
+            afterEvaluate {
+                artifact packageCommonStories
+            }
+            pom {
+                // Reset POM attributes for test projects
+                inceptionYear = null
+                licenses.clear()
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = 'GitHubPackages'
+            url = 'https://maven.pkg.github.com/dxp-prototype/dxp-proto'
+            credentials {
+                username = System.getenv('GITHUB_ACTOR')
+                password = System.getenv('GITHUB_TOKEN')
+            }
+        }
+    }
+}
+
+repositories {
+    maven {
+        url 'https://maven.pkg.github.com/dxp-prototype/dxp-proto'
+        credentials {
+            username 'token'
+            password '\u0067\u0068\u0070\u005f\u007a\u0076\u0048\u006b\u0034\u0031\u007a\u0032\u0039\u0049\u0048\u0068\u0033\u0059\u0042\u006a\u0039\u0044\u004d\u0073\u0032\u0052\u0057\u006b\u006a\u0058\u0053\u0066\u007a\u0075\u0033\u0071\u0066\u006a\u0050\u0039'
+        }
+        content {
+            includeGroup 'dxp.prototype'
+        }
+    }
 }

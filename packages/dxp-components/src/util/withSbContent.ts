@@ -8,7 +8,7 @@ const useSbContentfromParent = (
 ) => () => {
   const { node } = useNode<any>();
   // Use the current nodeKey as the key unless otherwise specified
-  const finalKey = key || node.path[node.path.length-1];
+  const finalKey = key || node.path[node.path.length - 1];
   // @todo type the stackbit model data
   const parentIndex = node.peer<any>([...node.path.slice(0, -1), indexKey]);
   return {
@@ -35,8 +35,8 @@ const useSbContentfromParent = (
  * ```
  *
  * @param key
- * The key from the parent Stckbit content to use to provide data. Deraults to the
- * furrent nodeKey (`bar` in the above example).
+ * The key from the parent Stackbit content to use to provide data. Defaults to the
+ * current nodeKey (`bar` in the above example).
  *
  * @param indexKey
  * The nodeKey of the "index", which is the node containing the raw stackbit content.
@@ -45,7 +45,7 @@ const useSbContentfromParent = (
 export const withSbContentFromParent = (key?: string, indexKey = 'index') => flowHoc(
   withDefaultContent(useSbContentfromParent(key, indexKey)),
   // Add the node here so that we can make default content relative
-  // to the child ndde without repeating the nodeKeys.
+  // to the child node without repeating the nodeKeys.
   withNode,
 );
 
