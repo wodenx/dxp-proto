@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "uuid": "f5895b4d-2014-4d31-a07b-cd732cfebc46",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardVerticalNoEyebrow"
+    },
+    {
+      "uuid": "55d5fc96-ce6e-4018-9f64-67d64c7a4b28",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ListInfographic"
+    },
+    {
+      "uuid": "0c69a646-578f-4ad3-945c-2681c811ffd6",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ImageLandscape"
+    }
+  ]
+}
